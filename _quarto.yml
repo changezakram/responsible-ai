@@ -1,0 +1,73 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  navbar:
+    left:
+      - icon: house
+        text: "Changez Akram"
+        href: https://changezakram.github.io/
+
+      - text: Generative AI
+        menu:
+          - text: Gen AI Introduction
+            href: https://changezakram.github.io/Deep-Generative-Models/index.html
+          - text: Variational Autoencoders (VAEs)
+            href: https://changezakram.github.io/Deep-Generative-Models/vae.html
+          - text: Normalizing Flows
+            href: https://changezakram.github.io/Deep-Generative-Models/flows.html
+          - text: Energy-Based Models (EBMs)
+            href: https://changezakram.github.io/Deep-Generative-Models/ebm.html
+          - text: Diffusion Models
+            href: https://changezakram.github.io/Deep-Generative-Models/diffusion.html
+
+      - text: Large Language Models
+        menu:
+          - text: Transformers
+            href: https://changezakram.github.io/Deep-Generative-Models/transformers.html
+          - text: Post Training
+            href: https://changezakram.github.io/Deep-Generative-Models/post-training.html
+          - text: NLP Evaluation
+            href: https://changezakram.github.io/Deep-Generative-Models/nlp-eval.html
+
+      - text: Agentic AI
+        menu:
+          - text: Introduction
+            href: https://changezakram.github.io/agentic-ai/agentic-ai.html
+          - text: Agentic Analytics
+            href: https://changezakram.github.io/agentic-ai/agentic-analytics.html
+          - text: Small Language Models
+            href: https://changezakram.github.io/Deep-Generative-Models/slm.html
+          - text: Multi-Agent Orchestration
+            href: https://changezakram.github.io/agentic-ai/Workflow-Orchestration.html
+          - text: Securing Agentic AI Systems
+            href: https://changezakram.github.io/agentic-ai/agentic_ai_security.html
+
+      - text: AI Strategy
+        menu:
+          - text: AI Roadmap for Banking
+            href: https://changezakram.github.io/Deep-Generative-Models/gen-ai-use-cases/ai-roadmap-for-banking.html
+          - text: Building the AI-First Bank
+            href: https://changezakram.github.io/Deep-Generative-Models/gen-ai-use-cases/ai_first_bank.html
+          - text: Gen AI in Banking
+            href: https://changezakram.github.io/Deep-Generative-Models/gen-ai-use-cases/banking-use-cases.html
+          - text: Gen AI in Healthcare
+            href: https://changezakram.github.io/Deep-Generative-Models/gen-ai-use-cases/healthcare-use-cases.html
+
+      - text: Math Review
+        menu:
+          - text: Linear Algebra
+            href: https://changezakram.github.io/math-review/linear-algebra.html
+          - text: Calculus
+            href: https://changezakram.github.io/math-review/calculus.html
+          - text: Probability
+            href: https://changezakram.github.io/math-review/probability.html
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 2
+    number-sections: true
+    html-math-method: mathjax

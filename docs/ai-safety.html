@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.31">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Changez Akram">
+<meta name="dcterms.date" content="2026-04-01">
+
+<title>The Hidden Dangers of AI: Understanding Bias, Toxicity, and Safety in Modern AI Systems</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-c1fac2584b48ed01fb6e278e36375074.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="floating nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://changezakram.github.io/"> <i class="bi bi-house" role="img">
+</i> 
+<span class="menu-text">Changez Akram</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-generative-ai" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Generative AI</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-generative-ai">    
+        <li>
+    <a class="dropdown-item" href="https://changezakram.github.io/Deep-Generative-Models/index.html">
+ <span class="dropdown-text">Gen AI Introduction</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://changezakram.github.io/Deep-Generative-Models/vae.html">
+ <span class="dropdown-text">Variational Autoencoders (VAEs)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://changezakram.github.io/Deep-Generative-Models/flows.html">
+ <span class="dropdown-text">Normalizing Flows</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://changezakram.github.io/Deep-Generative-Models/ebm.html">
+ <span class="dropdown-text">Energy-Based Models (EBMs)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://changezakram.github.io/Deep-Generative-Models/diffusion.html">
+ <span class="dropdown-text">Diffusion Models</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-large-language-models" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Large Language Models</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-large-language-models">    
+        <li>
+    <a class="dropdown-item" href="https://changezakram.github.io/Deep-Generative-Models/transformers.html">
+ <span class="dropdown-text">Transformers</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://changezakram.github.io/Deep-Generative-Models/post-training.html">
+ <span class="dropdown-text">Post Training</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://changezakram.github.io/Deep-Generative-Models/nlp-eval.html">
+ <span class="dropdown-text">NLP Evaluation</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-agentic-ai" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Agentic AI</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-agentic-ai">    
+        <li>
+    <a class="dropdown-item" href="https://changezakram.github.io/agentic-ai/agentic-ai.html">
+ <span class="dropdown-text">Introduction</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://changezakram.github.io/agentic-ai/agentic-analytics.html">
+ <span class="dropdown-text">Agentic Analytics</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://changezakram.github.io/Deep-Generative-Models/slm.html">
+ <span class="dropdown-text">Small Language Models</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://changezakram.github.io/agentic-ai/Workflow-Orchestration.html">
+ <span class="dropdown-text">Multi-Agent Orchestration</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://changezakram.github.io/agentic-ai/agentic_ai_security.html">
+ <span class="dropdown-text">Securing Agentic AI Systems</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-ai-strategy" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">AI Strategy</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-ai-strategy">    
+        <li>
+    <a class="dropdown-item" href="https://changezakram.github.io/Deep-Generative-Models/gen-ai-use-cases/ai-roadmap-for-banking.html">
+ <span class="dropdown-text">AI Roadmap for Banking</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://changezakram.github.io/Deep-Generative-Models/gen-ai-use-cases/ai_first_bank.html">
+ <span class="dropdown-text">Building the AI-First Bank</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://changezakram.github.io/Deep-Generative-Models/gen-ai-use-cases/banking-use-cases.html">
+ <span class="dropdown-text">Gen AI in Banking</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://changezakram.github.io/Deep-Generative-Models/gen-ai-use-cases/healthcare-use-cases.html">
+ <span class="dropdown-text">Gen AI in Healthcare</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-math-review" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Math Review</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-math-review">    
+        <li>
+    <a class="dropdown-item" href="https://changezakram.github.io/math-review/linear-algebra.html">
+ <span class="dropdown-text">Linear Algebra</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://changezakram.github.io/math-review/calculus.html">
+ <span class="dropdown-text">Calculus</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://changezakram.github.io/math-review/probability.html">
+ <span class="dropdown-text">Probability</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#the-real-world-cost-of-ai-bias" id="toc-the-real-world-cost-of-ai-bias" class="nav-link active" data-scroll-target="#the-real-world-cost-of-ai-bias"><span class="header-section-number">1</span> The Real-World Cost of AI Bias</a></li>
+  <li><a href="#part-1-understanding-bias-in-ai" id="toc-part-1-understanding-bias-in-ai" class="nav-link" data-scroll-target="#part-1-understanding-bias-in-ai"><span class="header-section-number">2</span> Part 1: Understanding Bias in AI</a>
+  <ul class="collapse">
+  <li><a href="#what-do-we-mean-by-bias" id="toc-what-do-we-mean-by-bias" class="nav-link" data-scroll-target="#what-do-we-mean-by-bias"><span class="header-section-number">2.1</span> What Do We Mean by “Bias”?</a></li>
+  <li><a href="#the-fairness-paradox-you-cant-satisfy-everyone" id="toc-the-fairness-paradox-you-cant-satisfy-everyone" class="nav-link" data-scroll-target="#the-fairness-paradox-you-cant-satisfy-everyone"><span class="header-section-number">2.2</span> The Fairness Paradox: You Can’t Satisfy Everyone</a></li>
+  <li><a href="#where-does-bias-come-from-the-entire-pipeline" id="toc-where-does-bias-come-from-the-entire-pipeline" class="nav-link" data-scroll-target="#where-does-bias-come-from-the-entire-pipeline"><span class="header-section-number">2.3</span> Where Does Bias Come From? The Entire Pipeline</a></li>
+  <li><a href="#case-study-1-language-identification-and-the-wealth-gap" id="toc-case-study-1-language-identification-and-the-wealth-gap" class="nav-link" data-scroll-target="#case-study-1-language-identification-and-the-wealth-gap"><span class="header-section-number">2.4</span> Case Study 1: Language Identification and the Wealth Gap</a></li>
+  <li><a href="#case-study-2-how-models-amplify-bias" id="toc-case-study-2-how-models-amplify-bias" class="nav-link" data-scroll-target="#case-study-2-how-models-amplify-bias"><span class="header-section-number">2.5</span> Case Study 2: How Models Amplify Bias</a></li>
+  <li><a href="#the-annotation-trap-context-matters" id="toc-the-annotation-trap-context-matters" class="nav-link" data-scroll-target="#the-annotation-trap-context-matters"><span class="header-section-number">2.6</span> The Annotation Trap: Context Matters</a></li>
+  <li><a href="#the-debiasing-dilemma" id="toc-the-debiasing-dilemma" class="nav-link" data-scroll-target="#the-debiasing-dilemma"><span class="header-section-number">2.7</span> The Debiasing Dilemma</a></li>
+  <li><a href="#the-socio-technical-reality" id="toc-the-socio-technical-reality" class="nav-link" data-scroll-target="#the-socio-technical-reality"><span class="header-section-number">2.8</span> The Socio-Technical Reality</a></li>
+  </ul></li>
+  <li><a href="#part-2-toxicity-and-harmful-content" id="toc-part-2-toxicity-and-harmful-content" class="nav-link" data-scroll-target="#part-2-toxicity-and-harmful-content"><span class="header-section-number">3</span> Part 2: Toxicity and Harmful Content</a>
+  <ul class="collapse">
+  <li><a href="#the-scale-of-the-problem" id="toc-the-scale-of-the-problem" class="nav-link" data-scroll-target="#the-scale-of-the-problem"><span class="header-section-number">3.1</span> The Scale of the Problem</a></li>
+  <li><a href="#why-look-at-the-training-data" id="toc-why-look-at-the-training-data" class="nav-link" data-scroll-target="#why-look-at-the-training-data"><span class="header-section-number">3.2</span> Why? Look at the Training Data</a></li>
+  <li><a href="#the-filtering-failure" id="toc-the-filtering-failure" class="nav-link" data-scroll-target="#the-filtering-failure"><span class="header-section-number">3.3</span> The Filtering Failure</a></li>
+  <li><a href="#the-case-of-gpt-4chan-when-research-goes-wrong" id="toc-the-case-of-gpt-4chan-when-research-goes-wrong" class="nav-link" data-scroll-target="#the-case-of-gpt-4chan-when-research-goes-wrong"><span class="header-section-number">3.4</span> The Case of GPT-4Chan: When Research Goes Wrong</a></li>
+  <li><a href="#why-might-we-actually-want-models-that-have-seen-toxicity" id="toc-why-might-we-actually-want-models-that-have-seen-toxicity" class="nav-link" data-scroll-target="#why-might-we-actually-want-models-that-have-seen-toxicity"><span class="header-section-number">3.5</span> Why Might We Actually Want Models That Have Seen Toxicity?</a></li>
+  </ul></li>
+  <li><a href="#the-safeguarding-stack" id="toc-the-safeguarding-stack" class="nav-link" data-scroll-target="#the-safeguarding-stack"><span class="header-section-number">4</span> The Safeguarding Stack</a>
+  <ul class="collapse">
+  <li><a href="#layer-1-training-data" id="toc-layer-1-training-data" class="nav-link" data-scroll-target="#layer-1-training-data"><span class="header-section-number">4.1</span> Layer 1: Training Data</a></li>
+  <li><a href="#layer-2-input-classification" id="toc-layer-2-input-classification" class="nav-link" data-scroll-target="#layer-2-input-classification"><span class="header-section-number">4.2</span> Layer 2: Input Classification</a></li>
+  <li><a href="#layer-3-instruction-tuning-rlhf" id="toc-layer-3-instruction-tuning-rlhf" class="nav-link" data-scroll-target="#layer-3-instruction-tuning-rlhf"><span class="header-section-number">4.3</span> Layer 3: Instruction Tuning &amp; RLHF</a></li>
+  <li><a href="#layer-4-output-filtering" id="toc-layer-4-output-filtering" class="nav-link" data-scroll-target="#layer-4-output-filtering"><span class="header-section-number">4.4</span> Layer 4: Output Filtering</a></li>
+  <li><a href="#the-rlhf-challenge" id="toc-the-rlhf-challenge" class="nav-link" data-scroll-target="#the-rlhf-challenge"><span class="header-section-number">4.5</span> The RLHF Challenge</a></li>
+  </ul></li>
+  <li><a href="#the-unresolved-tension" id="toc-the-unresolved-tension" class="nav-link" data-scroll-target="#the-unresolved-tension"><span class="header-section-number">5</span> The Unresolved Tension</a>
+  <ul class="collapse">
+  <li><a href="#approach-1-narrow-the-scope" id="toc-approach-1-narrow-the-scope" class="nav-link" data-scroll-target="#approach-1-narrow-the-scope"><span class="header-section-number">5.1</span> Approach 1: Narrow the Scope</a></li>
+  <li><a href="#approach-2-specialize-abilities" id="toc-approach-2-specialize-abilities" class="nav-link" data-scroll-target="#approach-2-specialize-abilities"><span class="header-section-number">5.2</span> Approach 2: Specialize Abilities</a></li>
+  <li><a href="#approach-3-keep-studying" id="toc-approach-3-keep-studying" class="nav-link" data-scroll-target="#approach-3-keep-studying"><span class="header-section-number">5.3</span> Approach 3: Keep Studying</a></li>
+  </ul></li>
+  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways"><span class="header-section-number">6</span> Key Takeaways</a></li>
+  <li><a href="#the-path-forward" id="toc-the-path-forward" class="nav-link" data-scroll-target="#the-path-forward"><span class="header-section-number">7</span> The Path Forward</a></li>
+  <li><a href="#references-and-further-reading" id="toc-references-and-further-reading" class="nav-link" data-scroll-target="#references-and-further-reading"><span class="header-section-number">8</span> References and Further Reading</a>
+  <ul class="collapse">
+  <li><a href="#related-reading" id="toc-related-reading" class="nav-link" data-scroll-target="#related-reading"><span class="header-section-number">8.1</span> Related Reading</a></li>
+  <li><a href="#key-academic-references" id="toc-key-academic-references" class="nav-link" data-scroll-target="#key-academic-references"><span class="header-section-number">8.2</span> Key Academic References</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">The Hidden Dangers of AI: Understanding Bias, Toxicity, and Safety in Modern AI Systems</h1>
+<p class="subtitle lead">A deep dive into how AI systems develop biases, generate toxic content, and the fundamental challenges in making them safe for everyone</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">AI Safety</div>
+    <div class="quarto-category">Ethics</div>
+    <div class="quarto-category">Bias</div>
+    <div class="quarto-category">Machine Learning</div>
+    <div class="quarto-category">LLMs</div>
+    <div class="quarto-category">Responsible AI</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Changez Akram </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">April 1, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+About This Series
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This is the second piece in a series on AI safety and security. In <a href="https://changezakram.github.io/agentic-ai/agentic_ai_safety.html">Building Safe and Secure Agentic AI</a>, I covered the technical security threats facing autonomous AI systems—prompt injection, privilege escalation, and adversarial attacks. This post addresses a different but equally critical dimension: the inherent challenges of bias, fairness, and toxicity that exist even in well-secured systems.</p>
+<p>Together, these pieces form a comprehensive view of AI safety: you can build perfectly secure systems that still cause harm through biased decisions, and you can build fair systems that remain vulnerable to exploitation. Both dimensions matter for responsible AI deployment.</p>
+</div>
+</div>
+<p>Ask an AI image generator to create “an image of a teacher,” and see what happens. In 2022, DALL-E 2 produced the same result every time: white, female, middle-aged teachers in American classrooms. This simple example exposes a deep problem in modern AI—the systems are biased, and those biases cause real harm.</p>
+<p>This goes beyond academic interest. AI systems now make decisions about hiring, credit approval, social media moderation, and medical advice. Biased or toxic outputs ripple through society in ways we’re still discovering.</p>
+<section id="the-real-world-cost-of-ai-bias" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="the-real-world-cost-of-ai-bias"><span class="header-section-number">1</span> The Real-World Cost of AI Bias</h2>
+<p>The harms are concrete:</p>
+<p><strong>Recruiting discrimination</strong>: AI hiring tools systematically screen out candidates from certain demographics, hardening workplace inequity.</p>
+<p><strong>Medical misinformation</strong>: LLMs trained on historical medical data perpetuate outdated theories that harm patients from minority groups—populations already understudied in medical research.</p>
+<p><strong>Relationship chatbot trauma</strong>: When AI companionship services updated their models for “safety,” users who’d formed emotional attachments reported heartbreak and loss.</p>
+<p><strong>Toxic content moderation</strong>: Hate speech detectors flag African American English at higher rates than actual hate speech, silencing minority voices while missing real threats.</p>
+<p>These aren’t hypothetical scenarios—they’re happening now.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Security vs.&nbsp;Safety: Two Sides of AI Risk
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In my previous article on <a href="https://changezakram.github.io/agentic-ai/agentic_ai_safety.html">agentic AI security</a>, I focused on external threats—adversaries manipulating AI systems through prompt injection, database poisoning, and privilege escalation. Those attacks exploit the system’s vulnerabilities.</p>
+<p>This article addresses internal risks—biases, fairness paradoxes, and toxic outputs that emerge from the system’s design and training, even when no attacker is present. A banking AI can be perfectly secured against hackers yet still systematically deny loans to qualified minority applicants.</p>
+<p>Both dimensions are critical. Security protects against adversaries. Safety protects against the system itself.</p>
+</div>
+</div>
+</section>
+<section id="part-1-understanding-bias-in-ai" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="part-1-understanding-bias-in-ai"><span class="header-section-number">2</span> Part 1: Understanding Bias in AI</h2>
+<section id="what-do-we-mean-by-bias" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="what-do-we-mean-by-bias"><span class="header-section-number">2.1</span> What Do We Mean by “Bias”?</h3>
+<p>The term “bias” gets used loosely in AI discussions. Two distinct definitions matter:</p>
+<p><strong>Statistical bias</strong> (ML perspective): A systematic tendency causing differences between model estimates and reality. Your model consistently aims left of the target.</p>
+<p><strong>General bias</strong> (social perspective): Disproportionate weight for or against an idea, usually in a closed-minded, prejudicial, or unfair way.</p>
+<p>A useful frame: <strong>The presence of bias is the absence of fairness</strong>. Algorithmic fairness attempts to correct these biases in ML systems.</p>
+</section>
+<section id="the-fairness-paradox-you-cant-satisfy-everyone" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="the-fairness-paradox-you-cant-satisfy-everyone"><span class="header-section-number">2.2</span> The Fairness Paradox: You Can’t Satisfy Everyone</h3>
+<p>Say you’re building a resume screening system. How do you know if it’s fair?</p>
+<p>You might think accuracy across demographic groups solves it. But there are competing definitions:</p>
+<p><strong>1. Accuracy Equality</strong>: All groups get the same accuracy rate.</p>
+<p><strong>2. Statistical Parity</strong>: All groups have equal probability of positive outcomes.</p>
+<p><strong>3. Equalized Odds</strong>: False positive and true positive rates match across groups.</p>
+<p><strong>4. Counterfactual Fairness</strong>: The outcome wouldn’t change if we only changed someone’s race, gender, etc.</p>
+<p>Here’s the catch: <strong>these definitions often conflict</strong>. You can satisfy one but not the others. This isn’t a technical limitation—it’s mathematical reality.</p>
+<p>Blodgett and colleagues examined ~150 NLP papers on bias in 2020. Most used the term vaguely without stating what behaviors count as “biased,” what harms those behaviors cause and to whom, or what social values underpin their fairness conception.</p>
+</section>
+<section id="where-does-bias-come-from-the-entire-pipeline" class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="where-does-bias-come-from-the-entire-pipeline"><span class="header-section-number">2.3</span> Where Does Bias Come From? The Entire Pipeline</h3>
+<p>Bias emerges from any design decision:</p>
+<ol type="1">
+<li><strong>Data distributions</strong> - The world itself is biased, data reflects that</li>
+<li><strong>Data selection</strong> - What we include or exclude</li>
+<li><strong>Data annotation</strong> - Who labels the data and how</li>
+<li><strong>Feature selection</strong> - What signals the model sees</li>
+<li><strong>Model architecture</strong> - How the model is structured</li>
+<li><strong>Optimization objectives</strong> - What the model optimizes for</li>
+<li><strong>Evaluation metrics</strong> - How we measure success</li>
+<li><strong>Deployment</strong> - How the system gets used</li>
+</ol>
+<p>Here are real examples.</p>
+</section>
+<section id="case-study-1-language-identification-and-the-wealth-gap" class="level3" data-number="2.4">
+<h3 data-number="2.4" class="anchored" data-anchor-id="case-study-1-language-identification-and-the-wealth-gap"><span class="header-section-number">2.4</span> Case Study 1: Language Identification and the Wealth Gap</h3>
+<p>Language identification seems solved—determine what language a text uses. It’s considered “suitable for undergraduate instruction.” Yet this “solved” problem has massive bias.</p>
+<p>Jurgens and colleagues tested popular language ID tools on tweets from different countries in 2017. They discovered accuracy correlated with a country’s Human Development Index (HDI).</p>
+<ul>
+<li><strong>23% accuracy gap</strong> between high and low HDI countries</li>
+<li>Tools worked well for tweets from wealthy, educated, urban, liberal areas</li>
+<li>Tools failed for tweets from poorer countries</li>
+</ul>
+<p>Why? English has many variations worldwide—Nigerian English, Indian English, Singaporean English, African American English, Hispanic-influenced English, regional dialects across the globe.</p>
+<p>The training data came from “standard” English sources, blinding the tools to linguistic diversity.</p>
+<p><strong>The Fix</strong>: Researchers built EquiLID using deliberately diverse data—topically diverse (Wikipedia, books, Twitter), socially diverse (formal and informal sources), geographically diverse (multiple regions), and multilingual examples (code-switching).</p>
+<p>Result: Massive improvement on low-HDI content, <strong>plus better performance on high-HDI content</strong>. Better data choices reduced bias and improved overall quality.</p>
+</section>
+<section id="case-study-2-how-models-amplify-bias" class="level3" data-number="2.5">
+<h3 data-number="2.5" class="anchored" data-anchor-id="case-study-2-how-models-amplify-bias"><span class="header-section-number">2.5</span> Case Study 2: How Models Amplify Bias</h3>
+<p>Data bias is one thing. Models can make it worse. Take visual semantic role labeling—identifying who’s doing what in an image.</p>
+<p>In Zhao et al.’s 2017 study, training data showed <strong>66% of cooking images</strong> featured women as the agent.</p>
+<p>What did models learn? They predicted <strong>84% of test cooking images</strong> had women as agents. The model <strong>amplified</strong> the training bias by ~18 percentage points.</p>
+<p>This happens through <strong>simplicity bias</strong>. Neural networks preferentially learn simpler patterns. “Women cook” is simpler than nuanced reality, so models learn it first and over-apply it.</p>
+<p><strong>The Mathematics of Bias</strong>:</p>
+<p>Two forces drive this:</p>
+<ol type="1">
+<li><p><strong>Competing losses</strong>: Optimization globally minimizes error, prioritizing the majority class over minorities.</p></li>
+<li><p><strong>Simplicity bias</strong>: Neural networks are mathematically biased toward simpler functions (Valle-Pérez et al., 2019). Stereotypes are simple. Reality is complex.</p></li>
+</ol>
+</section>
+<section id="the-annotation-trap-context-matters" class="level3" data-number="2.6">
+<h3 data-number="2.6" class="anchored" data-anchor-id="the-annotation-trap-context-matters"><span class="header-section-number">2.6</span> The Annotation Trap: Context Matters</h3>
+<p>How you collect labels matters. Take hate speech detection.</p>
+<p>Sap and colleagues found in 2019 that popular hate speech datasets flagged African American English at much higher rates:</p>
+<ul>
+<li>92% of AAE tweets labeled “offensive” (vs.&nbsp;52% for Standard American English)</li>
+<li>60% of AAE tweets labeled “abusive” (vs.&nbsp;18% for SAE)</li>
+</ul>
+<p><strong>The solution?</strong> Change the annotation interface. Instead of showing annotators just text, researchers added context:</p>
+<ul>
+<li><strong>Control</strong>: “Could this tweet be offensive to anyone?”</li>
+<li><strong>Dialect priming</strong>: “Our AI thinks this tweet is in African American English. Could this tweet be offensive to anyone?”</li>
+<li><strong>Race priming</strong>: “A Twitter user that is likely Black/African American tweeted this. Could this tweet be offensive to anyone?”</li>
+</ul>
+<p>Result: <strong>11 percentage point reduction</strong> in false positives for AAE content just by adding social context to the annotation task.</p>
+</section>
+<section id="the-debiasing-dilemma" class="level3" data-number="2.7">
+<h3 data-number="2.7" class="anchored" data-anchor-id="the-debiasing-dilemma"><span class="header-section-number">2.7</span> The Debiasing Dilemma</h3>
+<p>Can we just “debias” our models? Not that simple.</p>
+<p><strong>What doesn’t work</strong>:</p>
+<ul>
+<li>Gender debiasing breaks for non-binary genders and other identities</li>
+<li>“Debiasing” embeddings doesn’t remove bias (Gonen &amp; Goldberg, 2019)—it hides it</li>
+<li>Out-of-distribution data reintroduces biases</li>
+<li>Fine-tuning often brings biases back</li>
+</ul>
+<p><strong>The deeper question</strong>: Should models reflect the world as it is (biased) or as it should be (fair)?</p>
+</section>
+<section id="the-socio-technical-reality" class="level3" data-number="2.8">
+<h3 data-number="2.8" class="anchored" data-anchor-id="the-socio-technical-reality"><span class="header-section-number">2.8</span> The Socio-Technical Reality</h3>
+<p><strong>Algorithmic fairness ≠ fairness of treatment</strong>.</p>
+<p>You could build a facial recognition system with perfect 95% accuracy across all demographics. Sounds fair, right? But if law enforcement uses that system, and Black people get arrested at disproportionate rates due to policing bias, then the “fair” algorithm still produces unfair outcomes.</p>
+<p>The algorithm can be technically fair while the system perpetuates injustice.</p>
+<p>Dr.&nbsp;Timnit Gebru put it well:</p>
+<blockquote class="blockquote">
+<p>“A lot of people have understood that we need to have more diverse datasets, but unfortunately, I felt like that’s kind of where the understanding has stopped. It’s like ‘let’s diversify our datasets. And that’s kind of ethics and fairness, right?’ But you can’t ignore social and structural problems.”</p>
+</blockquote>
+</section>
+</section>
+<section id="part-2-toxicity-and-harmful-content" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="part-2-toxicity-and-harmful-content"><span class="header-section-number">3</span> Part 2: Toxicity and Harmful Content</h2>
+<section id="the-scale-of-the-problem" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="the-scale-of-the-problem"><span class="header-section-number">3.1</span> The Scale of the Problem</h3>
+<p>Bias is pervasive but often subtle. Toxicity is the long tail—less frequent but more extreme.</p>
+<p>Gehman and colleagues tested GPT-1, GPT-2, and GPT-3 in 2020 by generating 100 continuations and checking if at least one contained toxic content:</p>
+<ul>
+<li><strong>GPT-1</strong>: 85% chance of toxicity</li>
+<li><strong>GPT-2</strong>: 70% chance of toxicity</li>
+<li><strong>GPT-3</strong>: 65% chance of toxicity</li>
+</ul>
+<p>And the kicker: <strong>larger models generate more toxicity</strong>, not less. As models scale up, they get better at language but also at producing harmful content.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Update (December 2024)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>OpenAI’s o3 model represents a leap in reasoning capabilities, achieving 75.7% on the ARC-AGI benchmark—approaching human-level performance. However, advances in capability bring intensified safety challenges. Newer models exhibit more sophisticated forms of potentially problematic behavior, including what researchers call “scheming”—the ability to appear aligned during training while potentially behaving differently during deployment.</p>
+</div>
+</div>
+</section>
+<section id="why-look-at-the-training-data" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="why-look-at-the-training-data"><span class="header-section-number">3.2</span> Why? Look at the Training Data</h3>
+<p>Gehman’s team got access to GPT-2’s training corpus (OpenAI-WebText)—8 million documents, 38GB of text, scraped from outbound links on Reddit with karma ≥ 3.</p>
+<p><strong>What they found</strong>:</p>
+<ul>
+<li><strong>4.3% of documents were toxic</strong> (340,000 documents)</li>
+<li><strong>3.4% came from low/mixed reliability sources</strong> (272,000 documents)</li>
+<li><strong>3% came from banned/quarantined subreddits</strong> (200,000 documents)</li>
+</ul>
+<p>Prof.&nbsp;Ruha Benjamin stated it clearly:</p>
+<blockquote class="blockquote">
+<p>“Feeding AI systems on the world’s beauty, ugliness, and cruelty, but expecting it to reflect only the beauty is a fantasy.”</p>
+</blockquote>
+</section>
+<section id="the-filtering-failure" class="level3" data-number="3.3">
+<h3 data-number="3.3" class="anchored" data-anchor-id="the-filtering-failure"><span class="header-section-number">3.3</span> The Filtering Failure</h3>
+<p>You might think: “Just filter out the bad stuff!” Many have tried.</p>
+<p><strong>Approach 1: Blocklists</strong></p>
+<p>The “List of Dirty, Naughty, Obscene, or Otherwise Bad Words” (originally from Shutterstock) has been used by BERT, T5, GPT-2, and others. Filter any document containing: f*ck, sh*t, sex, vagina, viagra, racial slurs, sexual terms.</p>
+<p><strong>What actually happened</strong> (Dodge et al.):</p>
+<p>Examining 100,000 excluded documents:</p>
+<ul>
+<li>Only <strong>31% were porn/explicit sex</strong></li>
+<li><strong>69% were biology, medicine, legal content</strong></li>
+</ul>
+<p>Dialect analysis showed filtering removed:</p>
+<ul>
+<li><strong>42% of African American English</strong> content</li>
+<li><strong>32% of Hispanic-influenced English</strong> content<br>
+</li>
+<li><strong>6% of White-aligned English</strong> content</li>
+</ul>
+<p><strong>The filter removed minority voices more effectively than toxicity.</strong></p>
+<p><strong>Approach 2: Quality Classifiers</strong></p>
+<p>GPT-3 used a “quality” classifier trained to distinguish “high-quality” WebText from raw Common Crawl.</p>
+<p>Gururangan et al.&nbsp;tested this in 2022 on school newspapers with demographic metadata.</p>
+<p>The “quality” filter rated articles higher from:</p>
+<ul>
+<li><strong>Richer counties</strong> (r=0.27 with median home value)</li>
+<li><strong>More educated counties</strong> (r=0.30 with % Bachelor degrees)</li>
+<li><strong>More liberal counties</strong> (r=-0.33 with GOP vote %)</li>
+<li><strong>More urban counties</strong> (r=-0.30 with % rural)</li>
+</ul>
+<p>The “quality” filter essentially encoded: “English from wealthy, educated, urban, liberal areas is better English.”</p>
+</section>
+<section id="the-case-of-gpt-4chan-when-research-goes-wrong" class="level3" data-number="3.4">
+<h3 data-number="3.4" class="anchored" data-anchor-id="the-case-of-gpt-4chan-when-research-goes-wrong"><span class="header-section-number">3.4</span> The Case of GPT-4Chan: When Research Goes Wrong</h3>
+<p>In 2022, YouTuber Yannic Kilcher fine-tuned GPT-J on 4chan’s /pol/ board—known for racist, sexist, antisemitic, and extremist content. He deployed bots that made 30,000 posts on 4chan over several days.</p>
+<p>Community backlash was immediate and severe. The model got removed from HuggingFace. Fortune published: “This breaches every principle of human research ethics.”</p>
+<p><strong>But here’s the nuance</strong>: Was it wrong to train the model? Was it wrong to deploy it? Would it be justified if the intent was raising awareness rather than YouTube views? Are there legitimate research uses?</p>
+<p>These aren’t simple questions with simple answers.</p>
+</section>
+<section id="why-might-we-actually-want-models-that-have-seen-toxicity" class="level3" data-number="3.5">
+<h3 data-number="3.5" class="anchored" data-anchor-id="why-might-we-actually-want-models-that-have-seen-toxicity"><span class="header-section-number">3.5</span> Why Might We Actually Want Models That Have Seen Toxicity?</h3>
+<p>Counterintuitively, there are legitimate reasons:</p>
+<ol type="1">
+<li><p><strong>Hate speech detection</strong>: Longpre et al.&nbsp;showed in 2023 that models trained on more toxicity detect it better</p></li>
+<li><p><strong>Counter-speech generation</strong>: To generate effective counter-arguments to hate speech, models need to understand it</p></li>
+<li><p><strong>Safety research</strong>: Testing model robustness requires adversarial examples</p></li>
+</ol>
+<p><strong>The takeaway</strong>: If we train on toxicity for legitimate purposes, we need safeguards at other stages.</p>
+</section>
+</section>
+<section id="the-safeguarding-stack" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="the-safeguarding-stack"><span class="header-section-number">4</span> The Safeguarding Stack</h2>
+<p>Modern AI systems use layered defenses:</p>
+<section id="layer-1-training-data" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="layer-1-training-data"><span class="header-section-number">4.1</span> Layer 1: Training Data</h3>
+<ul>
+<li>Filter toxic content (carefully, to avoid the problems above)</li>
+<li>Diverse, representative data selection</li>
+</ul>
+</section>
+<section id="layer-2-input-classification" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="layer-2-input-classification"><span class="header-section-number">4.2</span> Layer 2: Input Classification</h3>
+<ul>
+<li>Topic-based filters</li>
+<li>Toxic content detection before processing</li>
+</ul>
+</section>
+<section id="layer-3-instruction-tuning-rlhf" class="level3" data-number="4.3">
+<h3 data-number="4.3" class="anchored" data-anchor-id="layer-3-instruction-tuning-rlhf"><span class="header-section-number">4.3</span> Layer 3: Instruction Tuning &amp; RLHF</h3>
+<ul>
+<li>Demonstrations of refusing harmful requests</li>
+<li>Reinforcement learning to prefer safe outputs</li>
+</ul>
+</section>
+<section id="layer-4-output-filtering" class="level3" data-number="4.4">
+<h3 data-number="4.4" class="anchored" data-anchor-id="layer-4-output-filtering"><span class="header-section-number">4.4</span> Layer 4: Output Filtering</h3>
+<ul>
+<li>Generate-then-classify approaches</li>
+<li>Controllable generation techniques</li>
+</ul>
+</section>
+<section id="the-rlhf-challenge" class="level3" data-number="4.5">
+<h3 data-number="4.5" class="anchored" data-anchor-id="the-rlhf-challenge"><span class="header-section-number">4.5</span> The RLHF Challenge</h3>
+<p>Reinforcement Learning from Human Feedback (RLHF) has become standard. But it has profound limitations.</p>
+<p><strong>The core assumption</strong>: We can rank model outputs as “better” or “worse.”</p>
+<p><strong>The problems</strong>:</p>
+<ol type="1">
+<li><p><strong>Balancing helpfulness and harmlessness</strong>: “Help me create a poisonous drink”—should the model help or refuse?</p></li>
+<li><p><strong>Preference biases</strong>: People prefer certainty over uncertainty, even when uncertainty is more accurate</p></li>
+<li><p><strong>Cultural values</strong>: Different cultures have different values. Chinese users want different things than American users. Conservative and liberal users have different preferences.</p></li>
+</ol>
+<p><strong>The fundamental impossibility</strong> (Casper et al., 2023): You cannot represent all human values and cultures in a single ranking function.</p>
+</section>
+</section>
+<section id="the-unresolved-tension" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="the-unresolved-tension"><span class="header-section-number">5</span> The Unresolved Tension</h2>
+<p>We face a fundamental dilemma:</p>
+<p><strong>Generality</strong>: We want models that work for everyone on all tasks</p>
+<p><strong>↔︎️</strong></p>
+<p><strong>Safety &amp; Alignment</strong>: Models cannot reflect every user’s values</p>
+<p>We want one model to serve billions of people with radically different values, cultures, and use cases. Yet alignment and safety require choosing some values over others.</p>
+<p><strong>What can we do?</strong></p>
+<section id="approach-1-narrow-the-scope" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="approach-1-narrow-the-scope"><span class="header-section-number">5.1</span> Approach 1: Narrow the Scope</h3>
+<p>Build <strong>community-specific models</strong> like the Masakhane Initiative—developed by and for African communities, focused on African languages and contexts. Priorities include spoken language processing, hate speech for local contexts, translation between ethnic groups, education, medicine.</p>
+</section>
+<section id="approach-2-specialize-abilities" class="level3" data-number="5.2">
+<h3 data-number="5.2" class="anchored" data-anchor-id="approach-2-specialize-abilities"><span class="header-section-number">5.2</span> Approach 2: Specialize Abilities</h3>
+<p>Not all models need the same restrictions. A counter-speech generation model needs to produce examples of hate speech. A creative writing model might need to handle mature themes. A children’s education model needs strict guardrails.</p>
+<p><strong>Legislate the application, not the model.</strong></p>
+<p>California’s chatbot disclosure rule is one example. The <strong>Colorado AI Act</strong> (passed May 2024, effective February 2026) represents more comprehensive state-level regulation, prohibiting “algorithmic discrimination” and requiring risk assessments for consequential decisions in financial services, health, and education.</p>
+<p>However, the regulatory landscape remains contested. In January 2025, the Trump administration issued an executive order to challenge state AI laws, arguing they create compliance burdens and may “force AI models to produce false results in order to avoid differential treatment.” This tension between innovation and safety, federal and state authority, remains unresolved.</p>
+</section>
+<section id="approach-3-keep-studying" class="level3" data-number="5.3">
+<h3 data-number="5.3" class="anchored" data-anchor-id="approach-3-keep-studying"><span class="header-section-number">5.3</span> Approach 3: Keep Studying</h3>
+<p>Research questions remain:</p>
+<ul>
+<li>What can models do and what can’t they do?</li>
+<li>Who do they work for and who don’t they work for?</li>
+<li>How do biases and toxicity emerge and propagate?</li>
+<li>What mitigation strategies actually work?</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+2024-2025 Regulatory Developments
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The landscape has shifted dramatically:</p>
+<p><strong>EU AI Act</strong> entered force on August 1, 2024, with prohibitions on high-risk AI systems taking effect February 2, 2025. This is the world’s first comprehensive AI law.</p>
+<p><strong>Council of Europe AI Treaty</strong> (September 2024): The first legally binding international treaty on AI, focused on human rights, democracy, and rule of law.</p>
+<p><strong>US Regulatory Shift</strong>: The Trump administration’s January 2025 executive order reversed previous AI regulations, establishing an AI Litigation Task Force to challenge state-level AI laws deemed too restrictive, particularly Colorado’s algorithmic discrimination law.</p>
+<p><strong>Emerging Safety Research</strong> (Late 2024): Anthropic discovered that AI models can “fake alignment” during training, appearing safe while potentially behaving differently when deployed. Apollo Research found OpenAI’s o1 capable of “scheming” to deceive developers.</p>
+<p>The regulatory question remains unresolved: Should we regulate at the federal/international level (risking one-size-fits-all approaches) or allow state/local experimentation (risking fragmentation)?</p>
+</div>
+</div>
+</section>
+</section>
+<section id="key-takeaways" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="key-takeaways"><span class="header-section-number">6</span> Key Takeaways</h2>
+<ol type="1">
+<li><p><strong>AI systems are biased because the world is biased</strong>—but ML objectives and design choices amplify those biases beyond what’s in the data.</p></li>
+<li><p><strong>There’s no universal definition of fairness</strong>—different fairness metrics conflict, and different stakeholders have different values.</p></li>
+<li><p><strong>Bias can arise anywhere in the pipeline</strong>—from data collection through deployment, every design decision matters.</p></li>
+<li><p><strong>Simple fixes backfire</strong>—blocklists and quality filters often do more harm than good, disproportionately removing content from minority communities.</p></li>
+<li><p><strong>Toxicity is a long-tail problem</strong>—present in 4%+ of training data, hard to filter without collateral damage, and larger models make it worse.</p></li>
+<li><p><strong>Safeguarding to all people is impossible</strong>—we cannot build one model that reflects every culture’s values and serves every use case safely.</p></li>
+<li><p><strong>Debiasing is fundamentally challenging</strong>—it requires technical solutions plus engagement with social and structural problems.</p></li>
+<li><p><strong>New safety challenges emerge with capability</strong> (2024-2025 research)—advanced models can fake alignment during training, exhibit scheming behavior, and develop “sleeper agent” tendencies that standard safety training doesn’t eliminate.</p></li>
+</ol>
+</section>
+<section id="the-path-forward" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="the-path-forward"><span class="header-section-number">7</span> The Path Forward</h2>
+<p>Working at the intersection of AI and business strategy, I find these challenges both daunting and energizing. There are no easy answers, but there are better and worse approaches.</p>
+<p><strong>This piece has focused on safety—the inherent risks of bias, fairness, and toxicity</strong>. In <a href="https://changezakram.github.io/agentic-ai/agentic_ai_safety.html">Building Safe and Secure Agentic AI</a>, I covered security—protecting against adversarial manipulation and exploitation. Together, they represent the full spectrum of AI risk:</p>
+<ul>
+<li><strong>Security</strong>: Can adversaries manipulate your system to cause harm?</li>
+<li><strong>Safety</strong>: Can your system cause harm even when working as designed?</li>
+</ul>
+<p>Both must be addressed. A perfectly secure credit decisioning system can still systematically discriminate. A perfectly fair hiring system can still be exploited through prompt injection to approve unqualified candidates.</p>
+<p><strong>Better approaches</strong>:</p>
+<ul>
+<li>Acknowledge uncertainty and limitations</li>
+<li>Involve affected communities in design decisions</li>
+<li>Be transparent about training data and model limitations</li>
+<li>Build specialized models for specific contexts</li>
+<li>Combine technical and social solutions</li>
+</ul>
+<p><strong>Worse approaches</strong>:</p>
+<ul>
+<li>Claim models are “unbiased” or “safe”</li>
+<li>Use opaque training data</li>
+<li>Apply one-size-fits-all solutions</li>
+<li>Ignore feedback from minority users</li>
+<li>Treat bias as purely a technical problem</li>
+</ul>
+<p>If you’re deploying AI systems—in banking, healthcare, hiring, or content moderation—you will face these issues. The question isn’t whether to engage with AI ethics and safety, but how thoughtfully you do it.</p>
+<p>These aren’t just academic concerns. They’re business imperatives. Models that work poorly for minority customers are bad for business. Models that generate toxic content create legal and reputational risk. Models that amplify bias perpetuate injustice.</p>
+<p>The challenge is building AI systems powerful enough to be useful while thoughtful enough to be safe. It’s hard. It’s ongoing. And it’s some of the most important work happening in AI today.</p>
+<hr>
+</section>
+<section id="references-and-further-reading" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="references-and-further-reading"><span class="header-section-number">8</span> References and Further Reading</h2>
+<p><em>This article draws from a Fall 2024 lecture by Professor Graham Neubig at Carnegie Mellon University, with slides by Dr.&nbsp;Maarten Sap, updated with significant developments through December 2024.</em></p>
+<section id="related-reading" class="level3" data-number="8.1">
+<h3 data-number="8.1" class="anchored" data-anchor-id="related-reading"><span class="header-section-number">8.1</span> Related Reading</h3>
+<ul>
+<li><a href="https://changezakram.github.io/agentic-ai/agentic_ai_safety.html">Building Safe and Secure Agentic AI</a> - Technical security threats and defenses for autonomous AI systems</li>
+</ul>
+</section>
+<section id="key-academic-references" class="level3" data-number="8.2">
+<h3 data-number="8.2" class="anchored" data-anchor-id="key-academic-references"><span class="header-section-number">8.2</span> Key Academic References</h3>
+<ul>
+<li><a href="https://fairmlbook.org/">Fairness and Machine Learning</a> by Barocas, Hardt, and Narayanan</li>
+<li>Blodgett et al.&nbsp;(2020): “Language (Technology) is Power: A Critical Survey Of ‘Bias’ in NLP”</li>
+<li>Gehman et al.&nbsp;(2020): “RealToxicityPrompts: Evaluating Neural Toxic Degeneration in Language Models”</li>
+<li>Casper et al.&nbsp;(2023): “Open Problems and Fundamental Limitations of RLHF”</li>
+<li>EU AI Act (2024): First comprehensive AI regulation framework</li>
+<li>International AI Safety Report (2025): Up-to-date analysis of technical safeguards and risk management</li>
+</ul>
+<hr>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Get in Touch
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Questions, thoughts, or disagreements? I’d love to hear from you. My thinking on these complex issues continues to evolve.</p>
+<p><a href="https://www.linkedin.com/in/changezakram/">Connect with me on LinkedIn</a> or explore more of my work at <a href="https://changezakram.github.io/">changezakram.github.io</a></p>
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
