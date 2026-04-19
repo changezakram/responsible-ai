@@ -11,9 +11,8 @@ format:
     theme: cosmo
 ---
 
-# The Hidden Dangers of AI: Bias, Toxicity, and Safety in Modern AI Systems
 
-## Introduction
+# Introduction
 
 ::: {.callout-note}
 AI risk has two dimensions: **security** and **safety**. Security focuses on attacks against systems. Safety focuses on harm that can arise even when systems behave as designed.
@@ -27,7 +26,7 @@ A model can be secure from attackers and still produce unfair or toxic outcomes.
 
 ---
 
-## The Real-World Cost of AI Bias
+# The Real-World Cost of AI Bias
 
 The consequences are already visible.
 
@@ -40,7 +39,7 @@ These are not edge cases. They show what happens when technical systems meet rea
 
 ---
 
-## Understanding Bias in AI
+# Understanding Bias in AI
 
 ## What Do We Mean by Bias?
 
@@ -81,7 +80,7 @@ Every stage matters.
 
 ---
 
-## Case Studies: How Bias Appears in Practice
+# Case Studies: How Bias Appears in Practice
 
 These issues become clearer when we look at how they appear in real systems.
 
@@ -109,7 +108,7 @@ Even labels can be biased. In hate-speech research, the same phrase may be inter
 
 ---
 
-## Toxicity and Harmful Content
+# Toxicity and Harmful Content
 
 Bias is one class of harm. Toxic content is another. Both emerge from how models are trained and deployed.
 
@@ -142,29 +141,29 @@ The key is governance, not blind inclusion or blind removal.
 
 ---
 
-## The Safeguarding Stack
+# The Safeguarding Stack
 
 ::: {.callout-tip}
 No single control solves these issues. Stronger systems rely on multiple layers of defense across data, prompts, model behavior, and outputs.
 :::
 
-## Layer 1: Training Data
+**Layer 1: Training Data**
 
 - Improve diversity and representativeness
 - Remove clearly harmful material carefully
 - Document data sources and limitations
 
-## Layer 2: Input Controls
+**Layer 2: Input Controls**
 
 - Detect malicious or unsafe requests
 - Apply policy checks before generation
 
-## Layer 3: Alignment and Fine-Tuning
+**Layer 3: Alignment and Fine-Tuning**
 
 - Teach refusal behavior for harmful requests
 - Reinforce helpful and policy-compliant behavior
 
-## Layer 4: Output Controls
+**Layer 4: Output Controls**
 
 - Screen generated responses
 - Use escalation or human review for sensitive cases
@@ -173,7 +172,7 @@ Layered controls are rarely perfect, but they are stronger than relying on one s
 
 ---
 
-## The Hard Tradeoff: Generality vs Alignment
+# The Hard Tradeoff: Generality vs Alignment
 
 Even with layered safeguards, a deeper challenge remains.
 
@@ -183,15 +182,15 @@ A single system cannot perfectly reflect every worldview while remaining consist
 
 That leaves three practical paths:
 
-### Narrow the Scope
+**Narrow the Scope**
 
 Build systems for specific communities, languages, or domains.
 
-### Specialize by Use Case
+**Specialize by Use Case**
 
 Different applications need different controls. A children’s tutor, a creative writing tool, and a fraud investigator should not behave the same way.
 
-### Keep Improving Through Research
+**Keep Improving Through Research**
 
 Many open questions remain around fairness, alignment, evaluation, and long-term behavior.
 
@@ -209,7 +208,7 @@ Many open questions remain around fairness, alignment, evaluation, and long-term
 
 ---
 
-## The Path Forward
+# The Path Forward
 
 ::: {.callout-important}
 For organizations adopting AI, responsible deployment is not separate from business performance. Trust, governance, compliance, and customer outcomes are part of the value equation.

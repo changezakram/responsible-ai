@@ -221,35 +221,31 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#the-hidden-dangers-of-ai-bias-toxicity-and-safety-in-modern-ai-systems" id="toc-the-hidden-dangers-of-ai-bias-toxicity-and-safety-in-modern-ai-systems" class="nav-link active" data-scroll-target="#the-hidden-dangers-of-ai-bias-toxicity-and-safety-in-modern-ai-systems"><span class="header-section-number">1</span> The Hidden Dangers of AI: Bias, Toxicity, and Safety in Modern AI Systems</a>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a></li>
+  <li><a href="#the-real-world-cost-of-ai-bias" id="toc-the-real-world-cost-of-ai-bias" class="nav-link" data-scroll-target="#the-real-world-cost-of-ai-bias"><span class="header-section-number">2</span> The Real-World Cost of AI Bias</a></li>
+  <li><a href="#understanding-bias-in-ai" id="toc-understanding-bias-in-ai" class="nav-link" data-scroll-target="#understanding-bias-in-ai"><span class="header-section-number">3</span> Understanding Bias in AI</a>
   <ul class="collapse">
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">1.1</span> Introduction</a></li>
-  <li><a href="#the-real-world-cost-of-ai-bias" id="toc-the-real-world-cost-of-ai-bias" class="nav-link" data-scroll-target="#the-real-world-cost-of-ai-bias"><span class="header-section-number">1.2</span> The Real-World Cost of AI Bias</a></li>
-  <li><a href="#understanding-bias-in-ai" id="toc-understanding-bias-in-ai" class="nav-link" data-scroll-target="#understanding-bias-in-ai"><span class="header-section-number">1.3</span> Understanding Bias in AI</a></li>
-  <li><a href="#what-do-we-mean-by-bias" id="toc-what-do-we-mean-by-bias" class="nav-link" data-scroll-target="#what-do-we-mean-by-bias"><span class="header-section-number">1.4</span> What Do We Mean by Bias?</a></li>
-  <li><a href="#the-fairness-problem-has-no-single-answer" id="toc-the-fairness-problem-has-no-single-answer" class="nav-link" data-scroll-target="#the-fairness-problem-has-no-single-answer"><span class="header-section-number">1.5</span> The Fairness Problem Has No Single Answer</a></li>
-  <li><a href="#bias-can-enter-anywhere-in-the-pipeline" id="toc-bias-can-enter-anywhere-in-the-pipeline" class="nav-link" data-scroll-target="#bias-can-enter-anywhere-in-the-pipeline"><span class="header-section-number">1.6</span> Bias Can Enter Anywhere in the Pipeline</a></li>
-  <li><a href="#case-studies-how-bias-appears-in-practice" id="toc-case-studies-how-bias-appears-in-practice" class="nav-link" data-scroll-target="#case-studies-how-bias-appears-in-practice"><span class="header-section-number">1.7</span> Case Studies: How Bias Appears in Practice</a></li>
-  <li><a href="#language-identification-and-global-inequality" id="toc-language-identification-and-global-inequality" class="nav-link" data-scroll-target="#language-identification-and-global-inequality"><span class="header-section-number">1.8</span> Language Identification and Global Inequality</a></li>
-  <li><a href="#models-can-amplify-existing-bias" id="toc-models-can-amplify-existing-bias" class="nav-link" data-scroll-target="#models-can-amplify-existing-bias"><span class="header-section-number">1.9</span> Models Can Amplify Existing Bias</a></li>
-  <li><a href="#the-annotation-problem" id="toc-the-annotation-problem" class="nav-link" data-scroll-target="#the-annotation-problem"><span class="header-section-number">1.10</span> The Annotation Problem</a></li>
-  <li><a href="#toxicity-and-harmful-content" id="toc-toxicity-and-harmful-content" class="nav-link" data-scroll-target="#toxicity-and-harmful-content"><span class="header-section-number">1.11</span> Toxicity and Harmful Content</a></li>
-  <li><a href="#why-simple-filtering-fails" id="toc-why-simple-filtering-fails" class="nav-link" data-scroll-target="#why-simple-filtering-fails"><span class="header-section-number">1.12</span> Why Simple Filtering Fails</a></li>
-  <li><a href="#why-models-sometimes-need-exposure-to-harmful-content" id="toc-why-models-sometimes-need-exposure-to-harmful-content" class="nav-link" data-scroll-target="#why-models-sometimes-need-exposure-to-harmful-content"><span class="header-section-number">1.13</span> Why Models Sometimes Need Exposure to Harmful Content</a></li>
-  <li><a href="#the-safeguarding-stack" id="toc-the-safeguarding-stack" class="nav-link" data-scroll-target="#the-safeguarding-stack"><span class="header-section-number">1.14</span> The Safeguarding Stack</a></li>
-  <li><a href="#layer-1-training-data" id="toc-layer-1-training-data" class="nav-link" data-scroll-target="#layer-1-training-data"><span class="header-section-number">1.15</span> Layer 1: Training Data</a></li>
-  <li><a href="#layer-2-input-controls" id="toc-layer-2-input-controls" class="nav-link" data-scroll-target="#layer-2-input-controls"><span class="header-section-number">1.16</span> Layer 2: Input Controls</a></li>
-  <li><a href="#layer-3-alignment-and-fine-tuning" id="toc-layer-3-alignment-and-fine-tuning" class="nav-link" data-scroll-target="#layer-3-alignment-and-fine-tuning"><span class="header-section-number">1.17</span> Layer 3: Alignment and Fine-Tuning</a></li>
-  <li><a href="#layer-4-output-controls" id="toc-layer-4-output-controls" class="nav-link" data-scroll-target="#layer-4-output-controls"><span class="header-section-number">1.18</span> Layer 4: Output Controls</a></li>
-  <li><a href="#the-hard-tradeoff-generality-vs-alignment" id="toc-the-hard-tradeoff-generality-vs-alignment" class="nav-link" data-scroll-target="#the-hard-tradeoff-generality-vs-alignment"><span class="header-section-number">1.19</span> The Hard Tradeoff: Generality vs Alignment</a>
+  <li><a href="#what-do-we-mean-by-bias" id="toc-what-do-we-mean-by-bias" class="nav-link" data-scroll-target="#what-do-we-mean-by-bias"><span class="header-section-number">3.1</span> What Do We Mean by Bias?</a></li>
+  <li><a href="#the-fairness-problem-has-no-single-answer" id="toc-the-fairness-problem-has-no-single-answer" class="nav-link" data-scroll-target="#the-fairness-problem-has-no-single-answer"><span class="header-section-number">3.2</span> The Fairness Problem Has No Single Answer</a></li>
+  <li><a href="#bias-can-enter-anywhere-in-the-pipeline" id="toc-bias-can-enter-anywhere-in-the-pipeline" class="nav-link" data-scroll-target="#bias-can-enter-anywhere-in-the-pipeline"><span class="header-section-number">3.3</span> Bias Can Enter Anywhere in the Pipeline</a></li>
+  </ul></li>
+  <li><a href="#case-studies-how-bias-appears-in-practice" id="toc-case-studies-how-bias-appears-in-practice" class="nav-link" data-scroll-target="#case-studies-how-bias-appears-in-practice"><span class="header-section-number">4</span> Case Studies: How Bias Appears in Practice</a>
   <ul class="collapse">
-  <li><a href="#narrow-the-scope" id="toc-narrow-the-scope" class="nav-link" data-scroll-target="#narrow-the-scope"><span class="header-section-number">1.19.1</span> Narrow the Scope</a></li>
-  <li><a href="#specialize-by-use-case" id="toc-specialize-by-use-case" class="nav-link" data-scroll-target="#specialize-by-use-case"><span class="header-section-number">1.19.2</span> Specialize by Use Case</a></li>
-  <li><a href="#keep-improving-through-research" id="toc-keep-improving-through-research" class="nav-link" data-scroll-target="#keep-improving-through-research"><span class="header-section-number">1.19.3</span> Keep Improving Through Research</a></li>
+  <li><a href="#language-identification-and-global-inequality" id="toc-language-identification-and-global-inequality" class="nav-link" data-scroll-target="#language-identification-and-global-inequality"><span class="header-section-number">4.1</span> Language Identification and Global Inequality</a></li>
+  <li><a href="#models-can-amplify-existing-bias" id="toc-models-can-amplify-existing-bias" class="nav-link" data-scroll-target="#models-can-amplify-existing-bias"><span class="header-section-number">4.2</span> Models Can Amplify Existing Bias</a></li>
+  <li><a href="#the-annotation-problem" id="toc-the-annotation-problem" class="nav-link" data-scroll-target="#the-annotation-problem"><span class="header-section-number">4.3</span> The Annotation Problem</a></li>
   </ul></li>
-  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways"><span class="header-section-number">1.20</span> Key Takeaways</a></li>
-  <li><a href="#the-path-forward" id="toc-the-path-forward" class="nav-link" data-scroll-target="#the-path-forward"><span class="header-section-number">1.21</span> The Path Forward</a></li>
+  <li><a href="#toxicity-and-harmful-content" id="toc-toxicity-and-harmful-content" class="nav-link" data-scroll-target="#toxicity-and-harmful-content"><span class="header-section-number">5</span> Toxicity and Harmful Content</a>
+  <ul class="collapse">
+  <li><a href="#why-simple-filtering-fails" id="toc-why-simple-filtering-fails" class="nav-link" data-scroll-target="#why-simple-filtering-fails"><span class="header-section-number">5.1</span> Why Simple Filtering Fails</a></li>
+  <li><a href="#why-models-sometimes-need-exposure-to-harmful-content" id="toc-why-models-sometimes-need-exposure-to-harmful-content" class="nav-link" data-scroll-target="#why-models-sometimes-need-exposure-to-harmful-content"><span class="header-section-number">5.2</span> Why Models Sometimes Need Exposure to Harmful Content</a></li>
   </ul></li>
+  <li><a href="#the-safeguarding-stack" id="toc-the-safeguarding-stack" class="nav-link" data-scroll-target="#the-safeguarding-stack"><span class="header-section-number">6</span> The Safeguarding Stack</a></li>
+  <li><a href="#the-hard-tradeoff-generality-vs-alignment" id="toc-the-hard-tradeoff-generality-vs-alignment" class="nav-link" data-scroll-target="#the-hard-tradeoff-generality-vs-alignment"><span class="header-section-number">7</span> The Hard Tradeoff: Generality vs Alignment</a>
+  <ul class="collapse">
+  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways"><span class="header-section-number">7.1</span> Key Takeaways</a></li>
+  </ul></li>
+  <li><a href="#the-path-forward" id="toc-the-path-forward" class="nav-link" data-scroll-target="#the-path-forward"><span class="header-section-number">8</span> The Path Forward</a></li>
   </ul>
 </nav>
     </div>
@@ -294,10 +290,8 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="the-hidden-dangers-of-ai-bias-toxicity-and-safety-in-modern-ai-systems" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> The Hidden Dangers of AI: Bias, Toxicity, and Safety in Modern AI Systems</h1>
-<section id="introduction" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">1.1</span> Introduction</h2>
+<section id="introduction" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -316,8 +310,8 @@ Note
 <p>A model can be secure from attackers and still produce unfair or toxic outcomes.</p>
 <hr>
 </section>
-<section id="the-real-world-cost-of-ai-bias" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="the-real-world-cost-of-ai-bias"><span class="header-section-number">1.2</span> The Real-World Cost of AI Bias</h2>
+<section id="the-real-world-cost-of-ai-bias" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> The Real-World Cost of AI Bias</h1>
 <p>The consequences are already visible.</p>
 <ul>
 <li><strong>Hiring:</strong> Screening tools can disadvantage qualified candidates from certain groups.</li>
@@ -328,11 +322,10 @@ Note
 <p>These are not edge cases. They show what happens when technical systems meet real human lives.</p>
 <hr>
 </section>
-<section id="understanding-bias-in-ai" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="understanding-bias-in-ai"><span class="header-section-number">1.3</span> Understanding Bias in AI</h2>
-</section>
-<section id="what-do-we-mean-by-bias" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="what-do-we-mean-by-bias"><span class="header-section-number">1.4</span> What Do We Mean by Bias?</h2>
+<section id="understanding-bias-in-ai" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Understanding Bias in AI</h1>
+<section id="what-do-we-mean-by-bias" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="what-do-we-mean-by-bias"><span class="header-section-number">3.1</span> What Do We Mean by Bias?</h2>
 <p>The word <em>bias</em> is used in different ways.</p>
 <ul>
 <li><strong>Statistical bias:</strong> A model systematically misses the true target.</li>
@@ -340,8 +333,8 @@ Note
 </ul>
 <p>These ideas are related but not identical. A model can be statistically strong and still create unfair outcomes.</p>
 </section>
-<section id="the-fairness-problem-has-no-single-answer" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="the-fairness-problem-has-no-single-answer"><span class="header-section-number">1.5</span> The Fairness Problem Has No Single Answer</h2>
+<section id="the-fairness-problem-has-no-single-answer" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="the-fairness-problem-has-no-single-answer"><span class="header-section-number">3.2</span> The Fairness Problem Has No Single Answer</h2>
 <p>Suppose you are building a resume screening model. What does fairness mean?</p>
 <p>Possible answers include:</p>
 <ul>
@@ -352,8 +345,8 @@ Note
 </ul>
 <p>The difficulty is that these definitions often conflict. Improving one can worsen another. Fairness is not a single metric that can be maximized once and solved forever.</p>
 </section>
-<section id="bias-can-enter-anywhere-in-the-pipeline" class="level2" data-number="1.6">
-<h2 data-number="1.6" class="anchored" data-anchor-id="bias-can-enter-anywhere-in-the-pipeline"><span class="header-section-number">1.6</span> Bias Can Enter Anywhere in the Pipeline</h2>
+<section id="bias-can-enter-anywhere-in-the-pipeline" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="bias-can-enter-anywhere-in-the-pipeline"><span class="header-section-number">3.3</span> Bias Can Enter Anywhere in the Pipeline</h2>
 <p>Bias does not come only from data. It can arise through decisions made across the full lifecycle:</p>
 <ol type="1">
 <li>Data collection</li>
@@ -368,17 +361,17 @@ Note
 <p>Every stage matters.</p>
 <hr>
 </section>
-<section id="case-studies-how-bias-appears-in-practice" class="level2" data-number="1.7">
-<h2 data-number="1.7" class="anchored" data-anchor-id="case-studies-how-bias-appears-in-practice"><span class="header-section-number">1.7</span> Case Studies: How Bias Appears in Practice</h2>
-<p>These issues become clearer when we look at how they appear in real systems.</p>
 </section>
-<section id="language-identification-and-global-inequality" class="level2" data-number="1.8">
-<h2 data-number="1.8" class="anchored" data-anchor-id="language-identification-and-global-inequality"><span class="header-section-number">1.8</span> Language Identification and Global Inequality</h2>
+<section id="case-studies-how-bias-appears-in-practice" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Case Studies: How Bias Appears in Practice</h1>
+<p>These issues become clearer when we look at how they appear in real systems.</p>
+<section id="language-identification-and-global-inequality" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="language-identification-and-global-inequality"><span class="header-section-number">4.1</span> Language Identification and Global Inequality</h2>
 <p>Language detection appears straightforward, yet performance has varied sharply across regions. Systems trained on “standard” forms of English often perform better on content from wealthier countries and worse on dialects, code-switching, and regional variations.</p>
 <p>The lesson is simple: narrow training data creates narrow performance.</p>
 </section>
-<section id="models-can-amplify-existing-bias" class="level2" data-number="1.9">
-<h2 data-number="1.9" class="anchored" data-anchor-id="models-can-amplify-existing-bias"><span class="header-section-number">1.9</span> Models Can Amplify Existing Bias</h2>
+<section id="models-can-amplify-existing-bias" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="models-can-amplify-existing-bias"><span class="header-section-number">4.2</span> Models Can Amplify Existing Bias</h2>
 <p>Sometimes models do more than reflect patterns in data—they intensify them. If historical examples over-associate a profession or activity with one group, the model may rely on that shortcut even more strongly during prediction.</p>
 <p>Why does this happen?</p>
 <ul>
@@ -388,20 +381,20 @@ Note
 </ul>
 <p>Reality is complex. Shortcuts are easier to learn.</p>
 </section>
-<section id="the-annotation-problem" class="level2" data-number="1.10">
-<h2 data-number="1.10" class="anchored" data-anchor-id="the-annotation-problem"><span class="header-section-number">1.10</span> The Annotation Problem</h2>
+<section id="the-annotation-problem" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="the-annotation-problem"><span class="header-section-number">4.3</span> The Annotation Problem</h2>
 <p>Even labels can be biased. In hate-speech research, the same phrase may be interpreted differently depending on cultural context, dialect, or who is doing the annotation. When context is missing, labeling quality drops and downstream models inherit those mistakes.</p>
 <hr>
 </section>
-<section id="toxicity-and-harmful-content" class="level2" data-number="1.11">
-<h2 data-number="1.11" class="anchored" data-anchor-id="toxicity-and-harmful-content"><span class="header-section-number">1.11</span> Toxicity and Harmful Content</h2>
+</section>
+<section id="toxicity-and-harmful-content" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Toxicity and Harmful Content</h1>
 <p>Bias is one class of harm. Toxic content is another. Both emerge from how models are trained and deployed.</p>
 <p>Bias is often subtle. Toxicity is more visible.</p>
 <p>Large language models trained on broad internet data can generate hate, harassment, misinformation, or abusive language. This should not be surprising. Training data collected from the open web includes both valuable knowledge and harmful content.</p>
 <p>The challenge is not only the presence of toxic material. It is deciding what to remove, what to preserve, and what context matters.</p>
-</section>
-<section id="why-simple-filtering-fails" class="level2" data-number="1.12">
-<h2 data-number="1.12" class="anchored" data-anchor-id="why-simple-filtering-fails"><span class="header-section-number">1.12</span> Why Simple Filtering Fails</h2>
+<section id="why-simple-filtering-fails" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="why-simple-filtering-fails"><span class="header-section-number">5.1</span> Why Simple Filtering Fails</h2>
 <p>A common instinct is to block offensive words or exclude “low-quality” sources. In practice, blunt filters create new problems.</p>
 <ul>
 <li>They can remove educational, medical, or legal content.</li>
@@ -410,8 +403,8 @@ Note
 </ul>
 <p>Filtering is necessary in many settings, but crude filtering is not enough.</p>
 </section>
-<section id="why-models-sometimes-need-exposure-to-harmful-content" class="level2" data-number="1.13">
-<h2 data-number="1.13" class="anchored" data-anchor-id="why-models-sometimes-need-exposure-to-harmful-content"><span class="header-section-number">1.13</span> Why Models Sometimes Need Exposure to Harmful Content</h2>
+<section id="why-models-sometimes-need-exposure-to-harmful-content" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="why-models-sometimes-need-exposure-to-harmful-content"><span class="header-section-number">5.2</span> Why Models Sometimes Need Exposure to Harmful Content</h2>
 <p>There are legitimate reasons for controlled exposure to toxic examples:</p>
 <ul>
 <li>Detecting hate speech</li>
@@ -422,8 +415,9 @@ Note
 <p>The key is governance, not blind inclusion or blind removal.</p>
 <hr>
 </section>
-<section id="the-safeguarding-stack" class="level2" data-number="1.14">
-<h2 data-number="1.14" class="anchored" data-anchor-id="the-safeguarding-stack"><span class="header-section-number">1.14</span> The Safeguarding Stack</h2>
+</section>
+<section id="the-safeguarding-stack" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> The Safeguarding Stack</h1>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -437,31 +431,23 @@ Tip
 <p>No single control solves these issues. Stronger systems rely on multiple layers of defense across data, prompts, model behavior, and outputs.</p>
 </div>
 </div>
-</section>
-<section id="layer-1-training-data" class="level2" data-number="1.15">
-<h2 data-number="1.15" class="anchored" data-anchor-id="layer-1-training-data"><span class="header-section-number">1.15</span> Layer 1: Training Data</h2>
+<p><strong>Layer 1: Training Data</strong></p>
 <ul>
 <li>Improve diversity and representativeness</li>
 <li>Remove clearly harmful material carefully</li>
 <li>Document data sources and limitations</li>
 </ul>
-</section>
-<section id="layer-2-input-controls" class="level2" data-number="1.16">
-<h2 data-number="1.16" class="anchored" data-anchor-id="layer-2-input-controls"><span class="header-section-number">1.16</span> Layer 2: Input Controls</h2>
+<p><strong>Layer 2: Input Controls</strong></p>
 <ul>
 <li>Detect malicious or unsafe requests</li>
 <li>Apply policy checks before generation</li>
 </ul>
-</section>
-<section id="layer-3-alignment-and-fine-tuning" class="level2" data-number="1.17">
-<h2 data-number="1.17" class="anchored" data-anchor-id="layer-3-alignment-and-fine-tuning"><span class="header-section-number">1.17</span> Layer 3: Alignment and Fine-Tuning</h2>
+<p><strong>Layer 3: Alignment and Fine-Tuning</strong></p>
 <ul>
 <li>Teach refusal behavior for harmful requests</li>
 <li>Reinforce helpful and policy-compliant behavior</li>
 </ul>
-</section>
-<section id="layer-4-output-controls" class="level2" data-number="1.18">
-<h2 data-number="1.18" class="anchored" data-anchor-id="layer-4-output-controls"><span class="header-section-number">1.18</span> Layer 4: Output Controls</h2>
+<p><strong>Layer 4: Output Controls</strong></p>
 <ul>
 <li>Screen generated responses</li>
 <li>Use escalation or human review for sensitive cases</li>
@@ -469,28 +455,21 @@ Tip
 <p>Layered controls are rarely perfect, but they are stronger than relying on one safeguard alone.</p>
 <hr>
 </section>
-<section id="the-hard-tradeoff-generality-vs-alignment" class="level2" data-number="1.19">
-<h2 data-number="1.19" class="anchored" data-anchor-id="the-hard-tradeoff-generality-vs-alignment"><span class="header-section-number">1.19</span> The Hard Tradeoff: Generality vs Alignment</h2>
+<section id="the-hard-tradeoff-generality-vs-alignment" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> The Hard Tradeoff: Generality vs Alignment</h1>
 <p>Even with layered safeguards, a deeper challenge remains.</p>
 <p>We often want one model that works for everyone, across every task, culture, and context. That goal runs into a basic constraint: people do not share identical values, expectations, or risk tolerances.</p>
 <p>A single system cannot perfectly reflect every worldview while remaining consistently safe.</p>
 <p>That leaves three practical paths:</p>
-<section id="narrow-the-scope" class="level3" data-number="1.19.1">
-<h3 data-number="1.19.1" class="anchored" data-anchor-id="narrow-the-scope"><span class="header-section-number">1.19.1</span> Narrow the Scope</h3>
+<p><strong>Narrow the Scope</strong></p>
 <p>Build systems for specific communities, languages, or domains.</p>
-</section>
-<section id="specialize-by-use-case" class="level3" data-number="1.19.2">
-<h3 data-number="1.19.2" class="anchored" data-anchor-id="specialize-by-use-case"><span class="header-section-number">1.19.2</span> Specialize by Use Case</h3>
+<p><strong>Specialize by Use Case</strong></p>
 <p>Different applications need different controls. A children’s tutor, a creative writing tool, and a fraud investigator should not behave the same way.</p>
-</section>
-<section id="keep-improving-through-research" class="level3" data-number="1.19.3">
-<h3 data-number="1.19.3" class="anchored" data-anchor-id="keep-improving-through-research"><span class="header-section-number">1.19.3</span> Keep Improving Through Research</h3>
+<p><strong>Keep Improving Through Research</strong></p>
 <p>Many open questions remain around fairness, alignment, evaluation, and long-term behavior.</p>
 <hr>
-</section>
-</section>
-<section id="key-takeaways" class="level2" data-number="1.20">
-<h2 data-number="1.20" class="anchored" data-anchor-id="key-takeaways"><span class="header-section-number">1.20</span> Key Takeaways</h2>
+<section id="key-takeaways" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="key-takeaways"><span class="header-section-number">7.1</span> Key Takeaways</h2>
 <ol type="1">
 <li>AI systems inherit patterns from the world, including harmful ones.</li>
 <li>Bias can enter at any stage of development, not only through data.</li>
@@ -502,8 +481,9 @@ Tip
 </ol>
 <hr>
 </section>
-<section id="the-path-forward" class="level2" data-number="1.21">
-<h2 data-number="1.21" class="anchored" data-anchor-id="the-path-forward"><span class="header-section-number">1.21</span> The Path Forward</h2>
+</section>
+<section id="the-path-forward" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> The Path Forward</h1>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -523,7 +503,6 @@ Important
 <p>The future of AI will not be shaped only by what models can do. It will be shaped by how responsibly we choose to use them.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
