@@ -1,7 +1,7 @@
 ---
 title: "The Hidden Dangers of AI: Bias, Toxicity, and Safety in Modern AI Systems"
 author: "Changez Akram"
-date: "2026-04-18"
+date: "2026-04-21"
 categories: [AI Safety, Responsible AI, Bias, Ethics, LLMs]
 format:
   html:
@@ -16,6 +16,9 @@ format:
 
 ::: {.callout-note}
 AI risk has two dimensions: **security** and **safety**. Security focuses on attacks against systems. Safety focuses on harm that can arise even when systems behave as designed.
+
+For a deeper look at adversarial threats such as prompt injection, privilege escalation, and defense-in-depth controls for autonomous systems, see my article: [Securing Agentic AI Systems: A Defense-in-Depth Approach](https://changezakram.github.io/agentic-ai/agentic_ai_security.html).
+
 :::
 
 Ask an AI image generator for a picture of a teacher and you may get the same pattern repeatedly: a white, middle-aged woman standing in an American classroom. That example may seem minor, but it points to a larger issue. AI systems learn patterns from historical data, and those patterns often include social bias, stereotypes, and harmful assumptions.
