@@ -68,12 +68,5 @@
     "title": "The Hidden Dangers of AI: Bias, Toxicity, and Safety in Modern AI Systems",
     "section": "5.2 Why Models Sometimes Need Exposure to Harmful Content",
     "text": "5.2 Why Models Sometimes Need Exposure to Harmful Content\nThere are legitimate reasons for controlled exposure to toxic examples:\n\nDetecting hate speech\nGenerating counter-speech\nStress-testing safety systems\nRed-team evaluation\n\nThe key is governance, not blind inclusion or blind removal."
-  },
-  {
-    "objectID": "ai-safety.html#key-takeaways",
-    "href": "ai-safety.html#key-takeaways",
-    "title": "The Hidden Dangers of AI: Bias, Toxicity, and Safety in Modern AI Systems",
-    "section": "7.1 Key Takeaways",
-    "text": "7.1 Key Takeaways\n\nAI systems inherit patterns from the world, including harmful ones.\nBias can enter at any stage of development, not only through data.\nFairness has multiple definitions that often conflict.\nSimple fixes such as blunt filtering can create new harms.\nSafety requires layered controls, not a single technique.\nOne universal model will always face tradeoffs across users and contexts.\nResponsible AI requires technical discipline and social judgment."
   }
 ]
