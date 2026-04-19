@@ -36,7 +36,6 @@ The consequences are already visible.
 - **Hiring:** Screening tools can disadvantage qualified candidates from certain groups.
 - **Healthcare:** Models trained on incomplete or outdated data can perform worse for underserved populations.
 - **Content Moderation:** Toxicity detectors may over-flag minority dialects while missing genuine abuse.
-- **Companion AI:** Changes made for safety can still cause emotional harm when users have formed strong attachments.
 
 These are not edge cases. They show what happens when technical systems meet real human lives.
 
