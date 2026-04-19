@@ -39,12 +39,7 @@ These are not edge cases. They show what happens when technical systems meet rea
 
 ## What Do We Mean by Bias?
 
-The word *bias* is used in different ways.
-
-- **Statistical bias:** A model systematically misses the true target.
-- **Social bias:** A system treats people unfairly or reinforces harmful stereotypes.
-
-These ideas are related but not identical. A model can be statistically strong and still create unfair outcomes.
+The word *bias* is used in different ways. In statistics, it means a model systematically misses the true target. In social contexts, it means a system treats people unfairly or reinforces harmful stereotypes. These ideas are related but not identical — a model can be statistically strong and still create unfair outcomes.
 
 ## The Fairness Problem Has No Single Answer
 
@@ -61,18 +56,7 @@ The difficulty is that these definitions often conflict. Improving one can worse
 
 ## Bias Can Enter Anywhere in the Pipeline
 
-Bias does not come only from data. It can arise through decisions made across the full lifecycle:
-
-1. Data collection
-2. Sampling choices
-3. Labeling and annotation
-4. Feature selection
-5. Model design
-6. Optimization objectives
-7. Evaluation metrics
-8. Deployment context
-
-Every stage matters.
+Bias does not come only from data. It can enter at any stage of the development lifecycle — through sampling choices, labeling decisions, feature selection, model design, optimization objectives, evaluation metrics, and deployment context. Every decision point is a potential source.
 
 ---
 
