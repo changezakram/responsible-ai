@@ -195,7 +195,7 @@ Build systems for specific communities, languages, or domains.
 
 **Specialize by Use Case**
 
-Different applications need different controls. A children’s tutor, a creative writing tool, and a fraud investigator should not behave the same way.
+A credit underwriting model requires explainability, demographic parity monitoring, and human review thresholds — governed by SR 11-7 and fair lending law. A customer chatbot at the same bank needs tone controls and hallucination guardrails. Same institution, different risk profiles, different governance requirements.
 
 **Keep Improving Through Research**
 
