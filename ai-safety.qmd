@@ -22,6 +22,7 @@ For a deeper look at adversarial threats such as prompt injection, privilege esc
 :::
 
 A model can be secure from attackers and still produce unfair or toxic outcomes. AI systems learn patterns from historical data, and those patterns often include social bias, stereotypes, and harmful assumptions.
+
 This is no longer a research problem. AI now influences hiring, lending, healthcare, content moderation, and customer service. When these systems fail, the impact is real.
 
 ---
