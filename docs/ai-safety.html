@@ -293,8 +293,7 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>AI risk has two dimensions: <strong>security</strong> and <strong>safety</strong>. Security focuses on attacks against systems. Safety focuses on harm that can arise even when systems behave as designed.</p>
-<p>For a deeper look at adversarial threats such as prompt injection, privilege escalation, and defense-in-depth controls for autonomous systems, see my article: <a href="https://changezakram.github.io/agentic-ai/agentic_ai_security.html">Securing Agentic AI Systems: A Defense-in-Depth Approach</a>.</p>
+<p>AI risk has two dimensions: <strong>security</strong> and <strong>safety</strong>. Security focuses on attacks against systems. Safety focuses on harm that can arise even when systems behave as designed. For a deeper look at adversarial threats such as prompt injection, privilege escalation, and defense-in-depth controls for autonomous systems, see my article: <a href="https://changezakram.github.io/agentic-ai/agentic_ai_security.html">Securing Agentic AI Systems: A Defense-in-Depth Approach</a>.</p>
 </div>
 </div>
 <p>A model can be secure from attackers and still produce unfair or toxic outcomes. AI systems learn patterns from historical data, and those patterns often include social bias, stereotypes, and harmful assumptions.</p>
@@ -384,7 +383,6 @@ Note
 <section id="toxicity-and-harmful-content" class="level1" data-number="5">
 <h1 data-number="5"><span class="header-section-number">5</span> Toxicity and Harmful Content</h1>
 <p>Bias is one class of harm. Toxic content is another. Both emerge from how models are trained and deployed.</p>
-<p>Bias is often subtle. Toxicity is more visible.</p>
 <p>Large language models trained on broad internet data can generate hate, harassment, misinformation, or abusive language. This should not be surprising. Training data collected from the open web includes both valuable knowledge and harmful content.</p>
 <p>The challenge is not only the presence of toxic material. It is deciding what to remove, what to preserve, and what context matters.</p>
 <section id="why-simple-filtering-fails" class="level2" data-number="5.1">
@@ -442,7 +440,7 @@ Note
 <p>Even with layered safeguards, a deeper challenge remains.</p>
 <p>We often want one model that works for everyone, across every task, culture, and context. That goal runs into a basic constraint: people do not share identical values, expectations, or risk tolerances.</p>
 <p>A single system cannot perfectly reflect every worldview while remaining consistently safe.</p>
-<p>That leaves three practical paths:</p>
+<p>Three practical paths exist:</p>
 <p><strong>Narrow the Scope</strong></p>
 <p>Build systems for specific communities, languages, or domains. A model fine-tuned on financial services data will outperform a general-purpose system on regulatory language and domain-specific risk — and will be easier to govern. For a deeper look at how smaller, domain-focused models are built, see <a href="https://changezakram.github.io/Deep-Generative-Models/slm.html">Small Language Models</a>.</p>
 <p><strong>Specialize by Use Case</strong></p>

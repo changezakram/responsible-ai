@@ -15,9 +15,7 @@ format:
 # Introduction
 
 ::: {.callout-note}
-AI risk has two dimensions: **security** and **safety**. Security focuses on attacks against systems. Safety focuses on harm that can arise even when systems behave as designed.
-
-For a deeper look at adversarial threats such as prompt injection, privilege escalation, and defense-in-depth controls for autonomous systems, see my article: [Securing Agentic AI Systems: A Defense-in-Depth Approach](https://changezakram.github.io/agentic-ai/agentic_ai_security.html).
+AI risk has two dimensions: **security** and **safety**. Security focuses on attacks against systems. Safety focuses on harm that can arise even when systems behave as designed. For a deeper look at adversarial threats such as prompt injection, privilege escalation, and defense-in-depth controls for autonomous systems, see my article: [Securing Agentic AI Systems: A Defense-in-Depth Approach](https://changezakram.github.io/agentic-ai/agentic_ai_security.html).
 
 :::
 
@@ -117,8 +115,6 @@ In 2016, ProPublica analyzed COMPAS, a recidivism scoring tool used by courts ac
 
 Bias is one class of harm. Toxic content is another. Both emerge from how models are trained and deployed.
 
-Bias is often subtle. Toxicity is more visible.
-
 Large language models trained on broad internet data can generate hate, harassment, misinformation, or abusive language. This should not be surprising. Training data collected from the open web includes both valuable knowledge and harmful content.
 
 The challenge is not only the presence of toxic material. It is deciding what to remove, what to preserve, and what context matters.
@@ -183,7 +179,7 @@ We often want one model that works for everyone, across every task, culture, and
 
 A single system cannot perfectly reflect every worldview while remaining consistently safe.
 
-That leaves three practical paths:
+Three practical paths exist:
 
 **Narrow the Scope**
 
