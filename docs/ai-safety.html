@@ -221,11 +221,12 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#the-fairness-problem-has-no-single-answer" id="toc-the-fairness-problem-has-no-single-answer" class="nav-link" data-scroll-target="#the-fairness-problem-has-no-single-answer"><span class="header-section-number">3.2</span> The Fairness Problem Has No Single Answer</a></li>
   <li><a href="#bias-can-enter-anywhere-in-the-pipeline" id="toc-bias-can-enter-anywhere-in-the-pipeline" class="nav-link" data-scroll-target="#bias-can-enter-anywhere-in-the-pipeline"><span class="header-section-number">3.3</span> Bias Can Enter Anywhere in the Pipeline</a></li>
   </ul></li>
-  <li><a href="#case-studies-how-bias-appears-in-practice" id="toc-case-studies-how-bias-appears-in-practice" class="nav-link" data-scroll-target="#case-studies-how-bias-appears-in-practice"><span class="header-section-number">4</span> Case Studies: How Bias Appears in Practice</a>
+  <li><a href="#how-bias-appears-in-practice" id="toc-how-bias-appears-in-practice" class="nav-link" data-scroll-target="#how-bias-appears-in-practice"><span class="header-section-number">4</span> How Bias Appears in Practice</a>
   <ul class="collapse">
   <li><a href="#language-identification-and-global-inequality" id="toc-language-identification-and-global-inequality" class="nav-link" data-scroll-target="#language-identification-and-global-inequality"><span class="header-section-number">4.1</span> Language Identification and Global Inequality</a></li>
   <li><a href="#models-can-amplify-existing-bias" id="toc-models-can-amplify-existing-bias" class="nav-link" data-scroll-target="#models-can-amplify-existing-bias"><span class="header-section-number">4.2</span> Models Can Amplify Existing Bias</a></li>
   <li><a href="#the-annotation-problem" id="toc-the-annotation-problem" class="nav-link" data-scroll-target="#the-annotation-problem"><span class="header-section-number">4.3</span> The Annotation Problem</a></li>
+  <li><a href="#high-stakes-prediction-the-compas-case" id="toc-high-stakes-prediction-the-compas-case" class="nav-link" data-scroll-target="#high-stakes-prediction-the-compas-case"><span class="header-section-number">4.4</span> High-Stakes Prediction: The COMPAS Case</a></li>
   </ul></li>
   <li><a href="#toxicity-and-harmful-content" id="toc-toxicity-and-harmful-content" class="nav-link" data-scroll-target="#toxicity-and-harmful-content"><span class="header-section-number">5</span> Toxicity and Harmful Content</a>
   <ul class="collapse">
@@ -354,8 +355,8 @@ Note
 <hr>
 </section>
 </section>
-<section id="case-studies-how-bias-appears-in-practice" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Case Studies: How Bias Appears in Practice</h1>
+<section id="how-bias-appears-in-practice" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> How Bias Appears in Practice</h1>
 <p>These issues become clearer when we look at how they appear in real systems.</p>
 <section id="language-identification-and-global-inequality" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="language-identification-and-global-inequality"><span class="header-section-number">4.1</span> Language Identification and Global Inequality</h2>
@@ -372,10 +373,15 @@ Note
 <li>Rare or complex cases receive less attention.</li>
 </ul>
 <p>Reality is complex. Shortcuts are easier to learn.</p>
+<p>Amazon’s internal resume screening tool, discontinued in 2018, illustrates this directly. Trained on a decade of historical hiring decisions, the model learned to penalize resumes that included the word “women’s” and downgraded graduates of all-women’s colleges. The historical data reflected a male-dominated industry, and the model amplified that pattern rather than correcting for it.</p>
 </section>
 <section id="the-annotation-problem" class="level2" data-number="4.3">
 <h2 data-number="4.3" class="anchored" data-anchor-id="the-annotation-problem"><span class="header-section-number">4.3</span> The Annotation Problem</h2>
 <p>Even labels can be biased. In hate-speech research, the same phrase may be interpreted differently depending on cultural context, dialect, or who is doing the annotation. When context is missing, labeling quality drops and downstream models inherit those mistakes.</p>
+</section>
+<section id="high-stakes-prediction-the-compas-case" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="high-stakes-prediction-the-compas-case"><span class="header-section-number">4.4</span> High-Stakes Prediction: The COMPAS Case</h2>
+<p>In 2016, ProPublica analyzed COMPAS, a recidivism scoring tool used by courts across the United States to inform sentencing and bail decisions. The analysis found that Black defendants were flagged as high future risk at nearly twice the rate of white defendants who went on to commit no further offenses. The model was not designed to discriminate — it was optimizing for predictive accuracy on historical data that reflected decades of unequal enforcement. Accuracy at the aggregate level masked systematic error at the group level. The COMPAS case remains one of the clearest documented examples of how a technically functional model can produce outcomes that are both statistically defensible and socially harmful.</p>
 <hr>
 </section>
 </section>

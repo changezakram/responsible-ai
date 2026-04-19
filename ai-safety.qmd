@@ -82,7 +82,7 @@ Every stage matters.
 
 ---
 
-# Case Studies: How Bias Appears in Practice
+# How Bias Appears in Practice
 
 These issues become clearer when we look at how they appear in real systems.
 
@@ -104,9 +104,16 @@ Why does this happen?
 
 Reality is complex. Shortcuts are easier to learn.
 
+Amazon's internal resume screening tool, discontinued in 2018, illustrates this directly. Trained on a decade of historical hiring decisions, the model learned to penalize resumes that included the word "women's" and downgraded graduates of all-women's colleges. The historical data reflected a male-dominated industry, and the model amplified that pattern rather than correcting for it.
+
 ## The Annotation Problem
 
 Even labels can be biased. In hate-speech research, the same phrase may be interpreted differently depending on cultural context, dialect, or who is doing the annotation. When context is missing, labeling quality drops and downstream models inherit those mistakes.
+
+
+## High-Stakes Prediction: The COMPAS Case
+
+In 2016, ProPublica analyzed COMPAS, a recidivism scoring tool used by courts across the United States to inform sentencing and bail decisions. The analysis found that Black defendants were flagged as high future risk at nearly twice the rate of white defendants who went on to commit no further offenses. The model was not designed to discriminate — it was optimizing for predictive accuracy on historical data that reflected decades of unequal enforcement. Accuracy at the aggregate level masked systematic error at the group level. The COMPAS case remains one of the clearest documented examples of how a technically functional model can produce outcomes that are both statistically defensible and socially harmful.
 
 ---
 
