@@ -148,9 +148,7 @@ The key is governance, not blind inclusion or blind removal.
 
 # The Safeguarding Stack
 
-::: {.callout-tip}
-No single control solves these issues. Stronger systems rely on multiple layers of defense across data, prompts, model behavior, and outputs.
-:::
+Addressing bias and toxicity requires controls at every stage, not a single fix.
 
 **Layer 1: Training Data**
 
