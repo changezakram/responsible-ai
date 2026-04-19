@@ -217,12 +217,8 @@ Many open questions remain around fairness, alignment, evaluation, and long-term
 
 # The Path Forward
 
-::: {.callout-important}
-For organizations adopting AI, responsible deployment is not separate from business performance. Trust, governance, compliance, and customer outcomes are part of the value equation.
-:::
-
 There are no perfect solutions, but there are better choices. Organizations deploying AI should be honest about limitations, transparent about risk, and deliberate about where human oversight is required. They should test systems across different populations, listen to affected users, and treat governance as part of product design rather than an afterthought.
 
 In financial services, this obligation is not aspirational. Regulators already require it. The EU AI Act classifies credit scoring and employment screening as high-risk applications subject to mandatory transparency, human oversight, and conformity assessments. SR 11-7 has long required model risk management disciplines — validation, documentation, and governance — that map directly onto the challenges described in this article. Banks that treat bias and fairness as compliance checkboxes rather than design principles will find themselves exposed on both dimensions.
 
-For business leaders, this is not only an ethics issue. It is a matter of trust, reputation, compliance, and long-term performance. The future of AI will not be shaped only by what models can do. It will be shaped by how responsibly we choose to use them.
+For business leaders, this is not only an ethics issue. It is a matter of trust, reputation, compliance, and long-term performance. The question is not whether AI will be used in high-stakes decisions. It already is. The question is whether the organizations deploying it will govern it with the same rigor they apply to the risks they already understand.
