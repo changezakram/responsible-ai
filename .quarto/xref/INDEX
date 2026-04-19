@@ -1,5 +1,9 @@
 {
   "ai-safety.qmd": {
     "ai-safety.html": "8a43e765"
+  },
+  "explainable-ai.qmd": {
+    "explainable-ai.html": "88c1189a",
+    "explainable-ai.tex": "cc213716"
   }
 }
