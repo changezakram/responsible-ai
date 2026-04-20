@@ -205,7 +205,7 @@ Three practical paths exist:
 
 **2. Specialize by Use Case:** A credit underwriting model requires explainability, demographic parity monitoring, and human review thresholds — governed by SR 11-7 and fair lending law. A customer chatbot at the same bank needs tone controls and hallucination guardrails. Same institution, different risk profiles, different governance requirements.
 
-**3. Keep Improving Through Research:** Many open questions remain around fairness, alignment, evaluation, and long-term behavior. Techniques like constitutional AI, interpretability tooling, and red-teaming are maturing but not yet solved. For a technical overview of how models are shaped after initial training, see [Post Training](https://changezakram.github.io/Deep-Generative-Models/post-training.html).
+**3. Keep Improving Through Research:** Many open questions remain around fairness, alignment, evaluation, and long-term behavior. Post-training techniques — including instruction tuning, RLHF, and constitutional AI — are among the primary tools for teaching models to refuse harmful requests and align outputs with safety requirements. Interpretability tooling and red-teaming remain open research problems. For a technical overview of how models are shaped after initial training, see [Post Training](https://changezakram.github.io/Deep-Generative-Models/post-training.html).
 
 ---
 
