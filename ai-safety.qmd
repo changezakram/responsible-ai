@@ -58,6 +58,12 @@ The difficulty is that these definitions often conflict. Improving one can worse
 
 Bias does not come only from data. It can enter at any stage of the development lifecycle — through sampling choices, labeling decisions, feature selection, model design, optimization objectives, evaluation metrics, and deployment context. Every decision point can introduce bias.
 
+Feature selection is a particularly consequential entry point in financial services. A model that excludes race as a variable can still produce discriminatory outcomes if it relies on features like zip code, income bracket, or educational history — variables that are neutral on their surface but closely correlated with race and ethnicity in practice. These are called proxy variables, and their presence in a model can produce disparate impact even when protected attributes are never explicitly used.
+
+Optimization objectives introduce a different class of risk. Models are trained to minimize loss globally — which means they learn to perform well for the majority population and accept higher error rates for minority groups as a mathematical byproduct. This is not a data problem. It is a design choice embedded in the objective function, and it will reproduce bias regardless of how carefully the training data was curated.
+
+Evaluation metrics are where bias becomes invisible. A model reporting 95% aggregate accuracy can simultaneously perform at 70% for a specific demographic — and standard validation will not surface that gap. In financial services, a credit model that passes SR 11-7 model validation on aggregate performance metrics can still produce outcomes that fail fair lending standards at the group level. Without disaggregated evaluation across protected classes, these failures remain hidden until they appear in production.
+
 ---
 
 # How Bias Appears in Practice
