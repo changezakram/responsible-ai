@@ -159,9 +159,7 @@ Layered controls are rarely perfect, but they are stronger than relying on one s
 
 Even with layered safeguards, a deeper challenge remains.
 
-We often want one model that works for everyone, across every task, culture, and context. That goal runs into a basic constraint: people do not share identical values, expectations, or risk tolerances.
-
-A single system cannot perfectly reflect every worldview while remaining consistently safe.
+We often want one model that works for everyone, across every task, culture, and context. That goal runs into a basic constraint: people do not share identical values, expectations, or risk tolerances. A single system cannot perfectly reflect every worldview while remaining consistently safe.
 
 Three practical paths exist:
 
@@ -187,7 +185,7 @@ Many open questions remain around fairness, alignment, evaluation, and long-term
 4. Simple fixes such as blunt filtering can create new harms.
 5. Safety requires layered controls, not a single technique.
 6. One universal model will always face tradeoffs across users and contexts.
-7. Responsible AI requires technical discipline and social judgment.
+7. Governance must be built into design, not applied as an afterthought.
 
 ---
 
@@ -197,4 +195,4 @@ There are no perfect solutions, but there are better choices. Organizations depl
 
 In financial services, this obligation is not aspirational. Regulators already require it. The EU AI Act classifies credit scoring and employment screening as high-risk applications subject to mandatory transparency, human oversight, and conformity assessments. SR 11-7 has long required model risk management disciplines — validation, documentation, and governance — that map directly onto the challenges described in this article. Banks that treat bias and fairness as compliance checkboxes rather than design principles will find themselves exposed on both dimensions.
 
-For business leaders, this is not only an ethics issue. It is a matter of trust, reputation, compliance, and long-term performance. The question is not whether AI will be used in high-stakes decisions. It already is. The question is whether the organizations deploying it will govern it with the same rigor they apply to the risks they already understand.
+The question is not whether AI will be used in high-stakes decisions. It already is. The question is whether the organizations deploying it will govern it with the same rigor they apply to the risks they already understand.
