@@ -207,7 +207,7 @@ Three practical paths exist:
 
 **3. Keep Improving Through Research:** Many open questions remain around fairness, alignment, evaluation, and long-term behavior. Post-training techniques — including instruction tuning, RLHF, and constitutional AI — are among the primary tools for teaching models to refuse harmful requests and align outputs with safety requirements. For a technical overview of how models are shaped after initial training, see [Post Training](https://changezakram.github.io/Deep-Generative-Models/post-training.html).
 
-These tradeoffs become materially more consequential as AI moves from generating text to taking actions. In agentic systems, a latent bias does not merely result in a biased word — it produces a biased transaction, executed at machine speed without a human in the loop. This shift transforms safety into a core operational risk. For a deeper look at governance and defense-in-depth controls for these autonomous systems, see [Securing Agentic AI Systems: A Defense-in-Depth Approach](https://changezakram.github.io/agentic-ai/agentic_ai_security.html).
+These tradeoffs become materially more consequential as AI moves from generating text to taking actions. In agentic systems, a latent bias does not just stay in the output — it executes as a biased transaction, at machine speed, without a human in the loop. This shift transforms safety into a core operational risk. For a deeper look at governance and defense-in-depth controls for these autonomous systems, see [Securing Agentic AI Systems: A Defense-in-Depth Approach](https://changezakram.github.io/agentic-ai/agentic_ai_security.html).
 
 ---
 
