@@ -130,15 +130,15 @@ The key is governance, not blind inclusion or blind removal.
 
 Bias and toxicity do not announce themselves. Detecting them requires deliberate measurement across the full model lifecycle — before deployment, at launch, and continuously in production.
 
-##Detecting Bias
+## Detecting Bias
 
 The starting point is disaggregated evaluation — breaking model performance down by demographic group rather than reporting a single aggregate accuracy score. A model that performs well overall can still perform poorly for specific populations. Aggregate metrics hide that gap.
 
 Common measurement approaches include:
 
-- Demographic parity: Does the model produce positive outcomes at equal rates across groups?
-- Equalized odds: Are error rates — both false positives and false negatives — consistent across groups?
-- Counterfactual testing: Does the prediction change if a protected attribute such as race or gender is altered while everything else stays the same?
+- **Demographic parity:** Does the model produce positive outcomes at equal rates across groups?
+- **Equalized odds:** Are error rates — both false positives and false negatives — consistent across groups?
+- **Counterfactual testing:** Does the prediction change if a protected attribute such as race or gender is altered while everything else stays the same?
 
 In financial services, these tests map directly onto fair lending obligations. A credit model that passes aggregate validation but fails demographic parity testing is a regulatory and reputational risk, regardless of its overall accuracy.
 
@@ -150,9 +150,9 @@ Toxicity detection relies on a different set of methods. The goal is to identify
 
 Common approaches include:
 
-- Classifier-based screening: Automated models trained to flag toxic content at input and output. Effective at scale but prone to the same dialect and context failures described in §5.
-- Red-team evaluation: Human testers deliberately probe the model with adversarial prompts to surface harmful outputs that automated screening misses.
-- Human review pipelines: Escalation paths that route flagged outputs to human reviewers for sensitive or ambiguous cases.
+- **Classifier-based screening:** Automated models trained to flag toxic content at input and output. Effective at scale but prone to the same dialect and context failures described in §5.
+- **Red-team evaluation:** Human testers deliberately probe the model with adversarial prompts to surface harmful outputs that automated screening misses.
+- **Human review pipelines:** Escalation paths that route flagged outputs to human reviewers for sensitive or ambiguous cases.
 
 No single method is sufficient. Classifiers miss context. Red-teaming is resource intensive and cannot cover every scenario. Human review does not scale. Effective toxicity detection combines all three.
 

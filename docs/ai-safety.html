@@ -235,7 +235,8 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#detecting-bias-and-toxicity" id="toc-detecting-bias-and-toxicity" class="nav-link" data-scroll-target="#detecting-bias-and-toxicity"><span class="header-section-number">6</span> Detecting Bias and Toxicity</a>
   <ul class="collapse">
-  <li><a href="#detecting-toxicity" id="toc-detecting-toxicity" class="nav-link" data-scroll-target="#detecting-toxicity"><span class="header-section-number">6.1</span> Detecting Toxicity</a></li>
+  <li><a href="#detecting-bias" id="toc-detecting-bias" class="nav-link" data-scroll-target="#detecting-bias"><span class="header-section-number">6.1</span> Detecting Bias</a></li>
+  <li><a href="#detecting-toxicity" id="toc-detecting-toxicity" class="nav-link" data-scroll-target="#detecting-toxicity"><span class="header-section-number">6.2</span> Detecting Toxicity</a></li>
   </ul></li>
   <li><a href="#the-safeguarding-stack" id="toc-the-safeguarding-stack" class="nav-link" data-scroll-target="#the-safeguarding-stack"><span class="header-section-number">7</span> The Safeguarding Stack</a></li>
   <li><a href="#the-hard-tradeoff-generality-vs-alignment" id="toc-the-hard-tradeoff-generality-vs-alignment" class="nav-link" data-scroll-target="#the-hard-tradeoff-generality-vs-alignment"><span class="header-section-number">8</span> The Hard Tradeoff: Generality vs Alignment</a></li>
@@ -393,24 +394,26 @@ Note
 <section id="detecting-bias-and-toxicity" class="level1" data-number="6">
 <h1 data-number="6"><span class="header-section-number">6</span> Detecting Bias and Toxicity</h1>
 <p>Bias and toxicity do not announce themselves. Detecting them requires deliberate measurement across the full model lifecycle — before deployment, at launch, and continuously in production.</p>
-<p>##Detecting Bias</p>
+<section id="detecting-bias" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="detecting-bias"><span class="header-section-number">6.1</span> Detecting Bias</h2>
 <p>The starting point is disaggregated evaluation — breaking model performance down by demographic group rather than reporting a single aggregate accuracy score. A model that performs well overall can still perform poorly for specific populations. Aggregate metrics hide that gap.</p>
 <p>Common measurement approaches include:</p>
 <ul>
-<li>Demographic parity: Does the model produce positive outcomes at equal rates across groups?</li>
-<li>Equalized odds: Are error rates — both false positives and false negatives — consistent across groups?</li>
-<li>Counterfactual testing: Does the prediction change if a protected attribute such as race or gender is altered while everything else stays the same?</li>
+<li><strong>Demographic parity:</strong> Does the model produce positive outcomes at equal rates across groups?</li>
+<li><strong>Equalized odds:</strong> Are error rates — both false positives and false negatives — consistent across groups?</li>
+<li><strong>Counterfactual testing:</strong> Does the prediction change if a protected attribute such as race or gender is altered while everything else stays the same?</li>
 </ul>
 <p>In financial services, these tests map directly onto fair lending obligations. A credit model that passes aggregate validation but fails demographic parity testing is a regulatory and reputational risk, regardless of its overall accuracy.</p>
 <p>Structured bias evaluation frameworks and open-source fairness toolkits are available to operationalize these tests, but tooling is not a substitute for judgment — knowing which metric to prioritize requires understanding the deployment context and the specific harm you are trying to prevent.</p>
-<section id="detecting-toxicity" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="detecting-toxicity"><span class="header-section-number">6.1</span> Detecting Toxicity</h2>
+</section>
+<section id="detecting-toxicity" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="detecting-toxicity"><span class="header-section-number">6.2</span> Detecting Toxicity</h2>
 <p>Toxicity detection relies on a different set of methods. The goal is to identify harmful outputs — hate speech, harassment, misinformation, and abusive language — before they reach users.</p>
 <p>Common approaches include:</p>
 <ul>
-<li>Classifier-based screening: Automated models trained to flag toxic content at input and output. Effective at scale but prone to the same dialect and context failures described in §5.</li>
-<li>Red-team evaluation: Human testers deliberately probe the model with adversarial prompts to surface harmful outputs that automated screening misses.</li>
-<li>Human review pipelines: Escalation paths that route flagged outputs to human reviewers for sensitive or ambiguous cases.</li>
+<li><strong>Classifier-based screening:</strong> Automated models trained to flag toxic content at input and output. Effective at scale but prone to the same dialect and context failures described in §5.</li>
+<li><strong>Red-team evaluation:</strong> Human testers deliberately probe the model with adversarial prompts to surface harmful outputs that automated screening misses.</li>
+<li><strong>Human review pipelines:</strong> Escalation paths that route flagged outputs to human reviewers for sensitive or ambiguous cases.</li>
 </ul>
 <p>No single method is sufficient. Classifiers miss context. Red-teaming is resource intensive and cannot cover every scenario. Human review does not scale. Effective toxicity detection combines all three.</p>
 <p>Models drift as the world changes and new forms of harmful content emerge. Detection is not a one-time exercise — it is an ongoing governance requirement for both bias and toxicity.</p>
