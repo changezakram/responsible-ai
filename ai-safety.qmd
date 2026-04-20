@@ -2,7 +2,7 @@
 title: "The Hidden Dangers of AI: Bias, Toxicity, and Safety in Modern AI Systems"
 author: "Changez Akram"
 date: "2026-04-21"
-categories: [AI Safety, Responsible AI, Bias, Ethics, LLMs]
+categories: [Responsible AI, AI Safety, Bias, Ethics]
 format:
   html:
     toc: true
