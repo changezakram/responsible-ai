@@ -348,6 +348,7 @@ Note
 <p>Sometimes models do more than reflect patterns in data—they intensify them. If historical examples over-associate a profession or activity with one group, the model may rely on that shortcut even more strongly during prediction.</p>
 <p>This happens because models favor simpler patterns over nuanced ones, optimization tends to prioritize majority behavior, and rare or complex cases receive less attention during training.</p>
 <p>Amazon’s internal resume screening tool, discontinued in 2018, illustrates this directly. Trained on a decade of historical hiring decisions, the model learned to penalize resumes that included the word “women’s” and downgraded graduates of all-women’s colleges. The historical data reflected a male-dominated industry, and the model amplified that pattern rather than correcting for it.</p>
+<p>Zhao et al.&nbsp;(2017) documented the amplification effect with precision. In a visual semantic role labeling task, 66% of cooking images in the training data showed women as the agent. The model predicted women as the agent in 84% of test cases — an 18-point amplification beyond what the data itself contained. The model did not learn the world as it was. It learned a more extreme version of it.</p>
 </section>
 <section id="the-annotation-problem" class="level2" data-number="4.3">
 <h2 data-number="4.3" class="anchored" data-anchor-id="the-annotation-problem"><span class="header-section-number">4.3</span> The Annotation Problem</h2>
@@ -381,6 +382,7 @@ Note
 <li>They may disproportionately suppress minority communities and dialects.</li>
 <li>They often miss harmful meaning expressed without banned words.</li>
 </ul>
+<p>Research confirms this. Dodge et al.&nbsp;examined the effect of blocklist filtering on a large web corpus and found that only 31% of removed documents contained explicit content — the remaining 69% included biology, medicine, and legal material. The same filters removed African American English content at 42% and Hispanic-aligned English at 32%, compared to just 6% for white-aligned English. Crude filtering does not just miss harmful content — it actively suppresses minority voices.</p>
 <p>Filtering is necessary in many settings, but crude filtering is not enough.</p>
 </section>
 <section id="why-models-sometimes-need-exposure-to-harmful-content" class="level2" data-number="5.2">

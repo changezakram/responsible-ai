@@ -78,6 +78,8 @@ This happens because models favor simpler patterns over nuanced ones, optimizati
 
 Amazon's internal resume screening tool, discontinued in 2018, illustrates this directly. Trained on a decade of historical hiring decisions, the model learned to penalize resumes that included the word "women's" and downgraded graduates of all-women's colleges. The historical data reflected a male-dominated industry, and the model amplified that pattern rather than correcting for it.
 
+Zhao et al. (2017) documented the amplification effect with precision. In a visual semantic role labeling task, 66% of cooking images in the training data showed women as the agent. The model predicted women as the agent in 84% of test cases — an 18-point amplification beyond what the data itself contained. The model did not learn the world as it was. It learned a more extreme version of it.
+
 ## The Annotation Problem
 
 Even labels can be biased. Many machine learning systems depend on human annotations, but human judgment is not always consistent or neutral.
@@ -115,6 +117,8 @@ A common instinct is to block offensive words or exclude “low-quality” sourc
 - They can remove educational, medical, or legal content.
 - They may disproportionately suppress minority communities and dialects.
 - They often miss harmful meaning expressed without banned words.
+
+Research confirms this. Dodge et al. examined the effect of blocklist filtering on a large web corpus and found that only 31% of removed documents contained explicit content — the remaining 69% included biology, medicine, and legal material. The same filters removed African American English content at 42% and Hispanic-aligned English at 32%, compared to just 6% for white-aligned English. Crude filtering does not just miss harmful content — it actively suppresses minority voices.
 
 Filtering is necessary in many settings, but crude filtering is not enough.
 
