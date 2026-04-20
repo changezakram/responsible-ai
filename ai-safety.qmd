@@ -120,12 +120,7 @@ Filtering is necessary in many settings, but crude filtering is not enough.
 
 ## Why Models Sometimes Need Exposure to Harmful Content
 
-There are legitimate reasons for controlled exposure to toxic examples:
-
-- Detecting hate speech
-- Generating counter-speech
-- Stress-testing safety systems
-- Red-team evaluation
+There are legitimate reasons for controlled exposure to toxic examples — detecting hate speech, generating counter-speech, stress-testing safety systems, and supporting red-team evaluation.
 
 The key is governance, not blind inclusion or blind removal.
 

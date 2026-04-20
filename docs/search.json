@@ -179,6 +179,6 @@
     "href": "ai-safety.html#why-models-sometimes-need-exposure-to-harmful-content",
     "title": "The Hidden Dangers of AI: Bias, Toxicity, and Safety in Modern AI Systems",
     "section": "5.2 Why Models Sometimes Need Exposure to Harmful Content",
-    "text": "5.2 Why Models Sometimes Need Exposure to Harmful Content\nThere are legitimate reasons for controlled exposure to toxic examples:\n\nDetecting hate speech\nGenerating counter-speech\nStress-testing safety systems\nRed-team evaluation\n\nThe key is governance, not blind inclusion or blind removal."
+    "text": "5.2 Why Models Sometimes Need Exposure to Harmful Content\nThere are legitimate reasons for controlled exposure to toxic examples — detecting hate speech, generating counter-speech, stress-testing safety systems, and supporting red-team evaluation.\nThe key is governance, not blind inclusion or blind removal."
   }
 ]
