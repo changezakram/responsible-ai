@@ -130,14 +130,14 @@
     "href": "ai-safety.html#the-fairness-problem-has-no-single-answer",
     "title": "The Hidden Dangers of AI: Bias, Toxicity, and Safety in Modern AI Systems",
     "section": "3.2 The Fairness Problem Has No Single Answer",
-    "text": "3.2 The Fairness Problem Has No Single Answer\nSuppose you are building a resume screening model. What does fairness mean?\nPossible answers include:\n\nEqual accuracy across groups\nEqual rates of positive outcomes\nEqual false positive and false negative rates\nDecisions unchanged if race or gender were different\n\nThe difficulty is that these definitions often conflict. Improving one can worsen another. Fairness is not a single metric that can be maximized once and solved forever."
+    "text": "3.2 The Fairness Problem Has No Single Answer\nSuppose you are building a resume screening model. How should fairness be defined?\nPossible answers include:\n\nEqual accuracy across groups\nEqual rates of positive outcomes\nEqual false positive and false negative rates\nDecisions unchanged if race or gender were different\n\nThe difficulty is that these definitions often conflict. Improving one can worsen another. Fairness is not a single metric that can be maximized once and solved forever."
   },
   {
     "objectID": "ai-safety.html#bias-can-enter-anywhere-in-the-pipeline",
     "href": "ai-safety.html#bias-can-enter-anywhere-in-the-pipeline",
     "title": "The Hidden Dangers of AI: Bias, Toxicity, and Safety in Modern AI Systems",
     "section": "3.3 Bias Can Enter Anywhere in the Pipeline",
-    "text": "3.3 Bias Can Enter Anywhere in the Pipeline\nBias does not come only from data. It can enter at any stage of the development lifecycle — through sampling choices, labeling decisions, feature selection, model design, optimization objectives, evaluation metrics, and deployment context. Every decision point is a potential source."
+    "text": "3.3 Bias Can Enter Anywhere in the Pipeline\nBias does not come only from data. It can enter at any stage of the development lifecycle — through sampling choices, labeling decisions, feature selection, model design, optimization objectives, evaluation metrics, and deployment context. Every decision point can introduce bias."
   },
   {
     "objectID": "ai-safety.html#language-identification-and-global-inequality",

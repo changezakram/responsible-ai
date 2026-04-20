@@ -43,7 +43,7 @@ The word *bias* is used in different ways. In statistics, it means a model syste
 
 ## The Fairness Problem Has No Single Answer
 
-Suppose you are building a resume screening model. What does fairness mean?
+Suppose you are building a resume screening model. How should fairness be defined?
 
 Possible answers include:
 
@@ -56,7 +56,7 @@ The difficulty is that these definitions often conflict. Improving one can worse
 
 ## Bias Can Enter Anywhere in the Pipeline
 
-Bias does not come only from data. It can enter at any stage of the development lifecycle — through sampling choices, labeling decisions, feature selection, model design, optimization objectives, evaluation metrics, and deployment context. Every decision point is a potential source.
+Bias does not come only from data. It can enter at any stage of the development lifecycle — through sampling choices, labeling decisions, feature selection, model design, optimization objectives, evaluation metrics, and deployment context. Every decision point can introduce bias.
 
 ---
 
