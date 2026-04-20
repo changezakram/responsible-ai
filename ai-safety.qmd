@@ -74,11 +74,7 @@ The lesson is simple: narrow training data creates narrow performance.
 
 Sometimes models do more than reflect patterns in data—they intensify them. If historical examples over-associate a profession or activity with one group, the model may rely on that shortcut even more strongly during prediction.
 
-Why can this happen?
-
-- Models often favor simpler patterns over nuanced ones.
-- Optimization tends to prioritize majority patterns.
-- Rare or complex cases receive less attention.
+This happens because models favor simpler patterns over nuanced ones, optimization tends to prioritize majority behavior, and rare or complex cases receive less attention during training.
 
 Amazon's internal resume screening tool, discontinued in 2018, illustrates this directly. Trained on a decade of historical hiring decisions, the model learned to penalize resumes that included the word "women's" and downgraded graduates of all-women's colleges. The historical data reflected a male-dominated industry, and the model amplified that pattern rather than correcting for it.
 

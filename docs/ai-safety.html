@@ -342,12 +342,7 @@ Note
 <section id="models-can-amplify-existing-bias" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="models-can-amplify-existing-bias"><span class="header-section-number">4.2</span> Models Can Amplify Existing Bias</h2>
 <p>Sometimes models do more than reflect patterns in data—they intensify them. If historical examples over-associate a profession or activity with one group, the model may rely on that shortcut even more strongly during prediction.</p>
-<p>Why can this happen?</p>
-<ul>
-<li>Models often favor simpler patterns over nuanced ones.</li>
-<li>Optimization tends to prioritize majority patterns.</li>
-<li>Rare or complex cases receive less attention.</li>
-</ul>
+<p>This happens because models favor simpler patterns over nuanced ones, optimization tends to prioritize majority behavior, and rare or complex cases receive less attention during training.</p>
 <p>Amazon’s internal resume screening tool, discontinued in 2018, illustrates this directly. Trained on a decade of historical hiring decisions, the model learned to penalize resumes that included the word “women’s” and downgraded graduates of all-women’s colleges. The historical data reflected a male-dominated industry, and the model amplified that pattern rather than correcting for it.</p>
 </section>
 <section id="the-annotation-problem" class="level2" data-number="4.3">
