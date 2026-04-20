@@ -74,7 +74,7 @@ The lesson is simple: narrow training data creates narrow performance.
 
 Sometimes models do more than reflect patterns in data—they intensify them. If historical examples over-associate a profession or activity with one group, the model may rely on that shortcut even more strongly during prediction.
 
-Why does this happen?
+Why can this happen?
 
 - Models often favor simpler patterns over nuanced ones.
 - Optimization tends to prioritize majority patterns.
@@ -84,12 +84,23 @@ Amazon's internal resume screening tool, discontinued in 2018, illustrates this 
 
 ## The Annotation Problem
 
-Even labels can be biased. In hate-speech research, the same phrase may be interpreted differently depending on cultural context, dialect, or who is doing the annotation. When context is missing, labeling quality drops and downstream models inherit those mistakes.
+Even labels can be biased. Many machine learning systems depend on human annotations, but human judgment is not always consistent or neutral.
+
+Common sources of annotation bias include:
+
+- Different annotators interpreting the same phrase in different ways
+- Cultural context shaping what is seen as harmful, offensive, or acceptable
+- Dialects or informal language being misunderstood
+- Missing context leading to inaccurate labels
+
+When these patterns enter the training data, downstream models learn and reproduce the same errors.
 
 
 ## High-Stakes Prediction and the COMPAS Case
 
-In 2016, ProPublica analyzed COMPAS, a recidivism scoring tool used by courts across the United States to inform sentencing and bail decisions. The analysis found that Black defendants were flagged as high future risk at nearly twice the rate of white defendants who went on to commit no further offenses. The model was not designed to discriminate — it was optimizing for predictive accuracy on historical data that reflected decades of unequal enforcement. Accuracy at the aggregate level masked systematic error at the group level. The COMPAS case remains one of the clearest documented examples of how a technically functional model can produce outcomes that are both statistically defensible and socially harmful.
+In 2016, ProPublica analyzed COMPAS, a recidivism scoring tool used by courts across the United States to inform sentencing and bail decisions. The analysis found that Black defendants were flagged as high future risk at nearly twice the rate of white defendants who went on to commit no further offenses. 
+
+The model was not designed to discriminate — it was optimizing for predictive accuracy on historical data that reflected decades of unequal enforcement. Accuracy at the aggregate level masked systematic error at the group level. The COMPAS case remains one of the clearest documented examples of how a technically functional model can produce outcomes that are both statistically defensible and socially harmful.
 
 ---
 
