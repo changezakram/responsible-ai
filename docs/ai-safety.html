@@ -233,10 +233,14 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#why-simple-filtering-fails" id="toc-why-simple-filtering-fails" class="nav-link" data-scroll-target="#why-simple-filtering-fails"><span class="header-section-number">5.1</span> Why Simple Filtering Fails</a></li>
   <li><a href="#why-models-sometimes-need-exposure-to-harmful-content" id="toc-why-models-sometimes-need-exposure-to-harmful-content" class="nav-link" data-scroll-target="#why-models-sometimes-need-exposure-to-harmful-content"><span class="header-section-number">5.2</span> Why Models Sometimes Need Exposure to Harmful Content</a></li>
   </ul></li>
-  <li><a href="#the-safeguarding-stack" id="toc-the-safeguarding-stack" class="nav-link" data-scroll-target="#the-safeguarding-stack"><span class="header-section-number">6</span> The Safeguarding Stack</a></li>
-  <li><a href="#the-hard-tradeoff-generality-vs-alignment" id="toc-the-hard-tradeoff-generality-vs-alignment" class="nav-link" data-scroll-target="#the-hard-tradeoff-generality-vs-alignment"><span class="header-section-number">7</span> The Hard Tradeoff: Generality vs Alignment</a></li>
-  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways"><span class="header-section-number">8</span> Key Takeaways</a></li>
-  <li><a href="#the-path-forward" id="toc-the-path-forward" class="nav-link" data-scroll-target="#the-path-forward"><span class="header-section-number">9</span> The Path Forward</a></li>
+  <li><a href="#detecting-bias-and-toxicity" id="toc-detecting-bias-and-toxicity" class="nav-link" data-scroll-target="#detecting-bias-and-toxicity"><span class="header-section-number">6</span> Detecting Bias and Toxicity</a>
+  <ul class="collapse">
+  <li><a href="#detecting-toxicity" id="toc-detecting-toxicity" class="nav-link" data-scroll-target="#detecting-toxicity"><span class="header-section-number">6.1</span> Detecting Toxicity</a></li>
+  </ul></li>
+  <li><a href="#the-safeguarding-stack" id="toc-the-safeguarding-stack" class="nav-link" data-scroll-target="#the-safeguarding-stack"><span class="header-section-number">7</span> The Safeguarding Stack</a></li>
+  <li><a href="#the-hard-tradeoff-generality-vs-alignment" id="toc-the-hard-tradeoff-generality-vs-alignment" class="nav-link" data-scroll-target="#the-hard-tradeoff-generality-vs-alignment"><span class="header-section-number">8</span> The Hard Tradeoff: Generality vs Alignment</a></li>
+  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways"><span class="header-section-number">9</span> Key Takeaways</a></li>
+  <li><a href="#the-path-forward" id="toc-the-path-forward" class="nav-link" data-scroll-target="#the-path-forward"><span class="header-section-number">10</span> The Path Forward</a></li>
   </ul>
 </nav>
     </div>
@@ -386,8 +390,35 @@ Note
 <hr>
 </section>
 </section>
-<section id="the-safeguarding-stack" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> The Safeguarding Stack</h1>
+<section id="detecting-bias-and-toxicity" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Detecting Bias and Toxicity</h1>
+<p>Bias and toxicity do not announce themselves. Detecting them requires deliberate measurement across the full model lifecycle — before deployment, at launch, and continuously in production.</p>
+<p>##Detecting Bias</p>
+<p>The starting point is disaggregated evaluation — breaking model performance down by demographic group rather than reporting a single aggregate accuracy score. A model that performs well overall can still perform poorly for specific populations. Aggregate metrics hide that gap.</p>
+<p>Common measurement approaches include:</p>
+<ul>
+<li>Demographic parity: Does the model produce positive outcomes at equal rates across groups?</li>
+<li>Equalized odds: Are error rates — both false positives and false negatives — consistent across groups?</li>
+<li>Counterfactual testing: Does the prediction change if a protected attribute such as race or gender is altered while everything else stays the same?</li>
+</ul>
+<p>In financial services, these tests map directly onto fair lending obligations. A credit model that passes aggregate validation but fails demographic parity testing is a regulatory and reputational risk, regardless of its overall accuracy.</p>
+<p>Structured bias evaluation frameworks and open-source fairness toolkits are available to operationalize these tests, but tooling is not a substitute for judgment — knowing which metric to prioritize requires understanding the deployment context and the specific harm you are trying to prevent.</p>
+<section id="detecting-toxicity" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="detecting-toxicity"><span class="header-section-number">6.1</span> Detecting Toxicity</h2>
+<p>Toxicity detection relies on a different set of methods. The goal is to identify harmful outputs — hate speech, harassment, misinformation, and abusive language — before they reach users.</p>
+<p>Common approaches include:</p>
+<ul>
+<li>Classifier-based screening: Automated models trained to flag toxic content at input and output. Effective at scale but prone to the same dialect and context failures described in §5.</li>
+<li>Red-team evaluation: Human testers deliberately probe the model with adversarial prompts to surface harmful outputs that automated screening misses.</li>
+<li>Human review pipelines: Escalation paths that route flagged outputs to human reviewers for sensitive or ambiguous cases.</li>
+</ul>
+<p>No single method is sufficient. Classifiers miss context. Red-teaming is resource intensive and cannot cover every scenario. Human review does not scale. Effective toxicity detection combines all three.</p>
+<p>Models drift as the world changes and new forms of harmful content emerge. Detection is not a one-time exercise — it is an ongoing governance requirement for both bias and toxicity.</p>
+<hr>
+</section>
+</section>
+<section id="the-safeguarding-stack" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> The Safeguarding Stack</h1>
 <p>Addressing bias and toxicity requires controls at every stage, not a single fix.</p>
 <p><strong>Layer 1: Training Data</strong></p>
 <ul>
@@ -413,8 +444,8 @@ Note
 <p>Layered controls are rarely perfect, but they are stronger than relying on one safeguard alone.</p>
 <hr>
 </section>
-<section id="the-hard-tradeoff-generality-vs-alignment" class="level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> The Hard Tradeoff: Generality vs Alignment</h1>
+<section id="the-hard-tradeoff-generality-vs-alignment" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> The Hard Tradeoff: Generality vs Alignment</h1>
 <p>Even with layered safeguards, a deeper challenge remains.</p>
 <p>We often want one model that works for everyone, across every task, culture, and context. That goal runs into a basic constraint: people do not share identical values, expectations, or risk tolerances. A single system cannot perfectly reflect every worldview while remaining consistently safe.</p>
 <p>Three practical paths exist:</p>
@@ -426,8 +457,8 @@ Note
 <p>Many open questions remain around fairness, alignment, evaluation, and long-term behavior. Techniques like constitutional AI, interpretability tooling, and red-teaming are maturing but not yet solved. For a technical overview of how models are shaped after initial training, see <a href="https://changezakram.github.io/Deep-Generative-Models/post-training.html">Post Training</a>.</p>
 <hr>
 </section>
-<section id="key-takeaways" class="level1" data-number="8">
-<h1 data-number="8"><span class="header-section-number">8</span> Key Takeaways</h1>
+<section id="key-takeaways" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> Key Takeaways</h1>
 <ol type="1">
 <li>AI systems inherit patterns from the world, including harmful ones.</li>
 <li>Bias can enter at any stage of development, not only through data.</li>
@@ -439,8 +470,8 @@ Note
 </ol>
 <hr>
 </section>
-<section id="the-path-forward" class="level1" data-number="9">
-<h1 data-number="9"><span class="header-section-number">9</span> The Path Forward</h1>
+<section id="the-path-forward" class="level1" data-number="10">
+<h1 data-number="10"><span class="header-section-number">10</span> The Path Forward</h1>
 <p>There are no perfect solutions, but there are better choices. Organizations deploying AI should be honest about limitations, transparent about risk, and deliberate about where human oversight is required. They should test systems across different populations, listen to affected users, and treat governance as part of product design rather than an afterthought.</p>
 <p>In financial services, this obligation is not aspirational. Regulators already require it. The EU AI Act classifies credit scoring and employment screening as high-risk applications subject to mandatory transparency, human oversight, and conformity assessments. SR 11-7 has long required model risk management disciplines — validation, documentation, and governance — that map directly onto the challenges described in this article. Banks that treat bias and fairness as compliance checkboxes rather than design principles will find themselves exposed on both dimensions.</p>
 <p>The question is not whether AI will be used in high-stakes decisions. It already is. The question is whether the organizations deploying it will govern it with the same rigor they apply to the risks they already understand.</p>

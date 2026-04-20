@@ -180,5 +180,12 @@
     "title": "The Hidden Dangers of AI: Bias, Toxicity, and Safety in Modern AI Systems",
     "section": "5.2 Why Models Sometimes Need Exposure to Harmful Content",
     "text": "5.2 Why Models Sometimes Need Exposure to Harmful Content\nThere are legitimate reasons for controlled exposure to toxic examples — detecting hate speech, generating counter-speech, stress-testing safety systems, and supporting red-team evaluation.\nThe key is governance, not blind inclusion or blind removal."
+  },
+  {
+    "objectID": "ai-safety.html#detecting-toxicity",
+    "href": "ai-safety.html#detecting-toxicity",
+    "title": "The Hidden Dangers of AI: Bias, Toxicity, and Safety in Modern AI Systems",
+    "section": "6.1 Detecting Toxicity",
+    "text": "6.1 Detecting Toxicity\nToxicity detection relies on a different set of methods. The goal is to identify harmful outputs — hate speech, harassment, misinformation, and abusive language — before they reach users.\nCommon approaches include:\n\nClassifier-based screening: Automated models trained to flag toxic content at input and output. Effective at scale but prone to the same dialect and context failures described in §5.\nRed-team evaluation: Human testers deliberately probe the model with adversarial prompts to surface harmful outputs that automated screening misses.\nHuman review pipelines: Escalation paths that route flagged outputs to human reviewers for sensitive or ambiguous cases.\n\nNo single method is sufficient. Classifiers miss context. Red-teaming is resource intensive and cannot cover every scenario. Human review does not scale. Effective toxicity detection combines all three.\nModels drift as the world changes and new forms of harmful content emerge. Detection is not a one-time exercise — it is an ongoing governance requirement for both bias and toxicity."
   }
 ]
