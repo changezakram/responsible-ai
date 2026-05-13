@@ -1,7 +1,7 @@
 ---
 title: "The Hidden Dangers of AI: Bias, Toxicity, and Safety in Modern AI Systems"
 author: "Changez Akram"
-date: "2026-04-21"
+date: "2026-05-12"
 categories: [Responsible AI, AI Safety, Bias, Ethics]
 format:
   html:
@@ -19,9 +19,11 @@ AI risk has two dimensions: **security** and **safety**. Security focuses on att
 
 :::
 
-A model can be secure from attackers and still produce unfair or toxic outcomes. AI systems learn patterns from historical data, and those patterns often include social bias, stereotypes, and harmful assumptions.
+A model can be secure from attackers and still produce unfair or harmful outcomes. AI systems learn patterns from historical data, and those patterns often include social bias, stereotypes, and harmful assumptions baked in long before the model was trained.
 
-This is no longer a research problem. AI now influences hiring, lending, healthcare, content moderation, and customer service. When these systems fail, the impact is real.
+This is no longer a research problem. AI now influences hiring, lending, healthcare, content moderation, and customer service. When these systems fail, the impact is real — and the organizations deploying them are accountable for it.
+
+For banks and financial institutions in particular, the stakes are higher. Bias is not an ethics abstraction — it is a fair lending liability, a model risk management obligation, and an examiner finding waiting to happen.
 
 ---
 
