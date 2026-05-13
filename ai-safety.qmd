@@ -182,6 +182,7 @@ No single control is sufficient. Bias and toxicity can enter a system at any sta
 **Layer 2 — Input Controls:** Detect malicious or unsafe requests and apply policy checks before the model generates a response.     
 **Layer 3 — Alignment and Fine-Tuning:** Teach the model to refuse harmful requests and reinforce helpful, policy-compliant behavior through post-training techniques.     
 **Layer 4 — Output Controls:** Screen generated responses and escalate ambiguous or sensitive cases to human review.
+
 These layers are rarely perfect in isolation. Their value is cumulative — each one narrows the surface area for failure that the others leave open.     
 
 ---
