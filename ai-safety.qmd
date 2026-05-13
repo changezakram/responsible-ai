@@ -189,9 +189,7 @@ These layers are rarely perfect in isolation. Their value is cumulative — each
 
 # The Hard Tradeoff: Generality vs Alignment
 
-Even with layered safeguards, a deeper challenge remains.
-
-We often want one model that works for everyone, across every task, culture, and context. That goal runs into a basic constraint: people do not share identical values, expectations, or risk tolerances. A single system cannot perfectly reflect every worldview while remaining consistently safe.
+Even with layered safeguards, a deeper challenge remains. We often want one model that works for everyone, across every task, culture, and context. That goal runs into a basic constraint: people do not share identical values, expectations, or risk tolerances. A single system cannot perfectly reflect every worldview while remaining consistently safe.
 
 Three practical paths exist:
 
