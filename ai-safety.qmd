@@ -60,7 +60,7 @@ Fairness is not a technical problem. It is a policy decision shaped by legal req
 
 Bias does not come only from data. It can enter at any stage of the development lifecycle — through sampling choices, labeling decisions, feature selection, model design, optimization objectives, evaluation metrics, and deployment context. Every decision point can introduce bias.
 
-![Bias Across AI Lifecycle](images/ai-bias-lifecycle.png){fig-align="center" width="100%"}
+![Bias can enter and amplify throughout the AI lifecycle, creating downstream operational, regulatory, and reputational risk.](images/ai-bias-lifecycle.png){fig-align="center" width="100%"}
 
 Feature selection is a particularly consequential entry point in financial services. A model that excludes race as a variable can still produce discriminatory outcomes if it relies on features like zip code, income bracket, or educational history — variables that are neutral on their surface but closely correlated with race and ethnicity in practice. These are called proxy variables, and their presence in a model can produce disparate impact even when protected attributes are never explicitly used.
 
