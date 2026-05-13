@@ -1,6 +1,6 @@
 ---
 title: "AI Can Be Secure and Still Be Harmful"
-subtitle: "Understanding Bias, Fairness, and Safe Deployment in Modern AI Systems"
+subtitle: "Bias, toxicity, and governance in modern AI systems"
 author: "Changez Akram"
 date: "2026-05-12"
 categories: [Responsible AI, AI Safety, Bias, Ethics]
