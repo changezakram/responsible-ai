@@ -52,7 +52,7 @@ Suppose you are building a resume-screening model. How should fairness be define
 
 Should the model have equal accuracy across demographic groups? Should candidates from different groups receive positive recommendations at equal rates? Should false positives and false negatives occur at similar rates across groups? Or should the decision remain unchanged if a candidate's race or gender were different — all else equal?
 
-These definitions frequently conflict with one another. Improving one fairness metric can worsen another. For example, equalizing false positive rates may increase false negative disparities, while enforcing equal selection rates can reduce predictive accuracy.
+These definitions frequently conflict with one another. Improving one fairness metric can worsen another. For example, equalizing false positive rates may increase false negative disparities, while enforcing equal selection rates can reduce overall predictive accuracy.
 
 Fairness is not a technical problem. It is a policy decision shaped by legal requirements, business objectives, ethical priorities, and societal expectations.
 
@@ -176,30 +176,13 @@ Models drift as the world changes and new forms of harmful content emerge. Detec
 
 # The Safeguarding Stack
 
-Addressing bias and toxicity requires controls at every stage, not a single fix.
+No single control is sufficient. Bias and toxicity can enter a system at any stage — through training data, model architecture, optimization objectives, deployment context, and user interaction. The only defensible approach is defense in depth: controls at every layer, each designed to catch what the previous layer misses.
 
-**Layer 1: Training Data**
-
-- Improve diversity and representativeness
-- Remove clearly harmful material carefully
-- Document data sources and limitations
-
-**Layer 2: Input Controls**
-
-- Detect malicious or unsafe requests
-- Apply policy checks before generation
-
-**Layer 3: Alignment and Fine-Tuning**
-
-- Teach refusal behavior for harmful requests
-- Reinforce helpful and policy-compliant behavior
-
-**Layer 4: Output Controls**
-
-- Screen generated responses
-- Use escalation or human review for sensitive cases
-
-Layered controls are rarely perfect, but they are stronger than relying on one safeguard alone.
+**Layer 1 — Training Data:** Improve diversity and representativeness, remove harmful material carefully, and document data sources and their limitations.     
+**Layer 2 — Input Controls:** Detect malicious or unsafe requests and apply policy checks before the model generates a response.     
+**Layer 3 — Alignment and Fine-Tuning:** Teach the model to refuse harmful requests and reinforce helpful, policy-compliant behavior through post-training techniques.     
+**Layer 4 — Output Controls:** Screen generated responses and escalate ambiguous or sensitive cases to human review.
+These layers are rarely perfect in isolation. Their value is cumulative — each one narrows the surface area for failure that the others leave open.     
 
 ---
 

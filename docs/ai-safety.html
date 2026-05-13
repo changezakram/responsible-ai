@@ -324,7 +324,7 @@ Note
 <h2 data-number="3.2" class="anchored" data-anchor-id="the-fairness-problem-has-no-single-answer"><span class="header-section-number">3.2</span> The Fairness Problem Has No Single Answer</h2>
 <p>Suppose you are building a resume-screening model. How should fairness be defined?</p>
 <p>Should the model have equal accuracy across demographic groups? Should candidates from different groups receive positive recommendations at equal rates? Should false positives and false negatives occur at similar rates across groups? Or should the decision remain unchanged if a candidate’s race or gender were different — all else equal?</p>
-<p>These definitions frequently conflict with one another. Improving one fairness metric can worsen another. For example, equalizing false positive rates may increase false negative disparities, while enforcing equal selection rates can reduce predictive accuracy.</p>
+<p>These definitions frequently conflict with one another. Improving one fairness metric can worsen another. For example, equalizing false positive rates may increase false negative disparities, while enforcing equal selection rates can reduce overall predictive accuracy.</p>
 <p>Fairness is not a technical problem. It is a policy decision shaped by legal requirements, business objectives, ethical priorities, and societal expectations.</p>
 </section>
 <section id="bias-can-enter-anywhere-in-the-pipeline" class="level2" data-number="3.3">
@@ -425,29 +425,11 @@ Note
 </section>
 <section id="the-safeguarding-stack" class="level1" data-number="7">
 <h1 data-number="7"><span class="header-section-number">7</span> The Safeguarding Stack</h1>
-<p>Addressing bias and toxicity requires controls at every stage, not a single fix.</p>
-<p><strong>Layer 1: Training Data</strong></p>
-<ul>
-<li>Improve diversity and representativeness</li>
-<li>Remove clearly harmful material carefully</li>
-<li>Document data sources and limitations</li>
-</ul>
-<p><strong>Layer 2: Input Controls</strong></p>
-<ul>
-<li>Detect malicious or unsafe requests</li>
-<li>Apply policy checks before generation</li>
-</ul>
-<p><strong>Layer 3: Alignment and Fine-Tuning</strong></p>
-<ul>
-<li>Teach refusal behavior for harmful requests</li>
-<li>Reinforce helpful and policy-compliant behavior</li>
-</ul>
-<p><strong>Layer 4: Output Controls</strong></p>
-<ul>
-<li>Screen generated responses</li>
-<li>Use escalation or human review for sensitive cases</li>
-</ul>
-<p>Layered controls are rarely perfect, but they are stronger than relying on one safeguard alone.</p>
+<p>No single control is sufficient. Bias and toxicity can enter a system at any stage — through training data, model architecture, optimization objectives, deployment context, and user interaction. The only defensible approach is defense in depth: controls at every layer, each designed to catch what the previous layer misses.</p>
+<p><strong>Layer 1 — Training Data:</strong> Improve diversity and representativeness, remove harmful material carefully, and document data sources and their limitations.<br>
+<strong>Layer 2 — Input Controls:</strong> Detect malicious or unsafe requests and apply policy checks before the model generates a response.<br>
+<strong>Layer 3 — Alignment and Fine-Tuning:</strong> Teach the model to refuse harmful requests and reinforce helpful, policy-compliant behavior through post-training techniques.<br>
+<strong>Layer 4 — Output Controls:</strong> Screen generated responses and escalate ambiguous or sensitive cases to human review. These layers are rarely perfect in isolation. Their value is cumulative — each one narrows the surface area for failure that the others leave open.</p>
 <hr>
 </section>
 <section id="the-hard-tradeoff-generality-vs-alignment" class="level1" data-number="8">
