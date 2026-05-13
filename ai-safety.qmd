@@ -203,15 +203,17 @@ These tradeoffs become materially more consequential as AI moves from generating
 
 ---
 
-# Key Takeaways
+::: {.callout-note}
+## Key Takeaways
 
-1. AI systems inherit patterns from the world, including harmful ones.
-2. Bias can enter at any stage of development, not only through data.
-3. Fairness has multiple definitions that often conflict.
-4. Simple fixes such as blunt filtering can create new harms.
-5. Safety requires layered controls, not a single technique.
-6. One universal model will always face tradeoffs across users and contexts.
-7. Governance must be built into design, not applied as an afterthought.
+1. AI systems do not invent bias — they inherit it from data, decisions, and the world that produced both.
+2. Bias can enter at any stage of development, not only through training data.
+3. Fairness has multiple definitions that frequently conflict with one another.
+4. Simple fixes such as blunt filtering can create new harms while missing the original problem.
+5. Safety requires layered controls — no single technique is sufficient.
+6. A universal model will always face tradeoffs across users, contexts, and risk tolerances.
+7. Governance must be built into design from the beginning, not applied as an afterthought.
+:::
 
 ---
 
