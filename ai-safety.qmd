@@ -156,7 +156,7 @@ Common measurement approaches include:
 
 In financial services, these tests map directly onto fair lending obligations. A credit model that passes aggregate validation but fails demographic parity testing is a regulatory and reputational risk, regardless of its overall accuracy.
 
-Structured bias evaluation frameworks and open-source fairness toolkits are available to operationalize these tests, but tooling is not a substitute for judgment — knowing which metric to prioritize requires understanding the deployment context and the specific harm you are trying to prevent.
+IBM AI Fairness 360 and similar open-source toolkits can operationalize these tests, but tooling is not a substitute for judgment — knowing which metric to prioritize requires understanding the deployment context and the specific harm you are trying to prevent.
 
 ## Detecting Toxicity
 
