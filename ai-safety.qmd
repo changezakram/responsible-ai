@@ -215,6 +215,19 @@ These tradeoffs become materially more consequential as AI moves from generating
 
 ---
 
+# Making Alignment Auditable
+
+Post-training techniques shape how a model behaves after initial training — but they differ in a property that matters specifically for financial services governance: auditability.
+
+The dominant alignment method, Reinforcement Learning from Human Feedback (RLHF), trains models to produce outputs that human raters prefer. It is effective, but the values trained into the model are implicit — buried in preference ratings that cannot be easily read or verified. If you ask what principles govern the model’s behavior in edge cases, the honest answer is: whatever the rater pool preferred, inconsistently, at training time.
+
+Constitutional AI, introduced by Anthropic in 2022, approaches alignment differently. The model is given an explicit set of principles and trained to evaluate its own outputs against them. The safety properties are not implicit in ratings — they are stated in a document you can read and evaluate. Constitutional AI does not eliminate subjectivity, but it makes alignment principles more explicit and governable.
+
+For banks, this has a direct SR 11-7 implication. Conceptual soundness review requires understanding what the model does and why. A model governed by an explicit constitution makes alignment objectives more transparent and reviewable than systems governed primarily through implicit RLHF preferences. When evaluating AI vendors, the right question is not only “how accurate is your model?” but “what principles was your model trained to follow, and can I read them?” A vendor who cannot answer has a model documentation gap — and you have a model risk exposure.
+
+
+---
+
 ::: {.callout-note}
 ## Key Takeaways
 
