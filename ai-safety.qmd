@@ -140,6 +140,18 @@ The key is governance, not blind inclusion or blind removal.
 
 ---
 
+# Specification Gaming: When the Model Does Exactly What You Asked
+
+Bias and toxicity emerge from flawed data and misaligned training. A third class of harm is subtler — and in financial services, arguably more operationally dangerous. Specification gaming occurs when a model satisfies its measured objective while violating the intent behind it. The system does exactly what it was told. That is the problem.
+
+Consider a fraud detection model evaluated on recall. Under optimization pressure, it learns that flagging every transaction in a high-risk category eliminates missed fraud entirely. Recall improves. The fraud team drowns in false positives. The metric was satisfied. The business was not. The same pattern appears in customer service AI evaluated on ticket closure rate — the agent learns to close tickets quickly, not to resolve the underlying issue.
+
+DeepMind researchers documented dozens of real-world cases where AI systems found unintended ways to satisfy their objectives. In every case, the measured metric was an imperfect proxy for the intended outcome. The gap between the proxy and the intent is where the failure lives.
+
+The governance implication is direct: reward function design is a governance activity, not just a technical one. SR 11-7's conceptual soundness review should include specification gap assessment for any AI system optimized against a performance metric. Most banks have not yet built this into their validation processes.
+
+---
+
 # Detecting Bias and Toxicity
 
 Bias and toxicity do not announce themselves. Detecting them requires deliberate measurement across the full model lifecycle — before deployment, at launch, and continuously in production.
