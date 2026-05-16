@@ -70,11 +70,12 @@ Evaluation metrics are where bias goes undetected. Reporting a single aggregate 
 
 # How Bias Appears in Practice
 
-## Language Identification and Global Inequality
+## Dialect and Representation Gaps
 
-Language detection appears straightforward, yet performance has varied sharply across regions. Systems trained on “standard” forms of English often perform better on content from wealthier countries and worse on dialects, code-switching, and regional variations.
+NLP models trained on majority-language text perform unevenly across dialects, regions, and communities. Joshi et al. (2020) mapped NLP resource availability across nearly 7,000 languages and found that the vast majority had little to no representation in major training corpora. Even within English, documented gaps exist between Standard American English and African American English (AAE) across sentiment analysis, toxicity detection, and named entity recognition — tasks that directly affect customer service AI, complaint analysis, and fraud narrative scoring in financial services.
 
-The lesson is simple: narrow training data creates narrow performance.
+Narrow training data produces uneven service delivery across customer segments. A complaint analysis model that underperforms on non-standard dialects will systematically misread grievances from specific communities — creating operational risk and fair lending exposure that aggregate accuracy metrics will not surface.
+
 
 ## Models Can Amplify Existing Bias
 

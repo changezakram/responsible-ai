@@ -223,7 +223,7 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#how-bias-appears-in-practice" id="toc-how-bias-appears-in-practice" class="nav-link" data-scroll-target="#how-bias-appears-in-practice"><span class="header-section-number">4</span> How Bias Appears in Practice</a>
   <ul class="collapse">
-  <li><a href="#language-identification-and-global-inequality" id="toc-language-identification-and-global-inequality" class="nav-link" data-scroll-target="#language-identification-and-global-inequality"><span class="header-section-number">4.1</span> Language Identification and Global Inequality</a></li>
+  <li><a href="#dialect-and-representation-gaps" id="toc-dialect-and-representation-gaps" class="nav-link" data-scroll-target="#dialect-and-representation-gaps"><span class="header-section-number">4.1</span> Dialect and Representation Gaps</a></li>
   <li><a href="#models-can-amplify-existing-bias" id="toc-models-can-amplify-existing-bias" class="nav-link" data-scroll-target="#models-can-amplify-existing-bias"><span class="header-section-number">4.2</span> Models Can Amplify Existing Bias</a></li>
   <li><a href="#the-annotation-problem" id="toc-the-annotation-problem" class="nav-link" data-scroll-target="#the-annotation-problem"><span class="header-section-number">4.3</span> The Annotation Problem</a></li>
   <li><a href="#high-stakes-prediction-and-the-compas-case" id="toc-high-stakes-prediction-and-the-compas-case" class="nav-link" data-scroll-target="#high-stakes-prediction-and-the-compas-case"><span class="header-section-number">4.4</span> High-Stakes Prediction and the COMPAS Case</a></li>
@@ -345,10 +345,10 @@ Note
 </section>
 <section id="how-bias-appears-in-practice" class="level1" data-number="4">
 <h1 data-number="4"><span class="header-section-number">4</span> How Bias Appears in Practice</h1>
-<section id="language-identification-and-global-inequality" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="language-identification-and-global-inequality"><span class="header-section-number">4.1</span> Language Identification and Global Inequality</h2>
-<p>Language detection appears straightforward, yet performance has varied sharply across regions. Systems trained on “standard” forms of English often perform better on content from wealthier countries and worse on dialects, code-switching, and regional variations.</p>
-<p>The lesson is simple: narrow training data creates narrow performance.</p>
+<section id="dialect-and-representation-gaps" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="dialect-and-representation-gaps"><span class="header-section-number">4.1</span> Dialect and Representation Gaps</h2>
+<p>NLP models trained on majority-language text perform unevenly across dialects, regions, and communities. Joshi et al.&nbsp;(2020) mapped NLP resource availability across nearly 7,000 languages and found that the vast majority had little to no representation in major training corpora. Even within English, documented gaps exist between Standard American English and African American English (AAE) across sentiment analysis, toxicity detection, and named entity recognition — tasks that directly affect customer service AI, complaint analysis, and fraud narrative scoring in financial services.</p>
+<p>Narrow training data produces uneven service delivery across customer segments. A complaint analysis model that underperforms on non-standard dialects will systematically misread grievances from specific communities — creating operational risk and fair lending exposure that aggregate accuracy metrics will not surface.</p>
 </section>
 <section id="models-can-amplify-existing-bias" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="models-can-amplify-existing-bias"><span class="header-section-number">4.2</span> Models Can Amplify Existing Bias</h2>
