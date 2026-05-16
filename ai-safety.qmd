@@ -113,9 +113,9 @@ When biased predictions influence real-world outcomes — who gets bail, who get
 
 # Toxicity and Harmful Content
 
-Bias is one class of harm; Toxic content is another. Both emerge from how models are trained and deployed.
+Bias is one class of harm; toxic content is another. Both emerge from how models are trained and deployed.
 
-Large language models trained on broad internet data can generate hate, harassment, misinformation, or abusive language. This should not be surprising. Training data collected from the open web includes both valuable knowledge and harmful content.
+Large language models trained on broad internet data can generate hate, harassment, misinformation, or abusive language. Training data collected from the open web includes both valuable knowledge and harmful content.
 
 The challenge is not only the presence of toxic material. It is deciding what to remove, what to preserve, and what context matters.
 
