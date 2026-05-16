@@ -84,7 +84,7 @@ Sometimes models do more than reflect patterns in data—they intensify them. If
 
 This happens because models favor simpler patterns over nuanced ones, optimization tends to prioritize majority behavior, and rare or complex cases receive less attention during training.
 
-Amazon's internal resume screening tool, discontinued in 2018, illustrates this directly. Trained on a decade of historical hiring decisions, the model learned to penalize resumes that included the word "women's" and downgraded graduates of all-women's colleges. The historical data reflected a male-dominated industry, and the model amplified that pattern rather than correcting for it.
+Amazon's resume screening tool, discontinued in 2018, is a direct example — the model amplified a male-dominated hiring history rather than correcting for it.
 
 Research has quantified this effect. Zhao et al. (2017) found that 66% of cooking images in the training data showed women as the agent. The model predicted women as the agent in 84% of test cases — an 18-point amplification beyond what the data itself contained. The model did not learn the world as it was. It learned a more extreme version of it.
 
