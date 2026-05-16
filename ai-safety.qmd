@@ -70,8 +70,6 @@ Evaluation metrics are where bias goes undetected. Reporting a single aggregate 
 
 # How Bias Appears in Practice
 
-These issues become clearer when we look at how they appear in real systems.
-
 ## Language Identification and Global Inequality
 
 Language detection appears straightforward, yet performance has varied sharply across regions. Systems trained on “standard” forms of English often perform better on content from wealthier countries and worse on dialects, code-switching, and regional variations.
@@ -114,7 +112,7 @@ When biased predictions influence real-world outcomes — who gets bail, who get
 
 # Toxicity and Harmful Content
 
-Bias is one class of harm. Toxic content is another. Both emerge from how models are trained and deployed.
+Bias is one class of harm; Toxic content is another. Both emerge from how models are trained and deployed.
 
 Large language models trained on broad internet data can generate hate, harassment, misinformation, or abusive language. This should not be surprising. Training data collected from the open web includes both valuable knowledge and harmful content.
 
@@ -136,7 +134,7 @@ Filtering is necessary in many settings, but crude filtering is not enough.
 
 There are legitimate reasons for controlled exposure to toxic examples — detecting hate speech, generating counter-speech, stress-testing safety systems, and supporting red-team evaluation.
 
-The key is governance, not blind inclusion or blind removal.
+Governance determines what stays and what goes — not blanket rules in either direction.
 
 ---
 
@@ -236,7 +234,7 @@ For banks, this has a direct SR 11-7 implication. Conceptual soundness review re
 
 # The Path Forward
 
-There are no perfect solutions, but there are better choices. Organizations deploying AI should be honest about limitations, transparent about risk, and deliberate about where human oversight is required. They should test systems across different populations, listen to affected users, and treat safety as part of product design rather than an afterthought.
+There are no perfect solutions, but there are better choices. Organizations deploying AI should be honest about limitations and deliberate about where human oversight is required. They should test systems across different populations, listen to affected users, and treat safety as part of product design rather than an afterthought.
 
 In financial services, this obligation is not aspirational. Regulators already require it. The EU AI Act classifies credit scoring and employment screening as high-risk applications subject to mandatory transparency, human oversight, and conformity assessments. SR 11-7 has long required model risk management disciplines — validation, documentation, and governance — that map directly onto the challenges described in this article. Banks that treat bias and fairness as compliance checkboxes rather than design principles will find themselves exposed on both dimensions.
 
