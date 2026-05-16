@@ -325,7 +325,7 @@ Note
 <p>Suppose you are building a resume-screening model. How should fairness be defined?</p>
 <p>Should the model have equal accuracy across demographic groups? Should candidates from different groups receive positive recommendations at equal rates? Should false positives and false negatives occur at similar rates across groups? Or should the decision remain unchanged if a candidate’s race or gender were different — all else equal?</p>
 <p>These definitions frequently conflict with one another. Improving one fairness metric can worsen another. For example, equalizing false positive rates may increase false negative disparities, while enforcing equal selection rates can reduce overall predictive accuracy.</p>
-<p>Fairness is not a technical problem. It is a policy decision shaped by legal requirements, business objectives, ethical priorities, and societal expectations.</p>
+<p>Choosing a fairness definition is not a technical decision — it is an institutional one with legal consequences. Equalizing false positive rates across demographic groups may satisfy equalized odds but violate demographic parity. Optimizing for one standard can actively worsen another. Banks cannot outsource that choice to a model.</p>
 </section>
 <section id="bias-can-enter-anywhere-in-the-pipeline" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="bias-can-enter-anywhere-in-the-pipeline"><span class="header-section-number">3.3</span> Bias Can Enter Anywhere in the Pipeline</h2>
