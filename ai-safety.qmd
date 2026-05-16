@@ -24,7 +24,7 @@ A model can be secure from attackers and still produce unfair or harmful outcome
 
 This is no longer a research problem. AI now influences hiring, lending, healthcare, content moderation, and customer service. When these systems fail, the impact is real — and the organizations deploying them are accountable for it.
 
-For banks and financial institutions in particular, the stakes are higher. Bias is not an ethics abstraction — it is a fair lending liability, a model risk management obligation, and an examiner finding waiting to happen.
+For banks and financial institutions in particular, the stakes are higher. Bias is a fair lending liability, a model risk management obligation, and an examiner finding waiting to happen.
 
 ---
 
@@ -34,7 +34,7 @@ In financial services, credit underwriting models have produced outcomes that di
 
 The same pattern appears across industries. Hiring screening tools have disadvantaged qualified candidates based on gender or background — Amazon discontinued its internal resume screening tool in 2018 after discovering it systematically penalized resumes from women. In healthcare, Obermeyer et al. (2019) found that a widely used risk-scoring algorithm underestimated the health needs of Black patients by using historical healthcare costs as a proxy for health — a proxy that reflected unequal access to care, not unequal need. Toxicity detection systems continue to over-flag minority dialects while failing to detect harmful content expressed in more common language patterns.
 
-These are not edge cases. They are the expected output of systems optimized on historical data that was never neutral to begin with.
+These failures appear consistently across real production systems. They are the expected output of systems optimized on historical data that was never neutral to begin with.
 
 ---
 
@@ -142,7 +142,7 @@ Governance determines what stays and what goes — not blanket rules in either d
 
 Bias and toxicity emerge from flawed data and misaligned training. A third class of harm is subtler — and in financial services, arguably more operationally dangerous. Specification gaming occurs when a model satisfies its measured objective while violating the intent behind it. The system does exactly what it was told. That is the problem.
 
-Consider a fraud detection model evaluated on recall. Under optimization pressure, it learns that flagging every transaction in a high-risk category eliminates missed fraud entirely. Recall improves. The fraud team drowns in false positives. The metric was satisfied. The business was not. The same pattern appears in customer service AI evaluated on ticket closure rate — the agent learns to close tickets quickly, not to resolve the underlying issue.
+Consider a fraud detection model evaluated on recall. Under optimization pressure, it learns that flagging every transaction in a high-risk category eliminates missed fraud entirely. Recall improves. The fraud team drowns in false positives. The model optimized the metric while creating operational problems for the business. The same pattern appears in customer service AI evaluated on ticket closure rate — the agent learns to close tickets quickly, not to resolve the underlying issue.
 
 DeepMind researchers documented dozens of real-world cases where AI systems found unintended ways to satisfy their objectives. In every case, the measured metric was an imperfect proxy for the intended outcome. The gap between the proxy and the intent is where the failure lives.
 
