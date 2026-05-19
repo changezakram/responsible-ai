@@ -37,7 +37,7 @@ That responsibility does not disappear because a model is involved. When people 
 
 ## Why Accuracy Alone Breaks Down
 
-**In high-impact settings, accuracy alone is a weak guarantee of acceptable behavior.**
+In high-impact settings, accuracy alone is a weak guarantee of acceptable behavior.
 
 Many such applications are under-studied. Training data rarely reflects the conditions encountered after deployment. Distribution shift is common. Historical data often encodes bias. Feedback loops quietly distort outcomes over time. A model can appear accurate in validation and still fail for reasons metrics never reveal.
 
