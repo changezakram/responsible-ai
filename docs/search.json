@@ -88,14 +88,14 @@
     "href": "explainable-ai.html#the-regulatory-reality",
     "title": "Explainable AI: Beyond the Checkbox",
     "section": "The Regulatory Reality",
-    "text": "The Regulatory Reality\nRegulation is not theoretical. Explainability requirements are already in force.\nThe EU AI Act mandates transparency for high-risk systems. GDPR grants individuals rights related to automated decisions. California’s Transparency in Frontier AI Act requires disclosure of risks and mitigation measures.\nOrganizations deploying AI without explainability capabilities are accumulating regulatory debt that will eventually come due."
+    "text": "The Regulatory Reality\nRegulation is not theoretical. Explainability requirements are already in force.\nThe EU AI Act mandates transparency for high-risk systems. GDPR grants individuals rights related to automated decisions. California’s Transparency in Frontier AI Act requires disclosure of risks and mitigation measures.\nIn the United States, SR 11-7 model risk management guidance requires banks to demonstrate conceptual soundness and ongoing monitoring for models used in consequential decisions. For credit, fraud, and fair lending applications, explainability is not optional — it is the mechanism through which model governance becomes defensible to examiners.\nOrganizations deploying AI without explainability capabilities are accumulating regulatory debt that will eventually come due."
   },
   {
     "objectID": "explainable-ai.html#a-practical-view",
     "href": "explainable-ai.html#a-practical-view",
     "title": "Explainable AI: Beyond the Checkbox",
     "section": "A Practical View",
-    "text": "A Practical View\nExplainable AI is not about choosing the “right” technique. It is about judgment.\nInterpretable models offer clarity but may lack flexibility. Post-hoc explanations offer access but rely on approximation. Local explanations surface failures. Global explanations support oversight. None provides a complete picture.\nResponsible AI does not require perfect transparency. It requires knowing when explanations are sufficient, when they mislead, and when a system should not be trusted at all.\nThat judgment—not any individual method—is the real objective of explainable AI."
+    "text": "A Practical View\nExplainable AI is not about choosing the “right” technique. It is about judgment.\nInterpretable models offer clarity but may lack flexibility. Post-hoc explanations offer access but rely on approximation. Local explanations surface failures. Global explanations support oversight. None provides a complete picture.\nResponsible AI does not require perfect transparency. It requires knowing when explanations are sufficient, when they mislead, and when a system should not be trusted at all.\nConsider a credit decisioning model that achieves high accuracy but relies heavily on zip code as a feature. Post-hoc explanation surfaces this. The question then is not which technique revealed it — it is what the organization does next. Explainability creates the opportunity for that judgment. It does not replace it."
   },
   {
     "objectID": "explainable-ai.html#implications-for-agentic-systems",

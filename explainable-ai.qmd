@@ -156,7 +156,9 @@ Explainability does not make a system fair. It does not make it safe. And it doe
 
 Regulation is not theoretical. Explainability requirements are already in force.
 
-The EU AI Act mandates transparency for high-risk systems. GDPR grants individuals rights related to automated decisions. California’s Transparency in Frontier AI Act requires disclosure of risks and mitigation measures.
+The EU AI Act mandates transparency for high-risk systems. GDPR grants individuals rights related to automated decisions. California's Transparency in Frontier AI Act requires disclosure of risks and mitigation measures.
+
+In the United States, SR 11-7 model risk management guidance requires banks to demonstrate conceptual soundness and ongoing monitoring for models used in consequential decisions. For credit, fraud, and fair lending applications, explainability is not optional — it is the mechanism through which model governance becomes defensible to examiners.
 
 Organizations deploying AI without explainability capabilities are accumulating regulatory debt that will eventually come due.
 
@@ -164,13 +166,13 @@ Organizations deploying AI without explainability capabilities are accumulating 
 
 ## A Practical View
 
-Explainable AI is not about choosing the “right” technique. It is about **judgment**.
+Explainable AI is not about choosing the "right" technique. It is about judgment.
 
 Interpretable models offer clarity but may lack flexibility. Post-hoc explanations offer access but rely on approximation. Local explanations surface failures. Global explanations support oversight. None provides a complete picture.
 
-Responsible AI does not require perfect transparency. It requires knowing **when explanations are sufficient, when they mislead, and when a system should not be trusted at all**.
+Responsible AI does not require perfect transparency. It requires knowing when explanations are sufficient, when they mislead, and when a system should not be trusted at all.
 
-That judgment—not any individual method—is the real objective of explainable AI.
+Consider a credit decisioning model that achieves high accuracy but relies heavily on zip code as a feature. Post-hoc explanation surfaces this. The question then is not which technique revealed it — it is what the organization does next. Explainability creates the opportunity for that judgment. It does not replace it.
 
 ---
 
