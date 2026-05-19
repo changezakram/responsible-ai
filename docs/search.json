@@ -53,7 +53,7 @@
     "href": "explainable-ai.html#local-and-global-views",
     "title": "Explainable AI: Beyond the Checkbox",
     "section": "Local and Global Views",
-    "text": "Local and Global Views\nLocal explanations focus on individual predictions. They answer: why did the model make this decision here? These are useful for debugging, investigating specific outcomes, and assessing whether individual decisions are defensible.\nGlobal explanations summarize behavior across populations. They address: what does the model generally rely on? and are certain groups systematically affected? These views are essential for governance, auditing, and regulatory oversight.\nLocal explanations reveal failures. Global explanations contextualize them.\nBoth are necessary. Neither is sufficient on its own."
+    "text": "Local and Global Views\nLocal explanations focus on individual predictions. They answer: why did the model make this decision here? These are useful for debugging, investigating specific outcomes, and assessing whether individual decisions are defensible.\nGlobal explanations summarize behavior across populations. They address: what does the model generally rely on? and are certain groups systematically affected? These views are essential for governance, auditing, and regulatory oversight.\nLocal explanations reveal failures. Global explanations contextualize them. Both are necessary. Neither is sufficient on its own."
   },
   {
     "objectID": "explainable-ai.html#core-post-hoc-techniques",

@@ -17,11 +17,11 @@ execute:
 
 ## Explainable AI: Beyond the Checkbox
 
-Explainability is often treated as a technical add-on—something applied after a model is trained, when stakeholders start asking uncomfortable questions. The reason it exists is simpler: **optimization breaks down in the real world**.
+Explainability is often treated as a technical add-on—something applied after a model is trained, when stakeholders start asking uncomfortable questions. The reason it exists is simpler: optimization breaks down in the real world.
 
 The stakes are not abstract. Google’s facial recognition system once mislabeled Black individuals as gorillas. Unable to fix the underlying bias, Google removed primate-related labels entirely—a workaround, not a solution. Uber’s autonomous vehicle ran a stop sign, raising questions about accountability in systems no one fully understands. As Cathy O’Neil documents in *Weapons of Math Destruction*, opaque models create feedback loops that amplify bias across criminal justice, hiring, credit scoring, and healthcare.
 
-The presence of machine learning alone does not determine whether explainability matters. **Context does.**
+The presence of machine learning alone does not determine whether explainability matters. Context does.
 
 ---
 
@@ -31,7 +31,7 @@ Not every system needs explanations. When errors are reversible, harm is limited
 
 High-stakes systems change the equation. In healthcare, lending, hiring, and judicial settings, model outputs shape outcomes that cannot be undone. People may lose access to credit, treatment, employment, or liberty. In these settings, humans remain responsible for the decisions the system supports.
 
-That responsibility does not disappear because a model is involved. When people are expected to rely on a system and justify its decisions, **explainability becomes a safety requirement—not a transparency exercise**.
+That responsibility does not disappear because a model is involved. When people are expected to rely on a system and justify its decisions, explainability becomes a safety requirement—not a transparency exercise.
 
 ---
 
@@ -43,7 +43,7 @@ Many such applications are under-studied. Training data rarely reflects the cond
 
 High-stakes systems also face requirements that extend beyond predictive performance. Fairness, non-discrimination, robustness, safety, and legal defensibility all matter. Increasingly, regulations mandate transparency or a right to explanation when automated systems influence consequential decisions.
 
-These demands expose a deeper issue: many of the criteria we care about cannot be fully specified as optimization objectives. What it means for a model to behave acceptably is often contextual, contested, and situation-dependent. **Problem formulations are inherently incomplete.**
+These demands expose a deeper issue: many of the criteria we care about cannot be fully specified as optimization objectives. What it means for a model to behave acceptably is often contextual, contested, and situation-dependent. Problem formulations are inherently incomplete.
 
 When requirements cannot be encoded into training, behavior must be evaluated another way. That is where explainability enters—not as proof that a model is correct, but as a diagnostic tool.
 
@@ -51,11 +51,11 @@ When requirements cannot be encoded into training, behavior must be evaluated an
 
 ## Explainability as Diagnostic Infrastructure
 
-Explainability is best understood as **diagnostic infrastructure**—a way to examine how a system behaves when performance metrics fall short. By inspecting what a model relies on and how its predictions change across cases, we can surface failure modes that would otherwise remain hidden.
+Explainability is best understood as diagnostic infrastructure—a way to examine how a system behaves when performance metrics fall short. By inspecting what a model relies on and how its predictions change across cases, we can surface failure modes that would otherwise remain hidden.
 
 In vision systems, explanations reveal shortcut learning: models that appear accurate while relying on irrelevant background cues. In financial systems, they can expose reliance on prohibited or proxy attributes. In clinical settings, they help practitioners decide when to trust a recommendation and when to override it.
 
-For people affected by automated decisions, the need is different. Feature importance alone is rarely useful. What matters is **recourse**—understanding what could realistically change an outcome.
+For people affected by automated decisions, the need is different. Feature importance alone is rarely useful. What matters is recourse—understanding what could realistically change an outcome.
 
 Across these cases, the audience varies: developers, decision-makers, regulators, affected individuals. The function does not. Explainability supports debugging, bias detection, trust calibration, recourse, and governance by making failures visible before they become systemic.
 
@@ -65,11 +65,11 @@ Across these cases, the audience varies: developers, decision-makers, regulators
 
 There are two ways to make AI systems understandable.
 
-**The first is to design models that are interpretable by construction.** These models expose their logic directly, allowing humans to inspect how inputs lead to outputs. Rule-based models, risk scores, and generalized additive models fall into this category. When an inherently interpretable model achieves adequate performance, it should usually be preferred. There is no surrogate layer, no approximation, and no ambiguity about fidelity.
+The first is to design models that are interpretable by construction. These models expose their logic directly, allowing humans to inspect how inputs lead to outputs. Rule-based models, risk scores, and generalized additive models fall into this category. When an inherently interpretable model achieves adequate performance, it should usually be preferred. There is no surrogate layer, no approximation, and no ambiguity about fidelity.
 
 But there is a trade-off. Simpler models often sacrifice performance. In domains like banking and insurance, interpretability may be required for every decision—yet true relationships in data are rarely linear. The most accurate models are often the hardest to interpret. This tension is why post-hoc explainability methods exist.
 
-**The second path is to explain models after the fact.** When models are too complex, externally sourced, or already deployed, post-hoc explanations act as a bridge between a black-box system and its users. The question shifts from *how does the model work?* to *how can its behavior be described without misleading people?*
+The second path is to explain models after the fact. When models are too complex, externally sourced, or already deployed, post-hoc explanations act as a bridge between a black-box system and its users. The question shifts from *how does the model work?* to *how can its behavior be described without misleading people?*
 
 That distinction matters.
 
@@ -77,11 +77,11 @@ That distinction matters.
 
 ## Explanation as an Interface, Not a Property
 
-Post-hoc explanations do not reveal a model’s internal reasoning. They **approximate behavior from the outside**.
+Post-hoc explanations do not reveal a model’s internal reasoning. They approximate behavior from the outside.
 
 An explanation method takes a trained model and produces a secondary artifact—feature attributions, rules, examples, or counterfactuals—that people can inspect. This artifact sits between the system and its stakeholders, translating complex computation into a usable form.
 
-This means explanations help people **use** a model, not fully understand it.
+This means explanations help people use a model, not fully understand it.
 
 For this interface to be useful, it must balance two competing goals: reflecting what the model actually does and remaining understandable to its audience. Improving one often degrades the other. There is no universal solution. Explainability is inherently audience-dependent.
 
@@ -93,8 +93,7 @@ Local explanations focus on individual predictions. They answer: *why did the mo
 
 Global explanations summarize behavior across populations. They address: *what does the model generally rely on?* and *are certain groups systematically affected?* These views are essential for governance, auditing, and regulatory oversight.
 
-**Local explanations reveal failures. Global explanations contextualize them.**  
-Both are necessary. Neither is sufficient on its own.
+Local explanations reveal failures. Global explanations contextualize them. Both are necessary. Neither is sufficient on its own.
 
 ---
 
