@@ -59,6 +59,8 @@ For people affected by automated decisions, the need is different. Feature impor
 
 Across these cases, the audience varies: developers, decision-makers, regulators, affected individuals. The function does not. Explainability supports debugging, bias detection, trust calibration, recourse, and governance by making failures visible before they become systemic.
 
+For a deeper look at the bias and fairness failures that make explainability necessary, see [AI Safety: Secure Systems Can Still Cause Harm](https://changezakram.github.io/responsible-ai/ai-safety.html).
+
 ---
 
 ## Two Paths to Model Understanding
@@ -139,6 +141,8 @@ Opaque models create attack surfaces. Model inversion attacks extract sensitive 
 
 Explainability can help detect these risks early. But it also introduces a paradox: revealing too much can create exploitation roadmaps. Organizations must balance transparency with security—providing enough insight to build trust without enabling abuse.
 
+For a comprehensive treatment of adversarial threats and defense-in-depth controls for autonomous systems, see [Securing Agentic AI Systems: A Defense-in-Depth Approach](https://changezakram.github.io/agentic-ai/agentic_ai_security.html).
+
 ---
 
 ## The Limits of Post-Hoc Explainability
@@ -182,6 +186,8 @@ For agentic AI—systems that act autonomously—the stakes rise further.
 Agents do not just make predictions; they chain decisions, interact with environments, and adapt over time. Explaining a single output is hard enough. Explaining sequences of autonomous actions requires new approaches to traceability, accountability, and oversight.
 
 The question is not whether to invest in explainability. It is whether to build it in now—or scramble to retrofit it later.
+
+For a governance framework for these autonomous systems, see [Securing Agentic AI Systems: A Defense-in-Depth Approach](https://changezakram.github.io/agentic-ai/agentic_ai_security.html).
 
 ---
 
