@@ -15,7 +15,7 @@ execute:
   echo: false
 ---
 
-## Why Explainability Exists.
+## Why Explainability Exists
 
 Explainability is often treated as a technical add-on—something applied after a model is trained, when stakeholders start asking uncomfortable questions. The reason it exists is simpler: optimization breaks down in the real world.
 
