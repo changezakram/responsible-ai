@@ -188,8 +188,12 @@ The question is not whether to invest in explainability. It is whether to build 
 
 ## Further Reading
 
-- Molnar, Christoph. *Interpretable Machine Learning*. https://christophm.github.io/interpretable-ml-book/
-- O’Neil, Cathy. *Weapons of Math Destruction*.
-- Rudin, Cynthia. “Stop Explaining Black Box Machine Learning Models for High Stakes Decisions and Use Interpretable Models Instead.” *Nature Machine Intelligence*, 2019.
-- Ribeiro, Singh, Guestrin. “Why Should I Trust You?” KDD 2016.
-- Lundberg, Lee. “A Unified Approach to Interpreting Model Predictions.” NeurIPS 2017.
+[1] Molnar, Christoph. *Interpretable Machine Learning*. https://christophm.github.io/interpretable-ml-book/
+
+[2] O’Neil, Cathy. *Weapons of Math Destruction*.
+
+[3] Rudin, Cynthia. “Stop Explaining Black Box Machine Learning Models for High Stakes Decisions and Use Interpretable Models Instead.” *Nature Machine Intelligence*, 2019.
+
+[4] Ribeiro, Singh, Guestrin. “Why Should I Trust You?” KDD 2016.
+
+[5] Lundberg, Lee. “A Unified Approach to Interpreting Model Predictions.” NeurIPS 2017.

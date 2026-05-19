@@ -109,7 +109,7 @@
     "href": "explainable-ai.html#further-reading",
     "title": "Explainable AI: Beyond the Checkbox",
     "section": "Further Reading",
-    "text": "Further Reading\n\nMolnar, Christoph. Interpretable Machine Learning. https://christophm.github.io/interpretable-ml-book/\nO’Neil, Cathy. Weapons of Math Destruction.\nRudin, Cynthia. “Stop Explaining Black Box Machine Learning Models for High Stakes Decisions and Use Interpretable Models Instead.” Nature Machine Intelligence, 2019.\nRibeiro, Singh, Guestrin. “Why Should I Trust You?” KDD 2016.\nLundberg, Lee. “A Unified Approach to Interpreting Model Predictions.” NeurIPS 2017."
+    "text": "Further Reading\n[1] Molnar, Christoph. Interpretable Machine Learning. https://christophm.github.io/interpretable-ml-book/\n[2] O’Neil, Cathy. Weapons of Math Destruction.\n[3] Rudin, Cynthia. “Stop Explaining Black Box Machine Learning Models for High Stakes Decisions and Use Interpretable Models Instead.” Nature Machine Intelligence, 2019.\n[4] Ribeiro, Singh, Guestrin. “Why Should I Trust You?” KDD 2016.\n[5] Lundberg, Lee. “A Unified Approach to Interpreting Model Predictions.” NeurIPS 2017."
   },
   {
     "objectID": "ai-safety.html",
