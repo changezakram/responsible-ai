@@ -137,7 +137,11 @@ At the portfolio level, counterfactual analysis becomes a governance tool: it ca
 
 ### Permutation Feature Importance
 
-Permutation importance measures what the model relies on across the entire dataset by shuffling one feature at a time and observing how much model performance degrades. If accuracy drops sharply, the feature mattered. If it barely changes, the model was not relying on it. This is a global technique — it does not explain individual decisions but validates whether a model is using sensible signals before deployment. In financial services, it is the natural audit tool: run it during model validation to confirm that features driving predictions are economically meaningful and not proxies for protected characteristics. Its key limitation is that correlated features can mask each other's true importance — a feature may appear less important simply because another correlated feature carries the same information.
+Permutation importance measures how much a model depends on each feature across the full dataset. The method works by shuffling one feature at a time and observing how much model performance deteriorates. If performance drops significantly, the model was relying on that feature. If performance barely changes, the feature contributed little to the model’s predictions.
+
+Unlike SHAP or counterfactual explanations, permutation importance is a global technique: it does not explain individual decisions, but instead reveals what drives the model overall. In financial services, permutation importance is a practical validation tool for conceptual soundness review. During model validation, it can help confirm that the features driving predictions are economically meaningful and not acting as hidden proxies for protected characteristics.
+
+Its primary limitation is feature correlation. Correlated variables can dilute each other’s measured importance because the model can often substitute one for another. As a result, a genuinely important feature may appear less influential than it is.
 
 ---
 
