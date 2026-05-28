@@ -338,14 +338,16 @@ Figure&nbsp;1: LIME explains a mortgage denial in five steps: selecting the pred
 </section>
 <section id="shap-shapley-additive-explanations" class="level3">
 <h3 class="anchored" data-anchor-id="shap-shapley-additive-explanations">SHAP (SHapley Additive exPlanations)</h3>
-<p>SHAP assigns each feature a fair share of credit for a prediction using principles from cooperative game theory. Where LIME approximates locally, SHAP provides theoretically grounded attribution with mathematical guarantees no other method offers. It supports both local explanations — why did this applicant get declined — and global views — what does the model rely on across the portfolio. That dual capability makes it the most defensible choice for SR 11-7 model documentation. The tradeoff is computational cost: SHAP can be slow at scale, which matters for real-time fraud detection but less so for credit underwriting, where decisions are not instantaneous.</p>
+<p>SHAP assigns each feature a fair share of credit for a prediction using principles from cooperative game theory — the same mathematics used to fairly divide credit among players in a shared outcome. Unlike LIME, which approximates locally and can produce inconsistent results, SHAP derives its values from a mathematically principled framework that guarantees consistency across explanations.</p>
+<p>SHAP supports both local explanations (“Why was this applicant declined?”) and global analysis (“What features drive decisions across the portfolio?”). That dual capability makes it the most defensible explainability approach for SR 11-7 model documentation and governance review.</p>
+<p>The tradeoff is computational cost. SHAP evaluates many feature combinations to estimate contributions fairly, which can become expensive at scale. That matters for real-time fraud detection and other latency-sensitive systems, but less so for underwriting and portfolio analytics, where decisions are not instantaneous.</p>
 <div id="fig-SHAP" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Four-step SHAP explanation diagram showing feature contributions for a mortgage application">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-SHAP-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/shap-visual.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Four-step SHAP explanation diagram showing feature contributions for a mortgage application">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-SHAP-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: SHAP explains a mortgage prediction in four steps using game theory. Starting from a baseline of 0.42, feature contributions sum to a final approval probability of 0.56. Credit score contributes +0.24; DTI ratio reduces the score by −0.18.
+Figure&nbsp;2: SHAP explains a mortgage prediction by measuring how each feature changes the model output across all possible feature combinations. Starting from a baseline of 0.42, feature contributions sum to a final approval probability of 0.56.
 </figcaption>
 </figure>
 </div>
