@@ -263,7 +263,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="why-explainability-exists" class="level2">
 <h2 class="anchored" data-anchor-id="why-explainability-exists">Why Explainability Exists</h2>
 <p>Explainability is often treated as a technical add-on — something applied after a model is trained, when regulators or stakeholders begin asking how decisions were made. The reason it exists is simpler: optimization breaks down in the real world.</p>
-<p>The stakes are not abstract. Google’s facial recognition system once mislabeled Black individuals as gorillas. Unable to fix the underlying bias, Google removed primate-related labels entirely—a workaround, not a solution. Uber’s autonomous vehicle ran a stop sign, raising questions about accountability in systems no one fully understands. As Cathy O’Neil documents in <em>Weapons of Math Destruction</em>, opaque models create feedback loops that amplify bias across criminal justice, hiring, credit scoring, and healthcare.</p>
+<p>The stakes are not abstract. Google’s facial recognition system once mislabeled Black individuals as gorillas. Unable to fix the underlying bias, Google removed primate-related labels entirely—a workaround, not a solution. Uber’s autonomous vehicle fatality raised questions about accountability in systems no one fully understands. As Cathy O’Neil documents in <em>Weapons of Math Destruction</em>, opaque models create feedback loops that amplify bias across criminal justice, hiring, credit scoring, and healthcare.</p>
 <p>The presence of machine learning alone does not determine whether explainability matters. Context does.</p>
 <hr>
 </section>
@@ -323,7 +323,7 @@ ul.task-list li input[type="checkbox"] {
 <p>The method works by creating many small variations of the original input — in a credit decisioning system, this means generating applicants with slightly different feature values — and observing how the model’s prediction changes. Those nearby examples are weighted by their similarity to the original input. LIME then fits a simple local model that approximates the behavior of the larger black-box system in that neighborhood.</p>
 <p>The approach is flexible and model-agnostic, which made it one of the earliest widely adopted explainability techniques for complex machine learning systems. But the same flexibility introduces an important limitation: explanations can change depending on how the perturbations are generated. Small changes to the sampling process may produce noticeably different explanations for the same prediction.</p>
 <p>For banking applications, that instability matters. Adverse action notices, fair lending reviews, and regulatory examinations require explanations that are consistent and defensible. LIME is often useful for exploratory analysis and rapid debugging, but it is less reliable as a primary explanation framework for formal model governance.</p>
-<div id="fig-LIME" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Five-step LIME explanation diagram for a denied mortgage application" data-fig-align="center">
+<div id="fig-LIME" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Five-step LIME explanation diagram for a denied mortgage application">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-LIME-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/lime.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Five-step LIME explanation diagram for a denied mortgage application">
@@ -339,7 +339,7 @@ Figure&nbsp;1: LIME explains a mortgage denial in five steps: selecting the pred
 <p>SHAP assigns each feature a fair share of credit for a prediction using principles from cooperative game theory — the same mathematics used to fairly divide credit among players in a shared outcome. Unlike LIME, which approximates locally and can produce inconsistent results, SHAP derives its values from a mathematically principled framework that guarantees consistency across explanations.</p>
 <p>SHAP supports both local explanations (“Why was this applicant declined?”) and global analysis (“What features drive decisions across the portfolio?”). That dual capability makes it the most defensible explainability approach for SR 11-7 model documentation and governance review.</p>
 <p>The tradeoff is computational cost. SHAP evaluates every possible feature combination to estimate contributions fairly, which can become expensive at scale. That matters for real-time fraud detection and other latency-sensitive systems, but less so for underwriting and portfolio analytics, where decisions are not instantaneous.</p>
-<div id="fig-SHAP" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Four-step SHAP explanation diagram showing feature contributions for a mortgage application" data-fig-align="center">
+<div id="fig-SHAP" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Four-step SHAP explanation diagram showing feature contributions for a mortgage application">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-SHAP-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/shap.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Four-step SHAP explanation diagram showing feature contributions for a mortgage application">
@@ -417,7 +417,7 @@ Figure&nbsp;3: Counterfactual explanations show the smallest realistic changes n
 <h2 class="anchored" data-anchor-id="implications-for-agentic-systems">Implications for Agentic Systems</h2>
 <p>For agentic AI—systems that act autonomously—the stakes rise further.</p>
 <p>Agents do not just make predictions; they chain decisions, interact with environments, and adapt over time. Explaining a single output is hard enough. Explaining sequences of autonomous actions requires new approaches to traceability, accountability, and oversight.</p>
-<p>The question is not whether to invest in explainability. It is whether to build it in now—or scramble to retrofit it later.</p>
+<p>The question is not whether to invest in explainability — it is whether to build it in now or retrofit it under pressure.</p>
 <p>For a governance framework for these autonomous systems, see <a href="https://changezakram.github.io/agentic-ai/agentic_ai_security.html">Securing Agentic AI Systems: A Defense-in-Depth Approach</a>.</p>
 <hr>
 </section>
