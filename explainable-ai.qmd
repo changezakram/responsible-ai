@@ -134,6 +134,9 @@ A counterfactual explanation tells an applicant not just that income influenced 
 At the portfolio level, counterfactual analysis becomes a governance tool: it can reveal whether some groups must exert systematically greater effort to achieve favorable outcomes. That pattern, if consistent, may indicate disparate impact — and a counterfactual audit can surface it before an examiner does.
 
 
+![Counterfactual explanations show the smallest realistic changes needed to alter a model’s decision. In this example, increasing annual income and reducing the debt-to-income ratio flip the mortgage application outcome from denied to approved, while all other applicant attributes remain unchanged.](images/counterfactual.png){#fig-counterfactual fig-align="center" width="100%"}
+
+
 ### Permutation Feature Importance
 
 Permutation importance measures what the model relies on across the entire dataset by shuffling one feature at a time and observing how much model performance degrades. If accuracy drops sharply, the feature mattered. If it barely changes, the model was not relying on it. This is a global technique — it does not explain individual decisions but validates whether a model is using sensible signals before deployment. In financial services, it is the natural audit tool: run it during model validation to confirm that features driving predictions are economically meaningful and not proxies for protected characteristics. Its key limitation is that correlated features can mask each other's true importance — a feature may appear less important simply because another correlated feature carries the same information.
