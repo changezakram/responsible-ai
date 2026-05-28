@@ -43,7 +43,7 @@ Many such applications are under-studied. Training data rarely reflects the cond
 
 High-stakes systems also face requirements that extend beyond predictive performance. Fairness, non-discrimination, robustness, safety, and legal defensibility all matter. Increasingly, regulations mandate transparency or a right to explanation when automated systems influence consequential decisions.
 
-These demands expose a deeper issue: many of the criteria we care about cannot be fully specified as optimization objectives. What it means for a model to behave acceptably is often contextual, contested, and situation-dependent. Problem formulations are inherently incomplete.
+These demands expose a deeper issue: many of the criteria we care about cannot be fully specified as optimization objectives. What it means for a model to behave acceptably is often contextual, contested, and dependent on the situation. Problem formulations are inherently incomplete — and incompleteness is not the same as uncertainty. Uncertainty can be quantified and managed; incompleteness cannot. When a criterion cannot be encoded, behavior must be observed and explained rather than optimized.
 
 When requirements cannot be encoded into training, behavior must be evaluated another way. That is where explainability enters—not as proof that a model is correct, but as a diagnostic tool.
 
@@ -57,7 +57,9 @@ In vision systems, explanations reveal shortcut learning: models that appear acc
 
 For people affected by automated decisions, the need is different. Feature importance alone is rarely useful. What matters is recourse—understanding what could realistically change an outcome.
 
-Across these cases, the audience varies: developers, decision-makers, regulators, affected individuals. The function does not. Explainability supports debugging, bias detection, trust calibration, recourse, and governance by making failures visible before they become systemic.
+Across these cases, the audience varies — and so do their needs. End users may need recourse: what would change the outcome. Decision-makers need trust calibration: when to rely on the model and when to override it. Regulators need auditability and evidence that models behave consistently and without prohibited bias. Researchers and engineers need debugging tools to identify failure modes before deployment.
+
+The function of explainability is to support all of these needs with the right explanation for the right audience — making failures visible before they become systemic.
 
 For a deeper look at the bias and fairness failures that make explainability necessary, see [AI Safety: Secure Systems Can Still Cause Harm](https://changezakram.github.io/responsible-ai/ai-safety.html).
 
