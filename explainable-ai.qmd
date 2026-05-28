@@ -134,7 +134,7 @@ The table below summarizes the key differences for practitioners deciding which 
 | SR 11-7 defensibility | Limited | Strong |
 | Primary use case | Debugging | Formal governance |
 
-*LIME is useful for rapid local debugging, while SHAP is generally more defensible for formal model governance because it provides more stable, mathematically grounded explanations.*
+*Table 1: LIME is useful for rapid local debugging, while SHAP is generally more defensible for formal model governance because it provides more stable, mathematically grounded explanations.*
 
 ### Counterfactual Explanations
 
