@@ -123,7 +123,7 @@ SHAP supports both local explanations ("Why was this applicant declined?") and g
 
 The tradeoff is computational cost. SHAP evaluates many feature combinations to estimate contributions fairly, which can become expensive at scale. That matters for real-time fraud detection and other latency-sensitive systems, but less so for underwriting and portfolio analytics, where decisions are not instantaneous.
 
-![SHAP explains a mortgage prediction by measuring how each feature changes the model output across all possible feature combinations. Starting from a baseline of 0.42, feature contributions sum to a final approval probability of 0.56.](images/shap-visual.png){#fig-SHAP fig-alt="Four-step SHAP explanation diagram showing feature contributions for a mortgage application" fig-align="center" width="100%"}
+![SHAP explains a mortgage prediction by measuring how each feature changes the model output across all possible feature combinations. Starting from a baseline of 0.42, feature contributions sum to a final approval probability of 0.56.](images/shap.png){#fig-SHAP fig-alt="Four-step SHAP explanation diagram showing feature contributions for a mortgage application" fig-align="center" width="100%"}
 
 ### Counterfactual Explanations
 
