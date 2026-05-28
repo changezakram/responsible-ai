@@ -17,7 +17,7 @@ execute:
 
 ## Why Explainability Exists
 
-Explainability is often treated as a technical add-on—something applied after a model is trained, when stakeholders start asking uncomfortable questions. The reason it exists is simpler: optimization breaks down in the real world.
+Explainability is often treated as a technical add-on — something applied after a model is trained, when regulators or stakeholders begin asking how decisions were made. The reason it exists is simpler: optimization breaks down in the real world.
 
 The stakes are not abstract. Google’s facial recognition system once mislabeled Black individuals as gorillas. Unable to fix the underlying bias, Google removed primate-related labels entirely—a workaround, not a solution. Uber’s autonomous vehicle ran a stop sign, raising questions about accountability in systems no one fully understands. As Cathy O’Neil documents in *Weapons of Math Destruction*, opaque models create feedback loops that amplify bias across criminal justice, hiring, credit scoring, and healthcare.
 
@@ -65,9 +65,7 @@ For a deeper look at the bias and fairness failures that make explainability nec
 
 ## Two Paths to Model Understanding
 
-There are two ways to make AI systems understandable.
-
-The first is to design models that are interpretable by construction. These models expose their logic directly, allowing humans to inspect how inputs lead to outputs. Rule-based models, risk scores, and generalized additive models fall into this category. When an inherently interpretable model achieves adequate performance, it should usually be preferred. There is no surrogate layer, no approximation, and no ambiguity about fidelity.
+The first path is to design models that are interpretable by construction. These models expose their logic directly, allowing humans to inspect how inputs lead to outputs. Rule-based models, risk scores, and generalized additive models fall into this category. When an inherently interpretable model achieves adequate performance, it should usually be preferred. There is no surrogate layer, no approximation, and no ambiguity about fidelity.
 
 But there is a trade-off. Simpler models often sacrifice performance. In domains like banking and insurance, interpretability may be required for every decision—yet true relationships in data are rarely linear. The most accurate models are often the hardest to interpret. This tension is why post-hoc explainability methods exist.
 
@@ -147,7 +145,7 @@ Its primary limitation is feature correlation. Correlated variables can dilute e
 
 ## Attention Is Not Explanation
 
-As large language models enter production, attention mechanisms are often presented as explanations. This is a mistake.
+As large language models enter production, attention mechanisms — the internal weights that determine which inputs a model focuses on when generating a response — are often presented as explanations. This is a mistake.
 
 Attention weights show which inputs influenced a prediction, not how or why a decision was made. High attention does not imply importance; low attention does not imply irrelevance. Treating attention as explanation conflates correlation with justification.
 
@@ -193,7 +191,7 @@ Organizations deploying AI without explainability capabilities are accumulating 
 
 Explainable AI is not about choosing the "right" technique. It is about judgment.
 
-Interpretable models offer clarity but may lack flexibility. Post-hoc explanations offer access but rely on approximation. Local explanations surface failures. Global explanations support oversight. None provides a complete picture.
+Interpretable models offer clarity but may lack flexibility. Post-hoc explanations make black-box models more inspectable, though the explanations themselves are approximations, not ground truth. None provides a complete picture.
 
 Responsible AI does not require perfect transparency. It requires knowing when explanations are sufficient, when they mislead, and when a system should not be trusted at all.
 

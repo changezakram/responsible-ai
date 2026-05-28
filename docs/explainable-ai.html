@@ -262,7 +262,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="why-explainability-exists" class="level2">
 <h2 class="anchored" data-anchor-id="why-explainability-exists">Why Explainability Exists</h2>
-<p>Explainability is often treated as a technical add-on—something applied after a model is trained, when stakeholders start asking uncomfortable questions. The reason it exists is simpler: optimization breaks down in the real world.</p>
+<p>Explainability is often treated as a technical add-on — something applied after a model is trained, when regulators or stakeholders begin asking how decisions were made. The reason it exists is simpler: optimization breaks down in the real world.</p>
 <p>The stakes are not abstract. Google’s facial recognition system once mislabeled Black individuals as gorillas. Unable to fix the underlying bias, Google removed primate-related labels entirely—a workaround, not a solution. Uber’s autonomous vehicle ran a stop sign, raising questions about accountability in systems no one fully understands. As Cathy O’Neil documents in <em>Weapons of Math Destruction</em>, opaque models create feedback loops that amplify bias across criminal justice, hiring, credit scoring, and healthcare.</p>
 <p>The presence of machine learning alone does not determine whether explainability matters. Context does.</p>
 <hr>
@@ -294,8 +294,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="two-paths-to-model-understanding" class="level2">
 <h2 class="anchored" data-anchor-id="two-paths-to-model-understanding">Two Paths to Model Understanding</h2>
-<p>There are two ways to make AI systems understandable.</p>
-<p>The first is to design models that are interpretable by construction. These models expose their logic directly, allowing humans to inspect how inputs lead to outputs. Rule-based models, risk scores, and generalized additive models fall into this category. When an inherently interpretable model achieves adequate performance, it should usually be preferred. There is no surrogate layer, no approximation, and no ambiguity about fidelity.</p>
+<p>The first path is to design models that are interpretable by construction. These models expose their logic directly, allowing humans to inspect how inputs lead to outputs. Rule-based models, risk scores, and generalized additive models fall into this category. When an inherently interpretable model achieves adequate performance, it should usually be preferred. There is no surrogate layer, no approximation, and no ambiguity about fidelity.</p>
 <p>But there is a trade-off. Simpler models often sacrifice performance. In domains like banking and insurance, interpretability may be required for every decision—yet true relationships in data are rarely linear. The most accurate models are often the hardest to interpret. This tension is why post-hoc explainability methods exist.</p>
 <p>The second path is to explain models after the fact. When models are too complex, externally sourced, or already deployed, post-hoc explanations act as a bridge between a black-box system and its users. The question shifts from <em>how does the model work?</em> to <em>how can its behavior be described without misleading people?</em></p>
 <p>That distinction matters.</p>
@@ -324,7 +323,7 @@ ul.task-list li input[type="checkbox"] {
 <p>The method works by creating many small variations of the original input — in a credit decisioning system, this means generating applicants with slightly different feature values — and observing how the model’s prediction changes. Those nearby examples are weighted by their similarity to the original input. LIME then fits a simple local model that approximates the behavior of the larger black-box system in that neighborhood.</p>
 <p>The approach is flexible and model-agnostic, which made it one of the earliest widely adopted explainability techniques for complex machine learning systems. But the same flexibility introduces an important limitation: explanations can change depending on how the perturbations are generated. Small changes to the sampling process may produce noticeably different explanations for the same prediction.</p>
 <p>For banking applications, that instability matters. Adverse action notices, fair lending reviews, and regulatory examinations require explanations that are consistent and defensible. LIME is often useful for exploratory analysis and rapid debugging, but it is less reliable as a primary explanation framework for formal model governance.</p>
-<div id="fig-LIME" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Five-step LIME explanation diagram for a denied mortgage application" data-fig-align="center">
+<div id="fig-LIME" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Five-step LIME explanation diagram for a denied mortgage application">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-LIME-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/lime.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Five-step LIME explanation diagram for a denied mortgage application">
@@ -340,7 +339,7 @@ Figure&nbsp;1: LIME explains a mortgage denial in five steps: selecting the pred
 <p>SHAP assigns each feature a fair share of credit for a prediction using principles from cooperative game theory — the same mathematics used to fairly divide credit among players in a shared outcome. Unlike LIME, which approximates locally and can produce inconsistent results, SHAP derives its values from a mathematically principled framework that guarantees consistency across explanations.</p>
 <p>SHAP supports both local explanations (“Why was this applicant declined?”) and global analysis (“What features drive decisions across the portfolio?”). That dual capability makes it the most defensible explainability approach for SR 11-7 model documentation and governance review.</p>
 <p>The tradeoff is computational cost. SHAP evaluates every possible feature combination to estimate contributions fairly, which can become expensive at scale. That matters for real-time fraud detection and other latency-sensitive systems, but less so for underwriting and portfolio analytics, where decisions are not instantaneous.</p>
-<div id="fig-SHAP" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Four-step SHAP explanation diagram showing feature contributions for a mortgage application" data-fig-align="center">
+<div id="fig-SHAP" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Four-step SHAP explanation diagram showing feature contributions for a mortgage application">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-SHAP-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/shap.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Four-step SHAP explanation diagram showing feature contributions for a mortgage application">
@@ -377,7 +376,7 @@ Figure&nbsp;3: Counterfactual explanations show the smallest realistic changes n
 </section>
 <section id="attention-is-not-explanation" class="level2">
 <h2 class="anchored" data-anchor-id="attention-is-not-explanation">Attention Is Not Explanation</h2>
-<p>As large language models enter production, attention mechanisms are often presented as explanations. This is a mistake.</p>
+<p>As large language models enter production, attention mechanisms — the internal weights that determine which inputs a model focuses on when generating a response — are often presented as explanations. This is a mistake.</p>
 <p>Attention weights show which inputs influenced a prediction, not how or why a decision was made. High attention does not imply importance; low attention does not imply irrelevance. Treating attention as explanation conflates correlation with justification.</p>
 <p>The same caution applies to saliency maps in vision models. Saliency shows where the model is sensitive, not why. Without context, these artifacts can create confidence without understanding.</p>
 <hr>
@@ -408,7 +407,7 @@ Figure&nbsp;3: Counterfactual explanations show the smallest realistic changes n
 <section id="a-practical-view" class="level2">
 <h2 class="anchored" data-anchor-id="a-practical-view">A Practical View</h2>
 <p>Explainable AI is not about choosing the “right” technique. It is about judgment.</p>
-<p>Interpretable models offer clarity but may lack flexibility. Post-hoc explanations offer access but rely on approximation. Local explanations surface failures. Global explanations support oversight. None provides a complete picture.</p>
+<p>Interpretable models offer clarity but may lack flexibility. Post-hoc explanations make black-box models more inspectable, though the explanations themselves are approximations, not ground truth. None provides a complete picture.</p>
 <p>Responsible AI does not require perfect transparency. It requires knowing when explanations are sufficient, when they mislead, and when a system should not be trusted at all.</p>
 <p>Consider a credit decisioning model that achieves high accuracy but relies heavily on zip code as a feature. Post-hoc explanation surfaces this. The question then is not which technique revealed it — it is what the organization does next. Explainability creates the opportunity for that judgment. It does not replace it.</p>
 <hr>
