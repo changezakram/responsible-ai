@@ -105,9 +105,15 @@ Local explanations reveal failures. Global explanations contextualize them. Both
 
 ### LIME (Local Interpretable Model-agnostic Explanations)
 
-LIME explains individual predictions by fitting a simple, interpretable model around a single instance — think of it as drawing a straight line around one point on a very complicated curve. It works by perturbing inputs slightly and observing how predictions change, then summarizing the result in terms a human can inspect. It is flexible and model-agnostic, but unstable: small changes in how inputs are perturbed can produce noticeably different explanations for the same prediction. For banking applications that require consistent, defensible explanations — adverse action notices, regulatory examinations — that instability is a meaningful limitation. LIME is better suited to rapid debugging than to formal model documentation.
+LIME explains a prediction by fitting a simple, interpretable model around a single decision. Instead of trying to explain the full behavior of a complex model, it focuses only on the local region near the prediction being analyzed. Conceptually, think of it as drawing a straight line around one small section of a very complicated curve.
 
-![LIME explains a mortgage denial in five steps: selecting the instance, generating nearby variations, getting model predictions, weighting by proximity, and fitting a simple local model. Credit score and savings push toward approval; DTI ratio and LTV push toward denial.](images/lime-visual.png){#fig-LIME fig-alt="Five-step LIME explanation diagram for a denied mortgage application" fig-align="center" width="100%"}
+The method works by creating many small variations of the original input — in a credit decisioning system, this means generating applicants with slightly different feature values — and observing how the model's prediction changes. Those nearby examples are weighted by their similarity to the original input. LIME then fits a simple local model that approximates the behavior of the larger black-box system in that neighborhood.
+
+The approach is flexible and model-agnostic, which made it one of the earliest widely adopted explainability techniques for complex machine learning systems. But the same flexibility introduces an important limitation: explanations can change depending on how the perturbations are generated. Small changes to the sampling process may produce noticeably different explanations for the same prediction.
+
+For banking applications, that instability matters. Adverse action notices, fair lending reviews, and regulatory examinations require explanations that are consistent and defensible. LIME is often useful for exploratory analysis and rapid debugging, but it is less reliable as a primary explanation framework for formal model governance.
+
+![LIME explains a mortgage denial in five steps: selecting the instance, generating nearby variations, getting model predictions, weighting by proximity, and fitting a simple local model. Credit score and savings push toward approval; DTI ratio and LTV push toward denial.](images/lime.png){#fig-LIME fig-alt="Five-step LIME explanation diagram for a denied mortgage application" fig-align="center" width="100%"}
 
 ### SHAP (SHapley Additive exPlanations)
 
