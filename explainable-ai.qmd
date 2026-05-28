@@ -222,7 +222,7 @@ For agentic AI—systems that act autonomously—the stakes rise further.
 
 Agents do not just make predictions; they chain decisions, interact with environments, and adapt over time. Explaining a single output is hard enough. Explaining sequences of autonomous actions requires new approaches to traceability, accountability, and oversight.
 
-The question is not whether to invest in explainability — it is whether to build it in now or retrofit it under pressure.
+The question is not whether to invest in explainability — it is whether to build it in now or retrofit it under pressure. Agentic systems that cannot account for their own behavior will not satisfy examiners, will not earn the trust of decision-makers, and will not survive the scrutiny that follows consequential failures. Explainability is not a feature to be added later. For autonomous systems operating in high-stakes environments, it is a precondition for deployment.
 
 For a governance framework for these autonomous systems, see [Securing Agentic AI Systems: A Defense-in-Depth Approach](https://changezakram.github.io/agentic-ai/agentic_ai_security.html).
 
