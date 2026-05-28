@@ -129,9 +129,9 @@ The tradeoff is computational cost. SHAP evaluates every possible feature combin
 
 Counterfactual explanations shift the question from "Why was this decision made?" to "What would need to change for the outcome to be different?" Wachter, Mittelstadt, and Russell (2017) proposed the approach as a way to support regulatory compliance and meaningful individual recourse — making it especially relevant for adverse action notices under ECOA and broader fair lending obligations.
 
-A counterfactual explanation tells an applicant not just that income influenced the decision, but that increasing income by a specific amount would have changed the outcome. The practical challenge is generating realistic counterfactuals: the smallest mathematical change is often not the most realistic one. Telling an applicant to earn $5,000 more is useful; telling them to change their zip code is not.
+A counterfactual explanation tells an applicant not just that income influenced the decision, but that increasing income by a specific amount would have changed the outcome. The practical challenge is generating realistic counterfactuals: the mathematically smallest change is not always the most realistic one. Telling an applicant to earn $5,000 more is useful; telling them to change their zip code is not.
 
-At the portfolio level, counterfactual analysis becomes a governance tool: it can reveal whether some groups must exert systematically greater effort to achieve favorable outcomes. That pattern, if consistent, may indicate disparate impact — and a counterfactual audit can surface it before an examiner does.
+At the portfolio level, counterfactual analysis becomes a governance tool: it can reveal whether some groups consistently need greater changes to achieve favorable outcomes. That pattern, if consistent, may indicate disparate impact — and a counterfactual audit can surface it before an examiner does.
 
 
 ![Counterfactual explanations show the smallest realistic changes needed to alter a model’s decision. In this example, increasing annual income and reducing the debt-to-income ratio flip the mortgage application outcome from denied to approved, while all other applicant attributes remain unchanged.](images/counterfactual.png){#fig-counterfactual fig-align="center" width="100%"}
