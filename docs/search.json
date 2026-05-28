@@ -1,0 +1,198 @@
+[
+  {
+    "objectID": "explainable-ai.html",
+    "href": "explainable-ai.html",
+    "title": "Explainable AI: Beyond the Checkbox",
+    "section": "",
+    "text": "Explainability is often treated as a technical add-on—something applied after a model is trained, when stakeholders start asking uncomfortable questions. The reason it exists is simpler: optimization breaks down in the real world.\nThe stakes are not abstract. Google’s facial recognition system once mislabeled Black individuals as gorillas. Unable to fix the underlying bias, Google removed primate-related labels entirely—a workaround, not a solution. Uber’s autonomous vehicle ran a stop sign, raising questions about accountability in systems no one fully understands. As Cathy O’Neil documents in Weapons of Math Destruction, opaque models create feedback loops that amplify bias across criminal justice, hiring, credit scoring, and healthcare.\nThe presence of machine learning alone does not determine whether explainability matters. Context does."
+  },
+  {
+    "objectID": "explainable-ai.html#why-explainability-exists",
+    "href": "explainable-ai.html#why-explainability-exists",
+    "title": "Explainable AI: Beyond the Checkbox",
+    "section": "",
+    "text": "Explainability is often treated as a technical add-on—something applied after a model is trained, when stakeholders start asking uncomfortable questions. The reason it exists is simpler: optimization breaks down in the real world.\nThe stakes are not abstract. Google’s facial recognition system once mislabeled Black individuals as gorillas. Unable to fix the underlying bias, Google removed primate-related labels entirely—a workaround, not a solution. Uber’s autonomous vehicle ran a stop sign, raising questions about accountability in systems no one fully understands. As Cathy O’Neil documents in Weapons of Math Destruction, opaque models create feedback loops that amplify bias across criminal justice, hiring, credit scoring, and healthcare.\nThe presence of machine learning alone does not determine whether explainability matters. Context does."
+  },
+  {
+    "objectID": "explainable-ai.html#when-explainability-mattersand-when-it-does-not",
+    "href": "explainable-ai.html#when-explainability-mattersand-when-it-does-not",
+    "title": "Explainable AI: Beyond the Checkbox",
+    "section": "When Explainability Matters—and When It Does Not",
+    "text": "When Explainability Matters—and When It Does Not\nNot every system needs explanations. When errors are reversible, harm is limited, and no human is expected to interpret or justify individual decisions, performance metrics are often sufficient. Recommendation systems, ad targeting, and internal optimization tools fall into this category. If a model makes a poor prediction, the consequences are contained.\nHigh-stakes systems change the equation. In healthcare, lending, hiring, and judicial settings, model outputs shape outcomes that cannot be undone. People may lose access to credit, treatment, employment, or liberty. In these settings, humans remain responsible for the decisions the system supports.\nThat responsibility does not disappear because a model is involved. When people are expected to rely on a system and justify its decisions, explainability becomes a safety requirement—not a transparency exercise."
+  },
+  {
+    "objectID": "explainable-ai.html#why-accuracy-alone-breaks-down",
+    "href": "explainable-ai.html#why-accuracy-alone-breaks-down",
+    "title": "Explainable AI: Beyond the Checkbox",
+    "section": "Why Accuracy Alone Breaks Down",
+    "text": "Why Accuracy Alone Breaks Down\nIn high-impact settings, accuracy alone is a weak guarantee of acceptable behavior.\nMany such applications are under-studied. Training data rarely reflects the conditions encountered after deployment. Distribution shift is common. Historical data often encodes bias. Feedback loops quietly distort outcomes over time. A model can appear accurate in validation and still fail for reasons metrics never reveal.\nHigh-stakes systems also face requirements that extend beyond predictive performance. Fairness, non-discrimination, robustness, safety, and legal defensibility all matter. Increasingly, regulations mandate transparency or a right to explanation when automated systems influence consequential decisions.\nThese demands expose a deeper issue: many of the criteria we care about cannot be fully specified as optimization objectives. What it means for a model to behave acceptably is often contextual, contested, and situation-dependent. Problem formulations are inherently incomplete.\nWhen requirements cannot be encoded into training, behavior must be evaluated another way. That is where explainability enters—not as proof that a model is correct, but as a diagnostic tool."
+  },
+  {
+    "objectID": "explainable-ai.html#explainability-as-diagnostic-infrastructure",
+    "href": "explainable-ai.html#explainability-as-diagnostic-infrastructure",
+    "title": "Explainable AI: Beyond the Checkbox",
+    "section": "Explainability as Diagnostic Infrastructure",
+    "text": "Explainability as Diagnostic Infrastructure\nExplainability is best understood as diagnostic infrastructure—a way to examine how a system behaves when performance metrics fall short. By inspecting what a model relies on and how its predictions change across cases, we can surface failure modes that would otherwise remain hidden.\nIn vision systems, explanations reveal shortcut learning: models that appear accurate while relying on irrelevant background cues. In financial systems, they can expose reliance on prohibited or proxy attributes. In clinical settings, they help practitioners decide when to trust a recommendation and when to override it.\nFor people affected by automated decisions, the need is different. Feature importance alone is rarely useful. What matters is recourse—understanding what could realistically change an outcome.\nAcross these cases, the audience varies: developers, decision-makers, regulators, affected individuals. The function does not. Explainability supports debugging, bias detection, trust calibration, recourse, and governance by making failures visible before they become systemic.\nFor a deeper look at the bias and fairness failures that make explainability necessary, see AI Safety: Secure Systems Can Still Cause Harm."
+  },
+  {
+    "objectID": "explainable-ai.html#two-paths-to-model-understanding",
+    "href": "explainable-ai.html#two-paths-to-model-understanding",
+    "title": "Explainable AI: Beyond the Checkbox",
+    "section": "Two Paths to Model Understanding",
+    "text": "Two Paths to Model Understanding\nThere are two ways to make AI systems understandable.\nThe first is to design models that are interpretable by construction. These models expose their logic directly, allowing humans to inspect how inputs lead to outputs. Rule-based models, risk scores, and generalized additive models fall into this category. When an inherently interpretable model achieves adequate performance, it should usually be preferred. There is no surrogate layer, no approximation, and no ambiguity about fidelity.\nBut there is a trade-off. Simpler models often sacrifice performance. In domains like banking and insurance, interpretability may be required for every decision—yet true relationships in data are rarely linear. The most accurate models are often the hardest to interpret. This tension is why post-hoc explainability methods exist.\nThe second path is to explain models after the fact. When models are too complex, externally sourced, or already deployed, post-hoc explanations act as a bridge between a black-box system and its users. The question shifts from how does the model work? to how can its behavior be described without misleading people?\nThat distinction matters."
+  },
+  {
+    "objectID": "explainable-ai.html#explanation-as-an-interface-not-a-property",
+    "href": "explainable-ai.html#explanation-as-an-interface-not-a-property",
+    "title": "Explainable AI: Beyond the Checkbox",
+    "section": "Explanation as an Interface, Not a Property",
+    "text": "Explanation as an Interface, Not a Property\nPost-hoc explanations do not reveal a model’s internal reasoning. They approximate behavior from the outside.\nAn explanation method takes a trained model and produces a secondary artifact—feature attributions, rules, examples, or counterfactuals—that people can inspect. This artifact sits between the system and its stakeholders, translating complex computation into a usable form.\nThis means explanations help people use a model, not fully understand it.\nFor this interface to be useful, it must balance two competing goals: reflecting what the model actually does and remaining understandable to its audience. Improving one often degrades the other. There is no universal solution. Explainability is inherently audience-dependent."
+  },
+  {
+    "objectID": "explainable-ai.html#local-and-global-views",
+    "href": "explainable-ai.html#local-and-global-views",
+    "title": "Explainable AI: Beyond the Checkbox",
+    "section": "Local and Global Views",
+    "text": "Local and Global Views\nLocal explanations focus on individual predictions. They answer: why did the model make this decision here? These are useful for debugging, investigating specific outcomes, and assessing whether individual decisions are defensible.\nGlobal explanations summarize behavior across populations. They address: what does the model generally rely on? and are certain groups systematically affected? These views are essential for governance, auditing, and regulatory oversight.\nLocal explanations reveal failures. Global explanations contextualize them. Both are necessary. Neither is sufficient on its own."
+  },
+  {
+    "objectID": "explainable-ai.html#core-post-hoc-techniques",
+    "href": "explainable-ai.html#core-post-hoc-techniques",
+    "title": "Explainable AI: Beyond the Checkbox",
+    "section": "Core Post-Hoc Techniques",
+    "text": "Core Post-Hoc Techniques\nExecutives may skim this section; the key takeaway is that these methods differ in stability, cost, and risk.\n\nLIME (Local Interpretable Model-agnostic Explanations)\nLIME explains a prediction by fitting a simple, interpretable model around a single decision. Instead of trying to explain the full behavior of a complex model, it focuses only on the local region near the prediction being analyzed. Conceptually, think of it as drawing a straight line around one small section of a very complicated curve.\nThe method works by creating many small variations of the original input — in a credit decisioning system, this means generating applicants with slightly different feature values — and observing how the model’s prediction changes. Those nearby examples are weighted by their similarity to the original input. LIME then fits a simple local model that approximates the behavior of the larger black-box system in that neighborhood.\nThe approach is flexible and model-agnostic, which made it one of the earliest widely adopted explainability techniques for complex machine learning systems. But the same flexibility introduces an important limitation: explanations can change depending on how the perturbations are generated. Small changes to the sampling process may produce noticeably different explanations for the same prediction.\nFor banking applications, that instability matters. Adverse action notices, fair lending reviews, and regulatory examinations require explanations that are consistent and defensible. LIME is often useful for exploratory analysis and rapid debugging, but it is less reliable as a primary explanation framework for formal model governance.\n\n\n\n\n\n\nFigure 1: LIME explains a mortgage denial in five steps: selecting the prediction to explain, generating nearby variations, running the model on those variations, weighting nearby samples more heavily, and fitting a simple local model. Credit score and savings push toward approval, while DTI ratio and LTV push toward denial.\n\n\n\n\n\nSHAP (SHapley Additive exPlanations)\nSHAP assigns each feature a fair share of credit for a prediction using principles from cooperative game theory — the same mathematics used to fairly divide credit among players in a shared outcome. Unlike LIME, which approximates locally and can produce inconsistent results, SHAP derives its values from a mathematically principled framework that guarantees consistency across explanations.\nSHAP supports both local explanations (“Why was this applicant declined?”) and global analysis (“What features drive decisions across the portfolio?”). That dual capability makes it the most defensible explainability approach for SR 11-7 model documentation and governance review.\nThe tradeoff is computational cost. SHAP evaluates every possible feature combination to estimate contributions fairly, which can become expensive at scale. That matters for real-time fraud detection and other latency-sensitive systems, but less so for underwriting and portfolio analytics, where decisions are not instantaneous.\n\n\n\n\n\n\nFigure 2: SHAP explains a mortgage prediction by measuring how each feature changes the model output across all possible feature combinations. Starting from a baseline of 0.42, feature contributions sum to a final approval probability of 0.56.\n\n\n\n\n\nCounterfactual Explanations\nCounterfactual explanations shift the question from “Why was this decision made?” to “What would need to change for the outcome to be different?” Wachter, Mittelstadt, and Russell (2017) proposed the approach as a way to support regulatory compliance and meaningful individual recourse — making it especially relevant for adverse action notices under ECOA and broader fair lending obligations.\nA counterfactual explanation tells an applicant not just that income influenced the decision, but that increasing income by a specific amount would have changed the outcome. The practical challenge is generating realistic counterfactuals: the smallest mathematical change is often not the most realistic one. Telling an applicant to earn $5,000 more is useful; telling them to change their zip code is not.\nAt the portfolio level, counterfactual analysis becomes a governance tool: it can reveal whether some groups must exert systematically greater effort to achieve favorable outcomes. That pattern, if consistent, may indicate disparate impact — and a counterfactual audit can surface it before an examiner does.\n\n\n\n\n\n\nFigure 3: Counterfactual explanations show the smallest realistic changes needed to alter a model’s decision. In this example, increasing annual income and reducing the debt-to-income ratio flip the mortgage application outcome from denied to approved, while all other applicant attributes remain unchanged.\n\n\n\n\n\nPermutation Feature Importance\nPermutation importance measures what the model relies on across the entire dataset by shuffling one feature at a time and observing how much model performance degrades. If accuracy drops sharply, the feature mattered. If it barely changes, the model was not relying on it. This is a global technique — it does not explain individual decisions but validates whether a model is using sensible signals before deployment. In financial services, it is the natural audit tool: run it during model validation to confirm that features driving predictions are economically meaningful and not proxies for protected characteristics. Its key limitation is that correlated features can mask each other’s true importance — a feature may appear less important simply because another correlated feature carries the same information."
+  },
+  {
+    "objectID": "explainable-ai.html#attention-is-not-explanation",
+    "href": "explainable-ai.html#attention-is-not-explanation",
+    "title": "Explainable AI: Beyond the Checkbox",
+    "section": "Attention Is Not Explanation",
+    "text": "Attention Is Not Explanation\nAs large language models enter production, attention mechanisms are often presented as explanations. This is a mistake.\nAttention weights show which inputs influenced a prediction, not how or why a decision was made. High attention does not imply importance; low attention does not imply irrelevance. Treating attention as explanation conflates correlation with justification.\nThe same caution applies to saliency maps in vision models. Saliency shows where the model is sensitive, not why. Without context, these artifacts can create confidence without understanding."
+  },
+  {
+    "objectID": "explainable-ai.html#the-security-dimension",
+    "href": "explainable-ai.html#the-security-dimension",
+    "title": "Explainable AI: Beyond the Checkbox",
+    "section": "The Security Dimension",
+    "text": "The Security Dimension\nExplainability is also a security concern—one often overlooked.\nOpaque models create attack surfaces. Model inversion attacks extract sensitive training data. Adversarial inputs exploit blind spots. Model drift quietly degrades performance as environments change.\nExplainability can help detect these risks early. But it also introduces a paradox: revealing too much can create exploitation roadmaps. Organizations must balance transparency with security—providing enough insight to build trust without enabling abuse.\nFor a comprehensive treatment of adversarial threats and defense-in-depth controls for autonomous systems, see Securing Agentic AI Systems: A Defense-in-Depth Approach."
+  },
+  {
+    "objectID": "explainable-ai.html#the-limits-of-post-hoc-explainability",
+    "href": "explainable-ai.html#the-limits-of-post-hoc-explainability",
+    "title": "Explainable AI: Beyond the Checkbox",
+    "section": "The Limits of Post-Hoc Explainability",
+    "text": "The Limits of Post-Hoc Explainability\nPost-hoc explanations are powerful tools, but they introduce new risks.\nThey can be unstable. They can be misleading. They can be selectively presented. Most importantly, they can create the illusion that a system is understood when it is not.\nExplainability does not make a system fair. It does not make it safe. And it does not remove human responsibility. Sometimes explanations reveal problems that require changing the model itself. Other times, they reveal that a system should not have been deployed at all."
+  },
+  {
+    "objectID": "explainable-ai.html#the-regulatory-reality",
+    "href": "explainable-ai.html#the-regulatory-reality",
+    "title": "Explainable AI: Beyond the Checkbox",
+    "section": "The Regulatory Reality",
+    "text": "The Regulatory Reality\nRegulation is not theoretical. Explainability requirements are already in force.\nThe EU AI Act mandates transparency for high-risk systems. GDPR grants individuals rights related to automated decisions. California’s Transparency in Frontier AI Act requires disclosure of risks and mitigation measures.\nIn the United States, SR 11-7 model risk management guidance requires banks to demonstrate conceptual soundness and ongoing monitoring for models used in consequential decisions. For credit, fraud, and fair lending applications, explainability is not optional — it is the mechanism through which model governance becomes defensible to examiners.\nOrganizations deploying AI without explainability capabilities are accumulating regulatory debt that will eventually come due."
+  },
+  {
+    "objectID": "explainable-ai.html#a-practical-view",
+    "href": "explainable-ai.html#a-practical-view",
+    "title": "Explainable AI: Beyond the Checkbox",
+    "section": "A Practical View",
+    "text": "A Practical View\nExplainable AI is not about choosing the “right” technique. It is about judgment.\nInterpretable models offer clarity but may lack flexibility. Post-hoc explanations offer access but rely on approximation. Local explanations surface failures. Global explanations support oversight. None provides a complete picture.\nResponsible AI does not require perfect transparency. It requires knowing when explanations are sufficient, when they mislead, and when a system should not be trusted at all.\nConsider a credit decisioning model that achieves high accuracy but relies heavily on zip code as a feature. Post-hoc explanation surfaces this. The question then is not which technique revealed it — it is what the organization does next. Explainability creates the opportunity for that judgment. It does not replace it."
+  },
+  {
+    "objectID": "explainable-ai.html#implications-for-agentic-systems",
+    "href": "explainable-ai.html#implications-for-agentic-systems",
+    "title": "Explainable AI: Beyond the Checkbox",
+    "section": "Implications for Agentic Systems",
+    "text": "Implications for Agentic Systems\nFor agentic AI—systems that act autonomously—the stakes rise further.\nAgents do not just make predictions; they chain decisions, interact with environments, and adapt over time. Explaining a single output is hard enough. Explaining sequences of autonomous actions requires new approaches to traceability, accountability, and oversight.\nThe question is not whether to invest in explainability. It is whether to build it in now—or scramble to retrofit it later.\nFor a governance framework for these autonomous systems, see Securing Agentic AI Systems: A Defense-in-Depth Approach."
+  },
+  {
+    "objectID": "explainable-ai.html#further-reading",
+    "href": "explainable-ai.html#further-reading",
+    "title": "Explainable AI: Beyond the Checkbox",
+    "section": "Further Reading",
+    "text": "Further Reading\n[1] Molnar, Christoph. Interpretable Machine Learning. https://christophm.github.io/interpretable-ml-book/\n[2] O’Neil, Cathy. Weapons of Math Destruction.\n[3] Rudin, Cynthia. “Stop Explaining Black Box Machine Learning Models for High Stakes Decisions and Use Interpretable Models Instead.” Nature Machine Intelligence, 2019.\n[4] Ribeiro, Singh, Guestrin. “Why Should I Trust You?” KDD 2016.\n[5] Lundberg, Lee. “A Unified Approach to Interpreting Model Predictions.” NeurIPS 2017."
+  },
+  {
+    "objectID": "ai-safety.html",
+    "href": "ai-safety.html",
+    "title": "Secure Systems Can Still Cause Harm",
+    "section": "",
+    "text": "Note\n\n\n\nAI risk has two dimensions: security and safety. Security focuses on attacks against systems. Safety focuses on harm that can arise even when systems behave as designed. For a deeper look at adversarial threats such as prompt injection, privilege escalation, and defense-in-depth controls for autonomous systems, see my article: Securing Agentic AI Systems: A Defense-in-Depth Approach.\n\n\nA model can be secure from attackers and still produce unfair or harmful outcomes. AI systems learn patterns from historical data, and those patterns often include social bias, stereotypes, and harmful assumptions baked in long before the model was trained.\nThis is no longer a research problem. AI now influences hiring, lending, healthcare, content moderation, and customer service. When these systems fail, the impact is real — and the organizations deploying them are accountable for it.\nFor banks and financial institutions in particular, the stakes are higher. Bias is a fair lending liability, a model risk management obligation, and an examiner finding waiting to happen."
+  },
+  {
+    "objectID": "ai-safety.html#what-do-we-mean-by-bias",
+    "href": "ai-safety.html#what-do-we-mean-by-bias",
+    "title": "Secure Systems Can Still Cause Harm",
+    "section": "3.1 What Do We Mean by Bias?",
+    "text": "3.1 What Do We Mean by Bias?\nThe word bias is used in different ways. In statistics, it means a model systematically misses the true target. In social contexts, it means a system treats people unfairly or reinforces harmful stereotypes. These ideas are related but not identical — a model can be statistically strong and still create unfair outcomes."
+  },
+  {
+    "objectID": "ai-safety.html#the-fairness-problem-has-no-single-answer",
+    "href": "ai-safety.html#the-fairness-problem-has-no-single-answer",
+    "title": "Secure Systems Can Still Cause Harm",
+    "section": "3.2 The Fairness Problem Has No Single Answer",
+    "text": "3.2 The Fairness Problem Has No Single Answer\nSuppose you are building a resume-screening model. How should fairness be defined?\nShould the model have equal accuracy across demographic groups? Should candidates from different groups receive positive recommendations at equal rates? Should false positives and false negatives occur at similar rates across groups? Or should the decision remain unchanged if a candidate’s race or gender were different — all else equal?\nThese definitions frequently conflict. Enforcing equal selection rates can reduce overall predictive accuracy. Satisfying one standard can violate another.\nChoosing a fairness definition is not a technical decision — it is an institutional one with legal consequences. A model can make errors at equal rates across demographic groups and still produce unequal outcomes — satisfying one fairness standard while failing another. Banks cannot outsource that choice to a model."
+  },
+  {
+    "objectID": "ai-safety.html#bias-can-enter-anywhere-in-the-pipeline",
+    "href": "ai-safety.html#bias-can-enter-anywhere-in-the-pipeline",
+    "title": "Secure Systems Can Still Cause Harm",
+    "section": "3.3 Bias Can Enter Anywhere in the Pipeline",
+    "text": "3.3 Bias Can Enter Anywhere in the Pipeline\nBias does not come only from data. It can enter at any stage of the development lifecycle — through sampling choices, labeling decisions, feature selection, model design, optimization objectives, evaluation metrics, and deployment context. Every decision point can introduce bias.\n\n\n\nBias can enter and amplify throughout the AI lifecycle, creating downstream operational, regulatory, and reputational risk.\n\n\nFeature selection is a particularly consequential entry point in financial services. A model that excludes race as a variable can still produce discriminatory outcomes if it relies on features like zip code, income bracket, or educational history — variables that are neutral on their surface but closely correlated with race and ethnicity in practice. These are called proxy variables, and their presence in a model can produce disparate impact even when protected attributes are never explicitly used.\nOptimization objectives can also reinforce unequal outcomes. Models are trained to minimize loss globally — which means they learn to perform well for the majority population and accept higher error rates for minority groups as a mathematical byproduct. This is not a data problem. It is a design choice embedded in the objective function, and it will reproduce bias regardless of how carefully the training data was curated.\nEvaluation metrics are where bias goes undetected. Reporting a single aggregate accuracy score across the full population obscures how the model performs for specific groups. In financial services, a model can pass SR 11-7 validation on aggregate metrics and still fail fair lending standards at the group level. Disaggregated evaluation — breaking performance down by demographic — is not optional. It is the only way to see what aggregate numbers hide."
+  },
+  {
+    "objectID": "ai-safety.html#dialect-and-representation-gaps",
+    "href": "ai-safety.html#dialect-and-representation-gaps",
+    "title": "Secure Systems Can Still Cause Harm",
+    "section": "4.1 Dialect and Representation Gaps",
+    "text": "4.1 Dialect and Representation Gaps\nNLP models trained on majority-language text perform unevenly across dialects, regions, and communities. Joshi et al. (2020) mapped NLP resource availability across nearly 7,000 languages and found that the vast majority had little to no representation in major training corpora. Even within English, documented gaps exist between Standard American English and African American English (AAE) across sentiment analysis, toxicity detection, and named entity recognition — tasks that directly affect customer service AI, complaint analysis, and fraud narrative scoring in financial services.\nNarrow training data produces uneven service delivery across customer segments. A complaint analysis model that underperforms on non-standard dialects will systematically misread grievances from specific communities — creating operational risk and fair lending exposure that aggregate accuracy metrics will not surface."
+  },
+  {
+    "objectID": "ai-safety.html#models-can-amplify-existing-bias",
+    "href": "ai-safety.html#models-can-amplify-existing-bias",
+    "title": "Secure Systems Can Still Cause Harm",
+    "section": "4.2 Models Can Amplify Existing Bias",
+    "text": "4.2 Models Can Amplify Existing Bias\nSometimes models do more than reflect patterns in data—they intensify them. If historical examples over-associate a profession or activity with one group, the model may rely on that shortcut even more strongly during prediction.\nThis happens because models favor simpler patterns over nuanced ones, optimization tends to prioritize majority behavior, and rare or complex cases receive less attention during training.\nAmazon’s resume screening tool, discontinued in 2018, is a direct example — the model amplified a male-dominated hiring history rather than correcting for it.\nResearch has quantified this effect. Zhao et al. (2017) found that 66% of cooking images in the training data showed women as the agent. The model predicted women as the agent in 84% of test cases — an 18-point amplification beyond what the data itself contained. The model did not learn the world as it was. It learned a more extreme version of it."
+  },
+  {
+    "objectID": "ai-safety.html#the-annotation-problem",
+    "href": "ai-safety.html#the-annotation-problem",
+    "title": "Secure Systems Can Still Cause Harm",
+    "section": "4.3 The Annotation Problem",
+    "text": "4.3 The Annotation Problem\nEven labels can be biased. Many machine learning systems depend on human annotations, but human judgment is not always consistent or neutral.\nCommon sources of annotation bias include:\n\nDifferent annotators interpreting the same phrase in different ways\nCultural context shaping what is seen as harmful, offensive, or acceptable\nDialects or informal language being misunderstood\nMissing context leading to inaccurate labels\n\nWhen these patterns enter the training data, downstream models learn and reproduce the same errors."
+  },
+  {
+    "objectID": "ai-safety.html#high-stakes-prediction-and-the-compas-case",
+    "href": "ai-safety.html#high-stakes-prediction-and-the-compas-case",
+    "title": "Secure Systems Can Still Cause Harm",
+    "section": "4.4 High-Stakes Prediction and the COMPAS Case",
+    "text": "4.4 High-Stakes Prediction and the COMPAS Case\nIn 2016, ProPublica analyzed COMPAS, a recidivism scoring tool used by courts across the United States to inform sentencing and bail decisions. The analysis found that Black defendants were flagged as high future risk at nearly twice the rate of white defendants who went on to commit no further offenses.\nThe model was not designed to discriminate — it was optimizing for predictive accuracy on historical data shaped by decades of unequal enforcement. Accuracy at the aggregate level masked systematic error at the group level. The COMPAS case remains one of the clearest documented examples of how a technically functional model can produce outcomes that are both statistically defensible and socially harmful.\nWhen biased predictions influence real-world outcomes — who gets bail, who gets a loan, who gets flagged for fraud — those outcomes become data. If that data feeds future models, the bias is not just inherited. It is reinforced. A model’s errors do not stay in the model. They enter the world, shape decisions, and return as training signal for the next generation of models."
+  },
+  {
+    "objectID": "ai-safety.html#why-simple-filtering-fails",
+    "href": "ai-safety.html#why-simple-filtering-fails",
+    "title": "Secure Systems Can Still Cause Harm",
+    "section": "5.1 Why Simple Filtering Fails",
+    "text": "5.1 Why Simple Filtering Fails\nA common instinct is to block offensive words or exclude “low-quality” sources. In practice, blunt filters create new problems.\n\nThey can remove educational, medical, or legal content.\nThey may disproportionately suppress minority communities and dialects.\nThey often miss harmful meaning expressed without banned words.\n\nResearch confirms this. Dodge et al. examined the effect of blocklist filtering on a large web corpus and found that only 31% of removed documents contained explicit content — the remaining 69% included biology, medicine, and legal material. The same filters removed African American English content at 42% and Hispanic-aligned English at 32%, compared to just 6% for white-aligned English. Crude filtering does not just miss harmful content — it actively suppresses minority voices.\nFiltering is necessary in many settings, but crude filtering is not enough."
+  },
+  {
+    "objectID": "ai-safety.html#why-models-sometimes-need-exposure-to-harmful-content",
+    "href": "ai-safety.html#why-models-sometimes-need-exposure-to-harmful-content",
+    "title": "Secure Systems Can Still Cause Harm",
+    "section": "5.2 Why Models Sometimes Need Exposure to Harmful Content",
+    "text": "5.2 Why Models Sometimes Need Exposure to Harmful Content\nThere are legitimate reasons for controlled exposure to toxic examples — detecting hate speech, generating counter-speech, stress-testing safety systems, and supporting red-team evaluation.\nGovernance determines what stays and what goes — not blanket rules in either direction."
+  },
+  {
+    "objectID": "ai-safety.html#detecting-bias",
+    "href": "ai-safety.html#detecting-bias",
+    "title": "Secure Systems Can Still Cause Harm",
+    "section": "7.1 Detecting Bias",
+    "text": "7.1 Detecting Bias\nThe starting point is disaggregated evaluation — breaking model performance down by demographic group rather than reporting a single aggregate accuracy score. A model that performs well overall can still perform poorly for specific populations. Aggregate metrics hide that gap.\nCommon measurement approaches include:\n\nDemographic parity: Does the model produce positive outcomes at equal rates across groups?\nEqualized odds: Are error rates — both false positives and false negatives — consistent across groups?\nCounterfactual testing: Does the prediction change if a protected attribute such as race or gender is altered while everything else stays the same?\n\nIn financial services, these tests map directly onto fair lending obligations. A credit model that passes aggregate validation but fails demographic parity testing is a regulatory and reputational risk, regardless of its overall accuracy.\nIBM AI Fairness 360 and similar open-source toolkits can operationalize these tests, but tooling is not a substitute for judgment — knowing which metric to prioritize requires understanding the deployment context and the specific harm you are trying to prevent."
+  },
+  {
+    "objectID": "ai-safety.html#detecting-toxicity",
+    "href": "ai-safety.html#detecting-toxicity",
+    "title": "Secure Systems Can Still Cause Harm",
+    "section": "7.2 Detecting Toxicity",
+    "text": "7.2 Detecting Toxicity\nToxicity detection relies on a different set of methods. The goal is to identify harmful outputs — hate speech, harassment, misinformation, and abusive language — before they reach users.\nCommon approaches include:\n\nClassifier-based screening: Automated models trained to flag toxic content at input and output. Effective at scale but prone to the same dialect and context failures described in §5.\nRed-team evaluation: Human testers deliberately probe the model with adversarial prompts to surface harmful outputs that automated screening misses.\nHuman review pipelines: Escalation paths that route flagged outputs to human reviewers for sensitive or ambiguous cases.\n\nNo single method is sufficient. Classifiers miss context. Red-teaming is resource intensive and cannot cover every scenario. Human review does not scale. Effective toxicity detection combines all three.\nModels drift as the world changes and new forms of harmful content emerge. Detection is not a one-time exercise — it is an ongoing governance requirement for both bias and toxicity."
+  }
+]
