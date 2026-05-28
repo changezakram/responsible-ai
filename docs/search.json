@@ -81,7 +81,7 @@
     "href": "explainable-ai.html#the-limits-of-post-hoc-explainability",
     "title": "Explainable AI: Beyond the Checkbox",
     "section": "The Limits of Post-Hoc Explainability",
-    "text": "The Limits of Post-Hoc Explainability\nPost-hoc explanations are powerful tools, but they introduce new risks.\nThey can be unstable, misleading, or selectively presented. Most importantly, they can create the illusion that a system is understood when it is not.\nExplainability does not make a system fair, safe, or free from human responsibility. Sometimes explanations reveal problems that require changing the model — or reconsidering whether it should have been deployed at all."
+    "text": "The Limits of Post-Hoc Explainability\nPost-hoc explanations are powerful tools, but they introduce new risks.\nThey can be unstable, misleading, or selectively presented. Most importantly, they can create the illusion that a system is understood when it is not.\nExplainability does not make a system fair, safe, or free from human responsibility. Sometimes explanations reveal problems that require changing the model — or reconsidering whether it should have been deployed at all.\nRegulators are beginning to formalize these expectations."
   },
   {
     "objectID": "explainable-ai.html#the-regulatory-reality",
