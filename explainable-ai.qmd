@@ -127,7 +127,12 @@ The tradeoff is computational cost. SHAP evaluates every possible feature combin
 
 ### Counterfactual Explanations
 
-Counterfactuals shift the question from "why did the model decide this?" to "what would need to change for the decision to be different?" Wachter, Mittelstadt, and Russell (2017) designed this approach explicitly with regulatory compliance and individual recourse in mind — making it the most directly relevant technique for adverse action notices under ECOA and fair lending obligations. A counterfactual explanation tells an applicant not just that income was a factor, but that a specific change in income would have changed the outcome. The practical challenge is generating realistic counterfactuals: mathematically minimal changes are often not actionable. Telling an applicant to earn $5,000 more is useful; telling them to change their zip code is not. At the portfolio level, counterfactuals are a governance tool — they can reveal whether certain groups must exert systematically more effort to achieve favorable outcomes.
+Counterfactual explanations shift the question from "Why was this decision made?" to "What would need to change for the outcome to be different?" Wachter, Mittelstadt, and Russell (2017) proposed the approach as a way to support regulatory compliance and meaningful individual recourse — making it especially relevant for adverse action notices under ECOA and broader fair lending obligations.
+
+A counterfactual explanation tells an applicant not just that income influenced the decision, but that increasing income by a specific amount would have changed the outcome. The practical challenge is generating realistic counterfactuals: the smallest mathematical change is often not the most realistic one. Telling an applicant to earn $5,000 more is useful; telling them to change their zip code is not.
+
+At the portfolio level, counterfactual analysis becomes a governance tool: it can reveal whether some groups must exert systematically greater effort to achieve favorable outcomes. That pattern, if consistent, may indicate disparate impact — and a counterfactual audit can surface it before an examiner does.
+
 
 ### Permutation Feature Importance
 
