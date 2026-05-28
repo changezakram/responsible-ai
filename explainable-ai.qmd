@@ -123,6 +123,18 @@ The tradeoff is computational cost. SHAP evaluates every possible feature combin
 
 ![SHAP explains a mortgage prediction by measuring how each feature changes the model output across all possible feature combinations. Starting from a baseline of 0.42, feature contributions sum to a final approval probability of 0.56.](images/shap.png){#fig-SHAP fig-alt="Four-step SHAP explanation diagram showing feature contributions for a mortgage application" fig-align="center" width="100%"}
 
+The table below summarizes the key differences for practitioners deciding which technique fits their governance context.
+
+| | LIME | SHAP |
+|---|---|---|
+| Scope | Local only | Local and global |
+| Stability | Unstable | Stable |
+| Computational cost | Fast | Computationally expensive at scale |
+| Mathematical guarantees | None | Yes |
+| SR 11-7 defensibility | Limited | Strong |
+| Primary use case | Debugging | Formal governance |
+
+
 ### Counterfactual Explanations
 
 Counterfactual explanations shift the question from "Why was this decision made?" to "What would need to change for the outcome to be different?" Wachter, Mittelstadt, and Russell (2017) proposed the approach as a way to support regulatory compliance and meaningful individual recourse — making it especially relevant for adverse action notices under ECOA and broader fair lending obligations.

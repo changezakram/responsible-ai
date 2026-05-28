@@ -350,6 +350,48 @@ Figure&nbsp;2: SHAP explains a mortgage prediction by measuring how each feature
 </figcaption>
 </figure>
 </div>
+<p>The table below summarizes the key differences for practitioners deciding which technique fits their governance context.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>LIME</th>
+<th>SHAP</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Scope</td>
+<td>Local only</td>
+<td>Local and global</td>
+</tr>
+<tr class="even">
+<td>Stability</td>
+<td>Unstable</td>
+<td>Stable</td>
+</tr>
+<tr class="odd">
+<td>Computational cost</td>
+<td>Fast</td>
+<td>Computationally expensive at scale</td>
+</tr>
+<tr class="even">
+<td>Mathematical guarantees</td>
+<td>None</td>
+<td>Yes</td>
+</tr>
+<tr class="odd">
+<td>SR 11-7 defensibility</td>
+<td>Limited</td>
+<td>Strong</td>
+</tr>
+<tr class="even">
+<td>Primary use case</td>
+<td>Debugging</td>
+<td>Formal governance</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="counterfactual-explanations" class="level3">
 <h3 class="anchored" data-anchor-id="counterfactual-explanations">Counterfactual Explanations</h3>
