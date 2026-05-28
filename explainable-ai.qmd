@@ -224,3 +224,11 @@ For a governance framework for these autonomous systems, see [Securing Agentic A
 [4] Ribeiro, Singh, Guestrin. “Why Should I Trust You?” KDD 2016.
 
 [5] Lundberg, Lee. “A Unified Approach to Interpreting Model Predictions.” NeurIPS 2017.
+
+[6] Wachter, S., Mittelstadt, B., & Russell, C. "Counterfactual Explanations Without Opening the Black Box: Automated Decisions and the GDPR." Harvard Journal of Law & Technology, 2017. https://arxiv.org/abs/1711.00399
+
+[7] Breiman, L. "Random Forests." Machine Learning, 45(1), 2001. https://link.springer.com/article/10.1023/A:1010933404324
+
+[8] Fisher, A., Rudin, C., & Dominici, F. "All Models are Wrong, but Many are Useful." Journal of Machine Learning Research, 2019. https://arxiv.org/abs/1801.01489
+
+[9] Joshi, P. et al. "The State and Fate of Linguistic Diversity and Inclusion in the NLP World." ACL 2020. https://arxiv.org/abs/2004.09095
