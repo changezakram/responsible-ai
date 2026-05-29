@@ -45,7 +45,7 @@ High-stakes systems also face requirements that extend beyond predictive perform
 
 These demands expose a deeper issue: many of the criteria we care about cannot be fully specified as optimization objectives. What it means for a model to behave acceptably is often contextual, contested, and dependent on the situation. Problem formulations are inherently incomplete — and incompleteness is not the same as uncertainty. Uncertainty can be quantified and managed; incompleteness cannot. When a criterion cannot be encoded, behavior must be observed and explained rather than optimized.
 
-When requirements cannot be encoded into training, behavior must be evaluated another way. That is where explainability enters—not as proof that a model is correct, but as a diagnostic tool.
+That is where explainability enters—not as proof that a model is correct, but as a diagnostic tool for evaluating behavior that optimization alone cannot guarantee.
 
 ---
 
