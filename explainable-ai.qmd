@@ -106,7 +106,7 @@ The approach is flexible and model-agnostic, which made it one of the earliest w
 
 For banking applications, that instability matters. Adverse action notices, fair lending reviews, and regulatory examinations require explanations that are consistent and defensible. LIME is often useful for exploratory analysis and rapid debugging, but it is less reliable as a primary explanation framework for formal model governance.
 
-![LIME explains a mortgage denial in five steps: selecting the prediction to explain, generating nearby variations, running the model on those variations, weighting nearby samples more heavily, and fitting a simple local model. Credit score and savings push toward approval, while DTI ratio and LTV push toward denial.](images/lime_.png){#fig-LIME fig-alt="Five-step LIME explanation diagram for a denied mortgage application" fig-align="center" width="100%"}
+![LIME explains a mortgage denial in five steps: selecting the prediction to explain, generating nearby variations, running the model on those variations, weighting nearby samples more heavily, and fitting a simple local model. Credit score and savings push toward approval, while DTI ratio and LTV push toward denial.](images/_lime_.png){#fig-LIME fig-alt="Five-step LIME explanation diagram for a denied mortgage application" fig-align="center" width="100%"}
 
 ### SHAP (SHapley Additive exPlanations)
 
