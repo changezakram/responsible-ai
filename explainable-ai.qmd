@@ -105,7 +105,7 @@ Local explanations reveal failures. Global explanations contextualize them. Both
 
 LIME explains a prediction by fitting a simple, interpretable model around a single decision. Instead of trying to explain the full behavior of a complex model, it focuses only on the local region near the prediction being analyzed. Conceptually, think of it as drawing a straight line around one small section of a very complicated curve.
 
-The method works by creating many small variations of the original input — in a credit decisioning system, this means generating applicants with slightly different feature values — and observing how the model's prediction changes. Those nearby examples are weighted by their similarity to the original input. LIME then fits a simple local model that approximates the behavior of the larger black-box system in that neighborhood.
+The method works by creating many randomly generated variations of the original input — in a credit decisioning system, this means sampling applicants with slightly different feature values around the original — and observing how the model's prediction changes. Those nearby examples are weighted by their similarity to the original input. LIME then fits a simple local model that approximates the behavior of the larger black-box system in that neighborhood.
 
 The approach is flexible and model-agnostic, which made it one of the earliest widely adopted explainability techniques for complex machine learning systems. But the same flexibility introduces an important limitation: explanations can change depending on how the perturbations are generated. Small changes to the sampling process may produce noticeably different explanations for the same prediction.
 
@@ -119,7 +119,7 @@ SHAP assigns each feature a fair share of credit for a prediction using principl
 
 SHAP supports both local explanations ("Why was this applicant declined?") and global analysis ("What features drive decisions across the portfolio?"). That dual capability makes it the most defensible explainability approach for SR 11-7 model documentation and governance review.
 
-The tradeoff is computational cost. SHAP evaluates every possible feature combination to estimate contributions fairly, which can become expensive at scale. That matters for real-time fraud detection and other latency-sensitive systems, but less so for underwriting and portfolio analytics, where decisions are not instantaneous.
+The tradeoff is computational cost. SHAP evaluates every possible feature combination to estimate contributions fairly, which can become expensive at scale. That matters for real-time fraud detection and other latency-sensitive systems, but less so for underwriting and portfolio analytics, where decisions are not instantaneous. A further limitation worth noting: standard SHAP implementations assume features are independent when estimating contributions. In banking data where features are often correlated — credit score and income, for example — this assumption can assign attribution to unrealistic feature combinations, slightly distorting individual explanations.
 
 ![SHAP explains a mortgage prediction by measuring how each feature changes the model output across all possible feature combinations. Starting from a baseline of 0.42, feature contributions sum to a final approval probability of 0.56.](images/shap.png){#fig-SHAP fig-alt="Four-step SHAP explanation diagram showing feature contributions for a mortgage application" fig-align="center" width="100%"}
 
@@ -152,7 +152,7 @@ At the portfolio level, counterfactual analysis becomes a governance tool: it ca
 
 Permutation importance measures how much a model depends on each feature across the full dataset. The method works by shuffling one feature at a time and observing how much model performance deteriorates. If performance drops significantly, the model was relying on that feature. If performance barely changes, the feature contributed little to the model’s predictions.
 
-Unlike SHAP or counterfactual explanations, permutation importance is a global technique: it does not explain individual decisions, but instead reveals what drives the model overall. In financial services, permutation importance is a practical validation tool for conceptual soundness review. During model validation, it can help confirm that the features driving predictions are economically meaningful and not acting as hidden proxies for protected characteristics.
+Unlike SHAP or counterfactual explanations, permutation importance is a global technique: it does not explain individual decisions, but instead reveals what drives the model overall. In financial services, permutation importance is a practical validation tool for conceptual soundness review. During model validation, it can help confirm that the features driving predictions make business sense and are not acting as hidden proxies for protected characteristics.
 
 Its primary limitation is feature correlation. Correlated variables can dilute each other’s measured importance because the model can often substitute one for another. As a result, a genuinely important feature may appear less influential than it is.
 
