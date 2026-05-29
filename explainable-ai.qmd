@@ -67,7 +67,7 @@ For a deeper look at the bias and fairness failures that make explainability nec
 
 ## Two Paths to Model Understanding
 
-The first path is to design models that are interpretable by construction. These models expose their logic directly, allowing humans to inspect how inputs lead to outputs. Rule-based models, risk scores, and generalized additive models fall into this category. When an inherently interpretable model achieves adequate performance, it should usually be preferred. There is no surrogate layer, no approximation, and no ambiguity about fidelity.
+The first path is to design models that are interpretable by construction. These models expose their logic directly, allowing humans to inspect how inputs lead to outputs. Rule-based models, risk scores, and generalized additive models fall into this category. When an inherently interpretable model achieves adequate performance, it should usually be preferred. There is no secondary explanation model, no approximation, and no uncertainty about whether the explanation truly reflects the model’s behavior.
 
 But there is a trade-off. Simpler models often sacrifice performance. In domains like banking and insurance, interpretability may be required for every decision—yet true relationships in data are rarely linear. The most accurate models are often the hardest to interpret. This tension is why post-hoc explainability methods exist.
 
