@@ -329,10 +329,10 @@ ul.task-list li input[type="checkbox"] {
 <p>The method works by creating many randomly generated variations of the original input — in a credit decisioning system, this means sampling applicants with slightly different feature values around the original — and observing how the model’s prediction changes. Those nearby examples are weighted by their similarity to the original input. LIME then fits a simple local model that approximates the behavior of the larger black-box system in that neighborhood.</p>
 <p>The approach is flexible and model-agnostic, which made it one of the earliest widely adopted explainability techniques for complex machine learning systems. But the same flexibility introduces an important limitation: explanations can change depending on how the perturbations are generated. Small changes to the sampling process may produce noticeably different explanations for the same prediction.</p>
 <p>For banking applications, that instability matters. Adverse action notices, fair lending reviews, and regulatory examinations require explanations that are consistent and defensible. LIME is often useful for exploratory analysis and rapid debugging, but it is less reliable as a primary explanation framework for formal model governance.</p>
-<div id="fig-LIME" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Five-step LIME explanation diagram for a denied mortgage application" data-fig-align="center">
+<div id="fig-LIME" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-LIME-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/_lime_.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Five-step LIME explanation diagram for a denied mortgage application">
+<img src="images/_lime_.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-LIME-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: LIME explains a mortgage denial in five steps: selecting the prediction to explain, generating nearby variations, running the model on those variations, weighting nearby samples more heavily, and fitting a simple local model. Credit score and savings push toward approval, while DTI ratio and LTV push toward denial.
