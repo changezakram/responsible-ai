@@ -68,7 +68,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<style>html{ scroll-behavior: smooth; }</style>
 
 
 </head>
@@ -212,24 +211,30 @@ ul.task-list li input[type="checkbox"] {
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
+  <ul>
+  <li><a href="#why-explainability-exists" id="toc-why-explainability-exists" class="nav-link active" data-scroll-target="#why-explainability-exists"><span class="header-section-number">1</span> Why Explainability Exists</a></li>
+  <li><a href="#when-explainability-mattersand-when-it-does-not" id="toc-when-explainability-mattersand-when-it-does-not" class="nav-link" data-scroll-target="#when-explainability-mattersand-when-it-does-not"><span class="header-section-number">2</span> When Explainability Matters—and When It Does Not</a></li>
+  <li><a href="#why-accuracy-alone-breaks-down" id="toc-why-accuracy-alone-breaks-down" class="nav-link" data-scroll-target="#why-accuracy-alone-breaks-down"><span class="header-section-number">3</span> Why Accuracy Alone Breaks Down</a></li>
+  <li><a href="#explainability-as-diagnostic-infrastructure" id="toc-explainability-as-diagnostic-infrastructure" class="nav-link" data-scroll-target="#explainability-as-diagnostic-infrastructure"><span class="header-section-number">4</span> Explainability as Diagnostic Infrastructure</a></li>
+  <li><a href="#two-paths-to-model-understanding" id="toc-two-paths-to-model-understanding" class="nav-link" data-scroll-target="#two-paths-to-model-understanding"><span class="header-section-number">5</span> Two Paths to Model Understanding</a></li>
+  <li><a href="#explanation-as-an-interface-not-a-property" id="toc-explanation-as-an-interface-not-a-property" class="nav-link" data-scroll-target="#explanation-as-an-interface-not-a-property"><span class="header-section-number">6</span> Explanation as an Interface, Not a Property</a></li>
+  <li><a href="#local-and-global-views" id="toc-local-and-global-views" class="nav-link" data-scroll-target="#local-and-global-views"><span class="header-section-number">7</span> Local and Global Views</a></li>
+  <li><a href="#core-post-hoc-techniques" id="toc-core-post-hoc-techniques" class="nav-link" data-scroll-target="#core-post-hoc-techniques"><span class="header-section-number">8</span> Core Post-Hoc Techniques</a>
   <ul class="collapse">
-  <li><a href="#why-explainability-exists" id="toc-why-explainability-exists" class="nav-link active" data-scroll-target="#why-explainability-exists">Why Explainability Exists</a></li>
-  <li><a href="#when-explainability-mattersand-when-it-does-not" id="toc-when-explainability-mattersand-when-it-does-not" class="nav-link" data-scroll-target="#when-explainability-mattersand-when-it-does-not">When Explainability Matters—and When It Does Not</a></li>
-  <li><a href="#why-accuracy-alone-breaks-down" id="toc-why-accuracy-alone-breaks-down" class="nav-link" data-scroll-target="#why-accuracy-alone-breaks-down">Why Accuracy Alone Breaks Down</a></li>
-  <li><a href="#explainability-as-diagnostic-infrastructure" id="toc-explainability-as-diagnostic-infrastructure" class="nav-link" data-scroll-target="#explainability-as-diagnostic-infrastructure">Explainability as Diagnostic Infrastructure</a></li>
-  <li><a href="#two-paths-to-model-understanding" id="toc-two-paths-to-model-understanding" class="nav-link" data-scroll-target="#two-paths-to-model-understanding">Two Paths to Model Understanding</a></li>
-  <li><a href="#explanation-as-an-interface-not-a-property" id="toc-explanation-as-an-interface-not-a-property" class="nav-link" data-scroll-target="#explanation-as-an-interface-not-a-property">Explanation as an Interface, Not a Property</a></li>
-  <li><a href="#local-and-global-views" id="toc-local-and-global-views" class="nav-link" data-scroll-target="#local-and-global-views">Local and Global Views</a></li>
-  <li><a href="#core-post-hoc-techniques" id="toc-core-post-hoc-techniques" class="nav-link" data-scroll-target="#core-post-hoc-techniques">Core Post-Hoc Techniques</a></li>
-  <li><a href="#attention-is-not-explanation" id="toc-attention-is-not-explanation" class="nav-link" data-scroll-target="#attention-is-not-explanation">Attention Is Not Explanation</a></li>
-  <li><a href="#the-security-dimension" id="toc-the-security-dimension" class="nav-link" data-scroll-target="#the-security-dimension">The Security Dimension</a></li>
-  <li><a href="#the-limits-of-post-hoc-explainability" id="toc-the-limits-of-post-hoc-explainability" class="nav-link" data-scroll-target="#the-limits-of-post-hoc-explainability">The Limits of Post-Hoc Explainability</a></li>
-  <li><a href="#the-regulatory-reality" id="toc-the-regulatory-reality" class="nav-link" data-scroll-target="#the-regulatory-reality">The Regulatory Reality</a></li>
-  <li><a href="#a-practical-view" id="toc-a-practical-view" class="nav-link" data-scroll-target="#a-practical-view">A Practical View</a></li>
-  <li><a href="#implications-for-agentic-systems" id="toc-implications-for-agentic-systems" class="nav-link" data-scroll-target="#implications-for-agentic-systems">Implications for Agentic Systems</a></li>
-  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading">Further Reading</a></li>
+  <li><a href="#lime-local-interpretable-model-agnostic-explanations" id="toc-lime-local-interpretable-model-agnostic-explanations" class="nav-link" data-scroll-target="#lime-local-interpretable-model-agnostic-explanations"><span class="header-section-number">8.1</span> LIME (Local Interpretable Model-agnostic Explanations)</a></li>
+  <li><a href="#shap-shapley-additive-explanations" id="toc-shap-shapley-additive-explanations" class="nav-link" data-scroll-target="#shap-shapley-additive-explanations"><span class="header-section-number">8.2</span> SHAP (SHapley Additive exPlanations)</a></li>
+  <li><a href="#counterfactual-explanations" id="toc-counterfactual-explanations" class="nav-link" data-scroll-target="#counterfactual-explanations"><span class="header-section-number">8.3</span> Counterfactual Explanations</a></li>
+  <li><a href="#permutation-feature-importance" id="toc-permutation-feature-importance" class="nav-link" data-scroll-target="#permutation-feature-importance"><span class="header-section-number">8.4</span> Permutation Feature Importance</a></li>
+  </ul></li>
+  <li><a href="#attention-is-not-explanation" id="toc-attention-is-not-explanation" class="nav-link" data-scroll-target="#attention-is-not-explanation"><span class="header-section-number">9</span> Attention Is Not Explanation</a></li>
+  <li><a href="#the-security-dimension" id="toc-the-security-dimension" class="nav-link" data-scroll-target="#the-security-dimension"><span class="header-section-number">10</span> The Security Dimension</a></li>
+  <li><a href="#the-limits-of-post-hoc-explainability" id="toc-the-limits-of-post-hoc-explainability" class="nav-link" data-scroll-target="#the-limits-of-post-hoc-explainability"><span class="header-section-number">11</span> The Limits of Post-Hoc Explainability</a></li>
+  <li><a href="#the-regulatory-reality" id="toc-the-regulatory-reality" class="nav-link" data-scroll-target="#the-regulatory-reality"><span class="header-section-number">12</span> The Regulatory Reality</a></li>
+  <li><a href="#a-practical-view" id="toc-a-practical-view" class="nav-link" data-scroll-target="#a-practical-view"><span class="header-section-number">13</span> A Practical View</a></li>
+  <li><a href="#implications-for-agentic-systems" id="toc-implications-for-agentic-systems" class="nav-link" data-scroll-target="#implications-for-agentic-systems"><span class="header-section-number">14</span> Implications for Agentic Systems</a></li>
+  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading"><span class="header-section-number">15</span> Further Reading</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="explainable-ai.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -260,22 +265,22 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="why-explainability-exists" class="level2">
-<h2 class="anchored" data-anchor-id="why-explainability-exists">Why Explainability Exists</h2>
+<section id="why-explainability-exists" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="why-explainability-exists"><span class="header-section-number">1</span> Why Explainability Exists</h2>
 <p>Explainability is often treated as a technical add-on — something applied after a model is trained, when regulators or stakeholders begin asking how decisions were made. The reason it exists is simpler: optimization breaks down in the real world because objective functions cannot fully capture acceptable behavior.</p>
 <p>The stakes are not abstract. Google’s facial recognition system once mislabeled Black individuals as gorillas. Unable to fix the underlying bias, Google removed primate-related labels entirely—a workaround, not a solution. Uber’s autonomous vehicle fatality raised questions about accountability in systems no one fully understands. As Cathy O’Neil documents in <em>Weapons of Math Destruction</em>, opaque models create feedback loops that amplify bias across criminal justice, hiring, credit scoring, and healthcare.</p>
 <p>The presence of machine learning alone does not determine whether explainability matters. Context does.</p>
 <hr>
 </section>
-<section id="when-explainability-mattersand-when-it-does-not" class="level2">
-<h2 class="anchored" data-anchor-id="when-explainability-mattersand-when-it-does-not">When Explainability Matters—and When It Does Not</h2>
+<section id="when-explainability-mattersand-when-it-does-not" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="when-explainability-mattersand-when-it-does-not"><span class="header-section-number">2</span> When Explainability Matters—and When It Does Not</h2>
 <p>Not every system needs explanations. When errors are reversible, harm is limited, and no human is expected to interpret or justify individual decisions, performance metrics are often sufficient. Recommendation systems, ad targeting, and internal optimization tools fall into this category. If a model makes a poor prediction, the consequences are contained.</p>
 <p>High-stakes systems change the equation. In healthcare, lending, hiring, and judicial settings, model outputs shape outcomes that cannot be undone. People may lose access to credit, treatment, employment, or liberty. In these settings, humans remain responsible for the decisions the system supports.</p>
 <p>That responsibility does not disappear because a model is involved. When people are expected to rely on a system and justify its decisions, explainability becomes a safety requirement—not a transparency exercise.</p>
 <hr>
 </section>
-<section id="why-accuracy-alone-breaks-down" class="level2">
-<h2 class="anchored" data-anchor-id="why-accuracy-alone-breaks-down">Why Accuracy Alone Breaks Down</h2>
+<section id="why-accuracy-alone-breaks-down" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="why-accuracy-alone-breaks-down"><span class="header-section-number">3</span> Why Accuracy Alone Breaks Down</h2>
 <p>In high-impact settings, accuracy alone is a weak guarantee of acceptable behavior.</p>
 <p>Many such applications are under-studied. Training data rarely reflects the conditions encountered after deployment. Distribution shift is common. Historical data often encodes bias. Feedback loops quietly distort outcomes over time. A model can appear accurate in validation and still fail for reasons metrics never reveal.</p>
 <p>High-stakes systems also face requirements that extend beyond predictive performance. Fairness, non-discrimination, robustness, safety, and legal defensibility all matter. Increasingly, regulations mandate transparency or a right to explanation when automated systems influence consequential decisions.</p>
@@ -283,8 +288,8 @@ ul.task-list li input[type="checkbox"] {
 <p>That is where explainability enters—not as proof that a model is correct, but as a diagnostic tool for evaluating behavior that optimization alone cannot guarantee.</p>
 <hr>
 </section>
-<section id="explainability-as-diagnostic-infrastructure" class="level2">
-<h2 class="anchored" data-anchor-id="explainability-as-diagnostic-infrastructure">Explainability as Diagnostic Infrastructure</h2>
+<section id="explainability-as-diagnostic-infrastructure" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="explainability-as-diagnostic-infrastructure"><span class="header-section-number">4</span> Explainability as Diagnostic Infrastructure</h2>
 <p>Explainability is best understood as diagnostic infrastructure—a way to examine how a system behaves when performance metrics fall short. By inspecting what a model relies on and how its predictions change across cases, we can surface failure modes that would otherwise remain hidden.</p>
 <p>In vision systems, explanations reveal shortcut learning: models that appear accurate while relying on irrelevant background cues. In financial systems, they can expose reliance on prohibited or proxy attributes. In clinical settings, they help practitioners decide when to trust a recommendation and when to override it.</p>
 <p>For people affected by automated decisions, the need is different. Feature importance alone is rarely useful. What matters is recourse—understanding what could realistically change an outcome.</p>
@@ -293,38 +298,38 @@ ul.task-list li input[type="checkbox"] {
 <p>For a deeper look at the bias and fairness failures that make explainability necessary, see <a href="https://changezakram.github.io/responsible-ai/ai-safety.html">AI Safety: Secure Systems Can Still Cause Harm</a>.</p>
 <hr>
 </section>
-<section id="two-paths-to-model-understanding" class="level2">
-<h2 class="anchored" data-anchor-id="two-paths-to-model-understanding">Two Paths to Model Understanding</h2>
+<section id="two-paths-to-model-understanding" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="two-paths-to-model-understanding"><span class="header-section-number">5</span> Two Paths to Model Understanding</h2>
 <p>The first path is to design models that are interpretable by construction. These models expose their logic directly, allowing humans to inspect how inputs lead to outputs. Rule-based models, risk scores, and generalized additive models fall into this category. When an inherently interpretable model achieves adequate performance, it should usually be preferred. There is no secondary explanation model, no approximation, and no uncertainty about whether the explanation truly reflects the model’s behavior.</p>
 <p>But there is a trade-off. Simpler models often sacrifice performance. In domains like banking and insurance, interpretability may be required for every decision—yet true relationships in data are rarely linear. The most accurate models are often the hardest to interpret. This tension is why post-hoc explainability methods exist.</p>
 <p>The second path is to explain models after the fact. When models are too complex, externally sourced, or already deployed, post-hoc explanations act as a bridge between a black-box system and its users. The question shifts from <em>how does the model work?</em> to <em>how can its behavior be described without misleading people?</em></p>
 <p>That distinction matters.</p>
 <hr>
 </section>
-<section id="explanation-as-an-interface-not-a-property" class="level2">
-<h2 class="anchored" data-anchor-id="explanation-as-an-interface-not-a-property">Explanation as an Interface, Not a Property</h2>
+<section id="explanation-as-an-interface-not-a-property" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="explanation-as-an-interface-not-a-property"><span class="header-section-number">6</span> Explanation as an Interface, Not a Property</h2>
 <p>Post-hoc explanations do not reveal a model’s internal reasoning. They approximate behavior from the outside.</p>
 <p>An explanation method takes a trained model and produces a secondary artifact—feature attributions, rules, examples, or counterfactuals—that people can inspect. This artifact sits between the system and its stakeholders, translating complex computation into a usable form.</p>
 <p>This means explanations help people use a model, not fully understand it.</p>
 <p>For this interface to be useful, it must balance two competing goals: reflecting what the model actually does and remaining understandable to its audience. Improving one often degrades the other. There is no universal solution. Explainability is inherently audience-dependent.</p>
 <hr>
 </section>
-<section id="local-and-global-views" class="level2">
-<h2 class="anchored" data-anchor-id="local-and-global-views">Local and Global Views</h2>
+<section id="local-and-global-views" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="local-and-global-views"><span class="header-section-number">7</span> Local and Global Views</h2>
 <p>Local explanations focus on individual predictions. They answer: <em>why did the model make this decision here?</em> These are useful for debugging, investigating specific outcomes, and assessing whether individual decisions are defensible.</p>
 <p>Global explanations summarize behavior across populations. They address: <em>what does the model generally rely on?</em> and <em>are certain groups systematically affected?</em> These views are essential for governance, auditing, and regulatory oversight.</p>
 <p>Local explanations reveal failures. Global explanations contextualize them. Both are necessary. Neither is sufficient on its own.</p>
 <hr>
 </section>
-<section id="core-post-hoc-techniques" class="level2">
-<h2 class="anchored" data-anchor-id="core-post-hoc-techniques">Core Post-Hoc Techniques</h2>
-<section id="lime-local-interpretable-model-agnostic-explanations" class="level3">
-<h3 class="anchored" data-anchor-id="lime-local-interpretable-model-agnostic-explanations">LIME (Local Interpretable Model-agnostic Explanations)</h3>
+<section id="core-post-hoc-techniques" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="core-post-hoc-techniques"><span class="header-section-number">8</span> Core Post-Hoc Techniques</h2>
+<section id="lime-local-interpretable-model-agnostic-explanations" class="level3" data-number="8.1">
+<h3 data-number="8.1" class="anchored" data-anchor-id="lime-local-interpretable-model-agnostic-explanations"><span class="header-section-number">8.1</span> LIME (Local Interpretable Model-agnostic Explanations)</h3>
 <p>LIME explains a prediction by fitting a simple, interpretable model around a single decision. Instead of trying to explain the full behavior of a complex model, it focuses only on the local region near the prediction being analyzed. Conceptually, think of it as drawing a straight line around one small section of a very complicated curve.</p>
 <p>The method works by creating many randomly generated variations of the original input — in a credit decisioning system, this means sampling applicants with slightly different feature values around the original — and observing how the model’s prediction changes. Those nearby examples are weighted by their similarity to the original input. LIME then fits a simple local model that approximates the behavior of the larger black-box system in that neighborhood.</p>
 <p>The approach is flexible and model-agnostic, which made it one of the earliest widely adopted explainability techniques for complex machine learning systems. But the same flexibility introduces an important limitation: explanations can change depending on how the perturbations are generated. Small changes to the sampling process may produce noticeably different explanations for the same prediction.</p>
 <p>For banking applications, that instability matters. Adverse action notices, fair lending reviews, and regulatory examinations require explanations that are consistent and defensible. LIME is often useful for exploratory analysis and rapid debugging, but it is less reliable as a primary explanation framework for formal model governance.</p>
-<div id="fig-LIME" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Five-step LIME explanation diagram for a denied mortgage application">
+<div id="fig-LIME" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Five-step LIME explanation diagram for a denied mortgage application" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-LIME-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/lime.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Five-step LIME explanation diagram for a denied mortgage application">
@@ -335,12 +340,12 @@ Figure&nbsp;1: LIME explains a mortgage denial in five steps: selecting the pred
 </figure>
 </div>
 </section>
-<section id="shap-shapley-additive-explanations" class="level3">
-<h3 class="anchored" data-anchor-id="shap-shapley-additive-explanations">SHAP (SHapley Additive exPlanations)</h3>
+<section id="shap-shapley-additive-explanations" class="level3" data-number="8.2">
+<h3 data-number="8.2" class="anchored" data-anchor-id="shap-shapley-additive-explanations"><span class="header-section-number">8.2</span> SHAP (SHapley Additive exPlanations)</h3>
 <p>SHAP assigns each feature a fair share of credit for a prediction using principles from cooperative game theory — the same mathematics used to fairly divide credit among players in a shared outcome. Unlike LIME, which approximates locally and can produce inconsistent results, SHAP derives its values from a mathematically principled framework that guarantees consistency across explanations.</p>
 <p>SHAP supports both local explanations (“Why was this applicant declined?”) and global analysis (“What features drive decisions across the portfolio?”). That dual capability makes it the most defensible explainability approach for SR 11-7 model documentation and governance review.</p>
 <p>The tradeoff is computational cost. SHAP evaluates every possible feature combination to estimate contributions fairly, which can become expensive at scale. That matters for real-time fraud detection and other latency-sensitive systems, but less so for underwriting and portfolio analytics, where decisions are not instantaneous. A further limitation worth noting: standard SHAP implementations assume features are independent when estimating contributions. In banking data where features are often correlated — credit score and income, for example — this assumption can assign attribution to unrealistic feature combinations, slightly distorting individual explanations.</p>
-<div id="fig-SHAP" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Four-step SHAP explanation diagram showing feature contributions for a mortgage application">
+<div id="fig-SHAP" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Four-step SHAP explanation diagram showing feature contributions for a mortgage application" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-SHAP-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/shap.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Four-step SHAP explanation diagram showing feature contributions for a mortgage application">
@@ -394,8 +399,8 @@ Figure&nbsp;2: SHAP explains a mortgage prediction by measuring how each feature
 </table>
 <p><em>Table 1: LIME is useful for rapid local debugging, while SHAP is generally more defensible for formal model governance because it provides more stable, mathematically grounded explanations.</em></p>
 </section>
-<section id="counterfactual-explanations" class="level3">
-<h3 class="anchored" data-anchor-id="counterfactual-explanations">Counterfactual Explanations</h3>
+<section id="counterfactual-explanations" class="level3" data-number="8.3">
+<h3 data-number="8.3" class="anchored" data-anchor-id="counterfactual-explanations"><span class="header-section-number">8.3</span> Counterfactual Explanations</h3>
 <p>Counterfactual explanations shift the question from “Why was this decision made?” to “What would need to change for the outcome to be different?” Wachter, Mittelstadt, and Russell (2017) proposed the approach as a way to support regulatory compliance and meaningful individual recourse — making it especially relevant for adverse action notices under ECOA and broader fair lending obligations.</p>
 <p>A counterfactual explanation tells an applicant not just that income influenced the decision, but that increasing income by a specific amount would have changed the outcome. The practical challenge is generating realistic counterfactuals: mathematically minimal changes are often not actionable. Telling an applicant to earn $5,000 more is useful; telling them to build three more years of credit history is not.</p>
 <p>At the portfolio level, counterfactual analysis becomes a governance tool: it can reveal whether some groups consistently need greater changes to achieve favorable outcomes. That pattern, if consistent, may indicate disparate impact — and a counterfactual audit can surface it before an examiner does.</p>
@@ -410,63 +415,63 @@ Figure&nbsp;3: Counterfactual explanations show the smallest realistic changes n
 </figure>
 </div>
 </section>
-<section id="permutation-feature-importance" class="level3">
-<h3 class="anchored" data-anchor-id="permutation-feature-importance">Permutation Feature Importance</h3>
+<section id="permutation-feature-importance" class="level3" data-number="8.4">
+<h3 data-number="8.4" class="anchored" data-anchor-id="permutation-feature-importance"><span class="header-section-number">8.4</span> Permutation Feature Importance</h3>
 <p>Permutation importance measures how much a model depends on each feature across the full dataset. The method works by shuffling one feature at a time and observing how much model performance deteriorates. If performance drops significantly, the model was relying on that feature. If performance barely changes, the feature contributed little to the model’s predictions.</p>
 <p>Unlike SHAP or counterfactual explanations, permutation importance is a global technique: it does not explain individual decisions, but instead reveals what drives the model overall. In financial services, permutation importance is a practical validation tool for conceptual soundness review. During model validation, it can help confirm that the features driving predictions make business sense and are not acting as hidden proxies for protected characteristics.</p>
 <p>Its primary limitation is feature correlation. Correlated variables can dilute each other’s measured importance because the model can often substitute one for another. As a result, a genuinely important feature may appear less influential than it is.</p>
 <hr>
 </section>
 </section>
-<section id="attention-is-not-explanation" class="level2">
-<h2 class="anchored" data-anchor-id="attention-is-not-explanation">Attention Is Not Explanation</h2>
+<section id="attention-is-not-explanation" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="attention-is-not-explanation"><span class="header-section-number">9</span> Attention Is Not Explanation</h2>
 <p>As large language models enter production, attention mechanisms — the internal weights that determine which inputs a model focuses on when generating a response — are often presented as explanations. This is a mistake.</p>
 <p>Attention weights show which inputs influenced a prediction, not how or why a decision was made. High attention does not imply importance; low attention does not imply irrelevance. Treating attention as explanation conflates correlation with justification.</p>
 <p>The same caution applies to saliency maps in vision models. Saliency shows where the model is sensitive, not why. Without context, these artifacts can create confidence without understanding.</p>
 <hr>
 </section>
-<section id="the-security-dimension" class="level2">
-<h2 class="anchored" data-anchor-id="the-security-dimension">The Security Dimension</h2>
+<section id="the-security-dimension" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="the-security-dimension"><span class="header-section-number">10</span> The Security Dimension</h2>
 <p>Explainability is also a security concern—one often overlooked.</p>
 <p>Opaque models create attack surfaces. Model inversion attacks extract sensitive training data. Adversarial inputs exploit blind spots. Model drift quietly degrades performance as environments change.</p>
 <p>Explainability can help detect these risks early. But it also introduces a paradox: revealing too much can create exploitation roadmaps. Organizations must balance transparency with security—providing enough insight to build trust without enabling abuse.</p>
 <p>For a comprehensive treatment of adversarial threats and defense-in-depth controls for autonomous systems, see <a href="https://changezakram.github.io/agentic-ai/agentic_ai_security.html">Securing Agentic AI Systems: A Defense-in-Depth Approach</a>.</p>
 <hr>
 </section>
-<section id="the-limits-of-post-hoc-explainability" class="level2">
-<h2 class="anchored" data-anchor-id="the-limits-of-post-hoc-explainability">The Limits of Post-Hoc Explainability</h2>
+<section id="the-limits-of-post-hoc-explainability" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="the-limits-of-post-hoc-explainability"><span class="header-section-number">11</span> The Limits of Post-Hoc Explainability</h2>
 <p>Post-hoc explanations are powerful tools, but they introduce new risks.</p>
 <p>They can be unstable, misleading, or selectively presented. Most importantly, they can create the illusion that a system is understood when it is not.</p>
 <p>Explainability does not make a system fair, safe, or free from human responsibility. Sometimes explanations reveal problems that require changing the model — or reconsidering whether it should have been deployed at all.</p>
 <p>Regulators are beginning to formalize these expectations.</p>
 <hr>
 </section>
-<section id="the-regulatory-reality" class="level2">
-<h2 class="anchored" data-anchor-id="the-regulatory-reality">The Regulatory Reality</h2>
+<section id="the-regulatory-reality" class="level2" data-number="12">
+<h2 data-number="12" class="anchored" data-anchor-id="the-regulatory-reality"><span class="header-section-number">12</span> The Regulatory Reality</h2>
 <p>Regulation is not theoretical. Explainability requirements are already in force.</p>
 <p>The EU AI Act mandates transparency for high-risk systems. GDPR grants individuals rights related to automated decisions. California’s Transparency in Frontier AI Act requires disclosure of risks and mitigation measures.</p>
 <p>In the United States, SR 11-7 model risk management guidance requires banks to demonstrate conceptual soundness and ongoing monitoring for models used in consequential decisions. For credit, fraud, and fair lending applications, explainability is not optional — it is the mechanism through which model governance becomes defensible to examiners.</p>
 <p>Organizations deploying AI without explainability capabilities are accumulating regulatory debt that will eventually come due.</p>
 <hr>
 </section>
-<section id="a-practical-view" class="level2">
-<h2 class="anchored" data-anchor-id="a-practical-view">A Practical View</h2>
+<section id="a-practical-view" class="level2" data-number="13">
+<h2 data-number="13" class="anchored" data-anchor-id="a-practical-view"><span class="header-section-number">13</span> A Practical View</h2>
 <p>Explainable AI is not about choosing the “right” technique. It is about judgment.</p>
 <p>Interpretable models offer clarity but may lack flexibility. Post-hoc explanations make black-box models more inspectable, though the explanations themselves are approximations, not ground truth. None provides a complete picture.</p>
 <p>Responsible AI does not require perfect transparency. It requires knowing when explanations are sufficient, when they mislead, and when a system should not be trusted at all.</p>
 <p>Consider a credit decisioning model that achieves high accuracy but relies heavily on zip code — a well-documented proxy for race and national origin in fair lending contexts. A post-hoc explanation surfaces this reliance. The decision that follows is organizational, not technical. Explainability creates the conditions for that judgment. It does not substitute for it.</p>
 <hr>
 </section>
-<section id="implications-for-agentic-systems" class="level2">
-<h2 class="anchored" data-anchor-id="implications-for-agentic-systems">Implications for Agentic Systems</h2>
+<section id="implications-for-agentic-systems" class="level2" data-number="14">
+<h2 data-number="14" class="anchored" data-anchor-id="implications-for-agentic-systems"><span class="header-section-number">14</span> Implications for Agentic Systems</h2>
 <p>For agentic AI—systems that act autonomously—the stakes rise further.</p>
 <p>Agents do not just make predictions; they chain decisions, interact with environments, and adapt over time. Explaining a single output is hard enough. Explaining sequences of autonomous actions requires new approaches to traceability, accountability, and oversight.</p>
 <p>The question is not whether to invest in explainability — it is whether to build it in now or retrofit it under pressure. Agentic systems that cannot account for their own behavior will not satisfy examiners, will not earn the trust of decision-makers, and will not survive the scrutiny that follows consequential failures. Explainability is not a feature to be added later. For autonomous systems operating in high-stakes environments, it is a precondition for deployment.</p>
 <p>For a governance framework for these autonomous systems, see <a href="https://changezakram.github.io/agentic-ai/agentic_ai_security.html">Securing Agentic AI Systems: A Defense-in-Depth Approach</a>.</p>
 <hr>
 </section>
-<section id="further-reading" class="level2">
-<h2 class="anchored" data-anchor-id="further-reading">Further Reading</h2>
+<section id="further-reading" class="level2" data-number="15">
+<h2 data-number="15" class="anchored" data-anchor-id="further-reading"><span class="header-section-number">15</span> Further Reading</h2>
 <p>[1] Molnar, Christoph. <em>Interpretable Machine Learning</em>. https://christophm.github.io/interpretable-ml-book/</p>
 <p>[2] O’Neil, Cathy. <em>Weapons of Math Destruction</em>.</p>
 <p>[3] Rudin, Cynthia. (2019). “Stop Explaining Black Box Machine Learning Models for High Stakes Decisions and Use Interpretable Models Instead.” https://arxiv.org/pdf/1811.10154</p>
@@ -886,5 +891,4 @@ Figure&nbsp;3: Counterfactual explanations show the smallest realistic changes n
 
 
 
-<script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
