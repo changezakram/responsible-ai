@@ -153,16 +153,6 @@ Its primary limitation is feature correlation. Correlated variables can dilute e
 
 ---
 
-## Attention Is Not Explanation
-
-As large language models enter production, attention mechanisms — the internal weights that determine which inputs a model focuses on when generating a response — are often presented as explanations. This is a mistake.
-
-Attention weights show which inputs influenced a prediction, not how or why a decision was made. High attention does not imply importance; low attention does not imply irrelevance. Treating attention as explanation conflates correlation with justification.
-
-The same caution applies to saliency maps in vision models. Saliency shows where the model is sensitive, not why. Without context, these artifacts can create confidence without understanding.
-
----
-
 ## The Security Dimension
 
 Explainability is also a security concern—one often overlooked.
@@ -187,39 +177,14 @@ Regulators are beginning to formalize these expectations.
 
 ---
 
-## The Regulatory Reality
+## Regulatory Reality and Practical Judgment
 
-Regulation is not theoretical. Explainability requirements are already in force.
+Regulation is not theoretical. Explainability requirements are already in force. The EU AI Act mandates transparency for high-risk systems. GDPR grants individuals rights related to automated decisions. In the United States, SR 11-7 model risk management guidance requires banks to demonstrate conceptual soundness and ongoing monitoring for models used in consequential decisions. For credit, fraud, and fair lending applications, explainability is not optional — it is the mechanism through which model governance becomes defensible to examiners. Organizations deploying AI without explainability capabilities are accumulating regulatory debt that will eventually come due.
 
-The EU AI Act mandates transparency for high-risk systems. GDPR grants individuals rights related to automated decisions. California's Transparency in Frontier AI Act requires disclosure of risks and mitigation measures.
-
-In the United States, SR 11-7 model risk management guidance requires banks to demonstrate conceptual soundness and ongoing monitoring for models used in consequential decisions. For credit, fraud, and fair lending applications, explainability is not optional — it is the mechanism through which model governance becomes defensible to examiners.
-
-Organizations deploying AI without explainability capabilities are accumulating regulatory debt that will eventually come due.
-
----
-
-## A Practical View
-
-Explainable AI is not about choosing the "right" technique. It is about judgment.
-
-Interpretable models offer clarity but may lack flexibility. Post-hoc explanations make black-box models more inspectable, though the explanations themselves are approximations, not ground truth. None provides a complete picture.
-
-Responsible AI does not require perfect transparency. It requires knowing when explanations are sufficient, when they mislead, and when a system should not be trusted at all.
+Regulation defines the obligation. Judgment determines how it is met. Interpretable models offer clarity but may lack flexibility. Post-hoc explanations make black-box models more inspectable, though the explanations themselves are approximations, not ground truth. 
+Responsible AI does not require perfect transparency — it requires knowing when explanations are sufficient, when they mislead, and when a system should not be trusted at all.
 
 Consider a credit decisioning model that achieves high accuracy but relies heavily on zip code — a well-documented proxy for race and national origin in fair lending contexts. A post-hoc explanation surfaces this reliance. The decision that follows is organizational, not technical. Explainability creates the conditions for that judgment. It does not substitute for it.
-
----
-
-## Implications for Agentic Systems
-
-For agentic AI—systems that act autonomously—the stakes rise further.
-
-Agents do not just make predictions; they chain decisions, interact with environments, and adapt over time. Explaining a single output is hard enough. Explaining sequences of autonomous actions requires new approaches to traceability, accountability, and oversight.
-
-The question is not whether to invest in explainability — it is whether to build it in now or retrofit it under pressure. Agentic systems that cannot account for their own behavior will not satisfy examiners, will not earn the trust of decision-makers, and will not survive the scrutiny that follows consequential failures. Explainability is not a feature to be added later. For autonomous systems operating in high-stakes environments, it is a precondition for deployment.
-
-For a governance framework for these autonomous systems, see [Securing Agentic AI Systems: A Defense-in-Depth Approach](https://changezakram.github.io/agentic-ai/agentic_ai_security.html).
 
 ---
 

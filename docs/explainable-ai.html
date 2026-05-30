@@ -226,13 +226,10 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#counterfactual-explanations" id="toc-counterfactual-explanations" class="nav-link" data-scroll-target="#counterfactual-explanations"><span class="header-section-number">8.3</span> Counterfactual Explanations</a></li>
   <li><a href="#permutation-feature-importance" id="toc-permutation-feature-importance" class="nav-link" data-scroll-target="#permutation-feature-importance"><span class="header-section-number">8.4</span> Permutation Feature Importance</a></li>
   </ul></li>
-  <li><a href="#attention-is-not-explanation" id="toc-attention-is-not-explanation" class="nav-link" data-scroll-target="#attention-is-not-explanation"><span class="header-section-number">9</span> Attention Is Not Explanation</a></li>
-  <li><a href="#the-security-dimension" id="toc-the-security-dimension" class="nav-link" data-scroll-target="#the-security-dimension"><span class="header-section-number">10</span> The Security Dimension</a></li>
-  <li><a href="#the-limits-of-post-hoc-explainability" id="toc-the-limits-of-post-hoc-explainability" class="nav-link" data-scroll-target="#the-limits-of-post-hoc-explainability"><span class="header-section-number">11</span> The Limits of Post-Hoc Explainability</a></li>
-  <li><a href="#the-regulatory-reality" id="toc-the-regulatory-reality" class="nav-link" data-scroll-target="#the-regulatory-reality"><span class="header-section-number">12</span> The Regulatory Reality</a></li>
-  <li><a href="#a-practical-view" id="toc-a-practical-view" class="nav-link" data-scroll-target="#a-practical-view"><span class="header-section-number">13</span> A Practical View</a></li>
-  <li><a href="#implications-for-agentic-systems" id="toc-implications-for-agentic-systems" class="nav-link" data-scroll-target="#implications-for-agentic-systems"><span class="header-section-number">14</span> Implications for Agentic Systems</a></li>
-  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading"><span class="header-section-number">15</span> Further Reading</a></li>
+  <li><a href="#the-security-dimension" id="toc-the-security-dimension" class="nav-link" data-scroll-target="#the-security-dimension"><span class="header-section-number">9</span> The Security Dimension</a></li>
+  <li><a href="#the-limits-of-post-hoc-explainability" id="toc-the-limits-of-post-hoc-explainability" class="nav-link" data-scroll-target="#the-limits-of-post-hoc-explainability"><span class="header-section-number">10</span> The Limits of Post-Hoc Explainability</a></li>
+  <li><a href="#regulatory-reality-and-practical-judgment" id="toc-regulatory-reality-and-practical-judgment" class="nav-link" data-scroll-target="#regulatory-reality-and-practical-judgment"><span class="header-section-number">11</span> Regulatory Reality and Practical Judgment</a></li>
+  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading"><span class="header-section-number">12</span> Further Reading</a></li>
   </ul>
 </nav>
     </div>
@@ -423,55 +420,31 @@ Figure&nbsp;3: Counterfactual explanations show the smallest realistic changes n
 <hr>
 </section>
 </section>
-<section id="attention-is-not-explanation" class="level2" data-number="9">
-<h2 data-number="9" class="anchored" data-anchor-id="attention-is-not-explanation"><span class="header-section-number">9</span> Attention Is Not Explanation</h2>
-<p>As large language models enter production, attention mechanisms — the internal weights that determine which inputs a model focuses on when generating a response — are often presented as explanations. This is a mistake.</p>
-<p>Attention weights show which inputs influenced a prediction, not how or why a decision was made. High attention does not imply importance; low attention does not imply irrelevance. Treating attention as explanation conflates correlation with justification.</p>
-<p>The same caution applies to saliency maps in vision models. Saliency shows where the model is sensitive, not why. Without context, these artifacts can create confidence without understanding.</p>
-<hr>
-</section>
-<section id="the-security-dimension" class="level2" data-number="10">
-<h2 data-number="10" class="anchored" data-anchor-id="the-security-dimension"><span class="header-section-number">10</span> The Security Dimension</h2>
+<section id="the-security-dimension" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="the-security-dimension"><span class="header-section-number">9</span> The Security Dimension</h2>
 <p>Explainability is also a security concern—one often overlooked.</p>
 <p>Opaque models create attack surfaces. Model inversion attacks extract sensitive training data. Adversarial inputs exploit blind spots. Model drift quietly degrades performance as environments change.</p>
 <p>Explainability can help detect these risks early. But it also introduces a paradox: revealing too much can create exploitation roadmaps. Organizations must balance transparency with security—providing enough insight to build trust without enabling abuse.</p>
 <p>For a comprehensive treatment of adversarial threats and defense-in-depth controls for autonomous systems, see <a href="https://changezakram.github.io/agentic-ai/agentic_ai_security.html">Securing Agentic AI Systems: A Defense-in-Depth Approach</a>.</p>
 <hr>
 </section>
-<section id="the-limits-of-post-hoc-explainability" class="level2" data-number="11">
-<h2 data-number="11" class="anchored" data-anchor-id="the-limits-of-post-hoc-explainability"><span class="header-section-number">11</span> The Limits of Post-Hoc Explainability</h2>
+<section id="the-limits-of-post-hoc-explainability" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="the-limits-of-post-hoc-explainability"><span class="header-section-number">10</span> The Limits of Post-Hoc Explainability</h2>
 <p>Post-hoc explanations are powerful tools, but they introduce new risks.</p>
 <p>They can be unstable, misleading, or selectively presented. Most importantly, they can create the illusion that a system is understood when it is not.</p>
 <p>Explainability does not make a system fair, safe, or free from human responsibility. Sometimes explanations reveal problems that require changing the model — or reconsidering whether it should have been deployed at all.</p>
 <p>Regulators are beginning to formalize these expectations.</p>
 <hr>
 </section>
-<section id="the-regulatory-reality" class="level2" data-number="12">
-<h2 data-number="12" class="anchored" data-anchor-id="the-regulatory-reality"><span class="header-section-number">12</span> The Regulatory Reality</h2>
-<p>Regulation is not theoretical. Explainability requirements are already in force.</p>
-<p>The EU AI Act mandates transparency for high-risk systems. GDPR grants individuals rights related to automated decisions. California’s Transparency in Frontier AI Act requires disclosure of risks and mitigation measures.</p>
-<p>In the United States, SR 11-7 model risk management guidance requires banks to demonstrate conceptual soundness and ongoing monitoring for models used in consequential decisions. For credit, fraud, and fair lending applications, explainability is not optional — it is the mechanism through which model governance becomes defensible to examiners.</p>
-<p>Organizations deploying AI without explainability capabilities are accumulating regulatory debt that will eventually come due.</p>
-<hr>
-</section>
-<section id="a-practical-view" class="level2" data-number="13">
-<h2 data-number="13" class="anchored" data-anchor-id="a-practical-view"><span class="header-section-number">13</span> A Practical View</h2>
-<p>Explainable AI is not about choosing the “right” technique. It is about judgment.</p>
-<p>Interpretable models offer clarity but may lack flexibility. Post-hoc explanations make black-box models more inspectable, though the explanations themselves are approximations, not ground truth. None provides a complete picture.</p>
-<p>Responsible AI does not require perfect transparency. It requires knowing when explanations are sufficient, when they mislead, and when a system should not be trusted at all.</p>
+<section id="regulatory-reality-and-practical-judgment" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="regulatory-reality-and-practical-judgment"><span class="header-section-number">11</span> Regulatory Reality and Practical Judgment</h2>
+<p>Regulation is not theoretical. Explainability requirements are already in force. The EU AI Act mandates transparency for high-risk systems. GDPR grants individuals rights related to automated decisions. In the United States, SR 11-7 model risk management guidance requires banks to demonstrate conceptual soundness and ongoing monitoring for models used in consequential decisions. For credit, fraud, and fair lending applications, explainability is not optional — it is the mechanism through which model governance becomes defensible to examiners. Organizations deploying AI without explainability capabilities are accumulating regulatory debt that will eventually come due.</p>
+<p>Regulation defines the obligation. Judgment determines how it is met. Interpretable models offer clarity but may lack flexibility. Post-hoc explanations make black-box models more inspectable, though the explanations themselves are approximations, not ground truth. Responsible AI does not require perfect transparency — it requires knowing when explanations are sufficient, when they mislead, and when a system should not be trusted at all.</p>
 <p>Consider a credit decisioning model that achieves high accuracy but relies heavily on zip code — a well-documented proxy for race and national origin in fair lending contexts. A post-hoc explanation surfaces this reliance. The decision that follows is organizational, not technical. Explainability creates the conditions for that judgment. It does not substitute for it.</p>
 <hr>
 </section>
-<section id="implications-for-agentic-systems" class="level2" data-number="14">
-<h2 data-number="14" class="anchored" data-anchor-id="implications-for-agentic-systems"><span class="header-section-number">14</span> Implications for Agentic Systems</h2>
-<p>For agentic AI—systems that act autonomously—the stakes rise further.</p>
-<p>Agents do not just make predictions; they chain decisions, interact with environments, and adapt over time. Explaining a single output is hard enough. Explaining sequences of autonomous actions requires new approaches to traceability, accountability, and oversight.</p>
-<p>The question is not whether to invest in explainability — it is whether to build it in now or retrofit it under pressure. Agentic systems that cannot account for their own behavior will not satisfy examiners, will not earn the trust of decision-makers, and will not survive the scrutiny that follows consequential failures. Explainability is not a feature to be added later. For autonomous systems operating in high-stakes environments, it is a precondition for deployment.</p>
-<p>For a governance framework for these autonomous systems, see <a href="https://changezakram.github.io/agentic-ai/agentic_ai_security.html">Securing Agentic AI Systems: A Defense-in-Depth Approach</a>.</p>
-<hr>
-</section>
-<section id="further-reading" class="level2" data-number="15">
-<h2 data-number="15" class="anchored" data-anchor-id="further-reading"><span class="header-section-number">15</span> Further Reading</h2>
+<section id="further-reading" class="level2" data-number="12">
+<h2 data-number="12" class="anchored" data-anchor-id="further-reading"><span class="header-section-number">12</span> Further Reading</h2>
 <p>[1] Molnar, Christoph. <em>Interpretable Machine Learning</em>. https://christophm.github.io/interpretable-ml-book/</p>
 <p>[2] O’Neil, Cathy. <em>Weapons of Math Destruction</em>.</p>
 <p>[3] Rudin, Cynthia. (2019). “Stop Explaining Black Box Machine Learning Models for High Stakes Decisions and Use Interpretable Models Instead.” https://arxiv.org/pdf/1811.10154</p>
