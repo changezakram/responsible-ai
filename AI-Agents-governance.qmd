@@ -65,7 +65,7 @@ Governance increasingly lives inside the system's execution path, not just its r
 
 ### Traditional Model Governance Still Matters
 
-None of this displaces the disciplines already in place. Conceptual soundness, independent validation, data quality, documentation, change management, and effective challenge remain essential — the practices above extend them, they don't replace them. In April 2026, the Federal Reserve, OCC, and FDIC reaffirmed these principles in revised model risk management guidance, while explicitly stating that generative and agentic AI fall outside its scope because they are novel and rapidly evolving, and directing banks to determine appropriate governance and controls through their broader risk-management frameworks instead. (Federal Reserve)
+None of this displaces the disciplines already in place. Conceptual soundness, independent validation, data quality, documentation, change management, and effective challenge remain essential — the practices above extend them, they don't replace them. In April 2026, the Federal Reserve, OCC, and FDIC reaffirmed these principles in revised model risk management guidance, while explicitly stating that generative and agentic AI fall outside its scope because they are novel and rapidly evolving, and directing banks to determine appropriate governance and controls through their broader risk-management frameworks instead.
 
 The Financial Stability Board has taken a similarly broader view. Its 2026 proposed sound practices address organization-wide AI governance, the AI lifecycle, cybersecurity, technology, and third-party risk, and explicitly consider whether these practices adequately address emerging forms of AI such as generative and agentic systems.
 
