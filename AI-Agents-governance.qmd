@@ -46,7 +46,7 @@ A lending model might recommend that an application requires additional document
 
 Enterprise AI rarely operates in isolation. An agentic workflow might combine a foundation model, enterprise data, a retrieval system, memory, business rules, APIs, other agents, and a core application, each handing off to the next. Every component can satisfy its individual control requirements and the overall system can still produce an undesirable outcome.
 
-For example, an LLM may correctly interpret a customer's request. A customer-data service may return accurate information. A pricing engine may correctly calculate an available offer. An API may execute exactly the instruction it receives. Yet the combination could still produce an offer that violates a business rule or gives the agent more discretion than intended — individually acceptable components do not necessarily produce an acceptable system. This is compositional risk, and it means governance needs to examine not only individual models and components, but the end-to-end behavior of the workflow they create together.
+For example, an LLM may correctly interpret a customer's request. A customer-data service may return accurate information. A pricing engine may correctly calculate an available offer. An API may execute exactly the instruction it receives. Yet the combination could still produce an offer that violates a business rule or gives the agent more discretion than intended — individually acceptable components do not necessarily produce an acceptable system. This is compositional risk: governance has to examine the end-to-end behavior of the workflow, not just the components that make it up.
 
 ### From Periodic Validation to Continuous Governance
 
@@ -69,8 +69,8 @@ None of this displaces the disciplines already in place. Conceptual soundness, i
 
 The Financial Stability Board has taken a similarly broader view. Its 2026 proposed sound practices address organization-wide AI governance, the AI lifecycle, cybersecurity, technology, and third-party risk, and explicitly consider whether these practices adequately address emerging forms of AI such as generative and agentic systems.
 
-Financial institutions don't need to replace model governance; they need to extend the governance boundary. For traditional models, the model itself can often remain the primary unit of governance. For agentic AI, governance increasingly needs to encompass the entire decision system:
+Banks don't need to replace model governance; they need to extend the governance boundary. For traditional models, the model itself can often remain the primary unit of governance. For agentic AI, governance increasingly needs to encompass the entire decision system:
 
 Objective → Model → Data → Memory → Tools → Authority → Actions → Outcomes
 
-One question raised at the outset — whether independently deployed agents can produce correlated behavior or systemic risk — sits outside any single institution's governance boundary entirely, and is addressed separately in the sections that follow. That transition, from governing models to governing dynamic decision systems, is the foundation for the governance architecture explored there.
+One question raised at the outset — whether independently deployed agents can produce correlated behavior or systemic risk — sits outside what any single institution can govern on its own, and is addressed separately in the sections that follow.
