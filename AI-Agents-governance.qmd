@@ -24,3 +24,58 @@ What happens when individually governed components interact?
 Could independently deployed agents produce correlated behavior or systemic risk?
 
 These questions point toward a broader governance model — one that treats AI not as a model to validate once, but as a dynamic decision-making system to govern throughout execution. The next evolution of Responsible AI, particularly in financial services, will require a shift from model governance to system governance, and from governance expressed primarily through policies and review processes to controls that can be observed, enforced, and audited at runtime.
+
+---
+
+## Why Traditional Model Governance Is Not Enough
+
+Traditional model risk management is built around a relatively stable unit of analysis: the model. A model is developed for an intended purpose, validated before use, approved within defined parameters, and monitored over time to determine whether its performance remains acceptable. Even sophisticated machine-learning models generally fit within this structure when their inputs, outputs, intended use, and decision boundaries can be clearly defined.
+
+Agentic AI introduces a different operating model: an agent can interpret an objective, formulate a plan, retrieve information, select among available tools, interact with other systems or agents, and execute a sequence of actions. Its behavior is determined not only by the underlying model, but also by the context it receives, the tools and data it can access, its memory and state, the policies governing it, and the results of previous actions. The object being governed is a dynamic system of models, data, tools, permissions, workflows, and decisions — and that shift creates several distinct challenges for traditional governance.
+
+### From Performance Drift to Behavioral Drift
+
+Traditional model monitoring typically looks for deterioration in metrics such as accuracy, discrimination, calibration, stability, or forecast error. These remain important, but an agent can remain technically capable while changing how it pursues its objective.
+
+Consider an AI agent supporting customer retention. Its objective might be to reduce attrition among high-value customers. Over time, the agent could discover that increasingly aggressive offers produce better short-term retention. Its predictive performance may remain strong — even improve — while its behavior gradually moves outside the institution's intended pricing, profitability, or customer-treatment boundaries.
+
+The relevant governance question is therefore no longer only is the model still performing? It also becomes: is the agent still behaving in a manner consistent with what we approved? Recent research describes this problem as policy drift and proposes monitoring observed agent behavior for changes in decision policy, rather than relying exclusively on traditional performance metrics.
+
+### From Outputs to Actions
+
+Traditional AI systems often produce an output that a human or downstream application consumes: a probability of default, fraud score, customer segment, forecast, or recommendation. Agents can retrieve customer information, query multiple systems, determine the next step, call an API, initiate a workflow, communicate with another agent, or execute an authorized transaction. As the system moves from recommendation to execution, governance must address not only the quality of the output but also the authority attached to it.
+
+A lending model might recommend that an application requires additional documentation. An agent could identify the missing information, contact the customer, retrieve documents, update the case, and advance the application through the workflow — each added capability expanding the governance surface. The question becomes not simply what can the AI determine? but what is the AI permitted to do as a consequence?
+
+### From a Model Boundary to a System Boundary
+
+Enterprise AI rarely operates in isolation. An agentic workflow might combine a foundation model, enterprise data, a retrieval system, memory, business rules, APIs, other agents, and a core application, each handing off to the next. Every component can satisfy its individual control requirements and the overall system can still produce an undesirable outcome.
+
+For example, an LLM may correctly interpret a customer's request. A customer-data service may return accurate information. A pricing engine may correctly calculate an available offer. An API may execute exactly the instruction it receives. Yet the combination could still produce an offer that violates a business rule or gives the agent more discretion than intended — individually acceptable components do not necessarily produce an acceptable system. This is compositional risk, and it means governance needs to examine not only individual models and components, but the end-to-end behavior of the workflow they create together.
+
+### From Periodic Validation to Continuous Governance
+
+Traditional governance is often organized around checkpoints: development review, independent validation, approval, periodic monitoring, and revalidation when material changes occur. That remains valuable, but autonomous systems introduce risks between those checkpoints.
+
+An agent's operating environment can change continuously. Data changes. Permissions change. APIs change. Other agents take actions. Business conditions change. An action that was appropriate when a plan was generated may no longer be appropriate when it is executed, which means governance has to operate during execution, not merely before and after it. Runtime controls can include:
+
+- verifying permissions before consequential actions,
+- enforcing transaction or exposure limits,
+- requiring human approval above defined thresholds,
+- monitoring anomalous behavior,
+- recording agent decisions and tool interactions,
+- and stopping or escalating activity when policy boundaries are reached.
+
+Governance, in other words, begins to move from a predominantly review-based function toward an executable control layer within the architecture itself.
+
+### Traditional Model Governance Still Matters
+
+Conceptual soundness, independent validation, data quality, performance monitoring, documentation, change management, and effective challenge remain essential. In April 2026, the Federal Reserve, OCC, and FDIC reaffirmed these principles in revised model risk management guidance — while explicitly stating that generative and agentic AI fall outside its scope because they are novel and rapidly evolving, and directing banks to determine appropriate governance and controls through their broader risk-management frameworks instead. (Federal Reserve)
+
+The Financial Stability Board has taken a similarly broader view. Its 2026 proposed sound practices address organization-wide AI governance, the AI lifecycle, cybersecurity, technology, and third-party risk, and explicitly consider whether these practices adequately address emerging forms of AI such as generative and agentic systems. (Financial Stability Board)
+
+Financial institutions don't need to replace model governance; they need to extend the governance boundary. For traditional models, the model itself can often remain the primary unit of governance. For agentic AI, governance increasingly needs to encompass the entire decision system:
+
+Objective → Model → Data → Memory → Tools → Authority → Actions → Outcomes
+
+That transition — from governing models to governing dynamic decision systems — is the foundation for the governance architecture explored in the sections that follow.
