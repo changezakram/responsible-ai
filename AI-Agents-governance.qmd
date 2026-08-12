@@ -115,7 +115,7 @@ This is the fourth question raised at the outset and deferred from the previous 
 
 In financial markets, this can amplify crowded trades, liquidity pressure, rapid repricing, procyclical behavior, or operational concentration. Within a single institution, similar effects can occur when multiple agents interact with the same customers, limits, inventories, or operational processes. The governance question expands accordingly: what happens when individually acceptable AI decisions interact at scale? Traditional model-by-model validation is poorly positioned to observe this on its own.
 
-**A Layered Governance Architecture**
+## A Layered Governance Architecture
 
 Taken together, these five dimensions form a chain, not five independent controls:
 
