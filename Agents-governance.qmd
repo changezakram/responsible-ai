@@ -1,0 +1,26 @@
+---
+title: "Agentic AI Governance"
+subtitle: "Why Agentic AI Changes the Governance Problem"
+date: today
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    theme: cosmo
+---
+
+## Introduction
+
+For decades, financial institutions have governed AI largely through frameworks built around models: define the intended use, validate performance, establish controls, approve deployment, and monitor for deterioration. This approach works reasonably well when the object being governed is a bounded model operating within a defined process. Agentic AI changes that assumption: an agent can reason across multiple steps, select and use tools, maintain state, and take actions toward an objective. As autonomy increases, the governance question expands from "Is this model performing as intended?" to "Is this system behaving as intended, and does it still have the appropriate authority to act?"
+
+The distinction is increasingly visible in financial regulation. In their revised 2026 model risk management guidance, U.S. banking regulators explicitly excluded generative and agentic AI from scope — a notable admission that the field's core supervisory framework doesn't yet know how to answer that second question. The guidance does direct institutions to apply appropriate risk-management practices to systems outside traditional model-risk frameworks, but stops short of specifying what those practices should be. The Financial Stability Board has taken a similar position internationally, emphasizing organization-wide governance, senior-management accountability, and lifecycle controls for AI adoption in financial services — direction, not a rulebook.
+
+Model validation, performance monitoring, explainability, fairness, and data controls remain necessary; they're just no longer sufficient on their own. Agentic systems introduce additional questions:
+
+What objective is the agent authorized to optimize, and toward what actions?
+Can its behavior change after approval?
+What happens when individually governed components interact?
+Could independently deployed agents produce correlated behavior or systemic risk?
+
+These questions point toward a broader governance model — one that treats AI not as a model to validate once, but as a dynamic decision-making system to govern throughout execution. The next evolution of Responsible AI, particularly in financial services, will require a shift from model governance to system governance, and from governance expressed primarily through policies and review processes to controls that can be observed, enforced, and audited at runtime.
