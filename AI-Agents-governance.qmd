@@ -20,7 +20,6 @@ Model validation, performance monitoring, explainability, fairness, and data con
 
 These questions point toward a broader governance model — one that treats AI not as a model to validate once, but as a dynamic decision-making system to govern throughout execution. The next evolution of Responsible AI, particularly in financial services, will require a shift from model governance to system governance, and from governance expressed primarily through policies and review processes to controls that can be observed, enforced, and audited at runtime.
 
----
 
 ## Why Traditional Model Governance Is Not Enough
 
@@ -75,7 +74,6 @@ Objective → Model → Data → Memory → Tools → Authority → Actions → 
 
 One question raised at the outset — whether independently deployed agents can produce correlated behavior or systemic risk — sits outside what any single institution can govern on its own, and is addressed separately in the sections that follow.
 
----
 
 ## From Model Governance to System Governance
 
