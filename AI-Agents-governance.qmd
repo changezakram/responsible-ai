@@ -205,3 +205,103 @@ Delegated authority also has to be capable of being reduced or withdrawn — org
 Traditional identity and access management answers who can access this resource? Agentic AI adds a second question: what can this autonomous system do with that access? That shift moves governance from access control toward action control, and a mature authority-governance architecture needs to connect identity, delegation, permissions, context, limits, approval, execution, and audit into a single chain. The goal isn't to prevent agents from acting — it's to make sure their autonomy stays bounded, attributable, contextual, and revocable.
 
 Once authority has been established, another problem emerges: an agent can operate entirely within its permissions and still begin behaving in unexpected ways. That's the next layer of the framework — Behavioral Governance: is the agent still acting as intended?
+
+
+## Behavioral Governance — Is the Agent Still Acting as Intended?
+
+An agent can have an appropriate objective and operate entirely within its authorized permissions, and still behave in ways the institution didn't intend. That's the third governance question: is the agent still behaving as intended? Traditional model monitoring is designed primarily to detect changes in performance — accuracy, calibration, discrimination, stability, forecast error, data drift, and other purpose-specific indicators — and those controls remain important. But agentic systems add another dimension: behavior over time. An agent doesn't simply produce isolated predictions; it selects actions, uses tools, responds to feedback, maintains context, and pursues an objective across a sequence of decisions, so the path it takes can matter as much as the final result.
+
+### Performance Drift Is Not Behavioral Drift
+
+Consider a retention agent authorized to offer customers pricing concessions within a defined range. Initially it uses those concessions selectively, but over time it learns — or repeatedly infers from context — that offers near the maximum permitted concession generate higher retention. Its retention performance improves, it stays within its authority, and no conventional performance threshold is breached, yet its behavior has changed materially: it's moved from selective intervention to routinely operating near the edge of its permitted authority.
+
+Performance drift asks whether the system is becoming less effective. Behavioral drift asks whether it's changing how it achieves its objective. Both matter, but they aren't the same question.
+
+### Monitor the Path, Not Just the Outcome
+
+Agentic behavior is often sequential — observe, reason, retrieve, decide, use a tool, observe the result, adjust, act again — and evaluating only the final outcome can hide risk that lives inside that sequence. Suppose a customer-service agent ultimately resolves a request correctly. The outcome looks successful, but during the process it may have accessed information unnecessary for the task, repeatedly attempted a restricted action, relied on an untrusted external source, invoked an unusual combination of tools, or tried several unsuccessful strategies before landing on the right one. Outcome monitoring would call that interaction a success; behavioral monitoring might flag it as a warning. For autonomous systems, how an outcome was produced becomes part of the control environment.
+
+### What Should Institutions Observe?
+
+Behavioral governance requires telemetry beyond conventional application logs — actions selected, tools invoked, resources accessed, permission requests, escalation frequency, failed actions, exceptions, decision sequences, proximity to financial or operational limits, interaction with other agents, policy violations, and shifts in the distribution of actions over time. The goal isn't to record every internal computation indiscriminately; it's to keep enough evidence to reconstruct consequential behavior and spot patterns that suggest the system is moving outside expected boundaries. That's the real distinction between logging and observability — logging records events, observability helps an institution understand what those events collectively say about the system's behavior.
+
+### Establish Behavioral Baselines
+
+Detecting abnormal behavior requires some definition of normal behavior, which institutions can establish during testing and controlled deployment. A payments agent, for instance, might normally complete most routine cases without escalation, invoke a defined set of tools, rarely approach transaction limits, escalate unusual beneficiary changes, and never attempt certain restricted actions — production monitoring can then compare observed behavior against that profile.
+
+The goal isn't identical behavior every time; agentic systems are valuable precisely because they adapt to context. It's identifying material deviations from approved behavioral boundaries — a sudden increase in tool usage, repeated attempts to access restricted resources, unusual delegation patterns, or growing concentration near control limits can warrant investigation even when business outcomes still look acceptable.
+
+### Individually Safe Actions Can Create Unsafe Trajectories
+
+A particularly important challenge in agentic systems is that every individual action can appear permissible while the combined trajectory becomes problematic. Imagine an agent individually authorized to retrieve customer data, summarize information, create a document, and send an internal communication — each action legitimate on its own. But a particular sequence could combine sensitive information from several sources into a document and send it to someone who shouldn't receive the aggregated whole. No individual tool call necessarily violates its permission boundary; the risk emerges from the composition of actions over time.
+
+That means runtime governance can't rely exclusively on asking is this action allowed? For higher-risk workflows, it also needs to ask: given everything this agent has already done, is this next action still appropriate? That's the difference between action-level control and trajectory-level control.
+
+### Behavioral Monitoring Should Trigger Intervention
+
+Observability without response is incomplete governance — institutions need to define what happens when behavior moves outside expected boundaries. Responses can be graduated by severity: observe (increase telemetry or flag unusual behavior), warn (generate an alert for review), constrain (reduce available tools, transaction limits, or permissions), escalate (require human approval before further consequential actions), suspend (temporarily stop the agent), and terminate (revoke authority and end execution) — a closed loop of observe, detect, evaluate, intervene, and learn. The goal isn't just identifying problems after an incident; it's catching emerging risk early enough to alter the agent's behavior or authority before real harm occurs.
+
+### Explainability Also Changes
+
+Traditional explainability asks why a model produced a particular prediction — which variables drove a credit-risk score, for instance. Agentic systems add a different question: why did the system take this sequence of actions? For consequential workflows, institutions may need to reconstruct the objective being pursued, the information available at the time, the actions selected, the tools used, the approvals obtained, the policy checks performed, and the resulting outcome — a form of decision provenance.
+
+The goal isn't necessarily to expose every internal reasoning token a foundation model generates; those traces can be unreliable, sensitive, or impractical to retain. What matters more is an auditable record of the observable decision process: context, actions, permissions, policy evaluations, tool interactions, and outcomes.
+
+### Monitoring Must Be Proportionate to Risk
+
+Not every agent needs the same degree of surveillance — an internal agent summarizing meeting notes presents a very different risk profile than one capable of initiating payments or changing customer account information. Behavioral governance should be risk-based: higher autonomy and consequence should generally mean stronger telemetry, behavioral baselines, runtime policy checks, anomaly detection, human escalation, auditability, and intervention mechanisms. The greater the autonomy and potential consequence, the stronger the requirement for runtime observability and control.
+
+### From Model Monitoring to Behavioral Assurance
+
+Traditional monitoring remains necessary, but agentic AI expands what institutions need to track — from asking whether the model is still performing, to whether business and customer outcomes are acceptable, to whether the agent is still acting as intended, to whether the institution can detect and intervene when it isn't. Together, these form behavioral assurance: confidence not just that an AI system remains technically effective, but that its ongoing actions stay consistent with its approved purpose, authority, and risk boundaries.
+
+Even a well-governed agent doesn't operate alone. Its behavior depends on data, models, tools, APIs, memory, and increasingly other agents — and each component can look safe individually while their interactions create risks no component-level control would catch. That's the next governance layer: Composition Governance, where safe components create unsafe systems.
+
+
+## Composition Governance — When Safe Components Create Unsafe Systems
+
+Enterprise AI systems are rarely built from a single model. A production agent may combine a foundation model, enterprise data, retrieval, memory, business rules, tools, APIs, other agents, and core systems into a single chain, and every component along that chain can be individually tested, approved, and operating exactly as designed — while the overall system still produces an unacceptable outcome. That's the fourth governance question: are the interactions between components as safe as the components themselves? This is composition risk.
+
+### Component Validation Does Not Equal System Validation
+
+Traditional governance typically evaluates components individually — a model is validated, a data source is certified, an API is tested, an application passes security review, a vendor completes third-party risk assessment — and these controls remain necessary. But agentic systems introduce dependencies across components that may not be visible when each is evaluated separately.
+
+Consider a commercial lending agent. The foundation model correctly interprets a request for a pricing exception. The customer data is accurate. The pricing engine correctly calculates available rates. The agent has legitimate access to the pricing API. The workflow system correctly executes the request it receives. Every component works as designed — yet the complete workflow could still produce an inappropriate pricing exception if the agent combines information incorrectly, fails to apply a required policy, or exercises authority in a context that authority was never intended for. The failure doesn't belong neatly to the model, the data, the API, or the application; it emerges from their interaction.
+
+### Agentic AI Expands the Dependency Chain
+
+Composition risk gets harder as agents gain access to more tools. A traditional predictive model has a relatively simple dependency chain — data, model, score, human decision — while an agentic workflow can look more like a request moving through an agent, retrieval, customer data, a policy engine, a specialized agent, an external tool, a decision, an approval, and a core system. Each additional interaction creates another place where context can be lost, permissions can change, data can cross boundaries, instructions can be misunderstood, untrusted information can enter the workflow, or one component can behave differently than another expects. Governance needs visibility into interfaces and dependencies, not just individual assets.
+
+### Permissions Must Survive Composition
+
+Authority governance gets harder still when agents interact. Suppose an employee authorizes Agent A to analyze a customer relationship, Agent A delegates document analysis to Agent B, and Agent B calls a third-party service — the original authorization shouldn't automatically become unrestricted authority throughout that chain. The relevant questions are what authority the employee originally delegated, which portion of that authority Agent A can pass along, what permissions Agent B should actually receive, whether the third-party service can reach the underlying customer data, whether authority expires when the task completes, and whether any downstream component can reuse the information for another purpose. This is permission continuity: authorization boundaries need to stay intact as tasks move across systems and agents. Without it, multi-agent architectures can unintentionally create privilege expansion.
+
+### Trusted Components Can Process Untrusted Information
+
+Composition also opens new pathways for attacks. An agent, its tools, and the enterprise systems it accesses may all be trusted — but the content entering the workflow may not be. An agent reviewing customer documents could encounter malicious instructions embedded in a document or retrieved web content, and if it interprets those instructions as part of its task, untrusted content can end up influencing actions performed through trusted enterprise permissions. This is the fundamental danger behind indirect prompt injection: the problem isn't simply that the model receives malicious text, it's the combination of untrusted content, a trusted agent, and a privileged tool producing a potentially consequential action. Composition governance therefore requires a clear separation between information the agent may interpret and instructions the agent is authorized to follow.
+
+### Safe Actions Can Combine Into Unsafe Outcomes
+
+Composition risk also shows up across sequences of otherwise legitimate actions. Imagine a wealth-management agent permitted to retrieve a client's holdings, analyze portfolio concentration, generate recommendations, prepare an order, and send the proposed transaction for approval — each capability appropriate on its own. But suppose the agent retrieves outdated suitability information, combines it with current holdings, generates a recommendation, and passes a technically valid order into the approval workflow. No individual component necessarily failed; the problem is that the state of the complete system was inconsistent. This is why system-level validation needs to test not just whether components function, but whether the complete workflow behaves safely under stale or missing data, conflicting information, unavailable services, permission changes, unusual sequences, adversarial inputs, and partial failures.
+
+### Multi-Agent Systems Increase the Challenge
+
+Composition gets more complex still when agents collaborate — a future financial workflow might chain a customer agent, credit agent, fraud agent, pricing agent, compliance agent, and execution agent together. Specialization can improve performance and control, since each agent has a narrower role, but it also creates coordination risk: agents may interpret objectives differently, operate with different information, make inconsistent assumptions, delegate tasks incorrectly, create feedback loops, or collectively produce an outcome none of them was individually designed to create. Multi-agent governance can't be reduced to governing each agent independently — the interactions themselves need to be tested and monitored.
+
+### Third-Party Risk Becomes System Risk
+
+Financial institutions already run mature third-party risk programs, and agentic AI complicates them. A single AI workflow may depend on a foundation-model provider, cloud infrastructure, vector databases, external datasets, identity services, agent frameworks, APIs, and specialized AI services, and a change by any one provider can alter the behavior of the complete system: a foundation-model upgrade may improve general capability while changing tool-selection behavior, an API modification may alter what information an agent receives, a retrieval service may change ranking behavior, a vendor policy change may affect data retention. Traditional vendor assessment asks whether a vendor is acceptable; agentic governance has to additionally ask what happens to the AI system when that vendor's component changes. Third-party risk becomes increasingly inseparable from AI system risk.
+
+### Validate the Workflow, Not Just the Components
+
+Composition governance requires testing at the level where business outcomes actually occur — the end-to-end workflow, not just its parts. Beyond normal operations, testing needs to cover interaction failures directly: what happens when a tool is unavailable, when two sources disagree, when an agent receives malicious retrieved content, when authorization changes mid-workflow, when one agent returns an unexpected response, when an external model changes behavior, or when several individually valid actions combine into a prohibited outcome. These aren't conventional model-validation questions — they're system-assurance questions.
+
+### Map Dependencies and Control Boundaries
+
+A mature governance architecture needs an inventory not just of AI models and agents, but of the dependencies that make each agentic workflow possible — for consequential systems, institutions should be able to trace the full chain from agent through model, data, memory, tools, APIs, other agents, business systems, and external providers, and establish ownership, data boundaries, permission boundaries, trust boundaries, failure modes, monitoring responsibilities, and escalation paths along it. Without that visibility, organizations may know which AI assets they own without understanding the systems those assets collectively create.
+
+### From Component Assurance to System Assurance
+
+Traditional controls remain essential — model validation establishes confidence in the model, data governance in the data, cybersecurity in systems and access, third-party risk management in external providers — but agentic AI adds a layer connecting them: system assurance, confidence that these components stay safe when they operate together. That's the essence of composition governance, and it expands the governance boundary once more, from component risk to interaction risk to workflow risk to system risk.
+
+For a single institution, this answers whether its own agentic system is safe within its own environment. Financial services introduces one further challenge: thousands of individually well-governed systems may consume similar information, use similar models, pursue similar objectives, and react to the same events. At that point the question is no longer whether one institution's AI is safe — it's what happens when autonomous systems across the financial system begin making similar decisions at the same time. That's the final layer of the framework: Systemic Governance, where autonomous decisions become correlated.
