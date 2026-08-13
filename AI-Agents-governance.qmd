@@ -269,12 +269,6 @@ Every agentic system should have an accountable business owner responsible for i
 
 Model Risk Management continues to play an important role. Where an agent relies on models within the institution’s definition of a model, established practices—including conceptual soundness, independent validation, documentation, performance monitoring, and effective challenge—remain essential. However, model validation alone cannot determine whether an agent should execute transactions, delegate authority, use enterprise tools, or interact safely with other agents. Those questions require a broader governance architecture.
 
-### Business Ownership and Model Risk
-
-Every agentic system should have an accountable business owner responsible for its purpose, expected outcomes, operating boundaries, customer impact, and ongoing business value. Technology, data, cybersecurity, compliance, and risk functions each contribute specialized expertise, but accountability for the business outcome should remain clear.
-
-Model Risk Management continues to play an important role. Where an agent relies on models within the institution’s definition of a model, established practices—including conceptual soundness, independent validation, documentation, performance monitoring, and effective challenge—remain essential. However, model validation alone cannot determine whether an agent should execute transactions, delegate authority, use enterprise tools, or interact safely with other agents. Those questions require a broader governance architecture.
-
 ### Data, Identity, and Security
 
 As AI moves from generating information to taking actions, data governance, identity, and cybersecurity become foundational governance capabilities rather than supporting functions.
@@ -353,7 +347,9 @@ A knowledge assistant summarizing internal policies should not be governed the s
 
 **Step 3 — Establish the Governance Contract** 
 
-Before a material agent receives production authority, the institution should establish a governance contract defining the agent’s approved purpose, objectives, permitted data, tools, systems, and actions not only expected scenariosit may access, prohibited activities, human-escalation requirements, monitoring expectations, the conditions under which its authority may be reduced or suspended, and the accountable business owner. This converts broad governance principles into explicit operating expectations.
+Before a material agent receives production authority, the institution should establish a governance contract that defines the agent’s approved purpose, objectives, permitted data, tools, systems, and actions, along with prohibited activities, human-escalation requirements, monitoring expectations, the conditions under which its authority may be reduced or revoked, and the accountable business owner.
+
+The governance contract translates high-level Responsible AI principles into explicit operating boundaries. It establishes what the agent is expected to achieve, what it is permitted to do, and the limits within which it must operate before meaningful autonomy is granted.
 
 **Step 4 — Put Controls in the Execution Path** 
 
