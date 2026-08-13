@@ -75,7 +75,7 @@ Governance increasingly lives within the system’s execution path—not simply 
 
 Agentic AI expands what needs to be governed, from an individual model to an autonomous decision-making system. The five dimensions below organize that expanded scope: whether the agent pursues the right objectives, operates within appropriate authority, behaves as intended, interacts safely with other components, and remains resilient as autonomous systems become more widespread.
 
-![**Figure 1. Five Dimensions of Agentic AI Governance.** This framework addresses five complementary questions that traditional model validation doesn't ask: What should the agent optimize (Objective)? What is it allowed to do (Authority)? Is it still acting as intended (Behavior)? Are its interactions safe (Composition)? What happens when autonomous decisions interact at scale (Systemic)?](images/system-governance.png)
+![**Five Dimensions of Agentic AI Governance.** This framework addresses five complementary questions that traditional model validation doesn't ask: What should the agent optimize (Objective)? What is it allowed to do (Authority)? Is it still acting as intended (Behavior)? Are its interactions safe (Composition)? What happens when autonomous decisions interact at scale (Systemic)?](images/system-governance.png){#fig-LIME fig-align="center" width="100%"}
 
 ### Objective Governance — What Is the Agent Optimizing?
 
