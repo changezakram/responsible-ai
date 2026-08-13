@@ -154,13 +154,15 @@ The next step is translating that framework into an operational governance archi
 
 
 
-## A Governance Architecture for Agentic AI
+## Operationalizing Agentic AI Governance
 
 The five governance dimensions—objective, authority, behavior, composition, and systemic risk—define what institutions need to govern. The next question is how to make that governance operational.
 
 Traditional governance relies on policies, validation, oversight, and periodic review. Those mechanisms remain essential, but autonomous systems make decisions continuously and at machine speed. Governance therefore needs to exist not only around AI systems, but increasingly within their execution path.
 
 A practical governance architecture consists of six interconnected capabilities: **Policy, Identity and Authority, Runtime Controls, Observability, Intervention, and Audit and Learning**. Together, they translate Responsible AI principles into controls that operate before, during, and after an agent acts.
+
+### Governance Architecture 
 
 **1. Policy — Define the Boundaries**
 
@@ -202,11 +204,15 @@ Rather than treating governance as a one-time approval process, this architectur
 
 ### Governance Across the AI Lifecycle
 
-These six capabilities operate across the lifecycle, not just at deployment. Before deployment, institutions define objectives, classify risk, establish ownership, validate components, test workflows, define authority, and set behavioral expectations. During execution, identity, authorization, policy enforcement, observability, human escalation, and intervention mechanisms govern the system in real time. After execution, audit, outcome monitoring, behavioral analysis, incident review, and control refinement provide ongoing assurance — design-time governance asking whether the institution is building the right system with appropriate boundaries, runtime governance asking whether the system is acting within those boundaries now, and post-execution governance asking whether the institution can demonstrate what happened and improve the controls. All three matter for higher-risk autonomous systems.
+The governance architecture operates across the entire AI lifecycle rather than at a single approval point.
+
+Before deployment, institutions define objectives, ownership, authority, risk classification, and operating boundaries. During execution, runtime controls, authorization, observability, and intervention govern the agent’s actions in real time. After execution, audit, outcome monitoring, incident review, and continuous learning strengthen future governance.
+
+Together, these activities provide continuous assurance—from defining appropriate boundaries before deployment, to enforcing them during execution, to improving them through operational experience.
 
 ### Connecting the Architecture to the Five Governance Dimensions
 
-The architecture provides the control mechanisms for the five dimensions introduced earlier, and the framework isn't a collection of independent controls — each layer reinforces the others.
+The six governance capabilities provide the operational controls for the five governance dimensions introduced earlier. Together, they translate governance principles into executable controls that operate throughout the AI lifecycle.
 
 | Governance Dimension | Primary Control Question | Key Capabilities |
 |----------------------|--------------------------|------------------|
@@ -216,23 +222,27 @@ The architecture provides the control mechanisms for the five dimensions introdu
 | **Composition** | Are interactions safe? | Dependency mapping, end-to-end testing, runtime policy |
 | **Systemic** | What happens at scale? | Stress testing, concentration monitoring, resilience controls |
 
+The framework should not be viewed as a collection of independent controls. Each governance capability reinforces the others, creating multiple layers of assurance around autonomous decision-making.
+
 ### Governance as a Control Plane
 
-One useful way to think about this architecture is as an AI governance control plane: the business application and agent perform the work, and the governance layer determines the conditions under which that work can occur.
+A useful way to think about this architecture is as an AI governance control plane. The AI agent performs the work, while the governance layer determines the conditions under which that work may occur.
 
-Business Objective → AI Agent / Multi-Agent System → Governance Control Plane (Identity | Authorization | Policy | Limits | Human Approval) → Tools / APIs / Enterprise Systems
+Business Objective → AI Agent / Multi-Agent System → Governance Control Plane (Identity • Authorization • Policy • Limits • Human Approval) → Tools / APIs / Enterprise Systems
 
-Running alongside execution, a parallel assurance layer provides telemetry, behavioral monitoring, intervention, and audit. This separation matters — it lets institutions improve models or replace individual AI components without making the model itself solely responsible for enforcing every institutional policy. Governance becomes part of the enterprise architecture, not just a characteristic of the model.
+Rather than embedding every governance decision inside the model, the control plane operates alongside execution. It enforces policy, verifies authority, provides observability, supports intervention, and creates an auditable record of consequential decisions.
+
+This separation allows institutions to improve or replace models without changing governance policies, making governance an enterprise capability rather than a characteristic of any individual model.
 
 ### From Responsible AI Principles to Executable Governance
 
-Responsible AI principles remain the foundation, but agentic systems require translating them into operational mechanisms: accountability becomes identifiable ownership and agent identity; human oversight becomes risk-based approval and escalation; safety becomes limits, runtime policies, and circuit breakers; transparency becomes decision provenance and auditability; fairness becomes measurable outcome constraints and ongoing monitoring; security becomes least privilege, contextual authorization, and controlled tool access; reliability becomes behavioral monitoring, system testing, and resilience.
+Responsible AI principles remain the foundation, but agentic systems require translating those principles into operational controls. Accountability becomes identifiable ownership and agent identity. Human oversight becomes risk-based approval and escalation. Safety becomes runtime policies, limits, and circuit breakers. Transparency becomes decision provenance and auditability. Fairness becomes measurable outcome monitoring. Security becomes least privilege, contextual authorization, and controlled tool access. Reliability becomes behavioral monitoring, system testing, and resilience.
 
-The critical transition, in short, is principle to policy to control to evidence. A governance principle without an enforceable control provides direction but limited protection; a control without evidence can't demonstrate that governance actually worked. Agentic AI requires both.
+The transition, in short, is: Principle → Policy → Control → Evidence
 
-The goal isn't to eliminate autonomy — doing so would eliminate much of the value these systems create. It's to make autonomy bounded, observable, interruptible, and accountable.
+A governance principle without an enforceable control provides direction but limited protection. A control without evidence cannot demonstrate that governance worked. Agentic AI requires both.
 
-With the architecture established, the next challenge is organizational rather than technical: how should a financial institution actually govern, own, and oversee these systems? That's where agentic AI governance moves from architecture into the enterprise operating model.
+With the governance architecture established, the next challenge becomes organizational rather than technical: how should financial institutions govern, own, and oversee these systems? That is where agentic AI governance moves from architecture into the enterprise operating model.
 
 ## What This Means for Financial Institutions
 
