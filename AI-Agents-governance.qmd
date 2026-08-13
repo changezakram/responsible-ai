@@ -89,7 +89,7 @@ Once the objective is established, the next question is equally important: How m
 
 Once an institution has defined what an agent should achieve, the next question is what authority it should receive to pursue that objective. This distinction between capability and authority is fundamental to governing agentic AI. An agent may be capable of analyzing a credit application, approving a pricing exception, initiating a payment, or updating customer information. That does not mean it should be permitted to perform those actions autonomously.
 
-Traditional identity and access management already controls which users and applications can access enterprise resources. Agentic AI extends this principle from access to action. Governance must answer not only what systems can the agent access? but also what decisions may it make, under what conditions, and within what limits?
+Traditional **identity and access management** already controls which users and applications can access enterprise resources. Agentic AI extends this principle from access to action. Governance must answer not only what systems can the agent access? but also what decisions may it make, under what conditions, and within what limits?
 
 Authority should be **bounded rather than absolute.** Agents should receive only the permissions required for their assigned task, following the principle of least privilege. Some actions may be appropriate for full automation, while others require additional controls such as transaction limits, contextual authorization, or human approval. As autonomy increases, governance should progressively expand authority rather than granting unrestricted access from the outset.
 
@@ -106,53 +106,19 @@ Once authority has been established, another challenge emerges: an agent can ope
 
 ### Behavioral Governance — Is the Agent Still Acting as Intended?
 
-An agent can have an appropriate objective and operate entirely within its authorized permissions, and still behave in ways the institution didn't intend. That's the third governance question: is the agent still behaving as intended? Traditional model monitoring is designed primarily to detect changes in performance — accuracy, calibration, discrimination, stability, forecast error, data drift, and other purpose-specific indicators — and those controls remain important. But agentic systems add another dimension: behavior over time. An agent doesn't simply produce isolated predictions; it selects actions, uses tools, responds to feedback, maintains context, and pursues an objective across a sequence of decisions, so the path it takes can matter as much as the final result.
+An agent can have an appropriate objective and operate entirely within its authorized permissions, yet still behave in ways the institution did not intend. That is the third governance question: Is the agent still acting as intended?
 
-#### Performance Drift Is Not Behavioral Drift
+Traditional model monitoring focuses on performance—accuracy, calibration, stability, data drift, and other technical measures. Those controls remain essential, but they do not reveal how an autonomous agent achieves its objective. An agent can improve business outcomes while gradually adopting increasingly aggressive or unexpected strategies that remain within its technical authority.
 
-Consider a retention agent authorized to offer customers pricing concessions within a defined range. Initially it uses those concessions selectively, but over time it learns — or repeatedly infers from context — that offers near the maximum permitted concession generate higher retention. Its retention performance improves, it stays within its authority, and no conventional performance threshold is breached, yet its behavior has changed materially: it's moved from selective intervention to routinely operating near the edge of its permitted authority.
+Behavioral governance therefore shifts attention from performance to behavior. Institutions need to monitor not only the outcomes an agent produces, but also the decisions it makes, the tools it uses, the resources it accesses, and the sequence of actions it takes. In agentic systems, the path to an outcome can be as important as the outcome itself.
 
-Performance drift asks whether the system is becoming less effective. Behavioral drift asks whether it's changing how it achieves its objective. Both matter, but they aren't the same question.
+That requires more than traditional logging. Organizations need sufficient observability to reconstruct consequential decisions, detect changes in behavioral patterns, establish normal operating baselines, and identify material deviations before they result in customer, operational, or financial harm.
 
-#### Monitor the Path, Not Just the Outcome
+Behavioral governance should also trigger action. When an agent begins operating outside approved boundaries, institutions should be able to increase monitoring, require human approval, reduce available permissions, or suspend execution altogether. Monitoring without intervention is incomplete governance.
 
-Agentic behavior is often sequential — observe, reason, retrieve, decide, use a tool, observe the result, adjust, act again — and evaluating only the final outcome can hide risk that lives inside that sequence. Suppose a customer-service agent ultimately resolves a request correctly. The outcome looks successful, but during the process it may have accessed information unnecessary for the task, repeatedly attempted a restricted action, relied on an untrusted external source, invoked an unusual combination of tools, or tried several unsuccessful strategies before landing on the right one. Outcome monitoring would call that interaction a success; behavioral monitoring might flag it as a warning. For autonomous systems, how an outcome was produced becomes part of the control environment.
+Ultimately, behavioral assurance extends traditional model monitoring. The objective is not only to confirm that an AI system remains technically effective, but also that its ongoing actions continue to align with its approved purpose, authority, and risk boundaries.
 
-#### What Should Institutions Observe?
-
-Behavioral governance requires telemetry beyond conventional application logs — actions selected, tools invoked, resources accessed, permission requests, escalation frequency, failed actions, exceptions, decision sequences, proximity to financial or operational limits, interaction with other agents, policy violations, and shifts in the distribution of actions over time. The goal isn't to record every internal computation indiscriminately; it's to keep enough evidence to reconstruct consequential behavior and spot patterns that suggest the system is moving outside expected boundaries. That's the real distinction between logging and observability — logging records events, observability helps an institution understand what those events collectively say about the system's behavior.
-
-#### Establish Behavioral Baselines
-
-Detecting abnormal behavior requires some definition of normal behavior, which institutions can establish during testing and controlled deployment. A payments agent, for instance, might normally complete most routine cases without escalation, invoke a defined set of tools, rarely approach transaction limits, escalate unusual beneficiary changes, and never attempt certain restricted actions — production monitoring can then compare observed behavior against that profile.
-
-The goal isn't identical behavior every time; agentic systems are valuable precisely because they adapt to context. It's identifying material deviations from approved behavioral boundaries — a sudden increase in tool usage, repeated attempts to access restricted resources, unusual delegation patterns, or growing concentration near control limits can warrant investigation even when business outcomes still look acceptable.
-
-#### Individually Safe Actions Can Create Unsafe Trajectories
-
-A particularly important challenge in agentic systems is that every individual action can appear permissible while the combined trajectory becomes problematic. Imagine an agent individually authorized to retrieve customer data, summarize information, create a document, and send an internal communication — each action legitimate on its own. But a particular sequence could combine sensitive information from several sources into a document and send it to someone who shouldn't receive the aggregated whole. No individual tool call necessarily violates its permission boundary; the risk emerges from the composition of actions over time.
-
-That means runtime governance can't rely exclusively on asking is this action allowed? For higher-risk workflows, it also needs to ask: given everything this agent has already done, is this next action still appropriate? That's the difference between action-level control and trajectory-level control.
-
-#### Behavioral Monitoring Should Trigger Intervention
-
-Observability without response is incomplete governance — institutions need to define what happens when behavior moves outside expected boundaries. Responses can be graduated by severity: observe (increase telemetry or flag unusual behavior), warn (generate an alert for review), constrain (reduce available tools, transaction limits, or permissions), escalate (require human approval before further consequential actions), suspend (temporarily stop the agent), and terminate (revoke authority and end execution) — a closed loop of observe, detect, evaluate, intervene, and learn. The goal isn't just identifying problems after an incident; it's catching emerging risk early enough to alter the agent's behavior or authority before real harm occurs.
-
-#### Explainability Also Changes
-
-Traditional explainability asks why a model produced a particular prediction — which variables drove a credit-risk score, for instance. Agentic systems add a different question: why did the system take this sequence of actions? For consequential workflows, institutions may need to reconstruct the objective being pursued, the information available at the time, the actions selected, the tools used, the approvals obtained, the policy checks performed, and the resulting outcome — a form of decision provenance.
-
-The goal isn't necessarily to expose every internal reasoning token a foundation model generates; those traces can be unreliable, sensitive, or impractical to retain. What matters more is an auditable record of the observable decision process: context, actions, permissions, policy evaluations, tool interactions, and outcomes.
-
-#### Monitoring Must Be Proportionate to Risk
-
-Not every agent needs the same degree of surveillance — an internal agent summarizing meeting notes presents a very different risk profile than one capable of initiating payments or changing customer account information. Behavioral governance should be risk-based: higher autonomy and consequence should generally mean stronger telemetry, behavioral baselines, runtime policy checks, anomaly detection, human escalation, auditability, and intervention mechanisms. The greater the autonomy and potential consequence, the stronger the requirement for runtime observability and control.
-
-#### From Model Monitoring to Behavioral Assurance
-
-Traditional monitoring remains necessary, but agentic AI expands what institutions need to track — from asking whether the model is still performing, to whether business and customer outcomes are acceptable, to whether the agent is still acting as intended, to whether the institution can detect and intervene when it isn't. Together, these form behavioral assurance: confidence not just that an AI system remains technically effective, but that its ongoing actions stay consistent with its approved purpose, authority, and risk boundaries.
-
-Even a well-governed agent doesn't operate alone. Its behavior depends on data, models, tools, APIs, memory, and increasingly other agents — and each component can look safe individually while their interactions create risks no component-level control would catch. That's the next governance layer: Composition Governance, where safe components create unsafe systems.
+Even then, one challenge remains. An agent may behave appropriately while interacting with data, tools, APIs, memory, and other agents in ways that create risks no individual component would produce on its own. That is the next governance dimension—**Composition Governance**.
 
 
 ### Composition Governance — When Safe Components Create Unsafe Systems
