@@ -25,7 +25,7 @@ These questions point toward a broader governance model—one that governs AI sy
 
 Traditional model risk management is built around a relatively stable unit of analysis: the model. Models are developed for a defined purpose, validated before deployment, approved within established parameters, and monitored throughout their lifecycle. This approach works well when the object being governed is a bounded model with well-defined inputs, outputs, and decision boundaries.
 
-Agentic AI changes that operating model. An agent can interpret an objective, formulate a plan, use tools, interact with other systems, and execute a sequence of actions. Its behavior depends not only on the underlying model but also on its context, memory, permissions, available tools, and prior actions. The object being governed is no longer a model but a dynamic decision system—and that shift creates several challenges for traditional governance.
+Agentic AI changes that operating model. An agent can interpret an objective, formulate a plan, use tools, interact with other systems, and execute a sequence of actions. Its behavior depends on its context, memory, permissions, available tools, and prior actions — not just the underlying model itself. The object being governed is no longer a model but a dynamic decision system—and that shift creates several challenges for traditional governance.
 
 ### From Performance Drift to Behavioral Drift
 
@@ -367,7 +367,7 @@ This creates a clear separation between intelligence and governance: the AI dete
 
 Before increasing autonomy, institutions should test complete workflows under both expected and adverse conditions, including stale data, unavailable services, authorization changes, adversarial inputs, third-party failures, and attempts to exceed established control limits.
 
-The objective is not only to understand how the system fails, but whether the controls fail safely when it does. For higher-risk systems, scenario and adversarial testing should become part of the approval process.
+The objective is to understand how the system fails, and whether the controls fail safely when it does. For higher-risk systems, scenario and adversarial testing should become part of the approval process.
 
 **Step 6 — Expand Autonomy Progressively**
 
