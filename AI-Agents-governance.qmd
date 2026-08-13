@@ -39,7 +39,7 @@ Governance is no longer just about whether the model is performing well. It’s 
 
 Traditional AI systems typically produce an output that a human or downstream application consumes—a probability of default, fraud score, customer segment, forecast, or recommendation.
 
-Agentic systems go further. They can retrieve information, invoke enterprise tools, communicate with other agents, and execute authorized actions. As AI moves from recommendation to execution, governance must address not only the quality of the output but also the authority attached to it.
+Agentic systems go further. They can retrieve information, invoke enterprise tools, communicate with other agents, and execute authorized actions. As AI moves from recommendation to execution, governance must address both the quality of the output and the authority attached to it.
 
 A lending model might recommend that an application requires additional documentation. An agent could identify the missing information, contact the customer, retrieve supporting documents, and advance the application through the workflow. Each additional capability expands the governance surface.
 
@@ -89,7 +89,7 @@ Once the objective is established, the next question is equally important: How m
 
 Once an institution has defined what an agent should achieve, the next question is what authority it should receive to pursue that objective. This distinction between capability and authority is fundamental to governing agentic AI. An agent may be capable of analyzing a credit application, approving a pricing exception, initiating a payment, or updating customer information. That does not mean it should be permitted to perform those actions autonomously.
 
-Traditional **identity and access management** already controls which users and applications can access enterprise resources. Agentic AI extends this principle from access to action. Governance must answer not only what systems can the agent access? but also what decisions may it make, under what conditions, and within what limits?
+Traditional **identity and access management** already controls which users and applications can access enterprise resources. Agentic AI extends this principle from access to action. Governance must answer a broader question than what systems the agent can access — it has to determine what decisions the agent may make, under what conditions, and within what limits.
 
 Authority should be **bounded rather than absolute.** Agents should receive only the permissions required for their assigned task, following the principle of least privilege. Some actions may be appropriate for full automation, while others require additional controls such as transaction limits, contextual authorization, or human approval. As autonomy increases, governance should progressively expand authority rather than granting unrestricted access from the outset.
 
@@ -110,13 +110,13 @@ An agent can have an appropriate objective and operate entirely within its autho
 
 Traditional model monitoring focuses on performance—accuracy, calibration, stability, data drift, and other technical measures. Those controls remain essential, but they do not reveal how an autonomous agent achieves its objective. An agent can improve business outcomes while gradually adopting increasingly aggressive or unexpected strategies that remain within its technical authority.
 
-Behavioral governance therefore shifts attention from performance to behavior. Institutions need to monitor not only the outcomes an agent produces, but also the decisions it makes, the tools it uses, the resources it accesses, and the sequence of actions it takes. In agentic systems, the path to an outcome can be as important as the outcome itself.
+Behavioral governance therefore shifts attention from performance to behavior. Institutions need to monitor the decisions an agent makes, the tools it uses, the resources it accesses, and the sequence of actions it takes — not just the outcomes it produces. In agentic systems, the path to an outcome can be as important as the outcome itself.
 
 That requires more than traditional logging. Organizations need sufficient observability to reconstruct consequential decisions, detect changes in behavioral patterns, establish normal operating baselines, and identify material deviations before they result in customer, operational, or financial harm.
 
 Behavioral governance should also trigger action. When an agent begins operating outside approved boundaries, institutions should be able to increase monitoring, require human approval, reduce available permissions, or suspend execution altogether. Monitoring without intervention is incomplete governance.
 
-Ultimately, behavioral assurance extends traditional model monitoring. The objective is not only to confirm that an AI system remains technically effective, but also that its ongoing actions continue to align with its approved purpose, authority, and risk boundaries.
+Ultimately, behavioral assurance extends traditional model monitoring: confidence that an AI system remains technically effective, and confidence that its ongoing actions stay aligned with its approved purpose, authority, and risk boundaries.
 
 Even then, one challenge remains. An agent may behave appropriately while interacting with data, tools, APIs, memory, and other agents in ways that create risks no individual component would produce on its own. That is the next governance dimension—**Composition Governance**.
 
@@ -131,7 +131,7 @@ Composition risk increases as agents gain access to more tools and collaborate w
 
 This also changes how systems are tested. Validating individual components is no longer sufficient. Institutions need to evaluate end-to-end workflows under realistic operating conditions, including conflicting information, unavailable services, authorization changes, stale data, unexpected agent responses, adversarial inputs, and partial failures.
 
-Composition governance also requires visibility into dependencies. Organizations should understand not only which models and agents they operate, but also the data, tools, APIs, external providers, business systems, and other agents that each workflow depends on. Those dependencies define the system’s trust boundaries, ownership, failure modes, and monitoring responsibilities.
+Composition governance also requires visibility into dependencies. Organizations should understand the full set of what each workflow depends on — not just the models and agents they operate, but the data, tools, APIs, external providers, business systems, and other agents behind them. Those dependencies define the system’s trust boundaries, ownership, failure modes, and monitoring responsibilities.
 
 Ultimately, composition governance extends traditional component assurance into system assurance. The objective is not simply to confirm that each individual component operates correctly, but that the complete agentic system continues to behave safely when those components interact.
 
@@ -178,7 +178,7 @@ Policies become effective only when they can be enforced. Runtime controls evalu
 
 **4. Observability — Understand What the Agent Is Doing**
 
-Runtime controls cannot anticipate every situation. Institutions therefore need sufficient observability to reconstruct an agent’s decisions, the information it used, the actions it performed, the controls that were evaluated, the authority under which it acted, and the resulting business outcome. The objective is not simply to collect logs, but to understand how consequential decisions were made and whether behavior remains consistent with approved boundaries.
+Runtime controls cannot anticipate every situation. Institutions therefore need sufficient observability to reconstruct an agent’s decisions, the information it used, the actions it performed, the controls that were evaluated, the authority under which it acted, and the resulting business outcome. The objective isn't just to collect logs — it's to understand how consequential decisions were made and whether behavior remains consistent with approved boundaries.
 
 **5. Intervention — Maintain the Ability to Regain Control**
 
@@ -287,7 +287,7 @@ Operational Risk complements these controls by assessing process failures, custo
 
 ### Third-Party Dependencies and Enterprise Inventory
 
-Agentic AI creates dependency chains that extend well beyond individual vendors. A single workflow may rely on foundation models, cloud platforms, identity providers, external datasets, APIs, agent frameworks, and specialized AI services. Institutions therefore need to understand not only individual vendors but also how these dependencies interact and where concentration risk exists.
+Agentic AI creates dependency chains that extend well beyond individual vendors. A single workflow may rely on foundation models, cloud platforms, identity providers, external datasets, APIs, agent frameworks, and specialized AI services. Institutions therefore need to understand how these dependencies interact and where concentration risk exists, not just evaluate individual vendors in isolation.
 
 This requires an enterprise inventory of material AI agents. For each agent, institutions should understand its owner, purpose, underlying models, data sources, available tools, delegated permissions, downstream systems, third-party dependencies, level of autonomy, human-oversight requirements, and production status. That inventory becomes the foundation for governance, monitoring, resilience analysis, and audit.
 
