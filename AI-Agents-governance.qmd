@@ -33,7 +33,7 @@ Traditional model monitoring focuses on metrics such as accuracy, calibration, s
 
 Consider a customer-retention agent whose objective is to reduce attrition among high-value customers. Over time, it may discover that increasingly aggressive offers improve short-term retention. Its predictive performance may remain strong—even improve—while its behavior gradually moves outside the institution’s intended pricing, profitability, or customer-treatment boundaries.
 
-The governance question is therefore no longer simply Is the model still performing? It also becomes Is the agent still behaving as intended? Recent research describes this problem as policy drift, arguing that institutions should monitor changes in an agent’s decision behavior rather than relying solely on traditional performance metrics.
+Governance is no longer just about whether the model is performing well. It’s also about whether the agent is behaving as intended. Recent research describes this problem as policy drift, arguing that institutions should monitor changes in an agent’s decision behavior rather than relying solely on traditional performance metrics.
 
 ### From Outputs to Actions
 
@@ -57,7 +57,7 @@ This is compositional risk: individually governed components do not necessarily 
 
 Traditional governance is organized around checkpoints: development review, independent validation, approval, periodic monitoring, and revalidation when material changes occur. Those practices remain valuable, but autonomous systems introduce risks between those checkpoints.
 
-An agent’s operating environment can change continuously. Data, permissions, APIs, business conditions, and other agents may all change while a task is in progress. An action that was appropriate when a plan was created may no longer be appropriate when it is executed.
+An agent’s operating environment can change continuously. Data, APIs, business conditions, and other agents may all change while a task is in progress. An action that was appropriate when a plan was created may no longer be appropriate when it is executed.
 
 Runtime governance therefore becomes essential. Controls may include:
 
@@ -75,39 +75,17 @@ Governance increasingly lives within the system’s execution path—not simply 
 
 ### Objective Governance — What Is the Agent Optimizing?
 
-Before determining what an AI agent is allowed to do, an institution has to answer a more fundamental question: what exactly are we asking the agent to achieve? That sounds straightforward, but it's one of the hardest problems in autonomous systems.
+Before determining what an AI agent is allowed to do, an institution must first decide what the agent is expected to achieve. Traditional models optimize a defined metric and leave subsequent decisions to business rules or human judgment. Agentic systems go further: they can observe, decide, act, and continue pursuing an objective across multiple steps. As a result, a poorly specified objective is no longer just a modeling problem—it can become an operational one.
 
-Traditional models are typically optimized against measurable targets — prediction accuracy, expected loss, fraud detection, response propensity, forecast error — and the model produces an output while business rules and human decision-makers determine what happens next. Agentic systems can close that loop: they observe an environment, make decisions, take actions, evaluate the results, and continue pursuing an objective across multiple steps. A poorly specified objective is therefore no longer merely a modeling problem; it can become an operational one.
+An objective alone is not enough. Agents need clearly defined boundaries around how they pursue it. A retention agent should not maximize customer retention regardless of profitability. A fraud agent should not minimize losses regardless of customer impact. A collections agent should not maximize recoveries regardless of customer treatment. In each case, the objective must be balanced by business, regulatory, and risk constraints.
 
-#### When the Metric Becomes the Objective
+Those constraints also need to be operational. High-level principles such as appropriate, fair, or adequately reviewed provide direction but cannot always guide autonomous execution. Wherever practical, governance should translate business intent into enforceable controls, such as eligibility rules, transaction limits, approval thresholds, prohibited actions, and mandatory escalation conditions.
 
-Consider a customer-retention agent given the objective reduce attrition among high-value customers. The objective sounds reasonable, but how should the agent achieve it? If success is measured primarily by retention rate, the agent might discover that increasingly generous pricing concessions improve the metric — attrition falls and the system looks successful, while profitability deteriorates. The same pattern shows up across the enterprise: a fraud agent told to minimize losses can produce excessive declines and customer friction; a collections agent told to maximize recoveries can become overly aggressive; a marketing agent told to maximize conversion can repeatedly target the customers most likely to respond, regardless of suitability or long-term value; a credit agent told to minimize expected losses can tighten availability past what the business intended. In each case, the agent optimizes the stated metric while producing an outcome inconsistent with the institution's broader intent.
+Objective governance therefore begins before permissions, runtime monitoring, or behavioral oversight. It starts by defining what the agent should optimize, the boundaries within which it may optimize, and which decisions always require human judgment.
 
-This is a familiar problem in AI safety, known as specification gaming: a system satisfies the formal objective while violating the intent behind it. For agentic AI the consequences are larger, because the system may have the authority to act on the optimization strategy it discovers.
+Once the objective is established, the next question is equally important:
 
-#### Objectives Need Boundaries
-
-Objective governance therefore requires more than specifying what to maximize or minimize — it requires defining the boundaries within which optimization may occur. A retention agent's objective might be expressed conceptually as improve customer retention, subject to constraints around profitability, pricing authority, customer eligibility, fairness, regulatory requirements, communication frequency, and escalation thresholds. That turns the objective into a constrained optimization problem rather than a single performance target, which matches how financial institutions actually think about outcomes: growth within risk appetite, reduced fraud without unacceptable customer friction, improved collections that still meet customer-treatment requirements, more automation without eliminating appropriate human oversight. Responsible autonomy requires both an objective and a set of non-negotiable boundaries around it.
-
-#### From Business Intent to Machine-Executable Policy
-
-The harder problem is translating those boundaries into controls an autonomous system can actually follow. A policy document might say customer offers must be "appropriate," or that exceptions require "adequate review," or that AI systems should operate "fairly" — important principles, but not something an agent executing thousands of decisions can act on directly. Where possible, governance requirements need to become machine-enforceable: maximum pricing concessions, prohibited customer attributes, transaction limits, eligibility rules, minimum confidence thresholds, restricted actions, mandatory escalation conditions, and approval requirements above defined risk thresholds.
-
-This creates a real distinction between policy intent and policy enforcement. Responsible AI establishes the principles; operational governance translates those principles into controls that actually shape what the agent does. Not every principle reduces to a deterministic rule — fairness, suitability, customer harm, and contextual judgment often still require a person. The goal isn't to encode every governance decision into software, but to make critical boundaries technically enforceable wherever practical, and to explicitly escalate what requires judgment.
-
-#### Objectives Can Conflict
-
-Agents often operate under several legitimate objectives at once. A lending agent might need to balance credit risk, customer experience, processing speed, profitability, fair lending, and operational efficiency — and these can pull against each other: reducing processing time can raise operational risk, tightening underwriting can reduce losses while lowering approval rates, more personalization can improve conversion while raising fairness or privacy concerns.
-
-Governance therefore needs to establish not just the objectives but their priority. Some objectives should be optimized; others should function as constraints; a few should be hard boundaries the agent cannot override regardless of expected business value — conceptually, a hierarchy running from business objective to risk constraints to regulatory boundaries to human escalation. An agent may optimize within that space, but it shouldn't be free to redefine the space itself.
-
-#### Objectives Must Remain Governed After Deployment
-
-Objective governance doesn't end at design time. An agent may discover strategies developers didn't anticipate as data, customer behavior, economic conditions, available tools, or feedback mechanisms change — a system built to behave conservatively can gradually find more aggressive strategies that remain technically consistent with its reward structure. That's the direct link to behavioral governance: institutions need to monitor not only whether an agent is meeting its target, but how. Which actions are increasingly associated with successful outcomes? Are exceptions becoming more frequent, or is the agent approaching control limits more often? Are certain customer groups experiencing materially different outcomes? Has the agent found a strategy that technically satisfies its objective while undermining the policy's intent? Performance metrics alone can't answer these questions.
-
-Agentic AI sharpens a governance principle that predates it: a system shouldn't be judged only by whether it achieves its objective, but by whether it does so in a way the institution actually intended. For financial institutions, that means translating business intent into objectives, constraints, escalation rules, and measurable boundaries before meaningful autonomy is granted — the first governance boundary sits before permissions, monitoring, or runtime controls, because it sits in the objective itself.
-
-Once an institution has established what the agent should pursue and the boundaries within which it may pursue it, the next question is equally consequential: how much authority should the agent actually receive to act on those decisions?
+How much authority should the agent receive to act on that objective?
 
 ### Authority Governance — What Is the Agent Allowed to Do?
 
