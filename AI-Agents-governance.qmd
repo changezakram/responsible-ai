@@ -78,11 +78,7 @@ Conceptual soundness, independent validation, data quality, documentation, chang
 
 The Financial Stability Board has taken a similar position. Its proposed 2026 sound practices extend beyond model governance to include organization-wide AI governance, lifecycle management, cybersecurity, technology, and third-party risk.
 
-Financial institutions therefore do not need to replace model governance—they need to extend the governance boundary.
-
-For traditional models, the model remains the primary unit of governance.
-
-For agentic AI, governance increasingly encompasses the entire decision system:
+Financial institutions therefore do not need to replace model governance—they need to extend the governance boundary. For traditional models, the model remains the primary unit of governance. For agentic AI, governance increasingly encompasses the entire decision system:
 
 Objective → Model → Data → Memory → Tools → Authority → Actions → Outcomes
 
