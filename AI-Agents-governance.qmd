@@ -158,7 +158,7 @@ The next step is translating that framework into an operational governance archi
 
 The five governance dimensions—objective, authority, behavior, composition, and systemic risk—define what institutions need to govern. The next question is how to make that governance operational.
 
-Traditional governance relies on policies, validation, oversight, and periodic review. Those mechanisms remain essential, but autonomous systems make decisions continuously and at machine speed. Governance therefore needs to exist not only around AI systems, but increasingly within their execution path.
+Traditional governance relies on policies, validation, oversight, and periodic review. Those mechanisms remain essential, but autonomous systems make decisions continuously and at machine speed. Governance therefore needs to exist within an AI system's execution path, not just around it.
 
 A practical governance architecture consists of six interconnected capabilities: **Policy, Identity and Authority, Runtime Controls, Observability, Intervention, and Audit and Learning**. Together, they translate Responsible AI principles into controls that operate before, during, and after an agent acts.
 
