@@ -172,6 +172,8 @@ A practical governance architecture consists of six interconnected capabilities:
 
 ### Governance Architecture 
 
+![**Figure 2. Agentic AI Governance Control Plane.** The governance control plane embeds institutional controls between agentic systems and enterprise execution. Rather than relying on AI systems to interpret and enforce policy, the control plane evaluates requests against policy, identity and authority, runtime controls, observability, intervention, and audit before approved actions reach enterprise systems.](images/governance-control-plane.png){#fig-control-plane width=90%}
+
 **1. Policy — Define the Boundaries**
 
 Governance begins with policy. Before deployment, institutions should define an agent’s approved purpose, business owner, permitted objectives, risk classification, data boundaries, level of autonomy, and human-oversight requirements. These policies establish the operating boundaries within which the agent may function and translate Responsible AI principles into practical controls for each use case.
