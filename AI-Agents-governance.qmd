@@ -85,7 +85,7 @@ Consider a customer-retention agent given a straightforward goal: reduce attriti
 
 An objective alone is not enough. Agents need clearly defined boundaries around how they pursue it. A fraud agent should not minimize losses regardless of customer impact. A collections agent should not maximize recoveries regardless of customer treatment. In each case, the objective must be balanced by business, regulatory, and risk constraints.
 
-Those constraints also need to be operational. High-level principles such as appropriate, fair, or adequately reviewed provide direction but cannot always guide autonomous execution. Wherever practical, governance should translate business intent into enforceable controls, such as eligibility rules, transaction limits, approval thresholds, prohibited actions, and mandatory escalation conditions.
+Those boundaries should be enforceable. Wherever practical, governance should translate business intent into controls such as eligibility rules, transaction limits, approval thresholds, prohibited actions, and mandatory escalation conditions.
 
 Objective governance therefore begins before permissions, runtime monitoring, or behavioral oversight. It starts by defining what the agent should optimize, the boundaries within which it may optimize, and which decisions always require human judgment.
 
