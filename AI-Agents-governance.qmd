@@ -156,9 +156,6 @@ Ultimately, systemic governance extends Responsible AI beyond the behavior of in
 
 Together, these five dimensions—**Objective, Authority, Behavioral, Composition, and Systemic Governance**—provide a framework for extending Responsible AI from model governance to governance of autonomous decision-making systems.
 
-The next step is translating that framework into an operational governance architecture that organizations can implement.
-
-
 
 ## Operationalizing Agentic AI Governance
 
