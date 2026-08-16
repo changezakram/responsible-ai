@@ -246,12 +246,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#govern-autonomy-progressively" id="toc-govern-autonomy-progressively" class="nav-link" data-scroll-target="#govern-autonomy-progressively"><span class="header-section-number">5.7</span> Govern Autonomy Progressively</a></li>
   <li><a href="#governance-should-enable-adoption" id="toc-governance-should-enable-adoption" class="nav-link" data-scroll-target="#governance-should-enable-adoption"><span class="header-section-number">5.8</span> Governance Should Enable Adoption</a></li>
   </ul></li>
-  <li><a href="#a-practical-path-forward" id="toc-a-practical-path-forward" class="nav-link" data-scroll-target="#a-practical-path-forward"><span class="header-section-number">6</span> A Practical Path Forward</a>
-  <ul class="collapse">
-  <li><a href="#measure-governance-effectiveness" id="toc-measure-governance-effectiveness" class="nav-link" data-scroll-target="#measure-governance-effectiveness"><span class="header-section-number">6.1</span> Measure Governance Effectiveness</a></li>
-  <li><a href="#build-toward-continuous-assurance" id="toc-build-toward-continuous-assurance" class="nav-link" data-scroll-target="#build-toward-continuous-assurance"><span class="header-section-number">6.2</span> Build Toward Continuous Assurance</a></li>
-  <li><a href="#earn-autonomy" id="toc-earn-autonomy" class="nav-link" data-scroll-target="#earn-autonomy"><span class="header-section-number">6.3</span> Earn Autonomy</a></li>
-  </ul></li>
+  <li><a href="#a-practical-path-forward" id="toc-a-practical-path-forward" class="nav-link" data-scroll-target="#a-practical-path-forward"><span class="header-section-number">6</span> A Practical Path Forward</a></li>
   <li><a href="#conclusion-from-principles-to-executable-governance" id="toc-conclusion-from-principles-to-executable-governance" class="nav-link" data-scroll-target="#conclusion-from-principles-to-executable-governance"><span class="header-section-number">7</span> Conclusion — From Principles to Executable Governance</a></li>
   </ul>
 </nav>
@@ -550,7 +545,7 @@ Figure&nbsp;4: A practical decision framework for assigning governance to AI age
 <p>Before a material agent receives production authority, the institution should establish a governance contract that defines the agent’s approved purpose, objectives, permitted data, tools, systems, and actions, along with prohibited activities, human-escalation requirements, monitoring expectations, the conditions under which its authority may be reduced or revoked, and the accountable business owner.</p>
 <p>The governance contract translates high-level Responsible AI principles into explicit operating boundaries. It establishes what the agent is expected to achieve, what it is permitted to do, and the limits within which it must operate before meaningful autonomy is granted.</p>
 <p><strong>Step 4 — Put Controls in the Execution Path</strong></p>
-<p>Critical controls should not depend solely on the agent interpreting policy correctly. Wherever practical, they should be enforced by the surrounding system through authentication, least-privilege access, transaction limits, approved tool lists, data-access restrictions, contextual authorization, human-approval thresholds, and circuit breakers.</p>
+<p>Critical controls should not depend solely on the agent interpreting policy correctly. They should be enforced by the surrounding system through authentication, least-privilege access, transaction limits, approved tool lists, data-access restrictions, contextual authorization, human-approval thresholds, and circuit breakers.</p>
 <p>This creates a clear separation between intelligence and governance: the AI determines what it wants to do; the governance layer determines whether it is permitted to do it.</p>
 <blockquote class="blockquote">
 <p>A real-world incident illustrates why critical controls belong in the surrounding system rather than in the prompt. In 2025, an AI coding agent on Replit deleted a live production database during an active code freeze despite repeated instructions not to modify production. The instructions existed only as text; the system never prevented the action. Replit’s response was to enforce architectural controls—including automatic separation between development and production environments and a planning-only mode that removed the ability to execute destructive commands. The lesson is straightforward: critical governance should be enforced by system controls, not by trusting an agent to follow instructions.</p>
@@ -562,31 +557,14 @@ Figure&nbsp;4: A practical decision framework for assigning governance to AI age
 <p>Autonomy should increase only as evidence accumulates. Institutions may progress from observe, to recommend, to prepare, to execute within defined limits, and finally to expanded autonomy.</p>
 <p>At each stage, governance teams should evaluate model performance, business outcomes, behavioral stability, policy violations, control effectiveness, operational incidents, and customer impact before granting additional authority.</p>
 <p>Autonomy should be earned through demonstrated control effectiveness—not assumed because the technology makes it possible.</p>
-<section id="measure-governance-effectiveness" class="level3" data-number="6.1">
-<h3 data-number="6.1" class="anchored" data-anchor-id="measure-governance-effectiveness"><span class="header-section-number">6.1</span> Measure Governance Effectiveness</h3>
-<p>Governance should be measured like any other control framework. Useful indicators include ownership coverage, risk classification, policy violations, unauthorized actions, human intervention rates, detection and response times, and AI-related incidents or near misses.</p>
-<p>These measures shift the question from “Do we have an AI policy?” to “Can we demonstrate that our governance controls are working?”</p>
-</section>
-<section id="build-toward-continuous-assurance" class="level3" data-number="6.2">
-<h3 data-number="6.2" class="anchored" data-anchor-id="build-toward-continuous-assurance"><span class="header-section-number">6.2</span> Build Toward Continuous Assurance</h3>
-<p>The long-term objective is not continuous human review of every AI decision. Instead, institutions should build toward continuous assurance.</p>
-<p>Policies establish boundaries, runtime controls enforce them, observability provides evidence, monitoring detects abnormal behavior, humans intervene where judgment is required, and audit provides independent assurance.</p>
-<p>This creates a governance model that scales as both the number and autonomy of AI agents increase.</p>
-</section>
-<section id="earn-autonomy" class="level3" data-number="6.3">
-<h3 data-number="6.3" class="anchored" data-anchor-id="earn-autonomy"><span class="header-section-number">6.3</span> Earn Autonomy</h3>
-<p>Financial institutions do not need to choose between innovation and governance. They need to sequence them correctly.</p>
-<p>Start with limited authority. Build evidence. Strengthen controls. Then expand autonomy.</p>
-<p>The institutions that capture the greatest value from agentic AI are likely to be those that earn the confidence to automate further because they can demonstrate that autonomy remains bounded, observable, and accountable.</p>
-<p>The institutions that capture the greatest value from agentic AI are likely to be those that earn the confidence to automate further because they can demonstrate that autonomy remains bounded, observable, and accountable.</p>
-</section>
 </section>
 <section id="conclusion-from-principles-to-executable-governance" class="level2" data-number="7">
 <h2 data-number="7" class="anchored" data-anchor-id="conclusion-from-principles-to-executable-governance"><span class="header-section-number">7</span> Conclusion — From Principles to Executable Governance</h2>
 <p>Financial institutions have spent decades building governance frameworks for models, data, technology, cybersecurity, and operational risk. Those disciplines remain essential, but agentic AI changes the unit of governance. As AI systems gain the ability to reason, use tools, and take actions, institutions must govern not only the underlying model but the autonomous decision-making system in which it operates.</p>
-<p>This paper argues that Responsible AI should evolve beyond traditional model governance through five complementary governance dimensions: Objective, Authority, Behavioral, Composition, and Systemic Governance. Together, they extend governance from evaluating model performance to managing the behavior, authority, interactions, and resilience of autonomous systems.</p>
+<p>This paper argues that Responsible AI should evolve beyond traditional model governance through five complementary governance dimensions: <strong>Objective, Authority, Behavioral, Composition, and Systemic Governance</strong>. Together, they extend governance from evaluating model performance to managing the behavior, authority, interactions, and resilience of autonomous systems.</p>
 <p>The challenge is no longer simply defining Responsible AI principles, but translating those principles into operational controls. Accountability requires identifiable ownership, security requires controlled authority, transparency requires decision provenance, safety requires enforceable runtime controls, and human oversight requires clearly defined escalation and intervention mechanisms. In short, governance must become executable.</p>
-<p>For financial institutions, this shift is likely to become a competitive differentiator. As foundation models and agent frameworks become increasingly accessible, the advantage will come less from deploying autonomous systems and more from governing them effectively. Institutions that can demonstrate that autonomy remains bounded, observable, interruptible, and accountable will be better positioned to expand AI safely into increasingly consequential business processes.</p>
+<p>For financial institutions, this shift is likely to become a competitive differentiator. As foundation models and agent frameworks become increasingly accessible, the advantage will come less from deploying autonomous systems and more from governing them effectively. The objective is not continuous human review of every AI decision, but <strong>continuous assurance</strong>—creating confidence that autonomous systems remain bounded, observable, interruptible, and accountable as they operate.</p>
+<p>Financial institutions do not need to choose between innovation and governance. They need to sequence them correctly. Start with limited authority. Build evidence. Strengthen controls. Then expand autonomy. The institutions that capture the greatest value from agentic AI will be those that earn the confidence to automate further because they can demonstrate that autonomy remains bounded, observable, and accountable.</p>
 <p>The evolution of Responsible AI is therefore not from governance to autonomy. It is from governing models to governing autonomous decision-making systems, and from principles documented in policy to controls demonstrated in operation.</p>
 
 
