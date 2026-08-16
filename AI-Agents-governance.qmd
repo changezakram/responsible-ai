@@ -261,7 +261,7 @@ As AI moves from generating information to taking actions, data governance, iden
 
 Identity and access management establishes accountable agent identities, delegated authority, least privilege, and controlled access to enterprise resources. Cybersecurity extends those controls through credential management, secrets protection, runtime monitoring, incident response, and protection against attacks such as prompt injection and data exfiltration.
 
-Data governance likewise expands beyond quality and lineage. Institutions need to understand which data informed a decision, when it was retrieved, whether it was authoritative, whether the agent was authorized to use it, and whether the context remained valid when the action occurred. Data lineage increasingly becomes part of decision provenance.
+Data governance likewise expands beyond quality and lineage. Institutions need to understand which data informed a decision, when it was retrieved, whether the agent was authorized to use it, and whether the context remained valid when the action occurred. Data lineage increasingly becomes part of decision provenance.
 
 ### Compliance and Operational Risk
 
