@@ -325,11 +325,11 @@ For each material agent, the inventory should capture its business purpose, acco
 
 **Step 2 — Classify by Autonomy and Consequence** 
 
-Not every agent requires the same level of governance. Institutions should classify use cases based on autonomy, financial consequence, customer impact, regulatory significance, data sensitivity, and external connectivity.
+Not every AI agent requires the same level of governance. Institutions should classify agents based on their autonomy, execution authority, business consequences, customer impact, regulatory significance, data sensitivity, and external connectivity. The resulting risk profile should determine the appropriate governance controls.
 
 ![A practical decision framework for assigning governance to AI agents. Governance is determined by an agent's decision-making authority, execution autonomy, and the potential consequences of its actions, rather than by the underlying AI model.](images/governance-decision-flow.png){#fig-governance-decision-flow fig-alt="Decision flow for assigning governance levels to AI agents based on decision-making authority, execution autonomy, and business impact."}
 
-A knowledge assistant summarizing internal policies should not be governed the same way as an agent capable of changing customer information or initiating payments. As autonomy and consequence increase, so should the strength of validation, authorization, observability, human oversight, and runtime controls.
+For example, a knowledge assistant summarizing internal policies should not be governed the same way as an agent capable of updating customer information or initiating payments. As an agent’s autonomy and potential consequences increase, so should the strength of validation, authorization, observability, human oversight, and runtime controls.
 
 **Step 3 — Establish the Governance Contract** 
 
