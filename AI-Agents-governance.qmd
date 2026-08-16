@@ -126,8 +126,7 @@ Behavioral governance should also trigger action. When an agent begins operating
 
 Ultimately, behavioral assurance extends traditional model monitoring: confidence that an AI system remains technically effective, and confidence that its ongoing actions stay aligned with its approved purpose, authority, and risk boundaries.
 
-Even then, one challenge remains. An agent may behave appropriately while interacting with data, tools, APIs, memory, and other agents in ways that create risks no individual component would produce on its own. That is the next governance dimension—**Composition Governance**.
-
+Behavior alone isn’t enough. An agent may interact with data, tools, APIs, memory, and other agents in ways that create risks no individual component would produce on its own. That is the next governance dimension—**Composition Governance.**
 
 ### Composition Governance — When Safe Components Create Unsafe Systems
 
@@ -143,8 +142,7 @@ Composition governance also requires visibility into dependencies. Organizations
 
 Ultimately, composition governance extends traditional component assurance into system assurance. The objective is not simply to confirm that each individual component operates correctly, but that the complete agentic system continues to behave safely when those components interact.
 
-Even then, one question remains. A single institution may successfully govern its own AI systems, yet many institutions may deploy similar agents, consume similar information, and respond to the same market events. At that point, governance extends beyond the individual system to the behavior of the broader financial ecosystem. That is the final governance dimension—**Systemic Governance.**
-
+The challenge doesn’t stop with a single institution. Many institutions may deploy similar agents, consume similar information, and respond to the same market events. At that point, governance extends beyond the individual system to the behavior of the broader financial ecosystem. That is the final governance dimension—**Systemic Governance.**
 
 ### Systemic Governance — When Autonomous Decisions Become Correlated
 
@@ -171,6 +169,8 @@ Traditional governance relies on policies, validation, oversight, and periodic r
 A practical governance architecture consists of six interconnected capabilities: **Policy, Identity and Authority, Runtime Controls, Observability, Intervention, and Audit and Learning**. Together, they translate Responsible AI principles into controls that operate before, during, and after an agent acts.
 
 ### Governance Architecture 
+
+While the five governance dimensions define what institutions need to govern, they do not explain how governance should operate in practice. Agentic AI requires governance to move beyond policies and periodic review into the execution path itself. The governance control plane provides that operational layer, evaluating requests against institutional controls before autonomous actions reach enterprise systems.
 
 ![**Figure 2. Agentic AI Governance Control Plane.** The governance control plane embeds institutional controls between agentic systems and enterprise execution. Rather than relying on AI systems to interpret and enforce policy, the control plane evaluates requests against policy, identity and authority, runtime controls, observability, intervention, and audit before approved actions reach enterprise systems.](images/governance-control-plane.png){#fig-control-plane width=90%}
 
