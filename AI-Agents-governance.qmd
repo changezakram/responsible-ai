@@ -217,13 +217,11 @@ Together, these activities provide continuous assurance—from defining appropri
 
 ### Governance as a Control Plane
 
-A useful way to think about this architecture is as an AI governance control plane. The AI agent performs the work, while the governance layer determines the conditions under which that work may occur.
+The governance architecture can be viewed as an AI governance control plane. The AI agent performs the work, while the governance layer determines the conditions under which that work may occur. Figure 2 illustrates this separation between autonomous reasoning and enterprise execution.
 
-Business Objective → AI Agent / Multi-Agent System → Governance Control Plane (Identity • Authorization • Policy • Limits • Human Approval) → Tools / APIs / Enterprise Systems
+Rather than embedding governance inside the model, the control plane evaluates requests before consequential actions reach enterprise systems. It enforces policy, verifies authority, provides observability, supports intervention, and creates an auditable record of execution.
 
-Rather than embedding every governance decision inside the model, the control plane operates alongside execution. It enforces policy, verifies authority, provides observability, supports intervention, and creates an auditable record of consequential decisions.
-
-This separation allows institutions to improve or replace models without changing governance policies, making governance an enterprise capability rather than a characteristic of any individual model.
+This separation allows institutions to improve or replace AI models without redesigning governance. Governance becomes an enterprise capability rather than a characteristic of any individual model.
 
 ### From Responsible AI Principles to Executable Governance
 
