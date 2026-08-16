@@ -215,20 +215,6 @@ Before deployment, institutions define objectives, ownership, authority, risk cl
 
 Together, these activities provide continuous assurance—from defining appropriate boundaries before deployment, to enforcing them during execution, to improving them through operational experience.
 
-### Connecting the Architecture to the Five Governance Dimensions
-
-The six governance capabilities provide the operational controls for the five governance dimensions introduced earlier. Together, they translate governance principles into executable controls that operate throughout the AI lifecycle.
-
-| Governance Dimension | Primary Control Question | Key Capabilities |
-|----------------------|--------------------------|------------------|
-| **Objective** | What should the agent pursue? | Policy, constraints, outcome monitoring |
-| **Authority** | What can the agent do? | Identity, permissions, limits, approvals |
-| **Behavior** | Is it still acting as intended? | Observability, behavioral monitoring, intervention |
-| **Composition** | Are interactions safe? | Dependency mapping, end-to-end testing, runtime policy |
-| **Systemic** | What happens at scale? | Stress testing, concentration monitoring, resilience controls |
-
-The framework should not be viewed as a collection of independent controls. Each governance capability reinforces the others, creating multiple layers of assurance around autonomous decision-making.
-
 ### Governance as a Control Plane
 
 A useful way to think about this architecture is as an AI governance control plane. The AI agent performs the work, while the governance layer determines the conditions under which that work may occur.

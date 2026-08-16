@@ -232,9 +232,8 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#governance-architecture" id="toc-governance-architecture" class="nav-link" data-scroll-target="#governance-architecture"><span class="header-section-number">4.1</span> Governance Architecture</a></li>
   <li><a href="#governance-across-the-ai-lifecycle" id="toc-governance-across-the-ai-lifecycle" class="nav-link" data-scroll-target="#governance-across-the-ai-lifecycle"><span class="header-section-number">4.2</span> Governance Across the AI Lifecycle</a></li>
-  <li><a href="#connecting-the-architecture-to-the-five-governance-dimensions" id="toc-connecting-the-architecture-to-the-five-governance-dimensions" class="nav-link" data-scroll-target="#connecting-the-architecture-to-the-five-governance-dimensions"><span class="header-section-number">4.3</span> Connecting the Architecture to the Five Governance Dimensions</a></li>
-  <li><a href="#governance-as-a-control-plane" id="toc-governance-as-a-control-plane" class="nav-link" data-scroll-target="#governance-as-a-control-plane"><span class="header-section-number">4.4</span> Governance as a Control Plane</a></li>
-  <li><a href="#from-responsible-ai-principles-to-executable-governance" id="toc-from-responsible-ai-principles-to-executable-governance" class="nav-link" data-scroll-target="#from-responsible-ai-principles-to-executable-governance"><span class="header-section-number">4.5</span> From Responsible AI Principles to Executable Governance</a></li>
+  <li><a href="#governance-as-a-control-plane" id="toc-governance-as-a-control-plane" class="nav-link" data-scroll-target="#governance-as-a-control-plane"><span class="header-section-number">4.3</span> Governance as a Control Plane</a></li>
+  <li><a href="#from-responsible-ai-principles-to-executable-governance" id="toc-from-responsible-ai-principles-to-executable-governance" class="nav-link" data-scroll-target="#from-responsible-ai-principles-to-executable-governance"><span class="header-section-number">4.4</span> From Responsible AI Principles to Executable Governance</a></li>
   </ul></li>
   <li><a href="#what-this-means-for-financial-institutions" id="toc-what-this-means-for-financial-institutions" class="nav-link" data-scroll-target="#what-this-means-for-financial-institutions"><span class="header-section-number">5</span> What This Means for Financial Institutions</a>
   <ul class="collapse">
@@ -445,61 +444,15 @@ Figure&nbsp;2: <strong>Agentic AI Governance Control Plane.</strong> Governance 
 <p>Before deployment, institutions define objectives, ownership, authority, risk classification, and operating boundaries. During execution, runtime controls, authorization, observability, and intervention govern the agent’s actions in real time. After execution, audit, outcome monitoring, incident review, and continuous learning strengthen future governance.</p>
 <p>Together, these activities provide continuous assurance—from defining appropriate boundaries before deployment, to enforcing them during execution, to improving them through operational experience.</p>
 </section>
-<section id="connecting-the-architecture-to-the-five-governance-dimensions" class="level3" data-number="4.3">
-<h3 data-number="4.3" class="anchored" data-anchor-id="connecting-the-architecture-to-the-five-governance-dimensions"><span class="header-section-number">4.3</span> Connecting the Architecture to the Five Governance Dimensions</h3>
-<p>The six governance capabilities provide the operational controls for the five governance dimensions introduced earlier. Together, they translate governance principles into executable controls that operate throughout the AI lifecycle.</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 39%">
-<col style="width: 27%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Governance Dimension</th>
-<th>Primary Control Question</th>
-<th>Key Capabilities</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Objective</strong></td>
-<td>What should the agent pursue?</td>
-<td>Policy, constraints, outcome monitoring</td>
-</tr>
-<tr class="even">
-<td><strong>Authority</strong></td>
-<td>What can the agent do?</td>
-<td>Identity, permissions, limits, approvals</td>
-</tr>
-<tr class="odd">
-<td><strong>Behavior</strong></td>
-<td>Is it still acting as intended?</td>
-<td>Observability, behavioral monitoring, intervention</td>
-</tr>
-<tr class="even">
-<td><strong>Composition</strong></td>
-<td>Are interactions safe?</td>
-<td>Dependency mapping, end-to-end testing, runtime policy</td>
-</tr>
-<tr class="odd">
-<td><strong>Systemic</strong></td>
-<td>What happens at scale?</td>
-<td>Stress testing, concentration monitoring, resilience controls</td>
-</tr>
-</tbody>
-</table>
-<p>The framework should not be viewed as a collection of independent controls. Each governance capability reinforces the others, creating multiple layers of assurance around autonomous decision-making.</p>
-</section>
-<section id="governance-as-a-control-plane" class="level3" data-number="4.4">
-<h3 data-number="4.4" class="anchored" data-anchor-id="governance-as-a-control-plane"><span class="header-section-number">4.4</span> Governance as a Control Plane</h3>
+<section id="governance-as-a-control-plane" class="level3" data-number="4.3">
+<h3 data-number="4.3" class="anchored" data-anchor-id="governance-as-a-control-plane"><span class="header-section-number">4.3</span> Governance as a Control Plane</h3>
 <p>A useful way to think about this architecture is as an AI governance control plane. The AI agent performs the work, while the governance layer determines the conditions under which that work may occur.</p>
 <p>Business Objective → AI Agent / Multi-Agent System → Governance Control Plane (Identity • Authorization • Policy • Limits • Human Approval) → Tools / APIs / Enterprise Systems</p>
 <p>Rather than embedding every governance decision inside the model, the control plane operates alongside execution. It enforces policy, verifies authority, provides observability, supports intervention, and creates an auditable record of consequential decisions.</p>
 <p>This separation allows institutions to improve or replace models without changing governance policies, making governance an enterprise capability rather than a characteristic of any individual model.</p>
 </section>
-<section id="from-responsible-ai-principles-to-executable-governance" class="level3" data-number="4.5">
-<h3 data-number="4.5" class="anchored" data-anchor-id="from-responsible-ai-principles-to-executable-governance"><span class="header-section-number">4.5</span> From Responsible AI Principles to Executable Governance</h3>
+<section id="from-responsible-ai-principles-to-executable-governance" class="level3" data-number="4.4">
+<h3 data-number="4.4" class="anchored" data-anchor-id="from-responsible-ai-principles-to-executable-governance"><span class="header-section-number">4.4</span> From Responsible AI Principles to Executable Governance</h3>
 <p>Responsible AI principles remain the foundation, but agentic systems require translating those principles into operational controls. Accountability becomes identifiable ownership and agent identity. Human oversight becomes risk-based approval and escalation. Safety becomes runtime policies, limits, and circuit breakers. Transparency becomes decision provenance and auditability. Fairness becomes measurable outcome monitoring. Security becomes least privilege, contextual authorization, and controlled tool access. Reliability becomes behavioral monitoring, system testing, and resilience.</p>
 <p>The transition, in short, is: Principle → Policy → Control → Evidence</p>
 <p>A governance principle without an enforceable control provides direction but limited protection. A control without evidence cannot demonstrate that governance worked. Agentic AI requires both.</p>
