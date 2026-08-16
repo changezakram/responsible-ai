@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-08-15">
+<meta name="dcterms.date" content="2026-08-16">
 
 <title>Agentic AI Governance</title>
 <style>
@@ -273,7 +273,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">August 15, 2026</p>
+      <p class="date">August 16, 2026</p>
     </div>
   </div>
   
@@ -466,32 +466,16 @@ Figure&nbsp;2: <strong>Agentic AI Governance Control Plane.</strong> Governance 
 <p>The level of governance should be determined by what an AI system can do and the consequences if it fails—not by the model it uses. An internal research assistant, a customer communications agent, a lending advisor, and a payments agent may all rely on the same foundation model while requiring very different governance.</p>
 <p>A practical approach is to classify agentic systems based on factors such as decision consequence, level of autonomy, customer impact, financial authority, data sensitivity, regulatory significance, and external connectivity. Controls should then be proportionate to risk.</p>
 <p>Two dimensions are particularly important: <strong>autonomy</strong> and <strong>consequence</strong>.</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 30%">
-<col style="width: 33%">
-<col style="width: 35%">
-</colgroup>
-<thead>
-<tr class="header">
-<th></th>
-<th><strong>Lower Consequence</strong></th>
-<th><strong>Higher Consequence</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Lower Autonomy</strong></td>
-<td>Standard controls</td>
-<td>Strong validation and human review</td>
-</tr>
-<tr class="even">
-<td><strong>Higher Autonomy</strong></td>
-<td>Runtime monitoring</td>
-<td>Maximum governance and runtime control</td>
-</tr>
-</tbody>
-</table>
+<div id="fig-ai-governance-matrix" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Risk-based governance framework for agentic AI illustrating governance requirements across varying levels of autonomy and business consequences.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ai-governance-matrix-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/ai-governance-matrix.png" class="img-fluid figure-img" alt="Risk-based governance framework for agentic AI illustrating governance requirements across varying levels of autonomy and business consequences.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ai-governance-matrix-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: AI governance should be proportional to both an agent’s autonomy and the consequences of its actions. As either dimension increases, stronger governance, oversight, and runtime controls become essential.
+</figcaption>
+</figure>
+</div>
 <p>A payments agent capable of moving funds should not be governed the same way as an internal knowledge assistant, even if both rely on the same underlying model.</p>
 </section>
 <section id="business-ownership-and-model-risk" class="level3" data-number="5.2">

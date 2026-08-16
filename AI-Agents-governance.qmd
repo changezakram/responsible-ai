@@ -245,10 +245,7 @@ A practical approach is to classify agentic systems based on factors such as dec
 
 Two dimensions are particularly important: **autonomy** and **consequence**.
 
-|                     | **Lower Consequence** | **Higher Consequence** |
-|---------------------|-----------------------|------------------------|
-| **Lower Autonomy**  | Standard controls | Strong validation and human review |
-| **Higher Autonomy** | Runtime monitoring | Maximum governance and runtime control |
+![AI governance should be proportional to both an agent's autonomy and the consequences of its actions. As either dimension increases, stronger governance, oversight, and runtime controls become essential.](images/ai-governance-matrix.png){#fig-ai-governance-matrix fig-alt="Risk-based governance framework for agentic AI illustrating governance requirements across varying levels of autonomy and business consequences."}
 
 A payments agent capable of moving funds should not be governed the same way as an internal knowledge assistant, even if both rely on the same underlying model.
 
