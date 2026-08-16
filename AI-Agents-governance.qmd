@@ -376,18 +376,12 @@ The evolution of Responsible AI is therefore not from governance to autonomy. It
 
 [1] National Institute of Standards and Technology (NIST). (2024). "Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile (AI RMF GenAI Profile)." https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf
 
-[2] Amodei, D., Olah, C., Steinhardt, J., Christiano, P., Schulman, J., & Mané, D. (2016). "Concrete Problems in AI Safety." https://arxiv.org/pdf/1606.06565
+[2] Board of Governors of the Federal Reserve System, Office of the Comptroller of the Currency, & Federal Deposit Insurance Corporation. (2026). "Revised Guidance on Model Risk Management (SR 26-2)." https://www.federalreserve.gov/supervisionreg/srletters/SR2602.htm
 
-[3] Yao, S., Zhao, J., Yu, D., Du, N., Shafran, I., Narasimhan, K., & Cao, Y. (2023). "ReAct: Synergizing Reasoning and Acting in Language Models." https://arxiv.org/pdf/2210.03629
+[3] Financial Stability Board. (2026). "Sound Practices for Responsible Adoption of Artificial Intelligence (AI): Consultation Report." https://www.fsb.org/2026/06/sound-practices-for-responsible-adoption-of-artificial-intelligence-ai-consultation-report/
 
-[4] Board of Governors of the Federal Reserve System, Office of the Comptroller of the Currency, & Federal Deposit Insurance Corporation. (2026). "Revised Guidance on Model Risk Management (SR 26-2)." https://www.federalreserve.gov/supervisionreg/srletters/SR2602.htm
+[4] Anthropic. (2023). "Constitutional AI: Harmlessness from AI Feedback." https://arxiv.org/pdf/2212.08073
 
-[5] Financial Stability Board. (2026). "Sound Practices for Responsible Adoption of Artificial Intelligence (AI): Consultation Report." https://www.fsb.org/2026/06/sound-practices-for-responsible-adoption-of-artificial-intelligence-ai-consultation-report/
+[5] Fortune. (2025). "An AI-powered coding tool wiped out a software company’s database" https://fortune.com/2025/07/23/ai-coding-tool-replit-wiped-database-called-it-a-catastrophic-failure/
 
-[6] Anthropic. (2023). "Constitutional AI: Harmlessness from AI Feedback." https://arxiv.org/pdf/2212.08073
-
-[7] Google DeepMind. (2024). "An Approach to Technical AGI Safety and Security." https://arxiv.org/pdf/2407.14972
-
-[8] Replit. (2025). "Incident Report: AI Coding Agent Production Database Deletion." (Official Replit engineering blog or incident report.)
-
-[9] Krakovna, V., Uesato, J., Mikulik, V., Everitt, T., et al. (2020). "Specification Gaming: The Flip Side of AI Ingenuity." https://deepmind.google/discover/blog/specification-gaming-the-flip-side-of-ai-ingenuity/
+[6] Krakovna, V., Uesato, J., Mikulik, V., Everitt, T., et al. (2020). "Specification Gaming: The Flip Side of AI Ingenuity." https://deepmind.google/discover/blog/specification-gaming-the-flip-side-of-ai-ingenuity/
