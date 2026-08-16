@@ -239,7 +239,7 @@ Agentic AI crosses organizational boundaries that financial institutions have tr
 
 ### Start With the Use Case, Not the Model
 
-The level of governance should be determined by what an AI system can do and the consequences if it fails—not by the model it uses. An internal research assistant, a customer communications agent, a lending advisor, and a payments agent may all rely on the same foundation model while requiring very different governance.
+The level of governance should be determined by what an AI system can do and the consequences if it fails, not by the model it uses. An internal search agent, a code review agent, a credit memo drafting agent, and a payment execution agent may all rely on the same foundation model while requiring very different governance.
 
 A practical approach is to classify agentic systems based on factors such as decision consequence, level of autonomy, customer impact, financial authority, data sensitivity, regulatory significance, and external connectivity. Controls should then be proportionate to risk.
 
