@@ -273,15 +273,13 @@ Operational Risk complements these controls by assessing process failures, custo
 
 ### Third-Party Dependencies and Enterprise Inventory
 
-Agentic AI creates dependency chains that extend well beyond individual vendors. A single workflow may rely on foundation models, cloud platforms, identity providers, external datasets, APIs, agent frameworks, and specialized AI services. Institutions therefore need to understand how these dependencies interact and where concentration risk exists, not just evaluate individual vendors in isolation.
+Agentic AI creates dependency chains that extend well beyond individual vendors. A single workflow may rely on foundation models, cloud platforms, identity providers, external datasets, and APIs. Institutions therefore need to understand how these dependencies interact and where concentration risk exists, not just evaluate individual vendors in isolation.
 
-This requires an enterprise inventory of material AI agents. For each agent, institutions should understand its owner, purpose, underlying models, data sources, available tools, delegated permissions, downstream systems, third-party dependencies, level of autonomy, human-oversight requirements, and production status. That inventory becomes the foundation for governance, monitoring, resilience analysis, and audit.
+This requires an enterprise inventory of AI agents. For each agent, institutions should understand its owner, purpose, underlying models, data sources, available tools, delegated permissions, downstream systems, third-party dependencies, level of autonomy, human-oversight requirements, and production status. That inventory becomes the foundation for governance, monitoring, resilience analysis, and audit.
 
 ### A Federated Governance Model
 
-Agentic AI should not become another organizational silo.
-
-A more sustainable approach is federated governance with centralized standards. A central AI governance function establishes enterprise policies, risk classifications, minimum control requirements, architecture standards, documentation expectations, monitoring requirements, and escalation procedures. Existing control functions then apply their expertise within that common framework:
+Agentic AI should not become another organizational silo. A more sustainable approach is federated governance with centralized standards. A central AI governance function establishes enterprise policies, risk classifications, minimum control requirements, architecture standards, documentation expectations, monitoring requirements, and escalation procedures. Existing control functions then apply their expertise within that common framework:
 
 * Business owns purpose and outcomes.
 * Data owns quality, lineage, and context.
