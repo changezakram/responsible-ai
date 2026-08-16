@@ -89,7 +89,7 @@ Those boundaries should be enforceable. Wherever practical, governance should tr
 
 Objective governance therefore begins before permissions, runtime monitoring, or behavioral oversight. It starts by defining what the agent should optimize, the boundaries within which it may optimize, and which decisions always require human judgment.
 
-Once the objective is established, the next question is equally important: How much **authority** should the agent receive to act on that objective?
+Once the objective is established, the next question is equally important: How much authority should the agent receive to act on that objective?
 
 ### Authority Governance — What Is the Agent Allowed to Do?
 
@@ -109,7 +109,7 @@ Finally, authority should remain **risk-based and revocable.** Low-risk, reversi
 
 Authority governance therefore extends traditional access control into action control. Its purpose is not to prevent agents from acting, but to ensure that their autonomy remains bounded, attributable, contextual, and revocable.
 
-Once authority has been established, another challenge emerges: an agent can operate entirely within its permissions and still begin behaving in unexpected ways. That is the focus of the next governance dimension—**Behavioral Governance.**
+Even when an agent operates entirely within its authorized permissions, its behavior may gradually diverge from institutional expectations. Governing that behavior is the next challenge.
 
 
 ### Behavioral Governance — Is the Agent Still Acting as Intended?
@@ -124,9 +124,9 @@ That requires more than traditional logging. Organizations need sufficient obser
 
 Behavioral governance should also trigger action. When an agent begins operating outside approved boundaries, institutions should be able to increase monitoring, require human approval, reduce available permissions, or suspend execution altogether. Monitoring without intervention is incomplete governance.
 
-Ultimately, behavioral assurance extends traditional model monitoring: confidence that an AI system remains technically effective, and confidence that its ongoing actions stay aligned with its approved purpose, authority, and risk boundaries.
+Behavioral assurance extends traditional model monitoring: confidence that an AI system remains technically effective, and confidence that its ongoing actions stay aligned with its approved purpose, authority, and risk boundaries. 
 
-Behavior alone isn’t enough. An agent may interact with data, tools, APIs, memory, and other agents in ways that create risks no individual component would produce on its own. That is the next governance dimension—**Composition Governance.**
+An agent also interacts with data, tools, APIs, memory, and other agents in ways that can create risks no individual component would produce on its own. Those interactions introduce a different governance challenge: ensuring the complete system remains safe, not just its individual components.
 
 ### Composition Governance — When Safe Components Create Unsafe Systems
 
@@ -140,9 +140,9 @@ This also changes how systems are tested. Validating individual components is no
 
 Composition governance also requires visibility into dependencies. Organizations should understand the full set of what each workflow depends on — not just the models and agents they operate, but the data, tools, APIs, external providers, business systems, and other agents behind them. Those dependencies define the system’s trust boundaries, ownership, failure modes, and monitoring responsibilities.
 
-Ultimately, composition governance extends traditional component assurance into system assurance. The objective is not simply to confirm that each individual component operates correctly, but that the complete agentic system continues to behave safely when those components interact.
+Composition governance extends traditional component assurance into system assurance. The objective is not simply to confirm that each individual component operates correctly, but that the complete agentic system continues to behave safely when those components interact.
 
-Many institutions may deploy similar agents, consume similar information, and respond to the same market events. At that point, governance extends beyond the individual system to the behavior of the broader financial ecosystem. That is the final governance dimension—**Systemic Governance.**
+As agentic AI becomes more widely adopted, governance extends beyond individual systems to the resilience of the broader financial ecosystem. Institutions may deploy similar agents, rely on common providers, and respond to the same market signals, creating risks that emerge only at scale.
 
 ### Systemic Governance — When Autonomous Decisions Become Correlated
 
@@ -152,7 +152,7 @@ Financial institutions already manage risks that emerge through correlation, suc
 
 While research has demonstrated this possibility in simulated environments rather than real financial markets, it highlights an important governance consideration. Institutions cannot govern the financial system on their own, but they can evaluate whether their autonomous systems rely heavily on common providers, react appropriately under stressed conditions, and include safeguards such as stress testing, circuit breakers, and the ability to reduce autonomy during periods of heightened uncertainty.
 
-Ultimately, systemic governance extends Responsible AI beyond the behavior of individual agents to the resilience of the broader financial system. As agentic AI becomes more widely deployed, governance must consider not only whether an individual system is safe, but also how many individually safe systems may behave collectively.
+Systemic governance extends Responsible AI beyond the behavior of individual agents to the resilience of the broader financial system. As agentic AI becomes more widely deployed, governance must consider not only whether an individual system is safe, but also how many individually safe systems may behave collectively.
 
 Together, these five dimensions—**Objective, Authority, Behavioral, Composition, and Systemic Governance**—provide a framework for extending Responsible AI from model governance to governance of autonomous decision-making systems.
 
@@ -294,7 +294,7 @@ This approach preserves specialist accountability while creating a consistent go
 
 ### Govern Autonomy Progressively
 
-Financial institutions do not need to move directly from copilots to fully autonomous systems. A more effective approach expands autonomy as evidence accumulates.
+Banks do not need to move directly from copilots to fully autonomous systems. A more effective approach expands autonomy as evidence accumulates.
 
 A typical progression might move from observe, to recommend, to prepare, to execute within defined limits, and finally to expanded autonomy under continuous runtime governance. Each stage provides evidence about performance, behavior, control effectiveness, and operational impact before additional authority is granted.
 
@@ -311,7 +311,7 @@ The next question is how to begin. Institutions do not need to implement the ent
 
 ## A Practical Path Forward
 
-Financial institutions do not need to build a complete agentic AI governance architecture before experimenting with AI agents. However, governance should evolve before autonomy expands, not after. A practical approach begins with visibility, establishes common risk boundaries, implements controls around high-risk actions, and progressively increases autonomy as the institution gains confidence that those controls are working.
+Banks do not need to build a complete agentic AI governance architecture before experimenting with AI agents. However, governance should evolve before autonomy expands, not after. A practical approach begins with visibility, establishes common risk boundaries, implements controls around high-risk actions, and progressively increases autonomy as the institution gains confidence that those controls are working.
 
 **Step 1 — Inventory Agentic AI Use Cases**
 
