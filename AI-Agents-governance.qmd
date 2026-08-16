@@ -235,7 +235,7 @@ With the governance architecture established, the next challenge becomes organiz
 
 ## What This Means for Financial Institutions
 
-The governance architecture described above has implications beyond AI technology. Agentic AI crosses organizational boundaries that financial institutions have traditionally managed through separate control functions. A single production agent may involve business processes, models, enterprise data, identity and access management, cybersecurity, compliance, third-party services, and operational risk. The challenge is not to create another AI governance committee, but to establish an operating model that coordinates these existing control disciplines around the complete AI system.
+Agentic AI crosses organizational boundaries that financial institutions have traditionally managed through separate control functions. A single production agent may involve business processes, models, enterprise data, identity and access management, cybersecurity, compliance, third-party services, and operational risk. The challenge is not to create another AI governance committee, but to establish an operating model that coordinates these existing control disciplines around the complete AI system.
 
 ### Start With the Use Case, Not the Model
 
