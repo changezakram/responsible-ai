@@ -142,7 +142,7 @@ Composition governance also requires visibility into dependencies. Organizations
 
 Ultimately, composition governance extends traditional component assurance into system assurance. The objective is not simply to confirm that each individual component operates correctly, but that the complete agentic system continues to behave safely when those components interact.
 
-The challenge doesn’t stop with a single institution. Many institutions may deploy similar agents, consume similar information, and respond to the same market events. At that point, governance extends beyond the individual system to the behavior of the broader financial ecosystem. That is the final governance dimension—**Systemic Governance.**
+Many institutions may deploy similar agents, consume similar information, and respond to the same market events. At that point, governance extends beyond the individual system to the behavior of the broader financial ecosystem. That is the final governance dimension—**Systemic Governance.**
 
 ### Systemic Governance — When Autonomous Decisions Become Correlated
 
