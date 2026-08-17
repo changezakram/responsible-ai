@@ -203,7 +203,8 @@ Governance does not end when an action completes. Institutions should periodical
 
 The result is a continuous governance cycle:
 
-Define → Authorize → Execute → Observe → Intervene → Learn → Refine
+![The Continuous Governance Loop. Audit and learning close the loop rather than ending it. As institutions define objectives, authorize agents, execute, observe outcomes, intervene when needed, and learn from what happened, those findings feed directly back into refining policy — closing the cycle rather than treating governance as a one-time approval.](images/governance-cycle.png){#fig-governance-cycle fig-align="center" width="40%"}
+
 
 Rather than treating governance as a one-time approval process, this architecture creates a continuous feedback loop that adapts as autonomous systems, business conditions, and risks evolve.
 
