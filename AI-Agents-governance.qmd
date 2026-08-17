@@ -223,7 +223,7 @@ Rather than embedding governance inside the model, the control plane evaluates r
 
 This separation allows institutions to improve or replace AI models without redesigning governance. Governance becomes an enterprise capability rather than a characteristic of any individual model.
 
-### From Responsible AI Principles to Executable Governance
+### Executable Governance
 
 Responsible AI principles remain the foundation, but agentic systems require translating those principles into operational controls. Accountability becomes identifiable ownership. Human oversight becomes risk-based approval and escalation. Safety becomes runtime policies and enforceable limits. Transparency becomes decision provenance and auditability. Fairness becomes measurable outcome monitoring. Security becomes least privilege and controlled authority. Reliability becomes behavioral monitoring, system testing, and resilience.
 
