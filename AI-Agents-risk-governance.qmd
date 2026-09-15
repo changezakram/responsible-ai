@@ -33,7 +33,8 @@ That evolution can be viewed across three generations of enterprise AI:
 | **Control timing** | Pre-deployment + periodic | Pre/post output | Before, during & after execution |
 | **Key question** | *Is the model performing as intended?* | *Can we trust the output?* | **Is the system behaving as intended and authorized to act?** |
 
-: **Exhibit 1: Evolution of AI Governance.** Author's framework, adapted from concepts presented in BCG, *When Agents Run the Bank: The End of the Second Line as You Know It*, 2026. {#tbl-evolution}
+**Exhibit 1: Evolution of AI Governance.** Author's framework, adapted from concepts presented in BCG, *When Agents Run the Bank: The End of the Second Line as You Know It*, 2026. {#tbl-evolution}
+
 
 The progression is important.
 
