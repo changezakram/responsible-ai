@@ -82,9 +82,9 @@ For agentic AI, first-line ownership extends to the agent’s mandate, delegated
 
 ## 3. Second Line: Governing the Boundaries of Autonomy
 
-The second line faces perhaps the most significant transformation. Traditional oversight relies heavily on policies, approvals, periodic monitoring, independent challenge, and escalation. Those mechanisms remain necessary, but the second line cannot independently review thousands—or eventually millions—of autonomous decisions occurring continuously. Its leverage increasingly comes from defining **the boundaries within which autonomous decisions are allowed to occur**.
+Traditional second-line oversight relies on policies, approvals, monitoring, independent challenge, and escalation. These mechanisms remain necessary, but the second line cannot review thousands—or eventually millions—of autonomous decisions. Its role increasingly centers on defining **the boundaries within which autonomous systems can operate**.
 
-Those boundaries might include:
+These boundaries might include:
 
 - permitted levels of autonomy;
 - transaction or exposure limits;
@@ -93,11 +93,11 @@ Those boundaries might include:
 - data-access restrictions;
 - escalation conditions.
 
-Where appropriate, these requirements should be machine-enforceable. A policy requiring human approval above a certain exposure threshold, for example, should not depend solely on an agent correctly interpreting the policy. The surrounding control architecture should prevent execution until the required approval occurs.
+Where appropriate, these requirements should be machine-enforceable. For example, if exposures above a certain threshold require human approval, the control architecture should prevent the agent from proceeding without it.
 
-Not every risk policy can—or should—be converted into code. Many decisions require context, interpretation, ethics, or expert judgment. The important distinction is between **boundaries that can be deterministically enforced** and **decisions that genuinely require human judgment**.
+Not every risk policy can—or should—be converted into code. Some decisions will continue to require human judgment. The key is determining **which boundaries can be enforced by the system and where human judgment is required**.
 
-Rather than reviewing every autonomous decision, the second line defines and challenges the **risk envelope within which autonomy can operate**. This preserves a critical principle of the Three Lines: **the second line establishes and challenges risk boundaries without becoming the operator of the system.**
+The second line therefore defines and challenges the **risk envelope within which autonomy can operate**, without becoming the operator of the system.
 
 ---
 
