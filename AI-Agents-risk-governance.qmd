@@ -31,7 +31,7 @@ That evolution can be viewed across three generations of enterprise AI:
 | **Primary concern** | Model performance | Output reliability & appropriate use | Authority, behavior & execution |
 | **Governance approach** | Validate & monitor | Guardrails & oversight | Runtime / executable governance |
 | **Control timing** | Pre-deployment + periodic | Pre/post output | Before, during & after execution |
-| **Key question** | *Is the model performing as intended?* | *Can we trust the output?* | **Is the system behaving as intended and authorized to act?** |
+| **Key question** | *Is the model performing as intended?* | *Can we trust the output?* | *Is the system behaving as intended and authorized to act?* |
 
 **Exhibit 1:** Evolution of AI Governance.
 
