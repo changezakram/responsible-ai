@@ -1,0 +1,364 @@
+---
+title: "Rethinking the Three Lines for Agentic Banking"
+subtitle: "How autonomy changes business ownership, risk oversight, and assurance"
+author: "Changez Akram"
+date: "2026-09-14"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    number-sections: false
+    smooth-scroll: true
+    code-fold: true
+    theme: cosmo
+---
+
+## Introduction
+
+The first generation of AI governance in banking was built around models.
+
+Models were developed for defined purposes, independently validated, approved for use, monitored for performance, and periodically reviewed. As generative AI emerged, institutions expanded those frameworks to address new risks such as hallucination, bias, data leakage, and inappropriate use.
+
+Agentic AI creates a more fundamental challenge.
+
+An AI agent can interpret an objective, retrieve information, invoke tools, interact with enterprise systems, make decisions, and execute actions across an end-to-end workflow. At sufficient scale, thousands of these decisions may occur before a traditional governance process has an opportunity to review even a sample of them.
+
+This changes not only **what banks need to govern**, but also **how governance itself must operate**.
+
+In my earlier article on Agentic AI Governance, I argued that governance needs to evolve from model governance toward system governance—and increasingly become part of the execution architecture itself.
+
+That evolution can be viewed across three generations of enterprise AI:
+
+| | **Predictive AI** | **Generative AI** | **Agentic AI** |
+|---|---|---|---|
+| **Primary role** | Predict / score | Generate / assist | Decide / act |
+| **Human role** | Makes decision | Reviews output | Supervises boundaries & exceptions |
+| **Governance object** | Model | Model + use case | End-to-end system |
+| **Primary concern** | Model performance | Output reliability & appropriate use | Authority, behavior & execution |
+| **Governance approach** | Validate & monitor | Guardrails & oversight | Runtime / executable governance |
+| **Control timing** | Pre-deployment + periodic | Pre/post output | Before, during & after execution |
+| **Key question** | *Is the model performing as intended?* | *Can we trust the output?* | **Is the system behaving as intended and authorized to act?** |
+
+: **Exhibit 1: Evolution of AI Governance.** Author's framework, adapted from concepts presented in BCG, *When Agents Run the Bank: The End of the Second Line as You Know It*, 2026. {#tbl-evolution}
+
+The progression is important.
+
+Predictive AI largely required institutions to govern **models**. Generative AI expanded the problem toward governing **models and their use**. Agentic AI expands it again toward governing **systems that can take actions**.
+
+But this creates a second-order question that receives less attention:
+
+> **What happens to the bank's governance operating model when AI systems begin operating at machine speed?**
+
+The Three Lines remain important. Their underlying principles—business ownership, independent challenge, accountability, and assurance—do not disappear.
+
+What changes is **how each line exercises those responsibilities**.
+
+---
+
+## 1. From Human-Speed Oversight to Machine-Speed Governance
+
+Traditional banking governance assumes that humans remain central to the decision process.
+
+The first line operates the business and manages its risks. The second line establishes risk policies, provides independent challenge, and monitors adherence. The third line independently assesses whether the control environment is appropriately designed and operating effectively.
+
+This structure works when consequential decisions occur at a speed and volume humans can reasonably supervise.
+
+Agentic AI changes that assumption.
+
+Consider an autonomous credit-monitoring workflow that continuously analyzes borrowers, retrieves updated information, evaluates risk indicators, invokes models and tools, identifies exceptions, and initiates downstream actions.
+
+Reviewing every decision would eliminate much of the value of automation.
+
+Sampling decisions after the fact is also insufficient. Individual actions may appear reasonable while aggregate system behavior gradually moves outside the institution's intended risk boundaries.
+
+The governance question therefore shifts from:
+
+> **Did we approve the system and periodically review its decisions?**
+
+to:
+
+> **Can we continuously demonstrate that the system is operating within approved objectives, authority, and risk boundaries?**
+
+This does not require abandoning the Three Lines.
+
+It requires making them capable of governing systems that operate continuously.
+
+---
+
+## 2. First Line: From Use-Case Ownership to Agent Accountability
+
+The first line's fundamental accountability does not change.
+
+The business remains responsible for the outcome and the risks created by the activity.
+
+But owning an agentic system requires more than sponsoring an AI use case.
+
+When an AI system can make decisions and take actions, the business must understand and own its **delegated authority**.
+
+A first-line owner should be able to answer:
+
+- **What objective has this agent been given?**
+- **What decisions can it make autonomously?**
+- **What data and systems can it access?**
+- **What actions can it execute?**
+- **What limits constrain those actions?**
+- **When must it escalate to a human?**
+- **What happens when its behavior moves outside expected boundaries?**
+
+This changes the meaning of business ownership.
+
+For traditional analytics, ownership might mean approving requirements and accepting model outputs.
+
+For agentic AI, ownership increasingly means accepting accountability for a **continuously operating decision system**.
+
+That accountability should be explicit.
+
+An agent should operate under delegated authority from an identifiable business owner, with defined objectives, permissions, limits, escalation requirements, and conditions under which that authority can be reduced or revoked.
+
+The first line therefore moves from simply **owning the use case** toward **owning the agent's mandate and operating boundaries**.
+
+---
+
+## 3. Second Line: From Reviewing Decisions to Governing Boundaries
+
+The second line faces perhaps the most significant transformation.
+
+Traditional second-line oversight relies heavily on policies, approvals, periodic monitoring, independent challenge, and escalation.
+
+Those mechanisms remain necessary. But the second line cannot independently review thousands—or eventually millions—of autonomous decisions occurring continuously.
+
+Its leverage increasingly comes from defining **the boundaries within which autonomous decisions are allowed to occur**.
+
+Those boundaries might include:
+
+- risk classifications;
+- permitted levels of autonomy;
+- transaction or exposure limits;
+- approval thresholds;
+- prohibited actions;
+- data-access restrictions;
+- behavioral tolerances;
+- monitoring requirements;
+- escalation conditions;
+- evidence requirements;
+- and conditions requiring authority to be reduced or revoked.
+
+Where appropriate, these requirements should become machine-enforceable.
+
+A policy stating that exposures above a threshold require human approval, for example, should not depend solely on an agent correctly interpreting the policy. The surrounding control architecture should prevent execution until the required approval occurs.
+
+This does not mean converting every risk policy into code.
+
+Many decisions require context, interpretation, ethics, or expert judgment.
+
+The important distinction is between **boundaries that should be deterministically enforced** and **decisions that genuinely require judgment**.
+
+The second line therefore moves upstream.
+
+Rather than attempting to review every autonomous decision, it defines and challenges the **risk envelope within which autonomy can operate**.
+
+That preserves a critical principle of the Three Lines:
+
+> **The second line defines and challenges risk boundaries without becoming the operator of the system.**
+
+---
+
+## 4. Third Line: From Transaction Testing to Control-System Assurance
+
+Agentic AI also changes the object of independent assurance.
+
+Traditional audit approaches often sample transactions and determine whether required processes and controls were followed.
+
+Sampling will remain important, particularly for consequential outcomes.
+
+But sampling alone cannot provide sufficient assurance over systems executing decisions continuously at machine scale.
+
+Internal Audit increasingly needs to assess whether the **control architecture producing those decisions** is designed appropriately and operating effectively.
+
+Questions begin to change:
+
+- Did the system enforce approved authority boundaries?
+- Were prohibited actions actually blocked?
+- Were required human approvals triggered?
+- Were permissions appropriately scoped?
+- Did monitoring identify material behavioral changes?
+- Did changes to policies propagate correctly into executable controls?
+- Could authority be suspended when thresholds were breached?
+- Can consequential decisions be reconstructed?
+- Can the institution demonstrate **who—or what—acted, under whose authority, using which information, subject to which controls, and with what outcome?**
+
+The third line is therefore not simply auditing the AI agent.
+
+It is increasingly auditing the **governance system surrounding the agent**.
+
+This represents a significant shift:
+
+> **From assurance over sampled decisions toward assurance over the architecture that continuously constrains those decisions.**
+
+---
+
+## 5. Human Judgment Moves to the Edge
+
+Machine-speed governance does not mean removing humans from risk management.
+
+It means becoming much more deliberate about **where human judgment adds value**.
+
+If humans must approve thousands of routine decisions produced by an AI system, the organization has not necessarily created meaningful oversight. It may instead create bottlenecks, automation bias, and rubber-stamping.
+
+Human judgment should concentrate where the system encounters ambiguity, consequence, or conditions outside established boundaries.
+
+Examples might include:
+
+- unusually large exposures;
+- conflicting evidence;
+- material customer impact;
+- novel regulatory interpretations;
+- significant deviations from behavioral baselines;
+- exceptions to established risk appetite;
+- or situations the system has not previously encountered.
+
+Routine decisions can proceed within clearly established controls.
+
+Edge cases move to accountable human decision-makers.
+
+This suggests a more useful interpretation of human-in-the-loop:
+
+> **Humans should not be everywhere in the workflow. They should be where judgment matters.**
+
+As agents become more capable, designing those intervention points becomes an important governance responsibility in its own right.
+
+---
+
+## 6. The Architecture That Connects the Three Lines
+
+The organizational responsibilities of the Three Lines remain distinct.
+
+But agentic AI creates a need for a technical governance architecture that connects them.
+
+In my earlier article, I described this concept as an **AI Governance Control Plane**:
+
+> **The AI determines what it wants to do. Governance determines whether it is allowed to do it.**
+
+The control plane translates organizational governance into runtime controls.
+
+The first line supplies the business mandate and owns the outcome.
+
+The second line establishes the risk boundaries and governance requirements.
+
+The third line independently assesses whether those controls are appropriately designed and operating effectively.
+
+Technology makes those requirements executable.
+
+A simplified flow might look like:
+
+> **Business Mandate → Delegated Authority → Policy → Runtime Controls → Agent Action → Human Intervention → Evidence → Monitoring & Assurance**
+
+Three capabilities become particularly important within this architecture.
+
+### Machine-Readable Policy
+
+Critical policies and risk boundaries need to be interpretable and, where appropriate, enforceable by systems.
+
+This may include permissions, transaction limits, prohibited actions, segregation-of-duties requirements, escalation thresholds, or human-approval requirements.
+
+The objective is not to automate judgment.
+
+It is to prevent autonomous systems from bypassing boundaries that should never depend on judgment in the first place.
+
+### A Machine-Readable View of the Bank
+
+Agents also need reliable context about the entities and relationships on which policies operate.
+
+A customer may simultaneously be a borrower, guarantor, beneficial owner, counterparty, household member, or business owner. A loan may connect to collateral, covenants, exposures, risk ratings, policies, and regulatory classifications.
+
+Humans navigate many of these relationships through institutional knowledge.
+
+Agents need them represented explicitly.
+
+This creates an important role for **semantic layers, ontologies, and knowledge graphs** that provide governed meaning and relationships across enterprise data.
+
+This is not simply a data-management improvement.
+
+It becomes part of the governance infrastructure because an agent cannot reliably apply policy if it does not correctly understand the entity, relationship, obligation, and context to which that policy applies.
+
+### Continuous Evidence
+
+Finally, governance needs evidence.
+
+Traditional governance frequently reconstructs evidence after an event occurs. Agentic systems create an opportunity to generate that evidence as decisions occur.
+
+For consequential actions, institutions should increasingly be able to reconstruct:
+
+> **Agent → Delegated Authority → Data → Decision → Policy Evaluation → Tool/Service → Human Intervention → Action → Outcome**
+
+This is more than logging.
+
+It is **decision provenance**.
+
+Continuous evidence allows the first line, Risk, Compliance, Internal Audit, management, and potentially regulators to determine not only what happened, but whether the system had the authority to act and which controls were applied before execution.
+
+Governance becomes demonstrable rather than merely documented.
+
+---
+
+## 7. Toward an AI-Native Three Lines Model
+
+The result is not a replacement for the Three Lines.
+
+It is an evolution in how the Three Lines operate.
+
+| **Line** | **Traditional emphasis** | **Agentic AI emphasis** |
+|---|---|---|
+| **First Line** | Own processes, decisions, and operating risks | Own agent mandate, delegated authority, outcomes, and operating boundaries |
+| **Second Line** | Establish policy, review risk, monitor and challenge | Define the risk envelope, autonomy limits, executable boundaries, monitoring and escalation requirements |
+| **Third Line** | Test controls and sample transactions | Independently assure the governance architecture and whether controls operate effectively at runtime |
+
+: **Exhibit 2: Evolution of the Three Lines for Agentic AI.** Author's framework. {#tbl-three-lines}
+
+The distinction is important.
+
+**First Line:** owns the autonomous activity.
+
+**Second Line:** defines and challenges the boundaries of autonomy.
+
+**Third Line:** independently assures that those boundaries and controls are actually working.
+
+The architecture between them increasingly performs the routine mechanics of governance:
+
+> **Policy → Authority → Runtime Controls → Monitoring → Human Judgment → Evidence → Learning**
+
+The future of AI governance is therefore not about automating the Three Lines.
+
+It is about **making their responsibilities, boundaries, and evidence operational at the same speed as the systems they govern.**
+
+---
+
+## Conclusion — Governance at Machine Speed
+
+Agentic AI will force banks to reconsider a fundamental assumption underlying traditional governance: that oversight can operate primarily on human time.
+
+It cannot.
+
+As autonomous systems begin making and executing decisions continuously, governance must increasingly operate alongside them.
+
+The First Line will need to own not simply AI use cases but the mandate and delegated authority given to autonomous systems.
+
+The Second Line will increasingly define the risk envelope within which those systems are allowed to operate.
+
+The Third Line will increasingly provide assurance over the architecture that translates those boundaries into effective controls.
+
+Human judgment remains essential—but becomes concentrated where context, consequence, ethics, and risk appetite genuinely require it.
+
+The Three Lines remain.
+
+What changes is how their responsibilities become operational.
+
+> **When decisions operate at machine speed, governance must be capable of operating at machine speed as well.**
+
+---
+
+## References
+
+Boston Consulting Group. 2026. *When Agents Run the Bank: The End of the Second Line as You Know It.*
+
+Akram, Changez. 2026. *Agentic AI Governance — Why Agentic AI Changes the Governance Problem.*
