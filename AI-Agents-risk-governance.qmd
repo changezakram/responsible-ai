@@ -61,33 +61,21 @@ The governance challenge therefore shifts from periodically reviewing an approve
 
 ## 2. First Line: Accountability for Agentic AI
 
-The first line's fundamental accountability does not change.
-
-The business remains responsible for the outcome and the risks created by the activity.
-
-But owning an agentic system requires more than sponsoring an AI use case.
-
-When an AI system can make decisions and take actions, the business must understand and own its **delegated authority**.
+The first line's fundamental accountability does not change. The business remains responsible for the outcome and the risks created by the activity. But owning an agentic system requires more than sponsoring an AI use case. When an AI system can make decisions and take actions, the business must understand and own its **delegated authority**.
 
 A first-line owner should be able to answer:
 
-- **What objective has this agent been given?**
-- **What decisions can it make autonomously?**
-- **What data and systems can it access?**
-- **What actions can it execute?**
-- **What limits constrain those actions?**
-- **When must it escalate to a human?**
-- **What happens when its behavior moves outside expected boundaries?**
+- What objective has this agent been given?
+- What decisions can it make autonomously?
+- What data and systems can it access?
+- What actions can it execute?
+- What limits constrain those actions?
+- When must it escalate to a human?
+- What happens when its behavior moves outside expected boundaries?
 
-This changes the meaning of business ownership.
+This changes the meaning of business ownership. For traditional analytics, ownership might mean approving requirements and accepting model outputs. For agentic AI, ownership increasingly means accepting accountability for a **continuously operating decision system**.
 
-For traditional analytics, ownership might mean approving requirements and accepting model outputs.
-
-For agentic AI, ownership increasingly means accepting accountability for a **continuously operating decision system**.
-
-That accountability should be explicit.
-
-An agent should operate under delegated authority from an identifiable business owner, with defined objectives, permissions, limits, escalation requirements, and conditions under which that authority can be reduced or revoked.
+That accountability should be explicit. An agent should operate under delegated authority from an identifiable business owner, with defined objectives, permissions, limits, escalation requirements, and conditions under which that authority can be reduced or revoked.
 
 The first line therefore moves from simply **owning the use case** toward **owning the agent's mandate and operating boundaries**.
 
