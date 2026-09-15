@@ -172,9 +172,9 @@ Continuous evidence makes governance demonstrable rather than merely documented.
 
 ---
 
-## 7. Toward an AI-Native Three Lines Model
+## 7. An AI-Native Three Lines Model
 
-The result is not a replacement for the Three Lines. It is an evolution in how the Three Lines operate.
+The Three Lines remain relevant for agentic AI, but how each line exercises its responsibilities evolves.
 
 | **Line** | **Traditional emphasis** | **Agentic AI emphasis** |
 |---|---|---|
@@ -182,23 +182,9 @@ The result is not a replacement for the Three Lines. It is an evolution in how t
 | **Second Line** | Establish policy, review risk, monitor and challenge | Define the risk envelope, autonomy limits, executable boundaries, monitoring and escalation requirements |
 | **Third Line** | Test controls and sample transactions | Independently assure the governance architecture and whether controls operate effectively at runtime |
 
-**Exhibit 2: Evolution of the Three Lines for Agentic AI.** Author's framework. 
+**Exhibit 2:** Evolution of the Three Lines for Agentic AI.
 
-The distinction is important.
-
-**First Line:** owns the autonomous activity.
-
-**Second Line:** defines and challenges the boundaries of autonomy.
-
-**Third Line:** independently assures that those boundaries and controls are actually working.
-
-The architecture between them increasingly performs the routine mechanics of governance:
-
-> **Policy → Authority → Runtime Controls → Monitoring → Human Judgment → Evidence → Learning**
-
-The future of AI governance is therefore not about automating the Three Lines.
-
-It is about **making their responsibilities, boundaries, and evidence operational at the same speed as the systems they govern.**
+The Three Lines are not being replaced. Their responsibilities are being adapted to systems that can make and execute decisions continuously. Business ownership, independent risk oversight, and assurance remain distinct, while the governance architecture makes those responsibilities operational at machine speed.
 
 ---
 
