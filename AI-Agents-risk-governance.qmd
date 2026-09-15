@@ -174,9 +174,7 @@ Continuous evidence makes governance demonstrable rather than merely documented.
 
 ## 7. Toward an AI-Native Three Lines Model
 
-The result is not a replacement for the Three Lines.
-
-It is an evolution in how the Three Lines operate.
+The result is not a replacement for the Three Lines. It is an evolution in how the Three Lines operate.
 
 | **Line** | **Traditional emphasis** | **Agentic AI emphasis** |
 |---|---|---|
