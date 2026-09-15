@@ -190,25 +190,13 @@ The Three Lines are not being replaced. Their responsibilities are being adapted
 
 ## Conclusion — Governance at Machine Speed
 
-Agentic AI will force banks to reconsider a fundamental assumption underlying traditional governance: that oversight can operate primarily on human time.
+Agentic AI challenges a fundamental assumption of traditional governance: that oversight can operate primarily on human time. As autonomous systems make and execute decisions continuously, governance must be able to operate alongside them.
 
-It cannot.
+This does not diminish the importance of human judgment. It makes **where humans intervene** more important, concentrating their attention on decisions involving ambiguity, significant consequences, or exceptions to established boundaries.
 
-As autonomous systems begin making and executing decisions continuously, governance must increasingly operate alongside them.
+The Three Lines remain relevant. Business ownership, independent risk oversight, and assurance are still essential, but the mechanisms supporting them must keep pace with increasingly autonomous systems.
 
-The First Line will need to own not simply AI use cases but the mandate and delegated authority given to autonomous systems.
-
-The Second Line will increasingly define the risk envelope within which those systems are allowed to operate.
-
-The Third Line will increasingly provide assurance over the architecture that translates those boundaries into effective controls.
-
-Human judgment remains essential—but becomes concentrated where context, consequence, ethics, and risk appetite genuinely require it.
-
-The Three Lines remain.
-
-What changes is how their responsibilities become operational.
-
-> **When decisions operate at machine speed, governance must be capable of operating at machine speed as well.**
+**When decisions operate at machine speed, governance must be capable of operating at machine speed as well.**
 
 ---
 
