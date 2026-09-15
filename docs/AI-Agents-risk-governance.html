@@ -399,51 +399,34 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="the-architecture-that-connects-the-three-lines" class="level2">
 <h2 class="anchored" data-anchor-id="the-architecture-that-connects-the-three-lines">6. The Architecture That Connects the Three Lines</h2>
-<p>The organizational responsibilities of the Three Lines remain distinct.</p>
-<p>But agentic AI creates a need for a technical governance architecture that connects them.</p>
-<p>In my earlier article, I described this concept as an <strong>AI Governance Control Plane</strong>:</p>
+<p>The responsibilities of the Three Lines remain distinct, but agentic AI requires a technical governance architecture that connects them. In my earlier article, I described this as an <strong>AI Governance Control Plane</strong>:</p>
 <blockquote class="blockquote">
 <p><strong>The AI determines what it wants to do. Governance determines whether it is allowed to do it.</strong></p>
 </blockquote>
-<p>The control plane translates organizational governance into runtime controls.</p>
-<p>The first line supplies the business mandate and owns the outcome.</p>
-<p>The second line establishes the risk boundaries and governance requirements.</p>
-<p>The third line independently assesses whether those controls are appropriately designed and operating effectively.</p>
-<p>Technology makes those requirements executable.</p>
+<p>The control plane translates governance requirements into runtime controls. The first line owns the business mandate and outcome, the second line establishes risk boundaries, and the third line provides independent assurance. Technology makes these requirements executable.</p>
 <p>A simplified flow might look like:</p>
 <blockquote class="blockquote">
 <p><strong>Business Mandate → Delegated Authority → Policy → Runtime Controls → Agent Action → Human Intervention → Evidence → Monitoring &amp; Assurance</strong></p>
 </blockquote>
-<p>Three capabilities become particularly important within this architecture.</p>
+<p>Three capabilities are particularly important.</p>
 <section id="machine-readable-policy" class="level3">
 <h3 class="anchored" data-anchor-id="machine-readable-policy">Machine-Readable Policy</h3>
-<p>Critical policies and risk boundaries need to be interpretable and, where appropriate, enforceable by systems.</p>
-<p>This may include permissions, transaction limits, prohibited actions, segregation-of-duties requirements, escalation thresholds, or human-approval requirements.</p>
-<p>The objective is not to automate judgment.</p>
-<p>It is to prevent autonomous systems from bypassing boundaries that should never depend on judgment in the first place.</p>
+<p>Critical policies and risk boundaries should be machine-enforceable where appropriate. These might include permissions, transaction limits, prohibited actions, segregation-of-duties requirements, escalation thresholds, and human-approval requirements.</p>
+<p>The objective is not to automate judgment, but to ensure that autonomous systems operate within established boundaries.</p>
 </section>
 <section id="a-machine-readable-view-of-the-bank" class="level3">
 <h3 class="anchored" data-anchor-id="a-machine-readable-view-of-the-bank">A Machine-Readable View of the Bank</h3>
-<p>Agents also need reliable context about the entities and relationships on which policies operate.</p>
-<p>A customer may simultaneously be a borrower, guarantor, beneficial owner, counterparty, household member, or business owner. A loan may connect to collateral, covenants, exposures, risk ratings, policies, and regulatory classifications.</p>
-<p>Humans navigate many of these relationships through institutional knowledge.</p>
-<p>Agents need them represented explicitly.</p>
-<p>This creates an important role for <strong>semantic layers, ontologies, and knowledge graphs</strong> that provide governed meaning and relationships across enterprise data.</p>
-<p>This is not simply a data-management improvement.</p>
-<p>It becomes part of the governance infrastructure because an agent cannot reliably apply policy if it does not correctly understand the entity, relationship, obligation, and context to which that policy applies.</p>
+<p>Agents need reliable context about the entities and relationships on which policies operate. A customer, for example, may simultaneously be a borrower, guarantor, beneficial owner, counterparty, or business owner. A loan may connect to collateral, covenants, exposures, risk ratings, and regulatory classifications.</p>
+<p>This creates an important role for <strong>semantic layers, ontologies, and knowledge graphs</strong> that provide governed meaning and relationships across enterprise data. These capabilities become part of the governance infrastructure because an agent cannot reliably apply policy without understanding the entities, relationships, and context to which that policy applies.</p>
 </section>
 <section id="continuous-evidence" class="level3">
 <h3 class="anchored" data-anchor-id="continuous-evidence">Continuous Evidence</h3>
-<p>Finally, governance needs evidence.</p>
-<p>Traditional governance frequently reconstructs evidence after an event occurs. Agentic systems create an opportunity to generate that evidence as decisions occur.</p>
-<p>For consequential actions, institutions should increasingly be able to reconstruct:</p>
+<p>Agentic systems also need to generate evidence as decisions occur. For consequential actions, institutions should be able to reconstruct:</p>
 <blockquote class="blockquote">
 <p><strong>Agent → Delegated Authority → Data → Decision → Policy Evaluation → Tool/Service → Human Intervention → Action → Outcome</strong></p>
 </blockquote>
-<p>This is more than logging.</p>
-<p>It is <strong>decision provenance</strong>.</p>
-<p>Continuous evidence allows the first line, Risk, Compliance, Internal Audit, management, and potentially regulators to determine not only what happened, but whether the system had the authority to act and which controls were applied before execution.</p>
-<p>Governance becomes demonstrable rather than merely documented.</p>
+<p>This is more than logging. It provides <strong>decision provenance</strong>—the ability to determine what happened, whether the system had authority to act, and which controls were applied before execution.</p>
+<p>Continuous evidence makes governance demonstrable rather than merely documented.</p>
 <hr>
 </section>
 </section>

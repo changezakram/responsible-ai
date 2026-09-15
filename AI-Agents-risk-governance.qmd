@@ -142,73 +142,39 @@ This provides a more practical interpretation of human-in-the-loop: **humans sho
 
 ## 6. The Architecture That Connects the Three Lines
 
-The organizational responsibilities of the Three Lines remain distinct.
-
-But agentic AI creates a need for a technical governance architecture that connects them.
-
-In my earlier article, I described this concept as an **AI Governance Control Plane**:
+The responsibilities of the Three Lines remain distinct, but agentic AI requires a technical governance architecture that connects them. In my earlier article, I described this as an **AI Governance Control Plane**:
 
 > **The AI determines what it wants to do. Governance determines whether it is allowed to do it.**
 
-The control plane translates organizational governance into runtime controls.
-
-The first line supplies the business mandate and owns the outcome.
-
-The second line establishes the risk boundaries and governance requirements.
-
-The third line independently assesses whether those controls are appropriately designed and operating effectively.
-
-Technology makes those requirements executable.
+The control plane translates governance requirements into runtime controls. The first line owns the business mandate and outcome, the second line establishes risk boundaries, and the third line provides independent assurance. Technology makes these requirements executable.
 
 A simplified flow might look like:
 
 > **Business Mandate → Delegated Authority → Policy → Runtime Controls → Agent Action → Human Intervention → Evidence → Monitoring & Assurance**
 
-Three capabilities become particularly important within this architecture.
+Three capabilities are particularly important.
 
 ### Machine-Readable Policy
 
-Critical policies and risk boundaries need to be interpretable and, where appropriate, enforceable by systems.
+Critical policies and risk boundaries should be machine-enforceable where appropriate. These might include permissions, transaction limits, prohibited actions, segregation-of-duties requirements, escalation thresholds, and human-approval requirements.
 
-This may include permissions, transaction limits, prohibited actions, segregation-of-duties requirements, escalation thresholds, or human-approval requirements.
-
-The objective is not to automate judgment.
-
-It is to prevent autonomous systems from bypassing boundaries that should never depend on judgment in the first place.
+The objective is not to automate judgment, but to ensure that autonomous systems operate within established boundaries.
 
 ### A Machine-Readable View of the Bank
 
-Agents also need reliable context about the entities and relationships on which policies operate.
+Agents need reliable context about the entities and relationships on which policies operate. A customer, for example, may simultaneously be a borrower, guarantor, beneficial owner, counterparty, or business owner. A loan may connect to collateral, covenants, exposures, risk ratings, and regulatory classifications.
 
-A customer may simultaneously be a borrower, guarantor, beneficial owner, counterparty, household member, or business owner. A loan may connect to collateral, covenants, exposures, risk ratings, policies, and regulatory classifications.
-
-Humans navigate many of these relationships through institutional knowledge.
-
-Agents need them represented explicitly.
-
-This creates an important role for **semantic layers, ontologies, and knowledge graphs** that provide governed meaning and relationships across enterprise data.
-
-This is not simply a data-management improvement.
-
-It becomes part of the governance infrastructure because an agent cannot reliably apply policy if it does not correctly understand the entity, relationship, obligation, and context to which that policy applies.
+This creates an important role for **semantic layers, ontologies, and knowledge graphs** that provide governed meaning and relationships across enterprise data. These capabilities become part of the governance infrastructure because an agent cannot reliably apply policy without understanding the entities, relationships, and context to which that policy applies.
 
 ### Continuous Evidence
 
-Finally, governance needs evidence.
-
-Traditional governance frequently reconstructs evidence after an event occurs. Agentic systems create an opportunity to generate that evidence as decisions occur.
-
-For consequential actions, institutions should increasingly be able to reconstruct:
+Agentic systems also need to generate evidence as decisions occur. For consequential actions, institutions should be able to reconstruct:
 
 > **Agent → Delegated Authority → Data → Decision → Policy Evaluation → Tool/Service → Human Intervention → Action → Outcome**
 
-This is more than logging.
+This is more than logging. It provides **decision provenance**—the ability to determine what happened, whether the system had authority to act, and which controls were applied before execution.
 
-It is **decision provenance**.
-
-Continuous evidence allows the first line, Risk, Compliance, Internal Audit, management, and potentially regulators to determine not only what happened, but whether the system had the authority to act and which controls were applied before execution.
-
-Governance becomes demonstrable rather than merely documented.
+Continuous evidence makes governance demonstrable rather than merely documented.
 
 ---
 
