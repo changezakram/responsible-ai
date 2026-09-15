@@ -35,7 +35,6 @@ That evolution can be viewed across three generations of enterprise AI:
 
 **Exhibit 1:** Evolution of AI Governance.
 
-
 The progression is important. Predictive AI largely required institutions to govern **models**. Generative AI expanded the problem toward governing **models and their use**. Agentic AI expands it again toward governing **systems that can take actions**.
 
 This creates a second-order question that receives less attention: What happens to the bank's governance operating model when AI systems begin operating at machine speed?
@@ -48,19 +47,13 @@ What changes is **how each line exercises those responsibilities**.
 
 ## 1. From Human-Speed Oversight to Machine-Speed Governance
 
-Traditional banking governance assumes that humans remain central to the decision process.
+Traditional banking governance assumes that humans remain central to the decision process. The first line operates the business and manages its risks. The second line establishes risk policies, provides independent challenge, and monitors adherence. The third line independently assesses whether the control environment is appropriately designed and operating effectively.
 
-The first line operates the business and manages its risks. The second line establishes risk policies, provides independent challenge, and monitors adherence. The third line independently assesses whether the control environment is appropriately designed and operating effectively.
-
-This structure works when consequential decisions occur at a speed and volume humans can reasonably supervise.
-
-Agentic AI changes that assumption.
+This structure works when consequential decisions occur at a speed and volume humans can reasonably supervise. Agentic AI changes that assumption.
 
 Consider an autonomous credit-monitoring workflow that continuously analyzes borrowers, retrieves updated information, evaluates risk indicators, invokes models and tools, identifies exceptions, and initiates downstream actions.
 
-Reviewing every decision would eliminate much of the value of automation.
-
-Sampling decisions after the fact is also insufficient. Individual actions may appear reasonable while aggregate system behavior gradually moves outside the institution's intended risk boundaries.
+Reviewing every decision would eliminate much of the value of automation. Sampling decisions after the fact is also insufficient. Individual decisions may remain within approved limits while, collectively, the agent’s behavior gradually pushes the institution beyond its intended risk boundaries.
 
 The governance question therefore shifts from:
 
