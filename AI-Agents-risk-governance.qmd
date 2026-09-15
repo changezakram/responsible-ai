@@ -36,13 +36,9 @@ That evolution can be viewed across three generations of enterprise AI:
 **Exhibit 1:** Evolution of AI Governance.
 
 
-The progression is important.
+The progression is important. Predictive AI largely required institutions to govern **models**. Generative AI expanded the problem toward governing **models and their use**. Agentic AI expands it again toward governing **systems that can take actions**.
 
-Predictive AI largely required institutions to govern **models**. Generative AI expanded the problem toward governing **models and their use**. Agentic AI expands it again toward governing **systems that can take actions**.
-
-But this creates a second-order question that receives less attention:
-
-> **What happens to the bank's governance operating model when AI systems begin operating at machine speed?**
+This creates a second-order question that receives less attention: What happens to the bank's governance operating model when AI systems begin operating at machine speed?
 
 The Three Lines remain important. Their underlying principles—business ownership, independent challenge, accountability, and assurance—do not disappear.
 
