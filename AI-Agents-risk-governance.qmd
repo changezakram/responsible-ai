@@ -182,19 +182,13 @@ The Three Lines remain relevant for agentic AI, but how each line exercises its 
 | **Second Line** | Establish policy, review risk, monitor and challenge | Define the risk envelope, autonomy limits, executable boundaries, monitoring and escalation requirements |
 | **Third Line** | Test controls and sample transactions | Independently assure the governance architecture and whether controls operate effectively at runtime |
 
-**Exhibit 2:** Evolution of the Three Lines for Agentic AI.
-
-The Three Lines are not being replaced. Their responsibilities are being adapted to systems that can make and execute decisions continuously. Business ownership, independent risk oversight, and assurance remain distinct, while the governance architecture makes those responsibilities operational at machine speed.
-
----
-
-## Conclusion — Governance at Machine Speed
+: **Exhibit 2: Evolution of the Three Lines for Agentic AI.** Author's framework.
 
 Agentic AI challenges a fundamental assumption of traditional governance: that oversight can operate primarily on human time. As autonomous systems make and execute decisions continuously, governance must be able to operate alongside them.
 
 This does not diminish the importance of human judgment. It makes **where humans intervene** more important, concentrating their attention on decisions involving ambiguity, significant consequences, or exceptions to established boundaries.
 
-The Three Lines remain relevant. Business ownership, independent risk oversight, and assurance are still essential, but the mechanisms supporting them must keep pace with increasingly autonomous systems.
+The Three Lines remain. Business ownership, independent risk oversight, and assurance are still essential, but the mechanisms supporting them must keep pace with increasingly autonomous systems.
 
 When decisions operate at machine speed, governance must be capable of operating at machine speed as well.
 
