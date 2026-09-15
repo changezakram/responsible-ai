@@ -103,35 +103,20 @@ The second line therefore defines and challenges the **risk envelope within whic
 
 ## 4. Third Line: Assurance for Agentic Systems
 
-Agentic AI also changes the object of independent assurance.
+Agentic AI changes the focus of independent assurance. Traditional audit approaches often sample transactions to determine whether required processes and controls were followed. Sampling will remain important, but it cannot provide sufficient assurance over systems making decisions continuously at machine scale.
 
-Traditional audit approaches often sample transactions and determine whether required processes and controls were followed.
+Internal Audit will increasingly need to assess whether the **governance and control architecture** is appropriately designed and operating effectively. Key questions include:
 
-Sampling will remain important, particularly for consequential outcomes.
-
-But sampling alone cannot provide sufficient assurance over systems executing decisions continuously at machine scale.
-
-Internal Audit increasingly needs to assess whether the **control architecture producing those decisions** is designed appropriately and operating effectively.
-
-Questions begin to change:
-
-- Did the system enforce approved authority boundaries?
-- Were prohibited actions actually blocked?
+- Were approved authority boundaries enforced?
+- Were prohibited actions blocked?
 - Were required human approvals triggered?
 - Were permissions appropriately scoped?
-- Did monitoring identify material behavioral changes?
-- Did changes to policies propagate correctly into executable controls?
-- Could authority be suspended when thresholds were breached?
+- Did monitoring identify material changes in behavior?
 - Can consequential decisions be reconstructed?
-- Can the institution demonstrate **who—or what—acted, under whose authority, using which information, subject to which controls, and with what outcome?**
 
-The third line is therefore not simply auditing the AI agent.
+The broader question is whether the institution can demonstrate **who—or what—acted, under whose authority, subject to which controls, and with what outcome**.
 
-It is increasingly auditing the **governance system surrounding the agent**.
-
-This represents a significant shift:
-
-> **From assurance over sampled decisions toward assurance over the architecture that continuously constrains those decisions.**
+The third line therefore provides assurance not only over individual decisions, but also over the **governance system that continuously controls agent behavior**.
 
 ---
 
