@@ -139,7 +139,6 @@ Routine decisions can proceed within established controls, while exceptions are 
 This provides a more practical interpretation of human-in-the-loop: **humans should be involved where judgment matters, not in every decision.** As agents become more capable, defining these intervention points becomes an important part of governance.
 
 ---
-
 ## 6. The Architecture That Connects the Three Lines
 
 The responsibilities of the Three Lines remain distinct, but agentic AI requires a technical governance architecture that connects them. In my earlier article, I described this as an **AI Governance Control Plane**:
@@ -147,10 +146,6 @@ The responsibilities of the Three Lines remain distinct, but agentic AI requires
 > **The AI determines what it wants to do. Governance determines whether it is allowed to do it.**
 
 The control plane translates governance requirements into runtime controls. The first line owns the business mandate and outcome, the second line establishes risk boundaries, and the third line provides independent assurance. Technology makes these requirements executable.
-
-A simplified flow might look like:
-
-> **Business Mandate → Delegated Authority → Policy → Runtime Controls → Agent Action → Human Intervention → Evidence → Monitoring & Assurance**
 
 Three capabilities are particularly important.
 
@@ -168,11 +163,9 @@ This creates an important role for **semantic layers, ontologies, and knowledge 
 
 ### Continuous Evidence
 
-Agentic systems also need to generate evidence as decisions occur. For consequential actions, institutions should be able to reconstruct:
+Agentic systems also need to generate evidence as decisions occur. For consequential actions, institutions should be able to reconstruct **what the agent did, under whose authority, which controls were applied, and what outcome resulted**.
 
-> **Agent → Delegated Authority → Data → Decision → Policy Evaluation → Tool/Service → Human Intervention → Action → Outcome**
-
-This is more than logging. It provides **decision provenance**—the ability to determine what happened, whether the system had authority to act, and which controls were applied before execution.
+This is more than logging. It provides **decision provenance**—a traceable record of the authority, controls, actions, and outcomes associated with an agent's decisions.
 
 Continuous evidence makes governance demonstrable rather than merely documented.
 
