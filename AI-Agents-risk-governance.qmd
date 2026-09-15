@@ -13,13 +13,9 @@ format:
 
 ## Introduction
 
-The first generation of AI governance in banking was built around models.
+The first generation of AI governance in banking was built around models. Models were developed for defined purposes, independently validated, approved for use, monitored for performance, and periodically reviewed. As generative AI emerged, institutions expanded those frameworks to address new risks such as hallucination, bias, data leakage, and inappropriate use.
 
-Models were developed for defined purposes, independently validated, approved for use, monitored for performance, and periodically reviewed. As generative AI emerged, institutions expanded those frameworks to address new risks such as hallucination, bias, data leakage, and inappropriate use.
-
-Agentic AI creates a more fundamental challenge.
-
-An AI agent can interpret an objective, retrieve information, invoke tools, interact with enterprise systems, make decisions, and execute actions across an end-to-end workflow. At sufficient scale, thousands of these decisions may occur before a traditional governance process has an opportunity to review even a sample of them.
+Agentic AI creates a more fundamental challenge. An AI agent can interpret an objective, retrieve information, invoke tools, interact with enterprise systems, make decisions, and execute actions across an end-to-end workflow. At sufficient scale, thousands of these decisions may occur before a traditional governance process has an opportunity to review even a sample of them.
 
 This changes not only **what banks need to govern**, but also **how governance itself must operate**.
 
