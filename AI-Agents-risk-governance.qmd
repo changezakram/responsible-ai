@@ -120,35 +120,23 @@ The third line therefore provides assurance not only over individual decisions, 
 
 ---
 
-## 5. Human Judgment Moves to the Edge
+## 5. Human Judgment at the Edge
 
-Machine-speed governance does not mean removing humans from risk management.
+Machine-speed governance does not mean removing humans from risk management. It requires being more deliberate about **where human judgment adds value**.
 
-It means becoming much more deliberate about **where human judgment adds value**.
-
-If humans must approve thousands of routine decisions produced by an AI system, the organization has not necessarily created meaningful oversight. It may instead create bottlenecks, automation bias, and rubber-stamping.
-
-Human judgment should concentrate where the system encounters ambiguity, consequence, or conditions outside established boundaries.
+Requiring humans to approve thousands of routine AI decisions may create bottlenecks and encourage rubber-stamping rather than meaningful oversight. Human intervention should focus on situations involving ambiguity, significant consequences, or conditions outside established boundaries.
 
 Examples might include:
 
 - unusually large exposures;
 - conflicting evidence;
 - material customer impact;
-- novel regulatory interpretations;
-- significant deviations from behavioral baselines;
 - exceptions to established risk appetite;
-- or situations the system has not previously encountered.
+- situations the system has not previously encountered.
 
-Routine decisions can proceed within clearly established controls.
+Routine decisions can proceed within established controls, while exceptions are directed to accountable human decision-makers.
 
-Edge cases move to accountable human decision-makers.
-
-This suggests a more useful interpretation of human-in-the-loop:
-
-> **Humans should not be everywhere in the workflow. They should be where judgment matters.**
-
-As agents become more capable, designing those intervention points becomes an important governance responsibility in its own right.
+This provides a more practical interpretation of human-in-the-loop: **humans should be involved where judgment matters, not in every decision.** As agents become more capable, defining these intervention points becomes an important part of governance.
 
 ---
 
