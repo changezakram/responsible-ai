@@ -139,6 +139,7 @@ Routine decisions can proceed within established controls, while exceptions are 
 This provides a more practical interpretation of human-in-the-loop: **humans should be involved where judgment matters, not in every decision.** As agents become more capable, defining these intervention points becomes an important part of governance.
 
 ---
+
 ## 6. The Architecture That Connects the Three Lines
 
 The responsibilities of the Three Lines remain distinct, but agentic AI requires a technical governance architecture that connects them. In my earlier article, I described this as an **AI Governance Control Plane**:

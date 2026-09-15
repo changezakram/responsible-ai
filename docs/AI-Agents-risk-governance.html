@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.31">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Rethinking the Three Lines for Agentic Banking</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-c1fac2584b48ed01fb6e278e36375074.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://changezakram.github.io/"> <i class="bi bi-house" role="img">
+</i> 
+<span class="menu-text">Changez Akram</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-generative-ai" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Generative AI</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-generative-ai">    
+        <li>
+    <a class="dropdown-item" href="https://changezakram.github.io/Deep-Generative-Models/index.html">
+ <span class="dropdown-text">Gen AI Introduction</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://changezakram.github.io/Deep-Generative-Models/vae.html">
+ <span class="dropdown-text">Variational Autoencoders (VAEs)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://changezakram.github.io/Deep-Generative-Models/flows.html">
+ <span class="dropdown-text">Normalizing Flows</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://changezakram.github.io/Deep-Generative-Models/ebm.html">
+ <span class="dropdown-text">Energy-Based Models (EBMs)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://changezakram.github.io/Deep-Generative-Models/diffusion.html">
+ <span class="dropdown-text">Diffusion Models</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-large-language-models" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Large Language Models</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-large-language-models">    
+        <li>
+    <a class="dropdown-item" href="https://changezakram.github.io/Deep-Generative-Models/transformers.html">
+ <span class="dropdown-text">Transformers</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://changezakram.github.io/Deep-Generative-Models/post-training.html">
+ <span class="dropdown-text">Post Training</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://changezakram.github.io/Deep-Generative-Models/nlp-eval.html">
+ <span class="dropdown-text">NLP Evaluation</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-agentic-ai" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Agentic AI</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-agentic-ai">    
+        <li>
+    <a class="dropdown-item" href="https://changezakram.github.io/agentic-ai/agentic-ai.html">
+ <span class="dropdown-text">Introduction</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://changezakram.github.io/agentic-ai/agentic-analytics.html">
+ <span class="dropdown-text">Agentic Analytics</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://changezakram.github.io/Deep-Generative-Models/slm.html">
+ <span class="dropdown-text">Small Language Models</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://changezakram.github.io/agentic-ai/Workflow-Orchestration.html">
+ <span class="dropdown-text">Multi-Agent Orchestration</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-ai-strategy" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">AI Strategy</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-ai-strategy">    
+        <li>
+    <a class="dropdown-item" href="https://changezakram.github.io/Deep-Generative-Models/gen-ai-use-cases/ai-roadmap-for-banking.html">
+ <span class="dropdown-text">AI Roadmap for Banking</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://changezakram.github.io/Deep-Generative-Models/gen-ai-use-cases/ai_first_bank.html">
+ <span class="dropdown-text">Building the AI-First Bank</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://changezakram.github.io/Deep-Generative-Models/gen-ai-use-cases/banking-use-cases.html">
+ <span class="dropdown-text">Gen AI in Banking</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://changezakram.github.io/Deep-Generative-Models/gen-ai-use-cases/healthcare-use-cases.html">
+ <span class="dropdown-text">Gen AI in Healthcare</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-responsible-ai" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Responsible AI</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-responsible-ai">    
+        <li>
+    <a class="dropdown-item" href="https://changezakram.github.io/agentic-ai/agentic_ai_security.html">
+ <span class="dropdown-text">AI Security</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://changezakram.github.io/responsible-ai/ai-safety.html">
+ <span class="dropdown-text">AI Safety</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#governing-ai-at-machine-speed" id="toc-governing-ai-at-machine-speed" class="nav-link" data-scroll-target="#governing-ai-at-machine-speed">1. Governing AI at Machine Speed</a></li>
+  <li><a href="#first-line-accountability-for-agentic-ai" id="toc-first-line-accountability-for-agentic-ai" class="nav-link" data-scroll-target="#first-line-accountability-for-agentic-ai">2. First Line: Accountability for Agentic AI</a></li>
+  <li><a href="#second-line-governing-the-boundaries-of-autonomy" id="toc-second-line-governing-the-boundaries-of-autonomy" class="nav-link" data-scroll-target="#second-line-governing-the-boundaries-of-autonomy">3. Second Line: Governing the Boundaries of Autonomy</a></li>
+  <li><a href="#third-line-assurance-for-agentic-systems" id="toc-third-line-assurance-for-agentic-systems" class="nav-link" data-scroll-target="#third-line-assurance-for-agentic-systems">4. Third Line: Assurance for Agentic Systems</a></li>
+  <li><a href="#human-judgment-at-the-edge" id="toc-human-judgment-at-the-edge" class="nav-link" data-scroll-target="#human-judgment-at-the-edge">5. Human Judgment at the Edge</a></li>
+  <li><a href="#the-architecture-that-connects-the-three-lines" id="toc-the-architecture-that-connects-the-three-lines" class="nav-link" data-scroll-target="#the-architecture-that-connects-the-three-lines">6. The Architecture That Connects the Three Lines</a></li>
+  <li><a href="#toward-an-ai-native-three-lines-model" id="toc-toward-an-ai-native-three-lines-model" class="nav-link" data-scroll-target="#toward-an-ai-native-three-lines-model">7. Toward an AI-Native Three Lines Model</a></li>
+  <li><a href="#conclusion-governance-at-machine-speed" id="toc-conclusion-governance-at-machine-speed" class="nav-link" data-scroll-target="#conclusion-governance-at-machine-speed">Conclusion — Governance at Machine Speed</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Rethinking the Three Lines for Agentic Banking</h1>
+<p class="subtitle lead">How autonomy changes business ownership, risk oversight, and assurance</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>The first generation of AI governance in banking was built around models. Models were developed for defined purposes, independently validated, approved for use, monitored for performance, and periodically reviewed. As generative AI emerged, institutions expanded those frameworks to address new risks such as hallucination, bias, data leakage, and inappropriate use.</p>
+<p>Agentic AI creates a more fundamental challenge. An AI agent can interpret an objective, retrieve information, invoke tools, interact with enterprise systems, make decisions, and execute actions across an end-to-end workflow. At sufficient scale, thousands of these decisions may occur before a traditional governance process has an opportunity to review even a sample of them.</p>
+<p>This changes not only <strong>what banks need to govern</strong>, but also <strong>how governance itself must operate</strong>.</p>
+<p>In my earlier article on Agentic AI Governance, I argued that governance needs to evolve from model governance toward system governance—and increasingly become part of the execution architecture itself.</p>
+<p>That evolution can be viewed across three generations of enterprise AI:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th><strong>Predictive AI</strong></th>
+<th><strong>Generative AI</strong></th>
+<th><strong>Agentic AI</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Primary role</strong></td>
+<td>Predict / score</td>
+<td>Generate / assist</td>
+<td>Decide / act</td>
+</tr>
+<tr class="even">
+<td><strong>Human role</strong></td>
+<td>Makes decision</td>
+<td>Reviews output</td>
+<td>Supervises boundaries &amp; exceptions</td>
+</tr>
+<tr class="odd">
+<td><strong>Governance object</strong></td>
+<td>Model</td>
+<td>Model + use case</td>
+<td>End-to-end system</td>
+</tr>
+<tr class="even">
+<td><strong>Primary concern</strong></td>
+<td>Model performance</td>
+<td>Output reliability &amp; appropriate use</td>
+<td>Authority, behavior &amp; execution</td>
+</tr>
+<tr class="odd">
+<td><strong>Governance approach</strong></td>
+<td>Validate &amp; monitor</td>
+<td>Guardrails &amp; oversight</td>
+<td>Runtime / executable governance</td>
+</tr>
+<tr class="even">
+<td><strong>Control timing</strong></td>
+<td>Pre-deployment + periodic</td>
+<td>Pre/post output</td>
+<td>Before, during &amp; after execution</td>
+</tr>
+<tr class="odd">
+<td><strong>Key question</strong></td>
+<td><em>Is the model performing as intended?</em></td>
+<td><em>Can we trust the output?</em></td>
+<td><em>Is the system behaving as intended and authorized to act?</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exhibit 1:</strong> Evolution of AI Governance.</p>
+<p>The progression is important. Predictive AI largely required institutions to govern <strong>models</strong>. Generative AI expanded the problem toward governing <strong>models and their use</strong>. Agentic AI expands it again toward governing <strong>systems that can take actions</strong>.</p>
+<p>This creates a second-order question that receives less attention: What happens to the bank’s governance operating model when AI systems begin operating at machine speed?</p>
+<p>The Three Lines remain important. Their underlying principles—business ownership, independent challenge, accountability, and assurance—do not disappear.</p>
+<p>What changes is <strong>how each line exercises those responsibilities</strong>.</p>
+<hr>
+</section>
+<section id="governing-ai-at-machine-speed" class="level2">
+<h2 class="anchored" data-anchor-id="governing-ai-at-machine-speed">1. Governing AI at Machine Speed</h2>
+<p>Traditional banking governance assumes that humans remain central to the decision process. The first line operates the business and manages its risks. The second line establishes risk policies, provides independent challenge, and monitors adherence. The third line independently assesses whether the control environment is appropriately designed and operating effectively.</p>
+<p>This structure works when consequential decisions occur at a speed and volume humans can reasonably supervise. Agentic AI changes that assumption.</p>
+<p>Consider an autonomous credit-monitoring workflow that continuously analyzes borrowers, retrieves updated information, evaluates risk indicators, invokes models and tools, identifies exceptions, and initiates downstream actions.</p>
+<p>Reviewing every decision would eliminate much of the value of automation. Sampling decisions after the fact is also insufficient. Individual decisions may remain within approved limits while, collectively, the agent’s behavior gradually pushes the institution beyond its intended risk boundaries.</p>
+<p>The governance challenge therefore shifts from periodically reviewing an approved system to continuously ensuring that it operates within established objectives, authority, and boundaries. The Three Lines remain relevant, but they must evolve to govern systems that operate continuously.</p>
+<hr>
+</section>
+<section id="first-line-accountability-for-agentic-ai" class="level2">
+<h2 class="anchored" data-anchor-id="first-line-accountability-for-agentic-ai">2. First Line: Accountability for Agentic AI</h2>
+<p>The first line’s fundamental accountability does not change. The business remains responsible for the outcome and the risks created by the activity. But owning an agentic system requires more than sponsoring an AI use case. When an AI system can make decisions and take actions, the business must understand and own its <strong>delegated authority</strong>.</p>
+<p>A first-line owner should be able to answer:</p>
+<ul>
+<li>What objective has this agent been given?</li>
+<li>What decisions can it make autonomously?</li>
+<li>What data and systems can it access?</li>
+<li>What actions can it execute?</li>
+<li>When must it escalate to a human?</li>
+<li>What happens when its behavior moves outside expected boundaries?</li>
+</ul>
+<p>This changes the meaning of business ownership. For traditional analytics, ownership might mean approving requirements and accepting model outputs. For agentic AI, ownership increasingly means accepting accountability for a <strong>continuously operating decision system</strong>.</p>
+<p>That accountability should be explicit. An agent should operate under delegated authority from an identifiable business owner, with defined objectives, permissions, limits, escalation requirements, and conditions under which that authority can be reduced or revoked.</p>
+<p>For agentic AI, first-line ownership extends to the agent’s mandate, delegated authority, and operating boundaries.</p>
+<hr>
+</section>
+<section id="second-line-governing-the-boundaries-of-autonomy" class="level2">
+<h2 class="anchored" data-anchor-id="second-line-governing-the-boundaries-of-autonomy">3. Second Line: Governing the Boundaries of Autonomy</h2>
+<p>Traditional second-line oversight relies on policies, approvals, monitoring, independent challenge, and escalation. These mechanisms remain necessary, but the second line cannot review thousands—or eventually millions—of autonomous decisions. Its role increasingly centers on defining <strong>the boundaries within which autonomous systems can operate</strong>.</p>
+<p>These boundaries might include:</p>
+<ul>
+<li>permitted levels of autonomy;</li>
+<li>transaction or exposure limits;</li>
+<li>approval thresholds;</li>
+<li>prohibited actions;</li>
+<li>data-access restrictions;</li>
+<li>escalation conditions.</li>
+</ul>
+<p>Where appropriate, these requirements should be machine-enforceable. For example, if exposures above a certain threshold require human approval, the control architecture should prevent the agent from proceeding without it.</p>
+<p>Not every risk policy can—or should—be converted into code. Some decisions will continue to require human judgment. The key is determining <strong>which boundaries can be enforced by the system and where human judgment is required</strong>.</p>
+<p>The second line therefore defines and challenges the <strong>risk envelope within which autonomy can operate</strong>, without becoming the operator of the system.</p>
+<hr>
+</section>
+<section id="third-line-assurance-for-agentic-systems" class="level2">
+<h2 class="anchored" data-anchor-id="third-line-assurance-for-agentic-systems">4. Third Line: Assurance for Agentic Systems</h2>
+<p>Agentic AI changes the focus of independent assurance. Traditional audit approaches often sample transactions to determine whether required processes and controls were followed. Sampling will remain important, but it cannot provide sufficient assurance over systems making decisions continuously at machine scale.</p>
+<p>Internal Audit will increasingly need to assess whether the <strong>governance and control architecture</strong> is appropriately designed and operating effectively. Key questions include:</p>
+<ul>
+<li>Were approved authority boundaries enforced?</li>
+<li>Were prohibited actions blocked?</li>
+<li>Were required human approvals triggered?</li>
+<li>Were permissions appropriately scoped?</li>
+<li>Did monitoring identify material changes in behavior?</li>
+<li>Can consequential decisions be reconstructed?</li>
+</ul>
+<p>The broader question is whether the institution can demonstrate <strong>who—or what—acted, under whose authority, subject to which controls, and with what outcome</strong>.</p>
+<p>The third line therefore provides assurance not only over individual decisions, but also over the <strong>governance system that continuously controls agent behavior</strong>.</p>
+<hr>
+</section>
+<section id="human-judgment-at-the-edge" class="level2">
+<h2 class="anchored" data-anchor-id="human-judgment-at-the-edge">5. Human Judgment at the Edge</h2>
+<p>Machine-speed governance does not mean removing humans from risk management. It requires being more deliberate about <strong>where human judgment adds value</strong>.</p>
+<p>Requiring humans to approve thousands of routine AI decisions may create bottlenecks and encourage rubber-stamping rather than meaningful oversight. Human intervention should focus on situations involving ambiguity, significant consequences, or conditions outside established boundaries.</p>
+<p>Examples might include:</p>
+<ul>
+<li>unusually large exposures;</li>
+<li>conflicting evidence;</li>
+<li>material customer impact;</li>
+<li>exceptions to established risk appetite;</li>
+<li>situations the system has not previously encountered.</li>
+</ul>
+<p>Routine decisions can proceed within established controls, while exceptions are directed to accountable human decision-makers.</p>
+<p>This provides a more practical interpretation of human-in-the-loop: <strong>humans should be involved where judgment matters, not in every decision.</strong> As agents become more capable, defining these intervention points becomes an important part of governance.</p>
+<hr>
+</section>
+<section id="the-architecture-that-connects-the-three-lines" class="level2">
+<h2 class="anchored" data-anchor-id="the-architecture-that-connects-the-three-lines">6. The Architecture That Connects the Three Lines</h2>
+<p>The responsibilities of the Three Lines remain distinct, but agentic AI requires a technical governance architecture that connects them. In my earlier article, I described this as an <strong>AI Governance Control Plane</strong>:</p>
+<blockquote class="blockquote">
+<p><strong>The AI determines what it wants to do. Governance determines whether it is allowed to do it.</strong></p>
+</blockquote>
+<p>The control plane translates governance requirements into runtime controls. The first line owns the business mandate and outcome, the second line establishes risk boundaries, and the third line provides independent assurance. Technology makes these requirements executable.</p>
+<p>Three capabilities are particularly important.</p>
+<section id="machine-readable-policy" class="level3">
+<h3 class="anchored" data-anchor-id="machine-readable-policy">Machine-Readable Policy</h3>
+<p>Critical policies and risk boundaries should be machine-enforceable where appropriate. These might include permissions, transaction limits, prohibited actions, segregation-of-duties requirements, escalation thresholds, and human-approval requirements.</p>
+<p>The objective is not to automate judgment, but to ensure that autonomous systems operate within established boundaries.</p>
+</section>
+<section id="a-machine-readable-view-of-the-bank" class="level3">
+<h3 class="anchored" data-anchor-id="a-machine-readable-view-of-the-bank">A Machine-Readable View of the Bank</h3>
+<p>Agents need reliable context about the entities and relationships on which policies operate. A customer, for example, may simultaneously be a borrower, guarantor, beneficial owner, counterparty, or business owner. A loan may connect to collateral, covenants, exposures, risk ratings, and regulatory classifications.</p>
+<p>This creates an important role for <strong>semantic layers, ontologies, and knowledge graphs</strong> that provide governed meaning and relationships across enterprise data. These capabilities become part of the governance infrastructure because an agent cannot reliably apply policy without understanding the entities, relationships, and context to which that policy applies.</p>
+</section>
+<section id="continuous-evidence" class="level3">
+<h3 class="anchored" data-anchor-id="continuous-evidence">Continuous Evidence</h3>
+<p>Agentic systems also need to generate evidence as decisions occur. For consequential actions, institutions should be able to reconstruct <strong>what the agent did, under whose authority, which controls were applied, and what outcome resulted</strong>.</p>
+<p>This is more than logging. It provides <strong>decision provenance</strong>—a traceable record of the authority, controls, actions, and outcomes associated with an agent’s decisions.</p>
+<p>Continuous evidence makes governance demonstrable rather than merely documented.</p>
+<hr>
+</section>
+</section>
+<section id="toward-an-ai-native-three-lines-model" class="level2">
+<h2 class="anchored" data-anchor-id="toward-an-ai-native-three-lines-model">7. Toward an AI-Native Three Lines Model</h2>
+<p>The result is not a replacement for the Three Lines.</p>
+<p>It is an evolution in how the Three Lines operate.</p>
+<div id="tbl-three-lines" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-three-lines-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: <strong>Exhibit 2: Evolution of the Three Lines for Agentic AI.</strong> Author’s framework.
+</figcaption>
+<div aria-describedby="tbl-three-lines-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Line</strong></th>
+<th><strong>Traditional emphasis</strong></th>
+<th><strong>Agentic AI emphasis</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>First Line</strong></td>
+<td>Own processes, decisions, and operating risks</td>
+<td>Own agent mandate, delegated authority, outcomes, and operating boundaries</td>
+</tr>
+<tr class="even">
+<td><strong>Second Line</strong></td>
+<td>Establish policy, review risk, monitor and challenge</td>
+<td>Define the risk envelope, autonomy limits, executable boundaries, monitoring and escalation requirements</td>
+</tr>
+<tr class="odd">
+<td><strong>Third Line</strong></td>
+<td>Test controls and sample transactions</td>
+<td>Independently assure the governance architecture and whether controls operate effectively at runtime</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>The distinction is important.</p>
+<p><strong>First Line:</strong> owns the autonomous activity.</p>
+<p><strong>Second Line:</strong> defines and challenges the boundaries of autonomy.</p>
+<p><strong>Third Line:</strong> independently assures that those boundaries and controls are actually working.</p>
+<p>The architecture between them increasingly performs the routine mechanics of governance:</p>
+<blockquote class="blockquote">
+<p><strong>Policy → Authority → Runtime Controls → Monitoring → Human Judgment → Evidence → Learning</strong></p>
+</blockquote>
+<p>The future of AI governance is therefore not about automating the Three Lines.</p>
+<p>It is about <strong>making their responsibilities, boundaries, and evidence operational at the same speed as the systems they govern.</strong></p>
+<hr>
+</section>
+<section id="conclusion-governance-at-machine-speed" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion-governance-at-machine-speed">Conclusion — Governance at Machine Speed</h2>
+<p>Agentic AI will force banks to reconsider a fundamental assumption underlying traditional governance: that oversight can operate primarily on human time.</p>
+<p>It cannot.</p>
+<p>As autonomous systems begin making and executing decisions continuously, governance must increasingly operate alongside them.</p>
+<p>The First Line will need to own not simply AI use cases but the mandate and delegated authority given to autonomous systems.</p>
+<p>The Second Line will increasingly define the risk envelope within which those systems are allowed to operate.</p>
+<p>The Third Line will increasingly provide assurance over the architecture that translates those boundaries into effective controls.</p>
+<p>Human judgment remains essential—but becomes concentrated where context, consequence, ethics, and risk appetite genuinely require it.</p>
+<p>The Three Lines remain.</p>
+<p>What changes is how their responsibilities become operational.</p>
+<blockquote class="blockquote">
+<p><strong>When decisions operate at machine speed, governance must be capable of operating at machine speed as well.</strong></p>
+</blockquote>
+<hr>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<p>Boston Consulting Group. 2026. <em>When Agents Run the Bank: The End of the Second Line as You Know It.</em></p>
+<p>Akram, Changez. 2026. <em>Agentic AI Governance — Why Agentic AI Changes the Governance Problem.</em></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
