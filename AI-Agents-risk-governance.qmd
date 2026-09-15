@@ -45,7 +45,7 @@ What changes is **how each line exercises those responsibilities**.
 
 ---
 
-## 1. From Human-Speed Oversight to Machine-Speed Governance
+## 1. Governing AI at Machine Speed
 
 Traditional banking governance assumes that humans remain central to the decision process. The first line operates the business and manages its risks. The second line establishes risk policies, provides independent challenge, and monitors adherence. The third line independently assesses whether the control environment is appropriately designed and operating effectively.
 
@@ -59,7 +59,7 @@ The governance challenge therefore shifts from periodically reviewing an approve
 
 ---
 
-## 2. First Line: From Use-Case Ownership to Agent Accountability
+## 2. First Line: Accountability for Agentic AI
 
 The first line's fundamental accountability does not change.
 
@@ -93,7 +93,7 @@ The first line therefore moves from simply **owning the use case** toward **owni
 
 ---
 
-## 3. Second Line: From Reviewing Decisions to Governing Boundaries
+## 3. Second Line: Governing the Boundaries of Autonomy
 
 The second line faces perhaps the most significant transformation.
 
@@ -137,7 +137,7 @@ That preserves a critical principle of the Three Lines:
 
 ---
 
-## 4. Third Line: From Transaction Testing to Control-System Assurance
+## 4. Third Line: Assurance for Agentic Systems
 
 Agentic AI also changes the object of independent assurance.
 
