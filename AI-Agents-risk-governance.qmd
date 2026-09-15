@@ -196,7 +196,7 @@ This does not diminish the importance of human judgment. It makes **where humans
 
 The Three Lines remain relevant. Business ownership, independent risk oversight, and assurance are still essential, but the mechanisms supporting them must keep pace with increasingly autonomous systems.
 
-**When decisions operate at machine speed, governance must be capable of operating at machine speed as well.**
+When decisions operate at machine speed, governance must be capable of operating at machine speed as well.
 
 ---
 
