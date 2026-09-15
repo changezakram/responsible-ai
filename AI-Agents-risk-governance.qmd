@@ -77,7 +77,7 @@ This changes the meaning of business ownership. For traditional analytics, owner
 
 That accountability should be explicit. An agent should operate under delegated authority from an identifiable business owner, with defined objectives, permissions, limits, escalation requirements, and conditions under which that authority can be reduced or revoked.
 
-The first line therefore moves from simply **owning the use case** toward **owning the agent's mandate and operating boundaries**.
+For agentic AI, first-line ownership extends to the agent’s mandate, delegated authority, and operating boundaries.
 
 ---
 
