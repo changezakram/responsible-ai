@@ -1,8 +1,6 @@
 ---
 title: "Rethinking the Three Lines for Agentic Banking"
 subtitle: "How autonomy changes business ownership, risk oversight, and assurance"
-author: "Changez Akram"
-date: "2026-09-14"
 format:
   html:
     toc: true
