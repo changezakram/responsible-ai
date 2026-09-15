@@ -184,7 +184,7 @@ It is an evolution in how the Three Lines operate.
 | **Second Line** | Establish policy, review risk, monitor and challenge | Define the risk envelope, autonomy limits, executable boundaries, monitoring and escalation requirements |
 | **Third Line** | Test controls and sample transactions | Independently assure the governance architecture and whether controls operate effectively at runtime |
 
-: **Exhibit 2: Evolution of the Three Lines for Agentic AI.** Author's framework. {#tbl-three-lines}
+**Exhibit 2: Evolution of the Three Lines for Agentic AI.** Author's framework. 
 
 The distinction is important.
 
