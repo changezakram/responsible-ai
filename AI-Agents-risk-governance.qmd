@@ -68,7 +68,7 @@ A first-line owner should be able to answer:
 - What objective has this agent been given?
 - What decisions can it make autonomously?
 - What data and systems can it access?
-- What actions can it execute, and what limits apply?
+- What actions can it execute?
 - When must it escalate to a human?
 - What happens when its behavior moves outside expected boundaries?
 
