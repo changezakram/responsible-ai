@@ -55,17 +55,7 @@ Consider an autonomous credit-monitoring workflow that continuously analyzes bor
 
 Reviewing every decision would eliminate much of the value of automation. Sampling decisions after the fact is also insufficient. Individual decisions may remain within approved limits while, collectively, the agent’s behavior gradually pushes the institution beyond its intended risk boundaries.
 
-The governance question therefore shifts from:
-
-> **Did we approve the system and periodically review its decisions?**
-
-to:
-
-> **Can we continuously demonstrate that the system is operating within approved objectives, authority, and risk boundaries?**
-
-This does not require abandoning the Three Lines.
-
-It requires making them capable of governing systems that operate continuously.
+The governance challenge therefore shifts from periodically reviewing an approved system to continuously ensuring that it operates within established objectives, authority, and boundaries. The Three Lines remain relevant, but they must evolve to govern systems that operate continuously.
 
 ---
 
